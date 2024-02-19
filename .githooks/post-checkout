@@ -1,0 +1,12 @@
+#!/bin/sh
+# Remove all rpym?c files that are older or don't correspond to rpym? files.
+set -euo pipefail
+if [ "$3" == 1 ]; then
+  find game -name '*.rpyc' -o -name '*.rpymc' | while read -r rpyc; do
+    rpy="${rpyc/%c}"
+    if [ ! -f "$rpy" ] || [ "$rpy" -nt "$rpyc" ]; then
+      rm -f "$rpyc"
+      rmdir -p "$(dirname "$rpy")" 2>/dev/null || true
+    fi
+  done
+fi

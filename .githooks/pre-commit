@@ -1,0 +1,64 @@
+#!/bin/sh
+set -euo pipefail
+
+if git rev-parse --verify HEAD >/dev/null 2>&1; then
+  against=HEAD
+else
+  # Initial commit: diff against an empty tree object
+  against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Note that the use of brackets around a tr range is ok here, (it's
+# even required, for portability to Solaris 10's /usr/bin/tr), since
+# the square bracket bytes happen to fall in the designated range.
+if [ "$(git diff --cached --name-only --diff-filter=A -z $against |
+    LC_ALL=C tr -d '[ -~]\0' | wc -c)" != 0 ]
+then
+  echo "Error: Attempt to add a non-ASCII file name."
+  # Non-ASCII filenames cause problems with the BOM enforcement code below. Fail
+  # early.
+  exit 1
+fi
+
+failed_sanity_check=0
+
+# Enforce no UTF-8 BOM.
+utf8bom="$(printf '\uFEFF')"
+while read -r file; do
+  if [ "$(git show :"$file" -- | head -c3)" == "$utf8bom" ]; then
+    echo "$file: UTF-8 BOM."
+    failed_sanity_check=1
+  fi
+done < <(git diff --cached --numstat --diff-filter=AM $against |
+           sed '/-\t-\t/d;s/[0-9]\+\t[0-9]\+\t//')
+
+# Check for whitespace errors.
+if ! git diff-index --check --cached "$against"; then
+  failed_sanity_check=1
+fi
+
+rc=0
+
+# Check for unknown file extensions. Ignore hidden files.
+while read -r extension; do
+  if ! grep "^\\*\\.${extension}" .gitattributes >/dev/null; then
+    echo "*.${extension}: missing entry in .gitattributes"
+    rc=1
+  fi
+done < <(git ls-files -co --exclude-standard . \
+           | sed -E '/^\.|\/\./d;s/^.*?\.([^.]*)$/\1/;t;d' \
+           | sort | uniq)
+
+# Exit with error code and a helpful message on failure.
+if [ "$failed_sanity_check" -ne 0 ]; then
+  cat <<\EOF
+
+Run the script `tools/sanitize.sh' to fix UTF-8 BOM and whitespace errors.
+
+EOF
+  exit 1
+fi
+exit "$rc"
