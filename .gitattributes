@@ -1,10 +1,11 @@
 # Default to auto-normalized line endings.
 * text=auto eol=lf
 
-# Code
+# Text
 *.rpy text
 *.rpym text
 *.sh text
+*.md text
 
 # Data
 *.png lfs

@@ -1,5 +1,6 @@
 #!/bin/sh
-cd "$(dirname "$0")" || exit 1
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # Default git configuration
 git config --local --bool pull.rebase true
