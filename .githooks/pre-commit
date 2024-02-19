@@ -25,7 +25,7 @@ fi
 
 failed_sanity_check=0
 
-# Enforce no UTF-8 BOM.
+# Check for UTF-8 BOM.
 utf8bom="$(printf '\uFEFF')"
 while read -r file; do
   if [ "$(git show :"$file" -- | head -c3)" == "$utf8bom" ]; then
@@ -44,7 +44,7 @@ rc=0
 
 # Check for unknown file extensions. Ignore hidden files.
 while read -r extension; do
-  if ! grep "^\\*\\.${extension}" .gitattributes >/dev/null; then
+  if ! git grep "^\\*\\.${extension}" :.gitattributes -- >/dev/null; then
     echo "*.${extension}: missing entry in .gitattributes"
     rc=1
   fi
