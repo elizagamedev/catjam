@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-name = renpy.input("My name is...")
-name = name.strip() or "Pumpkin"
+define name = renpy.input("My name is...")
+define name = name.strip() or "Pumpkin"
 
 define tc = Character("Trash Cat")
 define dc = Character("Designer Cat")
@@ -51,11 +51,11 @@ menu:
 
 label excited:
 
-    "{i}There's so much to learn! I can't wait to meet everyone.{/i}":
+    "{i}There's so much to learn! I can't wait to meet everyone.{/i}"
         jump go forth
 
 label nervous:
-    "{i}There's so much to learn... and so many people to meet.{/i}":
+    "{i}There's so much to learn... and so many people to meet.{/i}"
         jump go forth
 
 label goforth:
