@@ -52,10 +52,12 @@ menu:
 label excited:
 
     "{i}There's so much to learn! I can't wait to meet everyone.{/i}":
+        jump goforth
 
 label nervous:
+
     "{i}There's so much to learn... and so many people to meet.{/i}":
-        jump go forth
+        jump goforth
 
 label goforth:
 
