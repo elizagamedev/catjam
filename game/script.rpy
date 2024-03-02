@@ -3,6 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+name = renpy.input("My name is...")
+name = name.strip() or "Pumpkin"
 
 define tc = Character("Trash Cat")
 define dc = Character("Designer Cat")
@@ -33,11 +35,11 @@ label start:
 
     "It's only been a week since my human became my witch... since I became more than just a normal house cat."
 
-    "(i)I'm a familiar now.(/i)"
+    "{i}That's right... I'm a familiar now.{/i}"
 
     "We moved from the college dorms to a small house in this cozy little town so my witch can take summer classes, like all the other young witches do."
 
-    "(i)What does it mean to be a familiar? I guess I'm about to find out...(/i)"
+    "{i}What does it mean to be a familiar? I guess I'm about to find out...{/i}"
 
 menu:
 
@@ -49,11 +51,11 @@ menu:
 
 label excited:
 
-    "(i)There's so much to learn! I can't wait to meet everyone.(/i)":
+    "{i}There's so much to learn! I can't wait to meet everyone.{/i}":
         jump go forth
 
 label nervous:
-    "(i)There's so much to learn... and so many people to meet.":
+    "{i}There's so much to learn... and so many people to meet.{/i}":
         jump go forth
 
 label goforth:
@@ -112,7 +114,7 @@ label woodsintro:
 
 jump placeholder
 
-label placeholder
+label placeholder:
     # Need option menus for choosing the rest of the options consecutively.
     "Moving on..."
 
