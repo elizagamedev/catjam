@@ -51,11 +51,11 @@ menu:
 
 label excited:
 
-    "{i}There's so much to learn! I can't wait to meet everyone.{/i}" :
+    "{i}There's so much to learn! I can't wait to meet everyone.{/i}": # type: ignore
         jump go forth
 
 label nervous:
-    "{i}There's so much to learn... and so many people to meet.{/i}" :
+    "{i}There's so much to learn... and so many people to meet.{/i}": # type: ignore
         jump go forth
 
 label goforth:
