@@ -3,7 +3,12 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+
+define tc = Character("Trash Cat")
+define dc = Character("Designer Cat")
+define uc = Character("Unlucky Cat")
+define cc = Character("Cool Cat")
+define uchi = Character("Uchi Crow")
 
 
 # The game starts here.
@@ -24,9 +29,14 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    "The scribbled note crinkles in my hand as I smooth out the wrinkles with my paws, spreading it flat on the top of a the cardboard box I had meant to nap on."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "It's only been a week since my human became my witch... since I became more than just a normal house cat."
+
+    "I'm a familiar now."
+
+    "We moved from the college dorms to a small house in this cozy little town so my witch can take summer classes, like all the other young witches do."
+
 
     # This ends the game.
 
