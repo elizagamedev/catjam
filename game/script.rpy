@@ -3,9 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define name = renpy.input("My name is...")
-define name = name.strip() or "Pumpkin"
-
 define tc = Character("Trash Cat")
 define dc = Character("Designer Cat")
 define uc = Character("Unlucky Cat")
@@ -53,8 +50,6 @@ label excited:
 
     "{i}There's so much to learn! I can't wait to meet everyone.{/i}"
 
-jump goforth
-
 label nervous:
 
     "{i}There's so much to learn... and so many people to meet.{/i}"
@@ -89,13 +84,11 @@ label summerschoolintro:
 
     "There are no classes on the weekend so the school is quiet."
 
-jump placeholder
 
 label mainstreetintro:
 
     "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
 
-jump placeholder
 
 label parkintro:
 
@@ -103,7 +96,6 @@ label parkintro:
 
     "There's also someone napping on a bench. Is that... a bird? Maybe a crow?"
 
-jump placeholder
 
 label woodsintro:
 
@@ -113,7 +105,6 @@ label woodsintro:
 
     uc "OH MY GOD. ANOTHER NETTLE. HOW MANY NETTLES CAN THERE EVEN BE IN A FOREST"
 
-jump placeholder
 
 label placeholder:
     # Need option menus for choosing the rest of the options consecutively.
