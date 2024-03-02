@@ -47,16 +47,70 @@ menu:
     "I'm nervous.":
         jump nervous
 
-label excited
+label excited:
 
     "(i)There's so much to learn! I can't wait to meet everyone.(/i)":
         jump go forth
 
-label nervous
+label nervous:
     "(i)There's so much to learn... and so many people to meet.":
         jump go forth
 
-label go forth
+label goforth:
+
+    "I go to open the front door, taking a deep breath, and push it open to step out into the unfamiliar town."
+
+menu:
+
+    "I decide to start exploring by checking out..."
+
+    "Summer School":
+        jump summerschoolintro
+    # Meet nobody here, but gain... something
+
+    "Main Street":
+        jump mainstreetintro
+    # Meet Trash Cat here
+    # Meet Designer Cat here
+
+    "The Park":
+        jump parkintro
+    # Meet Cool Cat here
+    # Meet Uchi Crow here
+
+    "The Woods":
+        jump woodsintro
+    # Meet Unlucky Cat here
+
+label summerschoolintro:
+
+    "There are no classes on the weekend so the school is quiet."
+        jump placeholder
+
+label mainstreetintro:
+
+    "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
+        jump placeholder
+
+label parkintro:
+
+    "It's a sunny day, and you see a very cool looking cat swinging on a swing."
+
+    "There's also someone napping on a bench. Is that... a bird? Maybe a crow?"
+        jump placeholder
+
+label woodsintro:
+
+    "The woods are serene, the dappled light shifting as leafy trees sway gently in a light breeze."
+
+    "The peace is broken by a shrill yelp somewhere in the bushes ahead of you."
+
+    uc "OH MY GOD. ANOTHER NETTLE. HOW MANY NETTLES CAN THERE EVEN BE IN A FOREST"
+        jump placeholder
+
+label placeholder
+    # Need option menus for choosing the rest of the options consecutively.
+    "Moving on..."
 
 
 
