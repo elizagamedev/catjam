@@ -41,19 +41,19 @@ label start:
 
 menu:
 
-    "I'm excited to find out."
+    "I'm excited to find out.":
         jump excited
 
-    "I'm nervous."
+    "I'm nervous.":
         jump nervous
 
 label excited
 
-    "(i)There's so much to learn! I can't wait to meet everyone.(/i)"
+    "(i)There's so much to learn! I can't wait to meet everyone.(/i)":
         jump go forth
 
 label nervous
-    "(i)There's so much to learn... and so many people to meet."
+    "(i)There's so much to learn... and so many people to meet.":
         jump go forth
 
 label go forth
