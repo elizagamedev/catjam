@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("catjam")
+define config.name = _("Getting Familiar")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -48,7 +48,7 @@ define build.name = "catjam"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -120,7 +120,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 120
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -207,3 +207,23 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+## Other Stuff #################################################################
+init python:
+    def replace_text(s):
+        s = s.replace("'", '’')
+        s = s.replace('--', '\u2014') # em dash
+        s = s.replace('...', '\u2026') # ellipsis
+        return s
+    config.replace_text = replace_text
+
+    def custom_text_tag_enclose(start, end):
+        return lambda tag, _, contents: (
+            [(renpy.TEXT_TEXT, start)]
+            + contents
+            + [(renpy.TEXT_TEXT, end)]
+        )
+    config.custom_text_tags = {
+        "q": custom_text_tag_enclose("“", "”"),
+        "sq": custom_text_tag_enclose("‘", "’"),
+    }
