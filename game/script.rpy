@@ -38,7 +38,7 @@ label start:
 
     "{i}What does it mean to be a familiar? I guess I'm about to find out...{/i}"
 
-menu:
+menu intro_attitude:
 
     "I'm excited to find out.":
         jump excited
@@ -49,6 +49,7 @@ menu:
 label excited:
 
     "{i}There's so much to learn! I can't wait to meet everyone.{/i}"
+jump goforth
 
 label nervous:
 
@@ -58,7 +59,7 @@ label goforth:
 
     "I go to open the front door, taking a deep breath, and push it open to step out into the unfamiliar town."
 
-menu:
+menu intro_exploring:
 
     "I decide to start exploring by checking out..."
 
@@ -80,22 +81,25 @@ menu:
         jump woodsintro
     # Meet Unlucky Cat here
 
+    "Continue...":
+        jump end_intro
+
 label summerschoolintro:
 
     "There are no classes on the weekend so the school is quiet."
-
+jump intro_exploring
 
 label mainstreetintro:
 
     "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
-
+jump intro_exploring
 
 label parkintro:
 
     "It's a sunny day, and you see a very cool looking cat swinging on a swing."
 
     "There's also someone napping on a bench. Is that... a bird? Maybe a crow?"
-
+jump intro_exploring
 
 label woodsintro:
 
@@ -104,9 +108,9 @@ label woodsintro:
     "The peace is broken by a shrill yelp somewhere in the bushes ahead of you."
 
     uc "OH MY GOD. ANOTHER NETTLE. HOW MANY NETTLES CAN THERE EVEN BE IN A FOREST"
+jump intro_exploring
 
-
-label placeholder:
+label end_intro:
     # Need option menus for choosing the rest of the options consecutively.
     "Moving on..."
 
