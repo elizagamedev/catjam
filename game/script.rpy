@@ -53,7 +53,7 @@ jump goforth
 
 label nervous:
 
-    "{i}There's so much to learn... and so many people to meet.{/i}"
+    "{i}There's so much to learn... I wonder if I'll get along with everyone?{/i}"
 
 label goforth:
 
@@ -61,7 +61,7 @@ label goforth:
 
 menu intro_exploring:
 
-    "I decide to start exploring by checking out..."
+    "I go check out..."
 
     "Summer School":
         jump summerschoolintro
@@ -87,11 +87,32 @@ menu intro_exploring:
 label summerschoolintro:
 
     "There are no classes on the weekend so the school is quiet."
+
+    "It looks like any other school. Nobody would guess that it's actually a school for witches."
+
+    "From the outside, at least. The letter my witch got described how it works:"
+
+    "the school has a glamour that keeps it looking normal for the regular humans."
+
+    "Inside the perimeter, however, are old brick buildings covered in climbing ivy,"
+
+    "a potion-brewing lab, and a field for broom flying exercises."
+
+    "Familiars help witches in a lot of the classes, but not all."
+
+    "I {i}should{/i} have plenty of time to explore and pursue my own interests this summer."
+
 jump intro_exploring
 
 label mainstreetintro:
 
     "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
+
+    "It's a cozy little town with diners and old record shops lining the streets."
+
+    "Among the people you see a two cats: a trashy orange cat perched ..."
+    # Continue building this out!
+
 jump intro_exploring
 
 label parkintro:
@@ -99,6 +120,8 @@ label parkintro:
     "It's a sunny day, and you see a very cool looking cat swinging on a swing."
 
     "There's also someone napping on a bench. Is that... a bird? Maybe a crow?"
+    # Continue building this out!
+
 jump intro_exploring
 
 label woodsintro:
@@ -108,10 +131,12 @@ label woodsintro:
     "The peace is broken by a shrill yelp somewhere in the bushes ahead of you."
 
     uc "OH MY GOD. ANOTHER NETTLE. HOW MANY NETTLES CAN THERE EVEN BE IN A FOREST"
+    # Continue building this out!
+
 jump intro_exploring
 
 label end_intro:
-    # Need option menus for choosing the rest of the options consecutively.
+
     "Moving on..."
 
 
