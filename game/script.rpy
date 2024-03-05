@@ -13,20 +13,7 @@ define uchi = Character("Uchi Crow")
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
+    call ask_name_and_pronouns
 
     "The scribbled note crinkles in my hand as I smooth out the wrinkles with my paws, spreading it flat on the top of the cardboard box I had meant to nap on."
 
