@@ -47,7 +47,7 @@ label trashcat:
 
     gomer "Sweet. I got tickets-- {w=1.0}Well, I know how to get tickets for this live music place. Really cool vibe, you know, compared to like, you know, most things."
 
-    menu(screen = "dialog_choice") .time:
+    menu .time(screen = "dialog_choice"):
         set trashcat_time_menuset
         "What kind of music?":
             gomer "You know... the kind you listen to."
@@ -213,7 +213,7 @@ label trashcat:
 
     gomer "I just need, well, you know, a cat, to uh, transform."
 
-    menu(screen = "dialog_choice") .quest1:
+    menu .quest1(screen = "dialog_choice"):
         set trashcat_quest1_menuset
         "Let's do it.":
             pass
