@@ -5,7 +5,7 @@
 
 define gomer = Character("Gomer", who_color="#fcaa58")
 define dc = Character("Designer Cat")
-define uc = Character("Unlucky Cat")
+define uc = Character("Splinter")
 define cc = Character("Agate")
 define uchi = Character("Yuri")
 
