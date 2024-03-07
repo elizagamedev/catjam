@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define Gomer = Character("Gomer")
+define gomer = Character("Gomer", who_color="#fcaa58")
 define dc = Character("Designer Cat")
 define uc = Character("Unlucky Cat")
 define cc = Character("Agate")
