@@ -6,7 +6,7 @@ default unlucky_quest1 = 0
 label unlucky_date_1:
 
     if (unlucky_quest1 == 0):
-        unlucky "Anyways, what's up?"
+        unlucky "S-so, what's up? Can I help with anything"
         pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
         unlucky "Sure, I can give you pointers over coffee. There's a cafe nearby with a neat l-local twirl. I mean, twist."
     else:
@@ -59,7 +59,12 @@ label unlucky_date_1:
             pass
 
     pc "Neat, there's an enchanted forest near here?"
+
     "You take a sip."
+
+    scene cafe silver
+    show unlucky at center
+
     "You feel a cool, sparkling sensation, and before your eyes a silver cast washes over the scene."
     "Around happy cats is a glow and sparkles of joy and laughter."
 
@@ -112,9 +117,9 @@ label unlucky_date_1:
 
     "Splinters rummaged around in their too-large vest, fishing out a big shaker of salt."
 
-    pc "Salt? In coffee?"
+    pc "Salt? For... coffee?"
 
-    unlucky "I should have done this when I first got here, actually."
+    unlucky "Er, n-no. I should have done this when I first got here, actually."
     "They proceed to shake out a pile on their scratched-up paw, wincing as they did so."
     "Splinters then proceeded to toss the salt over the shoulder, mutter some words, then make the rosary cross."
 
@@ -147,7 +152,7 @@ label unlucky_date_1:
     unlucky "Yeah, I heard they grow l-lucky clovers in there. I'm hoping to try my hand at one this year."
 
     menu(screen="dialog_choice"):
-        "You know... you seem smart. Why do you let yourself get tied down with this luck stuff?":
+        "You know... you seem smart. Why the bogus luck stuff?":
             unlucky "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
             unlucky "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
             unlucky "Maybe you should talk with {i}the familiar owned by the librarian that I don't remember{/i}. They're more the logical type."
@@ -158,7 +163,7 @@ label unlucky_date_1:
             unlucky "There are different kinds."
             unlucky "Gold ones get you lots of money."
             unlucky "Silver ones protect you from evil."
-            unlucky "Tecnicolor ones are like, all of them c-combined."
+            unlucky "Tecnicolor ones are like, all of them c-c-combined."
             "Splinters looked longingly misty-eyed."
             unlucky "They're super rare though."
             pass
@@ -169,7 +174,7 @@ label unlucky_date_1:
 
     "Splinters continued telling you about the common lucky weeds as you exit the cafe together."
 
-    scene field with fade
+    scene home front with fade
 
     show unlucky at center with dissolve
 
@@ -185,7 +190,5 @@ label unlucky_date_1:
 
     $ unlucky_date_count += 1
     $ unlucky_quest1 = 1
-
-    jump unlucky_date
 
     return

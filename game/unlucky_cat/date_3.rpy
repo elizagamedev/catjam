@@ -63,6 +63,4 @@ label unlucky_date_3:
     $ unlucky_date_count += 1
     $ unlucky_quest3 = 1
 
-    jump unlucky_date
-
     return
