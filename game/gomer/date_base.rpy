@@ -10,6 +10,16 @@ label gomer_date:
 
     gomer "Huh? Hey, uh... huh? Yeah?"
 
+    if gomer_call_count == 0:
+        "Gomer's face is barely visible within the near black of their room."
+        "I wonder if maybe I caught them in the middle of a ritual."
+    elif gomer_call_count == 1:
+        "Gomer's face peers at me from an almost complete darkness, just as before."
+        "Just what are they getting up to in there?"
+    else:
+        "Gomer's face is barely visible amidst the now-familiar darkness."
+        "I guess that's one mystery solved."
+
     pc "I'm sorry, did I catch you at a bad time?"
 
     gomer "What? Bad--bad time? No, not at all, I'm great. I'm thriving."
