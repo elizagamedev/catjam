@@ -1,23 +1,9 @@
-define gomer = Character("Gomer", who_color="#fcaa58")
-
 default trashcat_time_menuset = set()
 default trashcat_quest1_menuset = set()
 default trashcat_quest1 = 0
 
-label trashcat:
+label gomer_date_1:
     scene home bg
-
-    "I decided to contact Gomer on my crystal ball."
-
-    gomer "Huh? Hey, uh... huh? Yeah?"
-
-    pc "I'm sorry, did I catch you at a bad time?"
-
-    gomer "What? Bad--bad time? No, not at all, I'm great. I'm thriving."
-
-    gomer "..."
-
-    gomer "So uh... you need something?"
 
     pc "I was actually just wondering if you were free today."
 
@@ -26,7 +12,6 @@ label trashcat:
     pc "I was hoping you'd have some ideas, since I'm new around here."
 
     gomer "Hey, look at us! Two drifters, no place to call home. I dig it."
-
     gomer "Actually, now you've got me thinking. You like music?"
 
     menu(screen="dialog_choice"):
@@ -34,13 +19,9 @@ label trashcat:
             pass
         "Not really.":
             gomer "Oh."
-
             gomer "..."
-
             gomer "Actually, I just remembered I had, like, a dentist appointment."
-
             gomer "But like. Call me again sometime."
-
             gomer "Uh. Bye."
 
             return
@@ -61,9 +42,7 @@ label trashcat:
             pass
 
     gomer "Uh, how about central station?"
-
     gomer "I'll head out now. Actually I'll head out in like five minutes."
-
     gomer "Anyway, peace out."
 
     "And that's how my first scry with Gomer went."
@@ -158,6 +137,8 @@ label trashcat:
             return
 
     scene alley
+    show gomer at center
+    with fade
 
     gomer "Oh man, and like, the part where they were all like, {b}DURN DURN DUUUURN{/b}, dog, I thought I was gonna like, have a stroke, but like, in a good way."
 
@@ -181,13 +162,12 @@ label trashcat:
             gomer "Haha... Yeah... Okay. It's not just me. Thought, thought maybe it was just me, haha."
             gomer "Alright, I'll let you in on something good, dog. You're gonna love this."
 
-    gomer "So, I was thinking, like, you know, {q}polymorph... transform... How do you {sq}transform{/sq}?{/q}"
-    gomer "Then I was watching this movie, right? This like, human chick starts out all ugly but then she like, gets her hair done and takes her glasses off and--{b}BAM{/b}--everyone's like, wow, she's a babe, what a {i}transformation{/i}."
-    gomer "That's when it hit me, dog... That's a transformation right there. Right on TV."
+    gomer "So I was watching this movie, right? This like, human chick starts out all ugly but then she like, gets her hair done and takes her glasses off and--{b}BAM{/b}--everyone's like, wow, she's a babe, what a transformation."
+    gomer "That's when it hit me, dog... That's magic right there. Right on TV."
 
     pc "What do you mean?"
 
-    gomer "Like... think about it, dog. What comes in a bottle and goes on hair? Or like, what comes in a bottle, goes on hair, and transforms?"
+    gomer "Like... think about it, dog. What comes in a bottle and goes on hair? Or like, what comes in a bottle, goes on hair, and is like, magic?"
 
     menu(screen = "dialog_choice"):
         "Shampoo?":

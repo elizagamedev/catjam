@@ -1,47 +1,5 @@
-define frankie = Character("Frankie", who_color="#c43830")
-
-# coolcat vocabulary
-
-# fink
-# fuzz
-# pussycat
-# all that and a bag of chips
-# wack
-# cruisin' for a bruisin'
-# made in the shade
-# word from the bird
-# knuckle sandwich
-# pussycat
-# bread
-# split
-# square
-# shindig
-# 12. Don’t Sell Me a Dog
-# Don’t sell me a dog was a fancy way of saying “Don’t lie to me.”
-# George Eddy is a customer who doesn’t tip well.
-# loaded for bear
-# cat's pajamas
-# catch you on the flip side
-# pump iron
-# knuckle sandwich
-# applesauce
-# dog soup
-# hornswoggler
-# frosted - peeved
-# what's the skinny
-# Cockamamie
-# gobsmacked
-# off the cob - corny
-#  Bindle punk or bindle stiff: Chronic wanderers, migratory harvest workers, and lumber jacks
-
-label coolcat:
+label frankie_date_1:
     scene home bg
-
-    "I decided to contact Frankie on my crystal ball."
-
-    frankie "Oh, it's you. What's the skinny?"
-
-    "Frankie's calico face appears in a flash of light."
 
     pc "Nothing in particular. Are you free tonight?"
 
@@ -158,6 +116,7 @@ label coolcat:
             frankie "Be seeing you. {w=1.0}From behind the podium when I give my valedictorian speech."
 
             "Frankie turns and heads back to town."
+            return
         "That sounds amazing!":
             pass
 
