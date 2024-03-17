@@ -3,9 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define gomer = Character("Gomer", who_color="#fcaa58")
 define dc = Character("Designer Cat")
-define uc = Character("Splinter")
 define cc = Character("Agate")
 define uchi = Character("Yuri")
 
@@ -108,7 +106,7 @@ label cafeintro:
 
     "The peace is broken by a yelp and the shattering of glass from inside."
 
-    uc "oh my god I am sooooo sorry I didn't mean to spill your drink please let me pay for it it's the least I can do"
+    unlucky "oh my god I am sooooo sorry I didn't mean to spill your drink please let me pay for it it's the least I can do"
 
     "I push the door open, a bell tied to the door chiming with the motion, and see a shrimp sized black cat in a preppy vest waving money at a witch who looks miffed that her coffee has ended up on the floor instead of in her belly."
 

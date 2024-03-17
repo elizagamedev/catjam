@@ -4,7 +4,6 @@ default unlucky_quest1_menuset = set()
 default unlucky_quest1 = 0
 
 label unlucky_date_1:
-
     if (unlucky_quest1 == 0):
         unlucky "S-so, what's up? Can I help with anything"
         pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
@@ -29,11 +28,16 @@ label unlucky_date_1:
 
     unlucky "G-great, see you tomorrow then!"
 
+    stop music fadeout 1.0
     scene cafe with fade
+    play bg "sound/cafe.mp3" fadein 1.0 volume 0.5
+    play music "music/Easy Lemon.mp3"
 
     "The cafe is lively. They're selling house blends of silver vine, honeysuckle and local golden hay."
     "In the corner drifts some folk from a talented strummer amidst the prattle of happy caffeinated cats."
+    play sound "sound/chair.opus"
     "You grab a seat near the guitarist."
+    play sound "sound/chimes.opus"
     "There is a jingle and a sequence of harried 'sorries.' Splinter must be here."
 
     show unlucky at center with dissolve
@@ -47,6 +51,9 @@ label unlucky_date_1:
             "It seemed difficult to drink without spilling; the lattes were practically overflowing..."
             $ expletive = renpy.random.choice(unlucky_expletives)
             unlucky "[expletive]! W-watch out!"
+            play sound "sound/crash.wav"
+            stop bg fadeout 0.5
+            stop music
             "Splinters goes flying. Wet cat and coffee spill onto the ground."
             "The cafe goes silent. Some patrons can't help but giggle."
             unlucky "*Sniff* S-sorry. I... I'm gonna go now."
@@ -62,12 +69,12 @@ label unlucky_date_1:
 
     "You take a sip."
 
-    scene cafe silver
-    show unlucky at center
+    show cafe silver with dissolve
 
     "You feel a cool, sparkling sensation, and before your eyes a silver cast washes over the scene."
     "Around happy cats is a glow and sparkles of joy and laughter."
 
+    play sound "sound/happy.opus"
     unlucky "Y-Yeah! I mean, it's kind of dangerous but we have the Dark Angora Forest."
     unlucky "We may grow enchanted crops and stuff around here, but plenty of the local flora has its own magic too."
     unlucky "The local flora used to get treated like w-weeds. It's good we're giving them a shot, now."
@@ -88,12 +95,15 @@ label unlucky_date_1:
 
     pc "Oh wow, that's neat. Yeah, this silver vine is pretty great!"
 
+    play sound "sound/snap.opus"
+    stop music fadeout 0.5
     "There are a lot of silver sparkles coming off the guitar. Suddenly a particularly big sparkle seems to sling towards the table."
 
     pc "Ooh, pretty sparkle..."
 
     unlucky "S-sparkle?"
 
+    play sound "sound/pain.opus"
     $ expletive = renpy.random.choice(unlucky_expletives)
     unlucky "[expletive]!"
     "The 'sparkle' hits them in the face."
@@ -109,6 +119,7 @@ label unlucky_date_1:
     guitarist "Ain't nothing to worry about. I'm not sure why the string snapped like that. I just swapped in new ones yesterday."
     guitarist "Guess I wound them up too tight, huh buddy? Gotta loosen up, and roll with things."
 
+    play music "music/Easy Lemon.mp3"
     "The guitarist went back to strumming, adapting to the missing string."
 
     unlucky "Sorry about that. It's my darn bad luck."
@@ -172,18 +183,23 @@ label unlucky_date_1:
 
     unlucky "Yeah, if we go out back there's a field. If you're really lucky you can find the more normal blue and green lucky clovers."
 
+    stop music fadeout 3.0
+    stop bg fadeout 3.0
+    scene black with dissolve
     "Splinters continued telling you about the common lucky weeds as you exit the cafe together."
 
-    scene home front with fade
-
-    show unlucky at center with dissolve
+    scene home_front
+    show unlucky at center
+    with Dissolve(1.0)
+    play bg "sound/night.opus" fadein 1.0 volume 0.5
 
     unlucky "Hey, I-I know I can be a bit much. Thanks for bearing with me. And I hope it was helpful!"
     unlucky "I-I know I'm clumsy but I like feeling helpful. Let me know if you want to know anything else!"
 
     pc "Sure, it was fun! We even found a few of the lucky clovers you mentioned."
 
-    "Splinters smiled."
+    play sound "sound/happy.opus"
+    "Splinters smiles."
 
     unlucky "Yeah! It's a good sign! Y-you're gonna do well here."
     unlucky "Until next time, keep away from cracks in the sidewalk and don't walk under the ladders!"

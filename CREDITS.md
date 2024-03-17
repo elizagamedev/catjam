@@ -25,3 +25,27 @@ https://freesound.org/people/DAVIDSUTTON/sounds/520601/
 
 hiss.opus
 https://freesound.org/people/Zabuhailo/sounds/146961/
+
+pain.opus
+https://freesound.org/people/F.M.Audio/sounds/583386/
+
+thud.opus
+https://freesound.org/people/F.M.Audio/sounds/547580/
+
+chair.opus
+https://freesound.org/people/SpliceSound/sounds/218316/
+
+chimes.wav
+https://freesound.org/people/Adrianac/sounds/266439/
+
+cafe.mp3
+https://freesound.org/people/HerbertBoland/sounds/147665/
+
+crash.wav
+https://freesound.org/people/yottasounds/sounds/175178/
+
+snap.opus
+https://freesound.org/people/khenshom/sounds/537084/
+
+night.wav
+https://freesound.org/people/Anthousai/sounds/405644/

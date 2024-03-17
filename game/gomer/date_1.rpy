@@ -3,8 +3,6 @@ default trashcat_quest1_menuset = set()
 default trashcat_quest1 = 0
 
 label gomer_date_1:
-    scene home
-
     gomer "..."
     gomer "So uh... you need something?"
 
@@ -88,9 +86,12 @@ label gomer_date_1:
     gomer "Here, just follow me."
 
     hide gomer with dissolve
-    stop bg fadeout 3.0
 
     "I follow closely behind Gomer, leaving the bustle behind."
+
+    stop bg fadeout 3.0
+    scene black with dissolve
+
     "Navigating through the streets here feels so different than the city my witch and I left behind. The wide open spaces still leave me feeling uneasy."
     "At least close to the city center, there are interesting buildings to jump and climb between as we make our way along."
 

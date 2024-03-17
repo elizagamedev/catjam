@@ -74,7 +74,7 @@ label frankie_date_1:
     stop music fadeout 3.0
     scene field
     with longfade
-    play music "music/Drankin Song.mp3"
+    play bg "sound/night.opus" fadein 1.0
 
     frankie "That about wraps it up for today."
 

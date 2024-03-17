@@ -11,8 +11,12 @@ label unlucky_date:
 
     "{i}The crystal ball crackles as it connects to Splinter's end.{/i}"
 
+    play sound ["sound/thud.opus", "sound/pain.opus"]
+    pause 1.0
     $ expletive = renpy.random.choice(unlucky_expletives)
     unlucky "OUCH. [expletive]! Just... just a moment!"
+
+    play music "music/Brandenburg No4-1 BWV1049.mp3"
 
     "Splinter crackles into view, licking a freshly-tenderized paw. They're adjusting the very cracked crystal ball back into place."
 
