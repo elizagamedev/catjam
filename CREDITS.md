@@ -47,5 +47,8 @@ https://freesound.org/people/yottasounds/sounds/175178/
 snap.opus
 https://freesound.org/people/khenshom/sounds/537084/
 
-night.wav
+night.opus
 https://freesound.org/people/Anthousai/sounds/405644/
+
+crackle.opus
+https://freesound.org/people/NoahBangs/sounds/636082/

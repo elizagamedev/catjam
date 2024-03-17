@@ -90,7 +90,7 @@ label gomer_date_1:
     "I follow closely behind Gomer, leaving the bustle behind."
 
     stop bg fadeout 3.0
-    scene black with dissolve
+    scene marketplace with dissolve
 
     "Navigating through the streets here feels so different than the city my witch and I left behind. The wide open spaces still leave me feeling uneasy."
     "At least close to the city center, there are interesting buildings to jump and climb between as we make our way along."

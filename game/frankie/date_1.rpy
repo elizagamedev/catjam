@@ -44,6 +44,7 @@ label frankie_date_1:
 
     "Finally, I spot Frankie enter through the glass double doors and purr at a waiter."
 
+    play sound "sound/purr.opus"
     frankie "The usual, would you? And make it double, for my friend over there."
 
     show frankie with dissolve

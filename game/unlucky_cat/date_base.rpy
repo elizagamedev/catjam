@@ -9,6 +9,7 @@ label unlucky_date:
 
     "I wondered what Splinter was getting themselves into. I decided to paw them up."
 
+    play sound "sound/crackle.opus"
     "{i}The crystal ball crackles as it connects to Splinter's end.{/i}"
 
     play sound ["sound/thud.opus", "sound/pain.opus"]
@@ -41,3 +42,13 @@ label unlucky_date:
     call expression next_unlucky_date
 
     return
+
+label debug_unlucky_date_2:
+    $ unlucky_call_count = 1
+    $ unlucky_date_count = 1
+    jump unlucky_date
+
+label debug_unlucky_date_3:
+    $ unlucky_call_count = 2
+    $ unlucky_date_count = 2
+    jump unlucky_date

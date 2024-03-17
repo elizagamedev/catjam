@@ -9,6 +9,7 @@ label gomer_date:
     "I decided to contact Gomer on my crystal ball."
 
     play music "music/Goblin_Tinker_Soldier_Spy.mp3"
+    play sound "sound/crackle.opus"
 
     gomer "Huh? Hey, uh... huh? Yeah?"
 
@@ -36,4 +37,9 @@ label gomer_date:
 label debug_gomer_date_2:
     $ gomer_call_count = 1
     $ gomer_date_count = 1
+    jump gomer_date
+
+label debug_gomer_date_3:
+    $ gomer_call_count = 2
+    $ gomer_date_count = 2
     jump gomer_date

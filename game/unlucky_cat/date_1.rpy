@@ -36,7 +36,7 @@ label unlucky_date_1:
     "The cafe is lively. They're selling house blends of silver vine, honeysuckle and local golden hay."
     "In the corner drifts some folk from a talented strummer amidst the prattle of happy caffeinated cats."
     play sound "sound/chair.opus"
-    "You grab a seat near the guitarist."
+    "I grab a seat near the guitarist."
     play sound "sound/chimes.opus"
     "There is a jingle and a sequence of harried 'sorries.' Splinter must be here."
 

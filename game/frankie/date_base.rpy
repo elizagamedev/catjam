@@ -43,6 +43,7 @@ label frankie_date:
     "I thought I'd call up Frankie."
 
     play music "music/Funky Boxstep.mp3"
+    play sound "sound/crackle.opus"
 
     frankie "Oh, it's you. What's the skinny?"
 
