@@ -155,7 +155,7 @@ label gomer_date_1:
     scene alley
     show gomer at center
     with longfade
-    play music "music/Drankin Song.mp3"
+    play bg "sound/night.opus" fadein 1.0
 
     gomer "Oh man, and like, the part where they were all like, {b}DURN DURN DUUUURN{/b}, dog, I thought I was gonna like, have a stroke, but like, in a good way."
 
