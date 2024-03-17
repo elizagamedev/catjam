@@ -9,10 +9,17 @@ define uc = Character("Splinter")
 define cc = Character("Agate")
 define uchi = Character("Yuri")
 
+label initialize:
+    window auto show
+    return
+
+label after_warp:
+    jump initialize
 
 # The game starts here.
 
 label start:
+    call initialize
     call ask_name_and_pronouns
 
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday living coming from the cozy little college town we'll now call home."

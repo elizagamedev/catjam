@@ -9,3 +9,7 @@
 
 # Data
 *.png lfs
+*.opus lfs
+*.wav lfs
+*.mp3 lfs
+*.otf lfs

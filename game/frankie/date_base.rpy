@@ -38,7 +38,7 @@ default frankie_date_count = 0
 #  Bindle punk or bindle stiff: Chronic wanderers, migratory harvest workers, and lumber jacks
 
 label frankie_date:
-    scene home bg
+    scene home
 
     "I thought I'd call up Frankie."
 

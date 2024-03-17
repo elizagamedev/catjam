@@ -3,7 +3,10 @@ default trashcat_quest1_menuset = set()
 default trashcat_quest1 = 0
 
 label gomer_date_1:
-    scene home bg
+    scene home
+
+    gomer "..."
+    gomer "So uh... you need something?"
 
     pc "I was actually just wondering if you were free today."
 
@@ -24,6 +27,7 @@ label gomer_date_1:
             gomer "But like. Call me again sometime."
             gomer "Uh. Bye."
 
+            stop music fadeout 3.0
             return
 
     gomer "Sweet. I got tickets-- {w=1.0}Well, I know how to get tickets for this live music place. Really cool vibe, you know, compared to like, you know, most things."
@@ -45,9 +49,12 @@ label gomer_date_1:
     gomer "I'll head out now. Actually I'll head out in like five minutes."
     gomer "Anyway, peace out."
 
-    "And that's how my first scry with Gomer went."
+    stop music fadeout 1.0
+
+    "So went my first scry with Gomer."
 
     scene central_station with fade
+    play sound "sound/train-station.opus" fadein 1.0 loop
 
     "I squinted from the shade of a promenade tree at the crowds bustling to and from the station."
 
@@ -80,11 +87,15 @@ label gomer_date_1:
     gomer "You're not afraid of heights, right? {w=1.0}Wait, no, that's a stupid question."
     gomer "Here, just follow me."
 
+    hide gomer with dissolve
+    stop sound fadeout 3.0
+
     "I follow closely behind Gomer, leaving the bustle behind."
     "Navigating through the streets here feels so different than the city my witch and I left behind. The wide open spaces still leave me feeling uneasy."
     "At least close to the city center, there are interesting buildings to jump and climb between as we make our way along."
 
     scene church with fade
+    play music "music/Club Diver.opus" fadein 1.0
 
     "We soon arrive at a church on the outskirts of main street. I'm surprised to see a line leading out through the old doors."
     "I can hear the muffled sound of a drumbeat over the low buzz of the crowd."
@@ -122,6 +133,7 @@ label gomer_date_1:
 
         "I'm going home.":
             "Gomer stops mid-scratch and slowly lowers their paw back on St. Gertrude's palm."
+
             gomer "What? Uh... Ok. Sure."
             gomer "Like... Okay."
             gomer "Uh..."
@@ -132,10 +144,14 @@ label gomer_date_1:
 
             gomer "Haha. Yeah. Uh, Monday."
 
+            stop music fadeout 3.0
+
             "They stare down at me, looking just as petrified as the saint as I leave for home."
 
             return
 
+    stop music fadeout 0.5
+    queue music "music/The Forest and the Trees.mp3"
     scene alley
     show gomer at center
     with fade
@@ -210,6 +226,8 @@ label gomer_date_1:
 
             gomer "Anyway... anyway. Catch you, uh, later, dog."
 
+            stop music fadeout 3.0
+
             "Gomer trods away, leaving me alone in the lamplight."
 
             return
@@ -222,4 +240,5 @@ label gomer_date_1:
     gomer "Alright. Wow, what a load off, haha. Man... Feel like I can breathe again, haha."
     gomer "Okay. Next Saturday, let's work it out, right? We gotta get a proper like, bottle for it and stuff."
 
+    stop music fadeout 3.0
     return

@@ -13,7 +13,7 @@ default dont = "don't"
 default xs = ""
 default xes = ""
 default xies = "y"
-define pc = Character("[pc_name!q]")
+define pc = Character("[pc_name!q]", who_color='#aaaaaa')
 
 screen name_and_pronouns():
     modal True

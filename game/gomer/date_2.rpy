@@ -1,4 +1,6 @@
 label gomer_date_2:
+    scene home
+
     gomer "So, you uh, you ready to carry out the, uh, do the {q}thing{/q}?"
 
     menu(screen="dialog_choice"):
@@ -44,6 +46,8 @@ label gomer_date_2:
             gomer "Let's uh, let's meet behind the Catspaw Diner at two o'clock."
             gomer "Later."
 
+    stop music fadeout 1.0
+    queue music "music/Cattails.mp3"
     scene market with fade
 
     "For such a remote town, TOWN NAME HERE's marketplace is almost as busy as some of the streets in my old city."
@@ -53,17 +57,25 @@ label gomer_date_2:
     scene alley with fade
 
     "I perch above the wall behind the diner in a spot of sunlight and wait for the appointed time."
+
+    stop music fadeout 0.5
+    play sound "sound/creaking.opus"
+
     "{i}Rattle.{/i}"
     "I hear a noise below me."
+
+    play sound "sound/garbage-can.wav"
+
     "{i}Clank.{/i}"
     "I stare agape as a familiar orange cat leisurely crawls from beneath the lid of a dumpster and stretches."
 
     show gomer at center with dissolve
-
+    play music "music/Cattails.mp3" fadein 1.0
     gomer "Hey dog."
 
     menu(screen = "dialog_choice"):
         "Are... are you doing okay?":
+            play music "music/Hyperfun.mp3"
             gomer "Doing okay? What? Yeah, I'm, like, fine, I guess."
             gomer "Oh, you mean like, why was I in a dumpster? Haha."
             gomer "Actually, I live here."
@@ -88,6 +100,10 @@ label gomer_date_2:
             gomer "I like... Oh, I forgot I had a dentist appointment."
             gomer "Haha."
 
+            stop music fadeout 3.0
+
             "Gomer fights back tears as they run off into the market."
+
+            return
         "Uh, hi.":
-            pass
+            gomer "Hi."

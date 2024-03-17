@@ -57,13 +57,13 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "default"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "default"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "default"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -478,3 +478,16 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
+
+################################################################################
+## Custom stuff
+
+define config.font_name_map["default"] = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
+
+init python:
+    for (name, bold, italic) in [
+            ("Bold", True, False),
+            ("Italic", False, True),
+            ("BoldItalic", True, True)
+    ]:
+        config.font_replacement_map["fonts/Atkinson-Hyperlegible-Regular-102.otf", bold, italic] = (f"fonts/Atkinson-Hyperlegible-{name}-102.otf", False, False)

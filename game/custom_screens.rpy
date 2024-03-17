@@ -1,9 +1,11 @@
 screen dialog_choice(items):
+    zorder 10 # Place in front of say window
     # style_prefix "dialog_choice"
     window:
+        background None
         window:
             style "namebox"
-            text pc_name
+            text pc_name color '#aaaaaa' size gui.name_text_size
 
         vbox:
             xpos gui.dialogue_xpos

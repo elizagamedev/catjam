@@ -5,7 +5,7 @@ default unlucky_call_count = 0
 default unlucky_date_count = 0
 
 label unlucky_date:
-    scene home bg
+    scene home
 
     "I wondered what Splinter was getting themselves into. I decided to paw them up."
 

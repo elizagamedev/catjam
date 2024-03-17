@@ -1,5 +1,5 @@
 label frankie_date_1:
-    scene home bg
+    scene home
 
     pc "Nothing in particular. Are you free tonight?"
 

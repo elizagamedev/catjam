@@ -4,9 +4,11 @@ default gomer_call_count = 0
 default gomer_date_count = 0
 
 label gomer_date:
-    scene home bg
+    scene home
 
     "I decided to contact Gomer on my crystal ball."
+
+    play music "music/Goblin_Tinker_Soldier_Spy.mp3"
 
     gomer "Huh? Hey, uh... huh? Yeah?"
 
@@ -23,8 +25,6 @@ label gomer_date:
     pc "I'm sorry, did I catch you at a bad time?"
 
     gomer "What? Bad--bad time? No, not at all, I'm great. I'm thriving."
-    gomer "..."
-    gomer "So uh... you need something?"
 
     $ date_id = gomer_date_count % len(gomer_dates)
     $ next_gomer_date = gomer_dates[date_id]
@@ -32,3 +32,8 @@ label gomer_date:
     $ gomer_call_count += 1
 
     jump expression next_gomer_date
+
+label debug_gomer_date_2:
+    $ gomer_call_count = 1
+    $ gomer_date_count = 1
+    jump gomer_date
