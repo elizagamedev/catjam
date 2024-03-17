@@ -54,7 +54,7 @@ label gomer_date_1:
     "So went my first scry with Gomer."
 
     scene central_station with fade
-    play sound "sound/train-station.opus" fadein 1.0 loop
+    play bg "sound/train-station.opus" fadein 1.0
 
     "I squinted from the shade of a promenade tree at the crowds bustling to and from the station."
 
@@ -88,7 +88,7 @@ label gomer_date_1:
     gomer "Here, just follow me."
 
     hide gomer with dissolve
-    stop sound fadeout 3.0
+    stop bg fadeout 3.0
 
     "I follow closely behind Gomer, leaving the bustle behind."
     "Navigating through the streets here feels so different than the city my witch and I left behind. The wide open spaces still leave me feeling uneasy."
@@ -150,11 +150,11 @@ label gomer_date_1:
 
             return
 
-    stop music fadeout 0.5
-    queue music "music/The Forest and the Trees.mp3"
+    stop music fadeout 3.0
     scene alley
     show gomer at center
-    with fade
+    with longfade
+    play music "music/Drankin Song.mp3"
 
     gomer "Oh man, and like, the part where they were all like, {b}DURN DURN DUUUURN{/b}, dog, I thought I was gonna like, have a stroke, but like, in a good way."
 
@@ -166,6 +166,7 @@ label gomer_date_1:
 
     menu(screen = "dialog_choice"):
         "Maybe I could help.":
+            play sound "sound/purr.opus"
             "Gomer purrs and turns their head away, embarrassed."
 
             gomer "Haha. Thanks. Actually, uh, I have an idea."
@@ -234,6 +235,7 @@ label gomer_date_1:
 
     $ trashcat_quest1 = 1
 
+    play sound "sound/happy.opus"
     "Gomer mewls and flops over."
 
     gomer "Oh man, oh geez. You're a real one, dog."

@@ -42,6 +42,8 @@ label frankie_date:
 
     "I thought I'd call up Frankie."
 
+    play music "music/Funky Boxstep.mp3"
+
     frankie "Oh, it's you. What's the skinny?"
 
     "Frankie's calico face appears on my crystal ball in a flash of light."
@@ -51,4 +53,4 @@ label frankie_date:
 
     $ frankie_call_count += 1
 
-    jump  expression next_frankie_date
+    jump expression next_frankie_date

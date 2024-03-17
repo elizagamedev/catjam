@@ -16,3 +16,12 @@ https://creativecommons.org/publicdomain/zero/1.0/
 
 Atkinson Hyperlegible
 https://brailleinstitute.org/wp-content/uploads/2020/11/Atkinson-Hyperlegible-Font-License-2020-1104.pdf
+
+happy.opus, purr.wav
+https://freesound.org/people/14FPanskaZummer_Jakub/sounds/418159/
+
+growl.opus
+https://freesound.org/people/DAVIDSUTTON/sounds/520601/
+
+hiss.opus
+https://freesound.org/people/Zabuhailo/sounds/146961/

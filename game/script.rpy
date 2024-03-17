@@ -13,6 +13,12 @@ label initialize:
     window auto show
     return
 
+label splashscreen:
+    if not persistent.set_volumes:
+        $ persistent.set_volumes = True
+        $ _preferences.volumes['music'] *= .75
+    return
+
 label after_warp:
     jump initialize
 

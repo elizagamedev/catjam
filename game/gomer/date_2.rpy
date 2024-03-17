@@ -47,8 +47,8 @@ label gomer_date_2:
             gomer "Later."
 
     stop music fadeout 1.0
-    queue music "music/Cattails.mp3"
     scene market with fade
+    play music "music/Cattails.mp3"
 
     "For such a remote town, TOWN NAME HERE's marketplace is almost as busy as some of the streets in my old city."
     "I climb up on a balcony above a grocer to get a better view above the crowd."

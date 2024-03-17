@@ -1,6 +1,4 @@
 label frankie_date_1:
-    scene home
-
     pc "Nothing in particular. Are you free tonight?"
 
     frankie "Free as a bird. What're you thinking?"
@@ -64,6 +62,7 @@ label frankie_date_1:
 
     menu(screen="dialog_choice"):
         "But, aren't those made for humans?":
+            play sound "sound/hiss.opus"
             "Frankie glowers."
 
             frankie "So are taxes. But try telling that to the IRS."
@@ -72,7 +71,10 @@ label frankie_date_1:
 
     frankie "Alright, we're wasting time yapping we could be spending doing pushups. Show me what you've got."
 
-    scene field with fade
+    stop music fadeout 3.0
+    scene field
+    with longfade
+    play music "music/Drankin Song.mp3"
 
     frankie "That about wraps it up for today."
 
@@ -82,19 +84,19 @@ label frankie_date_1:
     "Frankie didn't seem to mind at all, though. On the contrary, they seemed happy to show off."
     "And if I'm being honest, I enjoyed the show, too."
 
-    show frankie with dissolve
+    show frankie at center with dissolve
 
     frankie "Not bad for someone so green. You ought to be proud of yourself."
 
     menu(screen="dialog_choice"):
         "Thanks to you.":
+            play sound "sound/purr.opus"
             "Frankie purrs."
 
             frankie "Am I good or what?"
         "If you say so...":
             frankie "I ain't here to sell you a dog, jack. Learn to take a compliment."
-
-    "Frankie sighs."
+            "Frankie sighs."
 
     frankie "If only there were more hours in a day. Imagine being able to fit arm and leg day in the same day--It'd just be a day."
     frankie "..."
@@ -109,6 +111,7 @@ label frankie_date_1:
 
     menu(screen="dialog_choice"):
         "That sounds dangerous...":
+            play sound "sound/growl.opus"
             "Frankie narrows their peculiar eyes at me."
 
             frankie "Green {i}and{/i} yellow. Add a few more colors and you'll have the whole damn rainbow."
@@ -120,6 +123,7 @@ label frankie_date_1:
         "That sounds amazing!":
             pass
 
+    play sound "sound/happy.opus"
     "Frankie beams their signature smile."
 
     frankie "What can I say?"
