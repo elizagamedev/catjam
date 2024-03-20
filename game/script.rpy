@@ -3,9 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define dc = Character("Designer Cat")
-define cc = Character("Agate")
-define uchi = Character("Yuri")
+define gomer = Character("Gomer", who_color="#fcaa58")
+define pucci = Character("Pucci")
+define splinter = Character("Splinter")
+define frankie = Character("Frankie")
+define Yuri = Character("Yuri")
 
 label initialize:
     window auto show
