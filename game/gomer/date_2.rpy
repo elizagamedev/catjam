@@ -1,14 +1,12 @@
 label gomer_date_2:
-    scene bg home
-
     gomer "So, you uh, you ready to carry out the, uh, do the {q}thing{/q}?"
 
     menu(screen="dialog_choice"):
         "Ten-Four.":
             gomer "Ten... ten four? {w=1.0}What? Oh, wait. Oh. Oh, I get it."
-            gomer "Roger. Ten-Four. Uh. Let's, uh... {w=.5}twenty... {w=.5}at... {w=.5}2 o'clock."
+            gomer "Roger. Ten-Four. Uh. Let's, uh... {w=.5}twenty... {w=.5}at... {w=.5}four o'clock."
             gomer "Two o'clock like, the time. Not like, the--not like the, direction."
-            gomer "Let's two o'clock-- {w=.5}Let's twenty-- {w=.5}Let's meet behind the Catspaw Diner. Over."
+            gomer "Let's four o'clock-- {w=.5}Let's twenty-- {w=.5}Let's meet behind the Catspaw Diner. Over."
 
             "The crystal goes dark."
         "You mean, the hair dye?":
@@ -19,7 +17,7 @@ label gomer_date_2:
 
             "As they very slowly and exaggeratedly enunciate some more patter, Gomer frantically writes something on a piece of paper before thrusting it into view."
 
-            "{i}BEHIND CATSPAW DINER 2:00{/i}"
+            "{i}BEHIND CATSPAW DINER 4:00{/i}"
 
             gomer "NO, SORRY, I REALLY DON'T NEED ANYTHING. OKAY, HAVE A NICE WEEKEND."
 
@@ -27,7 +25,7 @@ label gomer_date_2:
         "What thing?":
             gomer "Dog, the... you know..."
 
-            "Gomer raises their right forepaw  and pantomimes squeezing the contents of a bottle out and kneading the air."
+            "Gomer raises their right forepaw and pantomimes squeezing the contents of a bottle out and kneading the air."
 
             gomer "The stuff."
 
@@ -43,7 +41,7 @@ label gomer_date_2:
                     gomer "You're still in, right?"
                 "Oh, {i}that{/i} stuff.":
                     gomer "Right."
-            gomer "Let's uh, let's meet behind the Catspaw Diner at two o'clock."
+            gomer "Let's uh, let's meet behind the Catspaw Diner at four o'clock."
             gomer "Later."
 
     stop music fadeout 1.0
@@ -54,7 +52,7 @@ label gomer_date_2:
     "I climb up on a balcony above a grocer to get a better view above the crowd."
     "Oh, I think I see it."
 
-    scene bg alley with fade
+    scene bg market with fade
 
     "I perch above the wall behind the diner in a spot of sunlight and wait for the appointed time."
 
@@ -69,36 +67,35 @@ label gomer_date_2:
     "{i}Clank.{/i}"
     "I stare agape as a familiar orange cat leisurely crawls from beneath the lid of a dumpster and stretches."
 
-    show gomer at center with dissolve
+    show gomer neutral at center with dissolve
     play music "music/Cattails.mp3" fadein 1.0
     gomer "Hey dog."
 
     menu(screen = "dialog_choice"):
         "Are... are you doing okay?":
-            play music "music/Hyperfun.mp3"
-            gomer "Doing okay? What? Yeah, I'm, like, fine, I guess."
+            gomer talking "Doing okay? What? Yeah, I'm, like, fine, I guess."
             gomer "Oh, you mean like, why was I in a dumpster? Haha."
-            gomer "Actually, I live here."
+            gomer neutral "Actually, I live here."
 
             pc "Wow. I didn't realize you were struggling so much..."
 
             gomer "What? No dog, I'm like, fine. Like, actually."
-            gomer "If you ask me, dog, housing is a scam. Like, the whole system, dog."
+            gomer smug "If you ask me, dog, housing is a scam. Like, the whole system, dog."
             gomer "They want like, money, dog. To live in a building. You know what I say? I don't need that. I don't need that in my life."
             gomer "It's called #freeliving, dog. Google it. It's like, a movement."
-            gomer "Cats aren't like, wired, for the domestic life. We're predators, dog. We're tigers."
-            gomer "Anyway..."
+            gomer annoyed "Cats aren't like, wired, for the domestic life. We're predators, dog. We're tigers."
+            gomer neutral "Anyway..."
         "That's... revolting.":
             "Gomer looks at the ground."
 
-            gomer "R-Revolting? Oh... I uh... Yeah, haha..."
+            gomer talking "R-Revolting? Oh... I uh... Yeah, haha..."
 
             "I can almost hear the gears grinding in their head as they try to come up with an explanation."
 
             gomer "I, uh... You know what... I think I could like... I'm good. I'm fine actually. With the plan."
             gomer "I uh... I need a moment, haha. To myself."
             gomer "I like... Oh, I forgot I had a dentist appointment."
-            gomer "Haha."
+            gomer upset "Haha."
 
             stop music fadeout 3.0
 
@@ -107,3 +104,141 @@ label gomer_date_2:
             return
         "Uh, hi.":
             gomer "Hi."
+
+    gomer "Okay, so, we've gotta buy two things."
+    gomer talking "Wait, no, three things."
+    gomer "Two things? Like-- {w=1.0}Okay, dye. And... a bottle."
+    gomer neutral "That's two things."
+    gomer "Oh, and we should like, test it out. Like, on your paw, or something."
+    gomer smug "Yeah."
+    gomer "Let's make a date out of it. Haha. Haha."
+    gomer neutral "Uh. That was a joke. Haha. {size=*0.75}fuck.{/size}"
+
+    hide gomer with dissolve
+
+    "Gomer averts their eyes and starts to trod towards the market in a sudden hurry."
+
+    scene market
+    show gomer neutral
+    with fade
+
+    gomer talking "That store's no good, dog. I think I saw someone from the school."
+    gomer "Like, they were looking this way. Right at me. Right into my eyes, dog."
+    gomer "They're gonna like... Oh man. I'm finished."
+
+    menu(screen = "dialog_choice"):
+        "Relax, it's okay.":
+            play sound "sound/hiss.opus"
+            gomer annoyed "Relax?"
+            gomer "You're in this with me, dog. If I go down, you go down. You know that?"
+        "We were just buying shampoo.":
+            gomer talking "Shampoo? Dog, what--"
+            gomer smug "Oh, right. Yeah. Shampoo. In the hair isle. Shampoo is with all the other hair products."
+            gomer "All of them. Haha."
+            gomer neutral "Uh."
+            gomer "Let's go to a different store."
+
+    scene market
+    show gomer neutral
+    with longfade
+
+    gomer "You sure this stuff will work, dog?"
+    gomer "Let me see the label again."
+
+    "Gomer squints at the newly purchased bottle of black hair dye."
+
+    gomer talking "{q}Not for use on pets or children.{/q}"
+    gomer neutral "Dog, I'm not like, saying, like, I'm a pet. I'm my own cat. But."
+    gomer "But like, the human writing this label was probably like... {q}Oh, you know cats, they're all, like, pets.{/q}"
+
+    menu(screen = "dialog_choice"):
+        "Probably.":
+            pass
+        "I hate when they do that.":
+            gomer smug "Yeah."
+            gomer "But that's like, not what I mean."
+
+    gomer talking "So is this like, cat poison? You know, like, are you gonna melt if I put this on you?"
+    gomer "I don't need that in my life, dog. I got enough problems."
+
+    menu(screen = "dialog_choice"):
+        "They probably just meant dogs.":
+            gomer happy "Haha. Yeah. Dogs are dumb."
+            gomer smug "Ha. Stupid dogs."
+            gomer "I bet they'd try to eat the whole bottle. Haha."
+            gomer "I bet they'd like, lick it all off. Because they're like, really stupid."
+            gomer neutral "I hate dogs."
+            stop music fadeout 3.0
+            jump .bottle
+        "You'd better test it out first...":
+            gomer talking "R-Right... Haha..."
+        "You know, on second thought...":
+            gomer talking "Dog... You can't back out now."
+            gomer neutral "I'll uh... I'll test it out first."
+            gomer "I'm as good as dead if this doesn't work, anyway..."
+
+    stop music fadeout 3.0
+    "Gomer clumsily unscrews the cap and pops the seal open with a claw."
+    gomer annoyed "Haha... dog... This smells awful."
+    gomer "Okay... Here I go..."
+    "They squirt a bit onto the back of their paw."
+    gomer neutral "..."
+    gomer "I think it's okay."
+    gomer smug "..."
+    "Gomer wipes their paw off it on the bark of a tree."
+    gomer "I guess I overreacted."
+
+label .bottle:
+    scene alley with longfade
+    play bg "sound/night.opus" fadein 1.0
+
+    "I stare at my newly blackened paw in the lamplight."
+
+    show gomer neutral with dissolve
+
+    gomer "That uh, that took longer than I thought."
+    gomer "I guess they edited all the waiting out out of that video."
+
+    "Gomer approaches from my flank and studies my paw. They must have finished transferring the dye to the potion flask we bought."
+    "I protested, but Gomer insisted that we get the rhinestone-studded squeeze flask."
+
+    menu(screen = "dialog_choice"):
+        "Real magic takes time.":
+            pass
+        "Maybe this was a bad idea after all...":
+            gomer annoyed "Haha... Uh..."
+            gomer "Maybe."
+            gomer upset "Dammit."
+            return
+
+    gomer blushing "Wow, dog. You're like, some kind of genius or something."
+    gomer talking "Hey, uh..."
+    gomer neutral "..."
+    gomer "You wanna like..."
+    gomer "..."
+    gomer smug "Are you like..."
+    gomer neutral "..."
+
+    menu(screen = "dialog_choice"):
+        "Do you want to hang out next weekend?":
+            pass
+        "Spit it out, you pile of garbage.":
+            gomer talking "..."
+            gomer upset "..."
+
+            hide gomer with dissolve
+
+            "Gomer wordlessly scurries away into the night."
+            return
+
+    gomer moe "...Yes."
+    gomer happy "Yeah. {w=0.5}If you're not like, busy. Haha."
+    gomer neutral "Okay. I'm gonna like, I've got leftovers to eat."
+    gomer "Later."
+
+    hide gomer with dissolve
+    pause 1.0
+
+    "Wait... Leftovers?"
+
+    return
