@@ -1,5 +1,5 @@
 label gomer_date_2:
-    scene home
+    scene bg home
 
     gomer "So, you uh, you ready to carry out the, uh, do the {q}thing{/q}?"
 
@@ -47,14 +47,14 @@ label gomer_date_2:
             gomer "Later."
 
     stop music fadeout 1.0
-    scene market with fade
+    scene bg market with fade
     play music "music/Cattails.mp3"
 
     "For such a remote town, TOWN NAME HERE's marketplace is almost as busy as some of the streets in my old city."
     "I climb up on a balcony above a grocer to get a better view above the crowd."
     "Oh, I think I see it."
 
-    scene alley with fade
+    scene bg alley with fade
 
     "I perch above the wall behind the diner in a spot of sunlight and wait for the appointed time."
 

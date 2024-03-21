@@ -1,5 +1,3 @@
-define unlucky = Character("Splinter", who_color="#F9C254")
-
 default unlucky_quest2_menuset = set()
 default unlucky_quest2 = 0
 
@@ -32,7 +30,7 @@ label unlucky_date_2:
     else:
         unlucky "Yeah. That sounds fun. Let's do it!"
 
-    scene marketplace with fade
+    scene bg marketplace with fade
 
     show unlucky at center with dissolve
 

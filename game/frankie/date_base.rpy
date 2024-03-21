@@ -1,4 +1,3 @@
-define frankie = Character("Frankie", who_color="#c43830")
 define frankie_dates = ["frankie_date_1", "frankie_date_2", "frankie_date_3"]
 default frankie_call_count = 0
 default frankie_date_count = 0
@@ -38,7 +37,7 @@ default frankie_date_count = 0
 #  Bindle punk or bindle stiff: Chronic wanderers, migratory harvest workers, and lumber jacks
 
 label frankie_date:
-    scene home
+    scene bg home
 
     "I thought I'd call up Frankie."
 

@@ -3,11 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define gomer = Character("Gomer", who_color="#fcaa58")
-define pucci = Character("Pucci")
-define splinter = Character("Splinter")
-define frankie = Character("Frankie")
-define Yuri = Character("Yuri")
+define gomer = Character("Gomer", image="gomer", who_color="#fcaa58")
+define frankie = Character("Frankie", image="frankie", who_color="#c43830")
+define pucci = Character("Pucci", image="pucci", who_color="#8e522e")
+define unlucky = Character("Splinter", image="splinters", who_color="#F9C254")
+define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 
 label initialize:
     window auto show

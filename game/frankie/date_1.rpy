@@ -30,7 +30,7 @@ label frankie_date_1:
 
     "And like that, the crystal went dark."
 
-    scene diner with fade
+    scene bg diner with fade
 
     "I check the clock tower again through the window. {i}12:58{/i}."
     "And to be sure, I glance around the interior of the diner to make sure that I hadn't just somehow missed them on the way in."
@@ -40,14 +40,14 @@ label frankie_date_1:
     "Frankie didn't seem like the kind of cat it'd be good to upset."
     "But at the same time, showing any kind of weakness feels like painting a target on my back."
 
-    scene diner with fade
+    scene bg diner with fade
 
     "Finally, I spot Frankie enter through the glass double doors and purr at a waiter."
 
     play sound "sound/purr.opus"
     frankie "The usual, would you? And make it double, for my friend over there."
 
-    show frankie with dissolve
+    show frankie neutral at center with dissolve
 
     frankie "Good to see you can follow directions. Can't say that about every cat."
 
@@ -73,7 +73,7 @@ label frankie_date_1:
     frankie "Alright, we're wasting time yapping we could be spending doing pushups. Show me what you've got."
 
     stop music fadeout 3.0
-    scene field
+    scene bg field
     with longfade
     play bg "sound/night.opus" fadein 1.0
 
@@ -85,7 +85,7 @@ label frankie_date_1:
     "Frankie didn't seem to mind at all, though. On the contrary, they seemed happy to show off."
     "And if I'm being honest, I enjoyed the show, too."
 
-    show frankie at center with dissolve
+    show frankie neutral at center with dissolve
 
     frankie "Not bad for someone so green. You ought to be proud of yourself."
 

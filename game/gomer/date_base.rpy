@@ -1,10 +1,9 @@
-define gomer = Character("Gomer", who_color="#fcaa58")
 define gomer_dates = ["gomer_date_1", "gomer_date_2", "gomer_date_3"]
 default gomer_call_count = 0
 default gomer_date_count = 0
 
 label gomer_date:
-    scene home
+    scene bg home
 
     "I decided to contact Gomer on my crystal ball."
 

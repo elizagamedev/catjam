@@ -1,5 +1,3 @@
-define unlucky = Character("Splinter", who_color="#F9C254")
-
 default unlucky_quest1_menuset = set()
 default unlucky_quest1 = 0
 
@@ -29,7 +27,7 @@ label unlucky_date_1:
     unlucky "G-great, see you tomorrow then!"
 
     stop music fadeout 1.0
-    scene cafe with fade
+    scene bg cafe with fade
     play bg "sound/cafe.mp3" fadein 1.0 volume 0.5
     play music "music/Easy Lemon.mp3"
 
@@ -38,15 +36,16 @@ label unlucky_date_1:
     play sound "sound/chair.opus"
     "I grab a seat near the guitarist."
     play sound "sound/chimes.opus"
-    "There is a jingle and a sequence of harried 'sorries.' Splinter must be here."
+    "There is a jingle and a sequence of harried 'sorries.' Splinters must be here."
 
-    show unlucky at center with dissolve
+    show splinters neutral at center with dissolve
 
     unlucky "H-hey, sorry. Did you wait long?"
     unlucky "You're new here so I-I'll get the drinks. Do you know what you want?"
 
     menu(screen="dialog_choice"):
         "A pretty latte with their signature hay design.":
+            hide splinters with dissolve
             "As Splinters makes the order, you admire the very photogenic lattes at the other tables."
             "It seemed difficult to drink without spilling; the lattes were practically overflowing..."
             $ expletive = renpy.random.choice(unlucky_expletives)
@@ -60,6 +59,9 @@ label unlucky_date_1:
             "Splinters runs off, a coffee-stained blushing mess."
             return
         "A simple pourover to go works for me.":
+            hide splinters with dissolve
+            pause 1.0
+            show splinters neutral with dissolve
             "Splinters brings over the two paper cups."
             unlucky "I got you the silver vine special, hope that's okay."
             unlucky "They get it from the enchanted forest near the school."
@@ -69,26 +71,28 @@ label unlucky_date_1:
 
     "You take a sip."
 
-    show cafe silver with dissolve
+    show bg cafe silver with dissolve
 
     "You feel a cool, sparkling sensation, and before your eyes a silver cast washes over the scene."
     "Around happy cats is a glow and sparkles of joy and laughter."
 
     play sound "sound/happy.opus"
-    unlucky "Y-Yeah! I mean, it's kind of dangerous but we have the Dark Angora Forest."
+    unlucky happy "Y-Yeah! I mean, it's kind of dangerous but we have the Dark Angora Forest."
     unlucky "We may grow enchanted crops and stuff around here, but plenty of the local flora has its own magic too."
     unlucky "The local flora used to get treated like w-weeds. It's good we're giving them a shot, now."
 
     menu(screen="dialog_choice"):
         "Oh wow, you know a lot about this stuff.":
-            unlucky "Oh, it's nothing special. They teach what the most common plants do in elemem-elemenar-elementary s-school."
+            unlucky moe "Oh, it's nothing special. They teach what the most common plants do in elemem-elemenar-elementary s-school."
             unlucky "Y-You'll pick it up in no time."
             pass
         "Ugh, {i}snore{/i}. It tasted pretty, I don't care. Zip it, nerd":
+            show splinters neutral
             "Splinters looks taken aback."
             unlucky "W-wow. You sound like Frankie right now."
             unlucky "Well, s-sorry for boring you. *sniff*"
             unlucky "I was hoping we could be friends."
+            hide splinters with dissolve
             "Splinters takes their cup and practically runs out, sad and embarassed."
             "There's a yelp, and you see that they've spilled their coffee. They stop, wipe up the mess, then continue their exit."
             return
@@ -101,6 +105,7 @@ label unlucky_date_1:
 
     pc "Ooh, pretty sparkle..."
 
+    show splinters talking
     unlucky "S-sparkle?"
 
     play sound "sound/pain.opus"
@@ -114,7 +119,7 @@ label unlucky_date_1:
 
     guitarist "Hey man, you all right?"
 
-    unlucky "Ow... Yeah, s-sorry about the string."
+    unlucky neutral "Ow... Yeah, s-sorry about the string."
 
     guitarist "Ain't nothing to worry about. I'm not sure why the string snapped like that. I just swapped in new ones yesterday."
     guitarist "Guess I wound them up too tight, huh buddy? Gotta loosen up, and roll with things."
@@ -130,13 +135,15 @@ label unlucky_date_1:
 
     pc "Salt? For... coffee?"
 
-    unlucky "Er, n-no. I should have done this when I first got here, actually."
+    unlucky talking "Er, n-no. I should have done this when I first got here, actually."
     "They proceed to shake out a pile on their scratched-up paw, wincing as they did so."
+    show splinters neutral
     "Splinters then proceeded to toss the salt over the shoulder, mutter some words, then make the rosary cross."
 
     menu(screen="dialog_choice"):
         "Haha, you're so weird Splinters.":
             pc "It would have been more normal if you salted your coffee."
+            show splinters talking
             "Splinters' expression grew strained."
             pc "Oh, I didn't mean to offend you. It's all in good fun. Weird is better than normal."
             unlucky "I-I don't think I'm that weird. Just a little cursed."
@@ -144,17 +151,18 @@ label unlucky_date_1:
             unlucky "You know, i-if weird is what you're after, then... then you should be talking to Gromer, not me."
             unlucky "Sorry, I'm always sore and sensitive."
             pc "I think what you mean is... {i}salty{/i}."
+            hide splinters dissolve
             "They just stare at you, quietly grabbing their cup before taking their leave."
             return
         "Oh, I see. Wow, you're... very serious about this bad luck stuff.":
-            unlucky "Oh, my whole family is like this to be honest."
-            unlucky "I know this probably seems weird and paranoid to everyone else."
+            unlucky talking "Oh, my whole family is like this to be honest."
+            unlucky neutral "I know this probably seems weird and paranoid to everyone else."
             pass
 
     pc "Whatever gives you guys a peace of mind. I'm not judging."
     pc "So... you mentioned common plants. What are the ones everyone knows about?"
 
-    unlucky "Well, there are our common exports. You should probably know about that."
+    unlucky happy "Well, there are our common exports. You should probably know about that."
     unlucky "We have enchanted pumpkins, transm-mute- Er, transmutable hay, and jewel apples."
     unlucky "We also have spirit willows. We have other trees too but I don't remember."
 
@@ -164,7 +172,7 @@ label unlucky_date_1:
 
     menu(screen="dialog_choice"):
         "You know... you seem smart. Why the bogus luck stuff?":
-            unlucky "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
+            unlucky neutral "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
             unlucky "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
             unlucky "Maybe you should talk with {i}the familiar owned by the librarian that I don't remember{/i}. They're more the logical type."
             "{i}the familiar owned by the librarian that I don't remember{/i}, huh? They seemed up your alley."
@@ -175,30 +183,32 @@ label unlucky_date_1:
             unlucky "Gold ones get you lots of money."
             unlucky "Silver ones protect you from evil."
             unlucky "Tecnicolor ones are like, all of them c-c-combined."
+            show splinters moe
             "Splinters looked longingly misty-eyed."
             unlucky "They're super rare though."
             pass
 
     pc "That's pretty cool! It makes me want to just walk around and see if I recognize the crops you mentioned. Maybe find a clover!"
 
-    unlucky "Yeah, if we go out back there's a field. If you're really lucky you can find the more normal blue and green lucky clovers."
+    unlucky happy "Yeah, if we go out back there's a field. If you're really lucky you can find the more normal blue and green lucky clovers."
 
     stop music fadeout 3.0
     stop bg fadeout 3.0
     scene black with dissolve
     "Splinters continued telling you about the common lucky weeds as you exit the cafe together."
 
-    scene home_front
-    show unlucky at center
+    scene bg home_front
+    show splinters neutral at center
     with Dissolve(1.0)
     play bg "sound/night.opus" fadein 1.0 volume 0.5
 
-    unlucky "Hey, I-I know I can be a bit much. Thanks for bearing with me. And I hope it was helpful!"
-    unlucky "I-I know I'm clumsy but I like feeling helpful. Let me know if you want to know anything else!"
+    unlucky talking "Hey, I-I know I can be a bit much. Thanks for bearing with me. And I hope it was helpful!"
+    unlucky blushing "I-I know I'm clumsy but I like feeling helpful. Let me know if you want to know anything else!"
 
     pc "Sure, it was fun! We even found a few of the lucky clovers you mentioned."
 
     play sound "sound/happy.opus"
+    show splinters happy
     "Splinters smiles."
 
     unlucky "Yeah! It's a good sign! Y-you're gonna do well here."

@@ -1,11 +1,10 @@
-define unlucky = Character("Splinter", who_color="#F9C254")
 define unlucky_expletives = ["Merlin's Beard", "Salacious Salamanders", "Hexes", "Curses", "Rats"]
 define unlucky_dates = ["unlucky_date_1", "unlucky_date_2", "unlucky_date_3"]
 default unlucky_call_count = 0
 default unlucky_date_count = 0
 
 label unlucky_date:
-    scene home
+    scene bg home
 
     "I wondered what Splinter was getting themselves into. I decided to paw them up."
 
