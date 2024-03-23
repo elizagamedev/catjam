@@ -110,7 +110,58 @@ label dinerintro:
 
 	"I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat, I wonder if I'll see more of them?"
 
-	"As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. Then, the tail end of a pink ribbon glints in the sun. I'm mesmerized."
+	"As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. The flash of a pink ribbon glints in the sun. I'm mesmerized."
+
+    "The crowd seamlessly parts before the impeccable feline strutting through their midst. Their fluffy tail swooshes langourously from side to side. Before I know it, we're face to face in front of the diner. They pause and give me a look."
+
+    pc "H-hi, can I help you?"
+
+    unknown "Do you know who I am?"
+
+    pc "Uh... no?"
+
+    unknown "You must be new here. Don't worry, everyone is at one point."
+
+    "They reach out a soft paw and pat my shoulder."
+
+    unknown "This is perfect. What do you think of my new ribbon?"
+
+menu pucci_ribbon:
+
+    "It's very pink":
+        jump p_r_pink
+
+    "It suits your fur so nicely!":
+        jump p_r_nicely
+
+    "It's... good?":
+        jump p_r_good
+
+    "Eh.":
+        jump p_r_eh
+
+label p_r_pink
+    unknown "You noticed! I would say \"try again\" buuuuut I already know my drip is immaculate."
+jump meeting_pucci
+
+label p_r_nicely
+    unknown "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
+
+    "They go on for a while, recounting ther. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
+jump meeting_pucci
+
+label p_r_good
+    "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
+jump meeting_pucci
+
+label p_r_eh
+    "Just \"eh\"? You clearly lack taste, but that's your prerogative."
+jump meeting_pucci
+
+label meeting_pucci
+    unknown "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
+    pucci "I need to go, someone's waiting for me. But you should totally come back here on the weekend. It gets real lively, you'll love it."
+
 
 jump intro_exploring
 
