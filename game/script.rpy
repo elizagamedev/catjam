@@ -45,7 +45,7 @@ menu intro_attitude:
 label excited:
 
     "{i}We're gonna ace it, I just know it! I can't wait to meet everyone.{/i}"
-jump goforth
+    jump goforth
 
 label nervous:
 
@@ -55,28 +55,27 @@ label goforth:
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house.."
 
-menu intro_exploring:
+    menu intro_expqloring:
+        "I go check out..."
 
-    "I go check out..."
+        "Diner":
+            jump dinerintro
+        # Meet gomer here
+        # Meet pucci while leaving here
 
-    "Diner":
-        jump dinerintro
-    # Meet gomer here
-    # Meet pucci while leaving here
+        "Marketplace":
+            jump marketplaceintro
+        # Meet yuri here
 
-    "Marketplace":
-        jump marketplaceintro
-    # Meet yuri here
+        "Cafe":
+            jump cafeintro
+        # Meet splinter here
+        # Meet francis here
 
-    "Cafe":
-        jump cafeintro
-    # Meet splinter here
-    # Meet francis here
+        "Continue...":
+            jump end_intro
 
-    "Continue...":
-        jump end_intro
-
-jump intro_exploring
+    jump intro_exploring
 
 label dinerintro:
 
@@ -90,7 +89,7 @@ label dinerintro:
 
     "I look around and behind me, but don't see anyone else looking back towards the orange cat. I certainly don't see a {i}dog{/i}."
 
-	"It takes a moment to connect the dots."
+    "It takes a moment to connect the dots."
 
     pc "...? Wait, do you mean me?"
 
@@ -98,33 +97,33 @@ label dinerintro:
 
     "I cautiously approach and see that they're on the precarious perch to get a better view through a high window, where there's a string on a little lever. Gomer waggles their eyebrows at me and gives it a tug. Inside, a small bell jingles softly."
 
-	"A human who must work there notices the bell, wipes his hands on his apron, and goes back into the kitchen. Shortly after, a side door into the alleyway swings open."
+    "A human who must work there notices the bell, wipes his hands on his apron, and goes back into the kitchen. Shortly after, a side door into the alleyway swings open."
 
-	gomer "Check this out."
+    gomer "Check this out."
 
-	"The human looks around the alleyway, spots me, and looks confused for a moment. Then Gomer hops down from the milk crates and rubs up against the human's ankles. They lean down to give the orange tomcat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
+    "The human looks around the alleyway, spots me, and looks confused for a moment. Then Gomer hops down from the milk crates and rubs up against the human's ankles. They lean down to give the orange tomcat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
 
-	"Gomer meows happily as they dig into the platter."
+    "Gomer meows happily as they dig into the platter."
 
-	gomer "Seeeee? Whad'd I tell ya? This diner's the best in town, dog."
+    gomer "Seeeee? Whad'd I tell ya? This diner's the best in town, dog."
 
-	"I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat, I wonder if I'll see more of them?"
+    "I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat, I wonder if I'll see more of them?"
 
-	"As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. The flash of a pink ribbon glints in the sun. I'm mesmerized."
+    "As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. The flash of a pink ribbon glints in the sun. I'm mesmerized."
 
     "The crowd seamlessly parts before the impeccable feline strutting through their midst. Their fluffy tail swooshes langourously from side to side. Before I know it, we're face to face in front of the diner. They pause and give me a look."
 
     pc "H-hi, can I help you?"
 
-    unknown "Do you know who I am?"
+    "???" "Do you know who I am?"
 
     pc "Uh... no?"
 
-    unknown "You must be new here. Don't worry, everyone is at one point."
+    "???" "You must be new here. Don't worry, everyone is at one point."
 
     "They reach out a soft paw and pat my shoulder."
 
-    unknown "This is perfect. What do you think of my new ribbon?"
+    "???" "This is perfect. What do you think of my new ribbon?"
 
 menu pucci_ribbon:
 
@@ -140,62 +139,60 @@ menu pucci_ribbon:
     "Eh.":
         jump p_r_eh
 
-label p_r_pink
-    unknown "You noticed! I would say \"try again\" buuuuut I already know my drip is immaculate."
-jump meeting_pucci
+label p_r_pink:
+    "???" "You noticed! I would say \"try again\" buuuuut I already know my drip is immaculate."
+    jump meeting_pucci
 
-label p_r_nicely
-    unknown "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
+label p_r_nicely:
+    "???" "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
 
     "They go on for a while, recounting ther. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
-jump meeting_pucci
+    jump meeting_pucci
 
-label p_r_good
+label p_r_good:
     "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
-jump meeting_pucci
+    jump meeting_pucci
 
-label p_r_eh
+label p_r_eh:
     "Just \"eh\"? You clearly lack taste, but that's your prerogative."
-jump meeting_pucci
+    jump meeting_pucci
 
-label meeting_pucci
-    unknown "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
+label meeting_pucci:
+    "???" "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
     pucci "I need to go, someone's waiting for me. But you should totally come back here on the weekend. It gets real lively, you'll love it."
-
-
-jump intro_exploring
+    jump intro_exploring
 
 label marketplaceintro:
 
     "The marketplace is a side street branching off of Main Street. The vendors are offering fresh vegetables, bookbinding, beeswax products, knitted clothing and blankets, and flower arrangements, among other crafted and grown products."
 
-	"My witch asks me to wait by the entrance sign so I don't get lost in the crowd. I wait for five minutes, then ten, and start to wonder how long I'll be here. That's when I notice someone napping on a bench."
+    "My witch asks me to wait by the entrance sign so I don't get lost in the crowd. I wait for five minutes, then ten, and start to wonder how long I'll be here. That's when I notice someone napping on a bench."
 
     "It's another familiar! I don't know why or how, but somehow I can tell. The crow seems to be lightly dozing, hugging a canvas bag overflowing with flowers. As if they could feel my gaze, their black eyes open and look right into mine."
 
-	yuri "O-oh! Hi there! Are you... here by yourself? Are you lost?"
+    yuri "O-oh! Hi there! Are you... here by yourself? Are you lost?"
 
-	pc "Naw, I'm just waiting for my... my witch."
+    pc "Naw, I'm just waiting for my... my witch."
 
-	yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here."
+    yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here."
 
-	pc "Haha yeah, we just got into town today. This market is cool, do you live around here?"
+    pc "Haha yeah, we just got into town today. This market is cool, do you live around here?"
 
-	yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there. I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
+    yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there. I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
 
-	yuri "Here, take one."
+    yuri "Here, take one."
 
-	"The flower is small and blue, the same shade as my eyes. It's fragile and beautiful."
+    "The flower is small and blue, the same shade as my eyes. It's fragile and beautiful."
 
-	yuri "It's more durable than it looks. Just give it some water when you get home and you'll be golden! Not literally golden, just figuratively."
+    yuri "It's more durable than it looks. Just give it some water when you get home and you'll be golden! Not literally golden, just figuratively."
 
-	pc "Thank you, this is lovely."
+    pc "Thank you, this is lovely."
 
-	yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town feel free to give me a scry and ask, I'll be around!"
+    yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town feel free to give me a scry and ask, I'll be around!"
 
-	"My witch comes back with a big canvas bag full of odds and ends from the market. She got me my own portable scrying orb! I'll be able to call Yuri later, if I want to. I look back at the crow and see her smiling and handing a yellow daisy to a young human holding their parent's hand. It'll be nice to see her again."
+    "My witch comes back with a big canvas bag full of odds and ends from the market. She got me my own portable scrying orb! I'll be able to call Yuri later, if I want to. I look back at the crow and see her smiling and handing a yellow daisy to a young human holding their parent's hand. It'll be nice to see her again."
 
-jump intro_exploring
+    jump intro_exploring
 
 label cafeintro:
 
@@ -203,39 +200,39 @@ label cafeintro:
 
     "The peace is broken by a yelp and the shattering of glass from inside."
 
-    Unknown "oh my god I am sooooo sorry I didn't mean to spill your drink please let me pay for it it's the least I can do"
+    "???" "oh my god I am sooooo sorry I didn't mean to spill your drink please let me pay for it it's the least I can do"
 
     "I push the door open, a bell tied to the door chiming with the motion, and see a shrimp sized black cat in a preppy vest waving money at a witch who looks miffed that her coffee has ended up on the floor instead of in her belly."
 
-	Unknown "Splinter, kid, listen. If you'd been doing those 100 pushups and 100 situps every day like I said you prolly wouldn't have dropped that drink. Just sayin, you dig?"
+    "???" "Splinter, kid, listen. If you'd been doing those 100 pushups and 100 situps every day like I said you prolly wouldn't have dropped that drink. Just sayin, you dig?"
 
-	splinter "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
+    unlucky "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
 
-	"The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink. The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
+    "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink. The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
 
-	frankie "Naw, naw, that biz is for cats who can't get their scratch from working hard. It's a cat eat cat world out there Splinter and you gotta look out for numero uno."
+    frankie "Naw, naw, that biz is for cats who can't get their scratch from working hard. It's a cat eat cat world out there Splinter and you gotta look out for numero uno."
 
-	"The calico points a clawed finger at me."
+    "The calico points a clawed finger at me."
 
-	frankie "Now that's a cool cat who doesn't skip the gym. Amiright?"
+    frankie "Now that's a cool cat who doesn't skip the gym. Amiright?"
 
-	"The question was directed at me."
+    "The question was directed at me."
 
-	pc "Uh, right?"
+    pc "Uh, right?"
 
-	frankie "That's right. Now listen kid, you listen to ol' Frankie here and you'll be top dog in no time. I know you must be dyin' to get those noodle arms beefed up. Now drop and gimme 20!"
+    frankie "That's right. Now listen kid, you listen to ol' Frankie here and you'll be top dog in no time. I know you must be dyin' to get those noodle arms beefed up. Now drop and gimme 20!"
 
-	"splinter looks confused and hands the tall cat a $20 bill."
+    "unlucky looks confused and hands the tall cat a $20 bill."
 
-	splinter "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and—"
+    unlucky "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and—"
 
-	"They look at me."
+    "They look at me."
 
-	splinter "--whoever you are"
+    unlucky "--whoever you are"
 
-	"They scurry out the door, the door's bell jingling as they go, and hop up onto a broom being flown by a taxi witch."
+    "They scurry out the door, the door's bell jingling as they go, and hop up onto a broom being flown by a taxi witch."
 
-jump intro_exploring
+    jump intro_exploring
 
 
 label end_intro:
