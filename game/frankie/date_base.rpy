@@ -54,3 +54,8 @@ label frankie_date:
     $ frankie_call_count += 1
 
     jump expression next_frankie_date
+
+label debug_frankie_date_2:
+    $ frankie_call_count = 1
+    $ frankie_date_count = 1
+    jump frankie_date

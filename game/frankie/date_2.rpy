@@ -1,3 +1,7 @@
+default frankie_hates_your_drink = False
+default pc_is_dizzard = False
+default pc_drink = "joe"
+
 label frankie_date_2:
     pc "You wanted to get started on that potion, right?"
 
@@ -17,3 +21,193 @@ label frankie_date_2:
     "It doesn't seem like Frankie is here yet. It'd be hard to miss them in the crowd, even amongst all the humans."
 
     play sound "sound/chimes.opus"
+
+    "I notice Frankie right away as they enter through the door."
+    "Without so much as glancing sideways, they prance straight towards the barista and hop up on a stool."
+
+    play sound "sound/purr.opus"
+
+    frankie "Hey, pussycat. I'll have my cappacino with the... Let's do the Ecuadorian beans today."
+    frankie "Oh, and my eggs."
+
+    show frankie neutral at center with dissolve
+
+    frankie "Good to see you, jack. I can tell you've been working on those gains."
+
+    "Frankie flashes their signature grin after hopping up onto the table beside me."
+
+    frankie "What'd you order?"
+
+    menu(screen="dialog_choice"):
+        "The pumpkin spice latte.":
+            pc "They even add this cute hay pattern in the latte with the milk!"
+
+            frankie "Oh, that's the cat's meow. If you don't have at least one of those before the fall's up, you're wasting your life, jack."
+        "Just a black coffee. The more bitter the better.":
+            frankie "Frankly, jack, that's applesauce. Completely wack."
+            frankie "Don't you have any appreciation for the sweet, subtle notes of the bean? You ask for it bitter and black and you might as well be drinking dog soup."
+            frankie "I thought you had better taste. You tryin' to prove somethin' to me?"
+            $ frankie_hates_your_drink = True
+        "Oh, it's oolong tea. Coffee's not my thing.":
+            $ pc_drink = "tea"
+
+            frankie "I'd bet you a horse you just haven't had the good stuff."
+            frankie "The oolong isn't too bad here, though. Just make sure you don't leave the leaves in too long or you might as well be drinkin' dirt."
+
+    menu(screen="dialog_choice"):
+        "You have excellent taste!" if not frankie_hates_your_drink:
+            play sound "sound/purr.opus"
+
+            frankie "There's only one kind of pleasure in this world, jack: gains."
+            frankie "Whether its physical gains or emotional, gains are gains. Treat yourself to delightful things."
+        "You have a surprisingly sensitive palate...":
+            play sound "sound/hiss.opus"
+
+            frankie "You're a surprisingly artless goober."
+            frankie "Whatever. If all you've got is the capacity for the corporeal, that's your cross to bear, jack."
+        "I didn't think you were such a flimsy wimp." if frankie_hates_your_drink:
+            frankie "You hungry, jack? 'Cuz I've got a knuckle sandwich with your name on it."
+            frankie "Whatever. I don't got time for finks."
+
+            hide frankie with dissolve
+
+            frankie "Make that to go, will you?"
+
+            "Frankie yowls as they jump from the table and head back to the barista."
+            "Maybe that was a really stupid thing to say, in retrospect..."
+            return
+
+    "Barista" "Cappuccino and eggs for Frankie."
+
+    frankie "That's my cue. Sit tight, dig?"
+
+    hide frankie with dissolve
+    pause 1.0
+    show frankie neutral with dissolve
+
+    "Frankie returns with a mug in one paw and a ceramic glass in the other."
+
+    pc "I thought you ordered eggs?"
+
+    "Frankie raises an eyebrow."
+
+    frankie "Yeah. I've got them right here, jack."
+    frankie "Down the hatch!"
+
+    "I watch agape as Frankie lifts the glass about half a foot above his face and upturns the glass. A pair of raw eggs slide out into their open mouth."
+
+    menu(screen="dialog_choice"):
+        "That's utterly disgusting.":
+            play sound "sound/hiss.opus"
+
+            "I shudder at Frankie's glower."
+
+            frankie "That makes two of us, jack. At least I do it for the gains. You're just born that way."
+            frankie "You come to my town and run your mouth like that? Don't expect that there won't be consequences."
+            frankie "Watch yourself carefully, you pigeon-livered hairball."
+
+            "Frankie chugs the cappuccino in one gulp."
+            "As they turn to jump off the table, their tail connects with my mug and--flick--it spills all over the table on my paws."
+
+            frankie "Oops. Shame that Cassie has to clean that mess up."
+
+            return
+        "You're always on the grind, Frankie! You're so cool!":
+            "Frankie does an exaggerated bow."
+
+            frankie "When life gives you lemons, jack, you make lemonade."
+            frankie "And when life gives you eggs... You drink 'em."
+
+    play sound "sound/chimes.opus"
+
+    "Just then, the chimes ring and another cat enters through the glass door."
+    "Wait, is that..."
+
+    show frankie at left with ease
+    show splinters neutral at right, mirror with dissolve
+
+    unlucky "Oh, gadzooks. H-Hello there, Frankie, [pc_name!q]."
+    unlucky talking "Nice weather today, don't you think?"
+
+    "Splinters shifts in place nervously, paw adjusting their collar."
+
+    menu(screen="dialog_choice"):
+        "Ugh, take a hike, dork.":
+            unlucky "Oh, um... I'm actually planning on j-just studying today. I didn't bring my camping gear."
+
+            frankie "[theyre!c] telling you to make like a tree, nerd."
+
+            unlucky neutral "Make... a tree?"
+
+            "Splinters' eyes glaze over for a moment."
+
+            unlucky "Oh, I've heard that one before. Haha. Very funny."
+            unlucky "Why don't you take that glass and shove it up your--{w=0.5}{nw}"
+
+            play sound ["sound/pain.opus", "sound/crash.wav"]
+            stop bg fadeout 0.5
+            with hpunch
+
+            "Before they could finish, a hurried busser trips over Splinters and drops a tray of dirty dishes on the ground."
+
+        "You're right! The weather here is so comfortable.":
+            $ pc_is_dizzard = True
+
+            unlucky happy "D-Days like this are perfect for knocking out a few chapters of {i}Magica Probata{/i}."
+
+            frankie "Did I walk into a checkerboard or something?"
+
+            unlucky talking "Huh?"
+
+            frankie "'Cuz I'm surrounded by squares!"
+
+            play sound "sound/growl.opus"
+
+            frankie "Beat it, bird-brain!" with hpunch
+
+            "Splinters shrivels and takes a step back."
+
+            play sound ["sound/pain.opus", "sound/crash.wav"]
+            stop bg fadeout 0.5
+            with hpunch
+
+            "Right into the path of a hurried-looking busser carrying a tray of dirty dishes."
+
+    $ expletive = renpy.random.choice(unlucky_expletives)
+    unlucky "[expletive]! I'm so sorry! I didn't think to w-wear my reflective vest today!"
+
+    "Busser" "What? Don't apologize! Are you okay? I'm so sorry!"
+
+    unlucky "No, it's m-my bad. Let me help you clean up."
+
+    hide splinters with dissolve
+
+    "Splinters grabs a mug off the ground. It snaps off at the handle and the rest of the coffee inside splashes onto their sweater."
+
+    unlucky "A-Actually I think I'm just going to go home and, um, recheck my horoscope."
+
+    play sound "sound/chimes.opus"
+    pause 1.0
+    play bg "sound/cafe.mp3" fadein 2.0
+
+    show frankie at center with ease
+
+    frankie "Sheesh. What a dizzard."
+
+    if pc_is_dizzard:
+        frankie "That makes the two of you, jack."
+        frankie "Word of advice: stay away from that foozler."
+        frankie "It's not just because it makes you look like a chump. You're liable to lose one of your nine lives if you stay too long in that aura of bad mojo."
+
+        pc "I see..."
+
+    frankie "Anyway, you finished that [pc_drink] yet, jack? I'm raring to get started on my idea."
+
+    scene black with dissolve
+    stop music fadeout 3.0
+
+    "Frankie and I spent the afternoon testing out hypotheses on time dilation."
+    "While we weren't able to quite reach our goal, we made some breakthroughs."
+    "I hope that our relationship can make a few breakthroughs, too..."
+
+    return
