@@ -770,7 +770,7 @@ menu j1hangout:
         jump j1talk
 
 
-menu j2hangoutchoice:
+menu j1hangoutchoice:
 
     "Gomer":
         jump j1gomerhangout
@@ -1054,7 +1054,7 @@ jump j3talk
 
 
 
-menu j1hangout:
+menu j3hangout:
 
     "I'm ready to choose someone to hang out with":
         jump jk3hangoutchoice
@@ -1176,7 +1176,7 @@ jump j4talk
 
 
 
-menu j1hangout:
+menu j4hangout:
 
     "I'm ready to choose someone to hang out with":
         jump j4hangoutchoice
