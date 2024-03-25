@@ -1062,25 +1062,7 @@ menu j1hangout:
     "I'm not done talking to everyone...":
         jump j3talk
 
-
-label j3hangoutchoice:
-
-    "Gomer":
-    pass
-        jump j3gomerhangout
-
-    "Splinters":
-    pass
-        jump j3splintershangout
-
-    "Pucci":
-    pass
-        jump j3puccihangout
-
-    "Frankie":
-    pass
-        jump j3frankiehangout
-
+#Add in j3hangoutchoice menu here lol I am deleting it for now because I couldn't figure out how to use the pass thing
 
 label j3gomerhangout:
 jump j4
