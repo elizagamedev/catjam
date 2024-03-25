@@ -1109,7 +1109,7 @@ menu j3hangout:
         jump j3talk
 
 #Add in j3hangoutchoice menu here lol I am deleting it for now because I couldn't figure out how to use the pass thing
-menu j3hangoutchoice
+menu j3hangoutchoice:
 
     "Gomer":
         jump j3gomerhangout
