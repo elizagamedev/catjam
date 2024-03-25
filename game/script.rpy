@@ -168,11 +168,17 @@ label meeting_pucci:
 
 label marketplaceintro:
 
-    "The marketplace is a side street branching off of Main Street. The vendors are offering fresh vegetables, bookbinding, beeswax products, knitted clothing and blankets, and flower arrangements, among other crafted and grown products."
+    "The marketplace is a side street branching off of Main Street. The vendors are offering fresh vegetables, bookbinding, beeswax products, knitted clothing and blankets,"
 
-    "My witch asks me to wait by the entrance sign so I don't get lost in the crowd. I wait for five minutes, then ten, and start to wonder how long I'll be here. That's when I notice someone napping on a bench."
+    "and flower arrangements, among other crafted and grown products."
 
-    "It's another familiar! I don't know why or how, but somehow I can tell. The crow seems to be lightly dozing, hugging a canvas bag overflowing with flowers. As if they could feel my gaze, their black eyes open and look right into mine."
+    "My witch asks me to wait by the entrance sign so I don't get lost in the crowd. I wait for five minutes, then ten, and start to wonder how long I'll be here."
+
+    "That's when I notice someone napping on a bench."
+
+    "It's another familiar! I don't know why or how, but somehow I can tell. The crow seems to be lightly dozing, hugging a canvas bag overflowing with flowers."
+
+    "As if they could feel my gaze, their black eyes open and look right into mine."
 
     yuri "O-oh! Hi there! Are you... here by yourself? Are you lost?"
 
@@ -182,7 +188,9 @@ label marketplaceintro:
 
     pc "Haha yeah, we just got into town today. This market is cool, do you live around here?"
 
-    yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there. I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
+    yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there."
+
+    yuri "I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
 
     yuri "Here, take one."
 
@@ -194,7 +202,11 @@ label marketplaceintro:
 
     yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town feel free to give me a scry and ask, I'll be around!"
 
-    "My witch comes back with a big canvas bag full of odds and ends from the market. She got me my own portable scrying orb! I'll be able to call Yuri later, if I want to. I look back at the crow and see her smiling and handing a yellow daisy to a young human holding their parent's hand. It'll be nice to see her again."
+    "My witch comes back with a big canvas bag full of odds and ends from the market. She got me my own portable scrying orb!"
+
+    "I'll be able to scry Yuri later, if I want to. I look back at the crow and see them smiling and handing a yellow daisy to a young human holding their parent's hand."
+
+    "It'll be nice to see them again."
 
     jump intro_exploring
 
@@ -212,7 +224,9 @@ label cafeintro:
 
     splinters "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
 
-    "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink. The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
+    "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink."
+
+    "The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
 
     frankie "Naw, naw, that biz is for cats who can't get their scratch from working hard. It's a cat eat cat world out there Splinter and you gotta look out for numero uno."
 
@@ -248,7 +262,9 @@ label end_intro:
 # Lay of the land
 label j1:
 
-    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances. Now we have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
+    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances."
+
+    "Now we have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
     "I should probably buckle down and try making some solid friendships in case we have to do any group projects. The test could be {i}anything{/i}."
 
@@ -288,7 +304,9 @@ menu j1explorechoice:
 label j1records:
     "{q}Schrodinger's Records{/q} is the kind of store that seems like it's always been there, and always will be. String lights twinkle across the tops of shelves where records are displayed in a cozy disarray from people shuffling through the stacks."
 # Description of the music that's playing in the shop
-    "The vibes are warm and welcoming. A red-haired human sitting at the checkout counter is quietly reading what's clearly a steamy bodice-ripper as he waits for customers to approach. His foot taps along in time with the music, and a glance tells me his nametag reads {q}HELLO MY NAME IS Alec, he/him{/q}."
+    "The vibes are warm and welcoming. A red-haired human sitting at the checkout counter is quietly reading what's clearly a steamy bodice-ripper as he waits for customers to approach."
+
+    "His foot taps along in time with the music, and a glance tells me his nametag reads {q}HELLO MY NAME IS Alec, he/him{/q}."
 
     pc "Hey mister. Alec."
 
@@ -312,7 +330,9 @@ menu j1records_alec:
         jump j1records_outro
 
 label j1records_games:
-    "Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit. You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
+    "Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit."
+
+    "You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
 
     pc "Secret gamer. Got it."
 
@@ -326,7 +346,8 @@ label j1records_secrets:
 
     "He taps his forehead."
 
-    "Alec" "and I know every hand, paw, or claw that's walked out of this grand repository with a vinyl. The other Schrodinger's Records secret is that my name's not actually Alec but you'll have to pry my real name out of me with a crowbar or the purchase of at least 3 vinyls."
+    "Alec" "and I know every hand, paw, or claw that's walked out of this grand repository with a vinyl."
+    "The other Schrodinger's Records secret is that my name's not actually Alec but you'll have to pry my real name out of me with a crowbar or the purchase of at least 3 vinyls."
 jump  j1records_alec
 
 label j1records_reading:
@@ -341,9 +362,11 @@ jump j1explorechoice
 
 # Explore - University
 label j1university:
-    "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful. Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
+    "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful."
+    "Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
 
-    "The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building. I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
+    "The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building."
+    "I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
 
     "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
 
@@ -353,7 +376,8 @@ label j1university:
 
     yuri "Oh hey you! I was just on my way in, wanna join me?"
 
-    "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences. Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
+    "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences."
+    "Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
 
     "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
 
@@ -365,15 +389,18 @@ jump j1explorechoice
 
 # Explore - Vineyard
 label j1vineyard:
-    "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical. In fact, it might even be magical."
+    "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical."
+    "In fact, it might even be magical."
 
-    "I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour. It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
+    "I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour."
+    "It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
 
     pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
 
-    "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way. I suspect they might just be a little rude."
+    "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way."
+    "I suspect they might just be a little rude."
 
-    pucci "Is this your first time to the Vineyards? Let's do the tour together!"
+    pucci "Is this your first time to the Vineyards? Let's walk together!"
 
 menu explore_vineyard_question:
 
@@ -388,7 +415,9 @@ label explore_vineyard_alone:
 
     "The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
 
-    "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical--powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops. The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
+    "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical."
+    "Powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops."
+    "The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
 jump explore_vineyard_outro
 
 label explore_vineyard_wpucci:
@@ -417,7 +446,10 @@ label j1study:
 
     "I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
 
-    "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber. I know this because of the enormous sign hanging above the front desk that says {q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply. If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}"
+    "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber."
+    "I know this because of the enormous sign hanging above the front desk that says,"
+    "{q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply.{/q}"
+    "{q}If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}"
 
     "It's beautiful here, and the scent of parchment and ink swirls around me. My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
 
@@ -452,7 +484,8 @@ menu j1study_choice:
         jump j1study_walkaway
 
 label j1study_helpsplinters:
-    "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
+    "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian"
+    "who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
 
     splinters "Oh hey how's it going what did you need my help with fam?"
 
@@ -462,7 +495,8 @@ label j1study_helpsplinters:
 
     "They actually say L-O-L... out loud."
 
-    splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week. I'm not doing that now but you can fer suuuure find me racking books"
+    splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week."
+    splinters "I'm not doing that now but you can fer suuuure find me racking books"
 
     "They flex their non-existent muscles."
 
@@ -478,7 +512,8 @@ label j1study_helpsplinters:
 
     pc "Yes..."
 
-    splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream, I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
+    splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
+    splinters "I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
 
     pc "Oooooo..."
 
@@ -494,7 +529,8 @@ label j1study_helpsplinters:
 
     pc "Sure, why not?"
 
-    "We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed. It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
+    "We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed."
+    "It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
 
     "I think this means we're friends! Two objectives completed, hurrah!"
 jump j1study_outro
@@ -520,7 +556,8 @@ label j1study_walkaway:
 jump j1study_outro
 
 label j1study_outro:
-"It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening, sun still peering above the horizon for one last glance across the surrounding landscapes."
+"It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening,"
+"sun still peering above the horizon for one last glance across the surrounding landscapes."
 jump j1witch
 
 label j1gym:
@@ -594,7 +631,8 @@ jump j1gym_outro
 
 
 label j1gym_outro:
-    "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself, and in my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
+    "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself."
+    "In my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
 
     "Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
 jump j1witch
@@ -604,7 +642,8 @@ jump j1witch
 label j1witch:
     "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
-    "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths—not totally unusual for us, but we're usually pretty tight-knit."
+    "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths—not totally unusual for us,"
+    "but we're usually pretty tight-knit."
 
     pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
 
@@ -621,7 +660,8 @@ jump j1wke
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
-    "It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning. I have enough time today to make my rounds and then hang out with someone, if they're free."
+    "It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning."
+    "I have enough time today to make my rounds and then hang out with someone, if they're free."
 
 menu j1talk:
     "I talk to..."
@@ -812,7 +852,9 @@ jump j2
 
 # --Week 2--
 label j2:
-    "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur. Before we get started brewing the potion, we're going to have to find some ingredients. My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
+    "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur."
+    "Before we get started brewing the potion, we're going to have to find some ingredients."
+    "My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
     "To get the ingredients, I'm going to..."
