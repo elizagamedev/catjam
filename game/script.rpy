@@ -1073,7 +1073,7 @@ menu j3talk:
     "Frankie":
         jump j3frankie
     "Continue...":
-        jump j1hangout
+        jump j3hangout
 
 
 
