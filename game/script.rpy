@@ -6,7 +6,7 @@
 define gomer = Character("Gomer", image="gomer", who_color="#fcaa58")
 define frankie = Character("Frankie", image="frankie", who_color="#c43830")
 define pucci = Character("Pucci", image="pucci", who_color="#8e522e")
-define unlucky = Character("Splinter", image="splinters", who_color="#F9C254")
+define splinters = Character("Splinters", image="splinters", who_color="#F9C254")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 
 label initialize:
@@ -206,7 +206,7 @@ label cafeintro:
 
     "???" "Splinter, kid, listen. If you'd been doing those 100 pushups and 100 situps every day like I said you prolly wouldn't have dropped that drink. Just sayin, you dig?"
 
-    unlucky "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
+    splinters "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
 
     "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink. The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
 
@@ -222,13 +222,13 @@ label cafeintro:
 
     frankie "That's right. Now listen kid, you listen to ol' Frankie here and you'll be top dog in no time. I know you must be dyin' to get those noodle arms beefed up. Now drop and gimme 20!"
 
-    "unlucky looks confused and hands the tall cat a $20 bill."
+    "Splinters looks confused and hands the tall cat a $20 bill."
 
-    unlucky "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and—"
+    splinters "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and—"
 
     "They look at me."
 
-    unlucky "--whoever you are"
+    splinters "--whoever you are"
 
     "They scurry out the door, the door's bell jingling as they go, and hop up onto a broom being flown by a taxi witch."
 

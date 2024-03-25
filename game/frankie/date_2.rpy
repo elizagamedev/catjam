@@ -16,7 +16,7 @@ label frankie_date_2:
     play bg "sound/cafe.mp3"
 
     "The cafe is bustling with witches and their familiars cramming along the small tables, preparing for their weekend study routines."
-    if unlucky_date_count >= 1:
+    if splinters_date_count >= 1:
         "The live music area is vacant today, but a hip tune gently drifts from the speakers."
     "It doesn't seem like Frankie is here yet. It'd be hard to miss them in the crowd, even amongst all the humans."
 
@@ -133,23 +133,23 @@ label frankie_date_2:
     show frankie at left with ease
     show splinters neutral at right, mirror with dissolve
 
-    unlucky "Oh, gadzooks. H-Hello there, Frankie, [pc_name!q]."
-    unlucky talking "Nice weather today, don't you think?"
+    splinters "Oh, gadzooks. H-Hello there, Frankie, [pc_name!q]."
+    splinters talking "Nice weather today, don't you think?"
 
     "Splinters shifts in place nervously, paw adjusting their collar."
 
     menu(screen="dialog_choice"):
         "Ugh, take a hike, dork.":
-            unlucky "Oh, um... I'm actually planning on j-just studying today. I didn't bring my camping gear."
+            splinters "Oh, um... I'm actually planning on j-just studying today. I didn't bring my camping gear."
 
             frankie "[theyre!c] telling you to make like a tree, nerd."
 
-            unlucky neutral "Make... a tree?"
+            splinters neutral "Make... a tree?"
 
             "Splinters' eyes glaze over for a moment."
 
-            unlucky "Oh, I've heard that one before. Haha. Very funny."
-            unlucky "Why don't you take that glass and shove it up your--{w=0.5}{nw}"
+            splinters "Oh, I've heard that one before. Haha. Very funny."
+            splinters "Why don't you take that glass and shove it up your--{w=0.5}{nw}"
 
             play sound ["sound/pain.opus", "sound/crash.wav"]
             stop bg fadeout 0.5
@@ -160,11 +160,11 @@ label frankie_date_2:
         "You're right! The weather here is so comfortable.":
             $ pc_is_dizzard = True
 
-            unlucky happy "D-Days like this are perfect for knocking out a few chapters of {i}Magica Probata{/i}."
+            splinters happy "D-Days like this are perfect for knocking out a few chapters of {i}Magica Probata{/i}."
 
             frankie "Did I walk into a checkerboard or something?"
 
-            unlucky talking "Huh?"
+            splinters talking "Huh?"
 
             frankie "'Cuz I'm surrounded by squares!"
 
@@ -180,18 +180,18 @@ label frankie_date_2:
 
             "Right into the path of a hurried-looking busser carrying a tray of dirty dishes."
 
-    $ expletive = renpy.random.choice(unlucky_expletives)
-    unlucky "[expletive]! I'm so sorry! I didn't think to w-wear my reflective vest today!"
+    $ expletive = renpy.random.choice(splinters_expletives)
+    splinters "[expletive]! I'm so sorry! I didn't think to w-wear my reflective vest today!"
 
     "Busser" "What? Don't apologize! Are you okay? I'm so sorry!"
 
-    unlucky "No, it's m-my bad. Let me help you clean up."
+    splinters "No, it's m-my bad. Let me help you clean up."
 
     hide splinters with dissolve
 
     "Splinters grabs a mug off the ground. It snaps off at the handle and the rest of the coffee inside splashes onto their sweater."
 
-    unlucky "A-Actually I think I'm just going to go home and, um, recheck my horoscope."
+    splinters "A-Actually I think I'm just going to go home and, um, recheck my horoscope."
 
     play sound "sound/chimes.opus"
     pause 1.0
