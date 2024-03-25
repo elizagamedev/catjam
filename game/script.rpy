@@ -1066,35 +1066,35 @@ menu j1hangout:
 label j3hangoutchoice:
 
     "Gomer":
+    pass
         jump j3gomerhangout
 
     "Splinters":
+    pass
         jump j3splintershangout
 
     "Pucci":
+    pass
         jump j3puccihangout
 
     "Frankie":
+    pass
         jump j3frankiehangout
 
 
 label j3gomerhangout:
-pass
 jump j4
 
 
 label j3splintershangout:
-pass
 jump j4
 
 
 label j3puccihangout:
-pass
 jump j4
 
 
 label j3frankiehangout:
-pass
 jump j4
 
 
