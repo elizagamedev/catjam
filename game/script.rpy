@@ -246,273 +246,273 @@ label j1:
 
     "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances. Now we have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
-	"I should probably buckle down and try making some solid friendships in case we have to do any group projects. The test could be {i}anything{/i}."
+    "I should probably buckle down and try making some solid friendships in case we have to do any group projects. The test could be {i}anything{/i}."
 
 menu j1wk:
 
-	"This week my focus is to..."
+    "This week my focus is to..."
 
-	"Explore":
-		jump j1explore
+    "Explore":
+        jump j1explore
 
-	"Study":
-		jump j1study
+    "Study":
+        jump j1study
 
-	"Work out":
-		jump j1gym
+    "Work out":
+        jump j1gym
 
 
 # Explore
 label j1explore:
 
-	"There's still a lot around town I haven't seen. There's a record shop, the university itself, a vineyard... any of these could be crucial to the test, but there's just no way to know. So I'm going to check out all of them. For research."
+    "There's still a lot around town I haven't seen. There's a record shop, the university itself, a vineyard... any of these could be crucial to the test, but there's just no way to know. So I'm going to check out all of them. For research."
 
 menu j1explorechoice:
 
-	"Record Shop":
-		 jump j1records
+    "Record Shop":
+         jump j1records
 
-	"University":
-		jump j1university
+    "University":
+        jump j1university
 
-	"Vineyard":
-		jump j1vineyard
+    "Vineyard":
+        jump j1vineyard
 
-	"I'm done exploring.":
-		jump j1witch
+    "I'm done exploring.":
+        jump j1witch
 
 label j1records:
-	"{q}Schrodinger's Records{/q} is the kind of store that seems like it's always been there, and always will be. String lights twinkle across the tops of shelves where records are displayed in a cozy disarray from people shuffling through the stacks."
+    "{q}Schrodinger's Records{/q} is the kind of store that seems like it's always been there, and always will be. String lights twinkle across the tops of shelves where records are displayed in a cozy disarray from people shuffling through the stacks."
 # Description of the music that's playing in the shop
-	"The vibes are warm and welcoming. A red-haired human sitting at the checkout counter is quietly reading what's clearly a steamy bodice-ripper as he waits for customers to approach. His foot taps along in time with the music, and a glance tells me his nametag reads {q}HELLO MY NAME IS Alec, he/him{/q}."
+    "The vibes are warm and welcoming. A red-haired human sitting at the checkout counter is quietly reading what's clearly a steamy bodice-ripper as he waits for customers to approach. His foot taps along in time with the music, and a glance tells me his nametag reads {q}HELLO MY NAME IS Alec, he/him{/q}."
 
-	pc "Hey mister. Alec."
+    pc "Hey mister. Alec."
 
-	"The guy looks up from his book at me hesitantly, like he'd rather be reading. Understandable."
+    "The guy looks up from his book at me hesitantly, like he'd rather be reading. Understandable."
 
-	"Alec" "Hey what's up, lookin' for somethin'?"
+    "Alec" "Hey what's up, lookin' for somethin'?"
 
 
 menu j1records_alec:
 
-	pc "You got any games on your phone?":
-		jump j1records_games
+    pc "You got any games on your phone?":
+        jump j1records_games
 
-	pc "I'm here to find out what your secrets are.":
-		jump j1records_secrets
+    pc "I'm here to find out what your secrets are.":
+        jump j1records_secrets
 
-	pc "What are you reading?":
-		jump j1records_reading
+    pc "What are you reading?":
+        jump j1records_reading
 
-	pc "Nevermind.":
-		jump j1records_outro
+    pc "Nevermind.":
+        jump j1records_outro
 
 label j1records_games:
-	"Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit. You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
+    "Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit. You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
 
-	pc "Secret gamer. Got it."
+    pc "Secret gamer. Got it."
 
-	"Alec" "What?"
+    "Alec" "What?"
 
-	pc "Don't worry about it."
+    pc "Don't worry about it."
 jump  j1records_alec
 
 label j1records_secrets:
-	"Alec" "Oh you're here for the exam. Well the secrets here are that we don't have an actual database except this baby right here,"
+    "Alec" "Oh you're here for the exam. Well the secrets here are that we don't have an actual database except this baby right here,"
 
-	"He taps his forehead."
+    "He taps his forehead."
 
-	"Alec" "and I know every hand, paw, or claw that's walked out of this grand repository with a vinyl. The other Schrodinger's Records secret is that my name's not actually Alec but you'll have to pry my real name out of me with a crowbar or the purchase of at least 3 vinyls."
+    "Alec" "and I know every hand, paw, or claw that's walked out of this grand repository with a vinyl. The other Schrodinger's Records secret is that my name's not actually Alec but you'll have to pry my real name out of me with a crowbar or the purchase of at least 3 vinyls."
 jump  j1records_alec
 
 label j1records_reading:
-	"Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffeeshop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
+    "Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffeeshop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
 jump  j1records_alec
 
 label j1records_outro:
-	"Data acquired. I'll remember this for later. For some reason I feel confident that this was absolutely crucial information."
-	"Time to keep exploring..."
+    "Data acquired. I'll remember this for later. For some reason I feel confident that this was absolutely crucial information."
+    "Time to keep exploring..."
 jump j1explorechoice
 
 
 # Explore - University
 label j1university:
-	"I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful. Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
+    "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful. Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
 
-	"The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building. I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
+    "The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building. I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
 
-	"{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
+    "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
 
-	"I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
+    "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
 
-	"I bump into Yuri outside the cafeteria hall."
+    "I bump into Yuri outside the cafeteria hall."
 
-	yuri "Oh hey you! I was just on my way in, wanna join me?"
+    yuri "Oh hey you! I was just on my way in, wanna join me?"
 
-	"I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences. Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
+    "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences. Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
 
-	"We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
+    "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
 
-	yuri "It was really nice catching up! Tell me how the rest of your exploring goes, okay?"
+    yuri "It was really nice catching up! Tell me how the rest of your exploring goes, okay?"
 
-	"I head home after a long day of recon. I can't wait to tell my witch."
+    "I head home after a long day of recon. I can't wait to tell my witch."
 jump j1explorechoice
 
 
 # Explore - Vineyard
 label j1vineyard:
-	"I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical. In fact, it might even be magical."
+    "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical. In fact, it might even be magical."
 
-	"I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour. It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
+    "I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour. It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
 
-	pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
+    pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
 
-	"I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way. I suspect they might just be a little rude."
+    "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way. I suspect they might just be a little rude."
 
-	pucci "Is this your first time to the Vineyards? Let's do the tour together!"
+    pucci "Is this your first time to the Vineyards? Let's do the tour together!"
 
 menu explore_vineyard_question:
 
-	"Uh, no thanks. I'll stay with the tour group.":
-		jump explore_vineyard_alone
+    "Uh, no thanks. I'll stay with the tour group.":
+        jump explore_vineyard_alone
 
-	"Sure, why not?":
-		jump explore_vineyard_wpucci
+    "Sure, why not?":
+        jump explore_vineyard_wpucci
 
 label explore_vineyard_alone:
-	pucci "Okay! Enjoy yourself."
+    pucci "Okay! Enjoy yourself."
 
-	"The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
+    "The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
 
-	"I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical--powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops. The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
+    "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical--powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops. The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
 jump explore_vineyard_outro
 
 label explore_vineyard_wpucci:
-	pucci "Perfect. I can't wait to show you my family's pride and joy :3"
+    pucci "Perfect. I can't wait to show you my family's pride and joy :3"
 
-	"Their... family's?! {i}Woah. What a perfect opportunity to find out all about the secrets of the Vineyards!{/i}"
+    "Their... family's?! {i}Woah. What a perfect opportunity to find out all about the secrets of the Vineyards!{/i}"
 
-	"We probably drink too much but Pucci is more than willing to answer all my questions, so long as I'm willing to listen to their humblebrags."
+    "We probably drink too much but Pucci is more than willing to answer all my questions, so long as I'm willing to listen to their humblebrags."
 
-	pucci "...and that's how we set up our second and third locations!"
+    pucci "...and that's how we set up our second and third locations!"
 
-	pucci "So, what do you think so far?"
+    pucci "So, what do you think so far?"
 
-	pc "I honestly dig it. This place is (hic) totally sick. Thanks for spilling the beans, Pucci."
+    pc "I honestly dig it. This place is (hic) totally sick. Thanks for spilling the beans, Pucci."
 
-	pucci "Anytime, just give me a scry, darling."
+    pucci "Anytime, just give me a scry, darling."
 jump explore_vineyard_outro
 
 label explore_vineyard_outro:
-	"At the end of the day I'm full of information and enough wine to make me a little bit spinny. All in all, it was a successful mission."
+    "At the end of the day I'm full of information and enough wine to make me a little bit spinny. All in all, it was a successful mission."
 jump j1explorechoice
 
 # Explore - Study
 label j1study:
-	"The best way to learn secrets is through research. I think. So this week I'll study and see where it gets me."
+    "The best way to learn secrets is through research. I think. So this week I'll study and see where it gets me."
 
-	"I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
+    "I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
 
     "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber. I know this because of the enormous sign hanging above the front desk that says {q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply. If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}"
 
     "It's beautiful here, and the scent of parchment and ink swirls around me. My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
 
-	"Librarian" "SPLINTERS."
+    "Librarian" "SPLINTERS."
 
-	"A classic library whisper-yell."
+    "A classic library whisper-yell."
 
-	"Librarian" "HOW DO YOU MANAGE TO TIP THESE OVER? GODDAMMIT SPLINTERS"
+    "Librarian" "HOW DO YOU MANAGE TO TIP THESE OVER? GODDAMMIT SPLINTERS"
 
-	"I turn and see the little black cat dangling from an upper shelf, a tipped-over cart beneath them."
+    "I turn and see the little black cat dangling from an upper shelf, a tipped-over cart beneath them."
 
-	"Librarian" "WHAT THE HECK, SPLINTERS"
+    "Librarian" "WHAT THE HECK, SPLINTERS"
 
-	splinters "listen there was this book I {i}needed{/i} and I couldn't wait okay and it was right there and I just figured I'd climb up here—"
+    splinters "listen there was this book I {i}needed{/i} and I couldn't wait okay and it was right there and I just figured I'd climb up here—"
 
-	"Librarian" "SPLINTERS THAT'S WHAT TALL PEOPLE ARE LITERALLY MADE FOR OKAY?"
+    "Librarian" "SPLINTERS THAT'S WHAT TALL PEOPLE ARE LITERALLY MADE FOR OKAY?"
 
-	"Splinters grabs a book, presumably the intended one, grasps it by the spine with his teeth, and drops down from the shelf."
+    "Splinters grabs a book, presumably the intended one, grasps it by the spine with his teeth, and drops down from the shelf."
 
-	"Librarian" "HOLY FUCK YOU DID NOT JUST PUT THAT IN YOUR MOUTH AND THEN STEP ON BOOKS"
+    "Librarian" "HOLY FUCK YOU DID NOT JUST PUT THAT IN YOUR MOUTH AND THEN STEP ON BOOKS"
 
-	splinters "It's not even going to leave teeth marks it's fine see it was just efficient"
+    splinters "It's not even going to leave teeth marks it's fine see it was just efficient"
 
-	"At this point an intervention might be a mercy."
+    "At this point an intervention might be a mercy."
 
 menu j1study_choice:
 
     "{q}Psst, hey Splinters, can you help me with something?{/q}":
-		jump j1study_helpsplinters
+        jump j1study_helpsplinters
 
-	"That's so not my business.":
-		jump j1study_walkaway
+    "That's so not my business.":
+        jump j1study_walkaway
 
 label j1study_helpsplinters:
-	"The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
+    "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
 
-	splinters "Oh hey how's it going what did you need my help with fam?"
+    splinters "Oh hey how's it going what did you need my help with fam?"
 
-	pc "Firstly, do you come here often?"
+    pc "Firstly, do you come here often?"
 
-	splinters "Lol,"
+    splinters "Lol,"
 
-	"They actually say L-O-L... out loud."
+    "They actually say L-O-L... out loud."
 
-	splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week. I'm not doing that now but you can fer suuuure find me racking books"
+    splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week. I'm not doing that now but you can fer suuuure find me racking books"
 
-	"They flex their non-existent muscles."
+    "They flex their non-existent muscles."
 
-	splinters "and picking up ladies."
+    splinters "and picking up ladies."
 
-	"I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored of the tiny cat."
+    "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored of the tiny cat."
 
-	pc "That tracks. So, that's perfect. Do you know any secrets about this place?"
+    pc "That tracks. So, that's perfect. Do you know any secrets about this place?"
 
-	splinters "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
+    splinters "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
 
-	"From the singular interaction I observed, it does indeed seem like that's Splinters' perception of the situation."
+    "From the singular interaction I observed, it does indeed seem like that's Splinters' perception of the situation."
 
-	pc "Yes..."
+    pc "Yes..."
 
-	splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream, I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
+    splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream, I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
 
-	pc "Oooooo..."
+    pc "Oooooo..."
 
-	splinters "and basically it's a secret I haven't told anyone about so there you have it!"
+    splinters "and basically it's a secret I haven't told anyone about so there you have it!"
 
-	splinters "Now I have a question for you"
+    splinters "Now I have a question for you"
 
-	pc "Yeah?"
+    pc "Yeah?"
 
-	splinters "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
+    splinters "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
 
-	"I have no idea what a SoundMeowd is but I believe them."
+    "I have no idea what a SoundMeowd is but I believe them."
 
-	pc "Sure, why not?"
+    pc "Sure, why not?"
 
-	"We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed. It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
+    "We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed. It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
 
-	"I think this means we're friends! Two objectives completed, hurrah!"
+    "I think this means we're friends! Two objectives completed, hurrah!"
 jump j1study_outro
 
 label j1study_walkaway:
-	"The rest of the library is a vast maze of stacks and shelves. Librarians young and old bustle around sorting stacks while familiars help guide guests to the books they seek."
+    "The rest of the library is a vast maze of stacks and shelves. Librarians young and old bustle around sorting stacks while familiars help guide guests to the books they seek."
 
-	"There's a wall with slots for rolled-up maps, which a couple people study. I rummage through the index and find what I'm looking for."
+    "There's a wall with slots for rolled-up maps, which a couple people study. I rummage through the index and find what I'm looking for."
 
-	"{i}A map of the whole town. Perfect.{/i}"
+    "{i}A map of the whole town. Perfect.{/i}"
 
-	"I find this library, which is near the university and its horticultural center. To the north is the Dark Angora Forest, and to the south, croplands and the festival grounds."
+    "I find this library, which is near the university and its horticultural center. To the north is the Dark Angora Forest, and to the south, croplands and the festival grounds."
 
-	"In the town proper I see the town hall, Schrodinger's Records, the diner and marketplace I went to when we first arrived, and a cafe."
+    "In the town proper I see the town hall, Schrodinger's Records, the diner and marketplace I went to when we first arrived, and a cafe."
 
-	"West of the residential district there's a graveyard, and south of the neighborhoods is a vineyard."
+    "West of the residential district there's a graveyard, and south of the neighborhoods is a vineyard."
 
-	"To the far west  is Abyssinian Lake, and beyond that, Dewclaw Beach."
+    "To the far west  is Abyssinian Lake, and beyond that, Dewclaw Beach."
 
-	"There's so much information here that I couldn't possibly learn it all, but at least I'll have heard of these places in case we need to go find them later."
+    "There's so much information here that I couldn't possibly learn it all, but at least I'll have heard of these places in case we need to go find them later."
 
-	"All in all, this was pretty dang successful."
+    "All in all, this was pretty dang successful."
 jump j1study_outro
 
 label j1study_outro:
@@ -520,138 +520,138 @@ label j1study_outro:
 jump j1witch
 
 label j1gym:
-	frankie "...and THAT'S why creatinine is good for the body, you dig?"
+    frankie "...and THAT'S why creatinine is good for the body, you dig?"
 
-	"Lanky Cat" "Dang that's sick, I'll definitely get some"
+    "Lanky Cat" "Dang that's sick, I'll definitely get some"
 
-	frankie "Hell yeah breh."
+    frankie "Hell yeah breh."
 
-	"The gym is pleasantly busy with conversation between nerds. Fitness nerds are, after all, still nerds. And every nerd up in this house is filled with determination."
+    "The gym is pleasantly busy with conversation between nerds. Fitness nerds are, after all, still nerds. And every nerd up in this house is filled with determination."
 
-	"Frankie wraps up their conversation and then comes up to me to strike a pose."
+    "Frankie wraps up their conversation and then comes up to me to strike a pose."
 
-	frankie "Welcome in fam-bam, if you're looking to build that muscle mass you're in the right place to kick some ass. What's your deal? Arms? Legs? Core?"
+    frankie "Welcome in fam-bam, if you're looking to build that muscle mass you're in the right place to kick some ass. What's your deal? Arms? Legs? Core?"
 
 menu j1gym_choice:
 
-	"Arms.":
-		jump j1gym_arms
-	"Legs.":
-		jump j1gym_legs
-	"Core.":
-		jump j1gym_core
-	"Everything.":
-		jump j1gym_everything
-	"I'm just watching.":
-		jump j1gym_none
-	"Oh god I don't work out.":
-		jump j1gym_none
+    "Arms.":
+        jump j1gym_arms
+    "Legs.":
+        jump j1gym_legs
+    "Core.":
+        jump j1gym_core
+    "Everything.":
+        jump j1gym_everything
+    "I'm just watching.":
+        jump j1gym_none
+    "Oh god I don't work out.":
+        jump j1gym_none
 
 
 label j1gym_arms:
-	frankie "Hell yeah, let's pump some iron. I noticed you're here alone, I'll spot you."
+    frankie "Hell yeah, let's pump some iron. I noticed you're here alone, I'll spot you."
 jump j1gym_cont
 
 
 label j1gym_legs:
-	frankie "Hell yeah, leg day. We got machines, we can do some sissy squats, we got a squat rack, whatever you feelin'."
+    frankie "Hell yeah, leg day. We got machines, we can do some sissy squats, we got a squat rack, whatever you feelin'."
 jump j1gym_cont
 
 
 label j1gym_core:
-	frankie "Oh, dip? Let's goooo. I bet I can out-plank you, how 'bout you come find out?"
+    frankie "Oh, dip? Let's goooo. I bet I can out-plank you, how 'bout you come find out?"
 jump j1gym_cont
 
 
 label j1gym_everything:
-	frankie "That's wack, pussycat. But I'm happy to show you around and give you a good looksee of what we have goin' on here. There's plenty to give you that full-body workout you're craving."
+    frankie "That's wack, pussycat. But I'm happy to show you around and give you a good looksee of what we have goin' on here. There's plenty to give you that full-body workout you're craving."
 jump j1gym_cont
 
 
 label j1gym_none:
-	frankie "You know what? I respect that. Ask questions if you're curious about anything, you dig?"
+    frankie "You know what? I respect that. Ask questions if you're curious about anything, you dig?"
 jump j1gym_outro
 
 
 label j1gym_cont:
-	"Frankie shows me around the gym and helps me get going on my exercise routine."
+    "Frankie shows me around the gym and helps me get going on my exercise routine."
 
-	"A couple times they come close and gently adjust my form, explaining how the small shifts change which muscles the exercise targets."
+    "A couple times they come close and gently adjust my form, explaining how the small shifts change which muscles the exercise targets."
 
-	"Sometimes they get {i}real{/i} close."
+    "Sometimes they get {i}real{/i} close."
 
-	frankie "I'm going to put my hand here, okay?"
+    frankie "I'm going to put my hand here, okay?"
 
-	pc "Sure"
+    pc "Sure"
 
-	frankie "So just flex that muscle and keep your core tight. And don't forget to breathe, homie."
-	"It's a great workout."
+    frankie "So just flex that muscle and keep your core tight. And don't forget to breathe, homie."
+    "It's a great workout."
 jump j1gym_outro
 
 
 label j1gym_outro:
-	"The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself, and in my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
+    "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself, and in my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
 
-	"Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
+    "Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
 jump j1witch
 
 
 # At home
 label j1witch:
-	"My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
+    "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
-	"She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths—not totally unusual for us, but we're usually pretty tight-knit."
+    "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths—not totally unusual for us, but we're usually pretty tight-knit."
 
-	pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
+    pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
 
-	"My witch reaches down as I walk up and helps lift my satchel off of me."
+    "My witch reaches down as I walk up and helps lift my satchel off of me."
 
-	"My Witch" "Oh, you. Always taking the initiative. I appreciate you so much, [pc]."
+    "My Witch" "Oh, you. Always taking the initiative. I appreciate you so much, [pc]."
 
-	"She gives my head a few pats and I purr. It's good to be home together."
+    "She gives my head a few pats and I purr. It's good to be home together."
 
-	"My Witch" "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
+    "My Witch" "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
 jump j1wke
 
 
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
-	"It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning. I have enough time today to make my rounds and then hang out with someone, if they're free."
+    "It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning. I have enough time today to make my rounds and then hang out with someone, if they're free."
 
 menu j1talk:
 "I talk to..."
-	"Gomer":
-		jump j1gomer
-	"Splinters":
-		jump j1splinters
-	"Pucci":
-		jump j1pucci
-	"Yuri":
-		jump j1yuri
-	"Frankie":
-		jump j1frankie
-	"Continue...":
-		jump j1hangout
+    "Gomer":
+        jump j1gomer
+    "Splinters":
+        jump j1splinters
+    "Pucci":
+        jump j1pucci
+    "Yuri":
+        jump j1yuri
+    "Frankie":
+        jump j1frankie
+    "Continue...":
+        jump j1hangout
 
 
 label j1gomer:
-	"Gomer's in his alley outside the diner, living it up."
+    "Gomer's in his alley outside the diner, living it up."
 
-	gomer "Hey dog, I remember you. What's up? You caught me redecorating my shack. I found some shineys that really resonated with me, y'know what I mean? Check it."
+    gomer "Hey dog, I remember you. What's up? You caught me redecorating my shack. I found some shineys that really resonated with me, y'know what I mean? Check it."
 
-	"The shineys are chunks of seaglass in varying shades, all with edges smoothed by sand and tide."
+    "The shineys are chunks of seaglass in varying shades, all with edges smoothed by sand and tide."
 
-	gomer "There's a whole lot to this town the cool cats up in the rich neighborhood never get to see. You ride with me, dog, and I'll show you things that'll blow your mind."
+    gomer "There's a whole lot to this town the cool cats up in the rich neighborhood never get to see. You ride with me, dog, and I'll show you things that'll blow your mind."
 
-	pc "Sick. You cool if I give you a scry sometime?"
+    pc "Sick. You cool if I give you a scry sometime?"
 
-	gomer "Sure thing."
+    gomer "Sure thing."
 jump j1talk
 
 
 label j1splinters:
-	"Splinters is in the cafe on a cellphone. They notice me entering when the door's bell jingles."
+    "Splinters is in the cafe on a cellphone. They notice me entering when the door's bell jingles."
 
     splinters "Oh hey!"
 
@@ -661,128 +661,128 @@ label j1splinters:
 
 menu j1splinters_coffee
 
-	"Drink it":
-		jump j1splinters_coffeeyes
+    "Drink it":
+        jump j1splinters_coffeeyes
 
-	"Pass":
-		jump j1splinters_coffeeno
+    "Pass":
+        jump j1splinters_coffeeno
 
 label j1splinters_coffeeyes:
-	"It's a warm and extremely sweet mocha latte. I feel a little more awake."
+    "It's a warm and extremely sweet mocha latte. I feel a little more awake."
 
-	splinters "It has pigeon milk!"
+    splinters "It has pigeon milk!"
 
-	"I blanch."
+    "I blanch."
 
-	"It was delicious."
+    "It was delicious."
 
-	pc "This slaps. Also, do you mind if I scry you sometime?"
+    pc "This slaps. Also, do you mind if I scry you sometime?"
 
-	splinters "Go ahead, though I'd prefer if you called my cell. Here's my number."
+    splinters "Go ahead, though I'd prefer if you called my cell. Here's my number."
 
-	"I don't have a phone but I suppose this will come in handy someday."
+    "I don't have a phone but I suppose this will come in handy someday."
 jump j1talk
 
 
 label j1splinters_coffeeno:
-	pc "Umm, no thanks. I think I'll get my own drink."
+    pc "Umm, no thanks. I think I'll get my own drink."
 
-	splinters "No worries just thought I'd offer"
+    splinters "No worries just thought I'd offer"
 
-	pc "Thanks! Uh, would it be cool if I scry'd you sometime?"
+    pc "Thanks! Uh, would it be cool if I scry'd you sometime?"
 
-	splinters "Yeah totally though normally I'm nearer to a phone than anything else so here's  my number just in case you need it."
+    splinters "Yeah totally though normally I'm nearer to a phone than anything else so here's  my number just in case you need it."
 
-	"I don't have a phone but I suppose this will come in handy someday."
+    "I don't have a phone but I suppose this will come in handy someday."
 jump j1talk
 
 
 label j1pucci:
-	pucci "Hey, come here, I think this would look amazing on you."
+    pucci "Hey, come here, I think this would look amazing on you."
 
-	"Pucci was sitting at the counter in the diner going through a bag of brightly colored fabrics. They wave me over, and as I approach they hold up a deep red scarf."
+    "Pucci was sitting at the counter in the diner going through a bag of brightly colored fabrics. They wave me over, and as I approach they hold up a deep red scarf."
 
-	pucci "Yep, this is {i}so{/i} your color. You should scry me sometime and we'll get you some cute accessories."
+    pucci "Yep, this is {i}so{/i} your color. You should scry me sometime and we'll get you some cute accessories."
 
-	"Right, they already said I should scry them!"
+    "Right, they already said I should scry them!"
 jump j1talk
 
 
 label j1yuri:
-	"Yuri is sitting in a window seat inside the cafe. They're writing in a notebook in a very pretty cursive script. I already know I can scry them, but I should say hi anyway."
+    "Yuri is sitting in a window seat inside the cafe. They're writing in a notebook in a very pretty cursive script. I already know I can scry them, but I should say hi anyway."
 
-	"They catch me looking over their shoulder and startle."
+    "They catch me looking over their shoulder and startle."
 
-	yuri "Oh! Hi! I'm writing a haiku, but I can't figure out the last line. Here's what I have: Feathers like petals, Fall gently singing silent..."
+    yuri "Oh! Hi! I'm writing a haiku, but I can't figure out the last line. Here's what I have: Feathers like petals, Fall gently singing silent..."
 
 menu j1yuri_haiku
 
-	"All the leaves are black":
-		jump j1yuri_haiku_black
-	"Summer fades away":
-		jump j1yuri_haiku_summer
-	"Haikus are stupid":
-		jump j1yuri_haiku_stupid
-	"What's a haiku?":
-		jump j1yuri_haiku_what
+    "All the leaves are black":
+        jump j1yuri_haiku_black
+    "Summer fades away":
+        jump j1yuri_haiku_summer
+    "Haikus are stupid":
+        jump j1yuri_haiku_stupid
+    "What's a haiku?":
+        jump j1yuri_haiku_what
 label j1yuri_haiku_black:
-	yuri "Like crow feathers! Perfect, thank you!"
+    yuri "Like crow feathers! Perfect, thank you!"
 jump j1talk
 
 
 label j1yuri_haiku_summer:
-	yuri "Perfect for this season, that's so good."
+    yuri "Perfect for this season, that's so good."
 jump j1talk
 
 
 label j1yuri_haiku_stupid:
-	yuri "Okay, that isn't very nice, but that is technically proper haiku form so I'll write it anyway. You don't have to be mean about something just because you don't like it, you know."
+    yuri "Okay, that isn't very nice, but that is technically proper haiku form so I'll write it anyway. You don't have to be mean about something just because you don't like it, you know."
 jump j1talk
 
 
 label j1yuri_haiku_what:
-	yuri "Oh, no worries! A haiku is a kind of poem that has three lines. The first line has 5 syllables, the second line has 7 syllables, and the last line has 5 syllables. :)"
+    yuri "Oh, no worries! A haiku is a kind of poem that has three lines. The first line has 5 syllables, the second line has 7 syllables, and the last line has 5 syllables. :)"
 jump j1talk
 
 
 label j1frankie:
-	"I see Frankie doing bicep curls with Splinters as their weight."
-	pc "Hey Frankie!"
-	frankie "Oh hey!"
-	"They set down the small cat who looks up at them with big eyes."
-	splinters "So that was super dope but I still don't think I'll be able to do that lifting you up basically ever in my life even if I worked out every day"
-	frankie "Psh, you can't know until you try. I believeeeeee."
-	pc "Not to interrupt--"
-	frankie "Naw, naw, you aren't interrupting"
-	pc "--but I--"
-	frankie "interrupting is totally not your style"
-	pc "As I was saying, I--"
-	"Frankie opens their mouth and then closes it again."
-	pc "I was wondering if it's okay to scry you sometime?"
-	frankie "Oh! Yeah of course. Especially if you need a gym buddy, just give me a scry and I'll be at the gym at sonic speeds."
+    "I see Frankie doing bicep curls with Splinters as their weight."
+    pc "Hey Frankie!"
+    frankie "Oh hey!"
+    "They set down the small cat who looks up at them with big eyes."
+    splinters "So that was super dope but I still don't think I'll be able to do that lifting you up basically ever in my life even if I worked out every day"
+    frankie "Psh, you can't know until you try. I believeeeeee."
+    pc "Not to interrupt--"
+    frankie "Naw, naw, you aren't interrupting"
+    pc "--but I--"
+    frankie "interrupting is totally not your style"
+    pc "As I was saying, I--"
+    "Frankie opens their mouth and then closes it again."
+    pc "I was wondering if it's okay to scry you sometime?"
+    frankie "Oh! Yeah of course. Especially if you need a gym buddy, just give me a scry and I'll be at the gym at sonic speeds."
 jump j1talk
 
 menu j1hangout:
 
-	"I'm ready to choose someone to hang out with":
-		jump j1hangoutchoice
-	"I'm not done talking to everyone...":
-		jump j1talk
+    "I'm ready to choose someone to hang out with":
+        jump j1hangoutchoice
+    "I'm not done talking to everyone...":
+        jump j1talk
 
 
 menu j2hangoutchoice:
 
-	"Gomer":
-		jump j1gomerhangout
+    "Gomer":
+        jump j1gomerhangout
 
-	"Splinters":
-		jump j1splintershangout
+    "Splinters":
+        jump j1splintershangout
 
-	"Pucci":
-		jump j1puccihangout
+    "Pucci":
+        jump j1puccihangout
 
-	"Frankie":
-		jump j1frankiehangout
+    "Frankie":
+        jump j1frankiehangout
 
 
 label j1gomerhangout:
@@ -808,16 +808,16 @@ jump j2
 
 # --Week 2--
 label j2:
-	"My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur. Before we get started brewing the potion, we're going to have to find some ingredients. My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
+    "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur. Before we get started brewing the potion, we're going to have to find some ingredients. My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
 "To get the ingredients, I'm going to..."
-	"Haggle":
-		jump j2haggle
-	"Synthesize":
-		jump j2synthesize
-	"Forage":
-		jump j2forage
+    "Haggle":
+        jump j2haggle
+    "Synthesize":
+        jump j2synthesize
+    "Forage":
+        jump j2forage
 
 
 # Haggle
@@ -874,23 +874,23 @@ label j2wke
 
 menu j2talk:
 "I talk to..."
-	"Gomer":
-		jump j2gomer
+    "Gomer":
+        jump j2gomer
 
-	"Splinters":
-		jump j2splinters
+    "Splinters":
+        jump j2splinters
 
-	"Pucci":
-		jump j2pucci
+    "Pucci":
+        jump j2pucci
 
-	"Yuri":
-		jump j2yuri
+    "Yuri":
+        jump j2yuri
 
-	"Frankie":
-		jump j2frankie
+    "Frankie":
+        jump j2frankie
 
-	"Continue...":
-		jump j2hangout
+    "Continue...":
+        jump j2hangout
 
 
 label j2gomer:
@@ -920,26 +920,26 @@ jump j2talk
 
 menu j2hangout:
 
-	"I'm ready to choose someone to hang out with"
-		jump j2hangoutchoice
+    "I'm ready to choose someone to hang out with"
+        jump j2hangoutchoice
 
-	"I'm not done talking to everyone..."
-		jump j2talk
+    "I'm not done talking to everyone..."
+        jump j2talk
 
 
 menu j2hangoutchoice:
 
-	"Gomer":
-		jump j2gomerhangout
+    "Gomer":
+        jump j2gomerhangout
 
-	"Splinters":
-		jump j2splintershangout
+    "Splinters":
+        jump j2splintershangout
 
-	"Pucci":
-		jump j2puccihangout
+    "Pucci":
+        jump j2puccihangout
 
-	"Frankie":
-		jump j2frankiehangout
+    "Frankie":
+        jump j2frankiehangout
 
 
 label j2gomerhangout:
@@ -964,14 +964,14 @@ label j3:
 # This is the last week we have to get the potion ready for the exam next week, where we'll make everything from scratch. We can stick to the plan we're already working on, or we can try something else and  see  if it works better.
 menu j3wk:
 
-	"Shop":
-		jump j3shop
+    "Shop":
+        jump j3shop
 
-	"Visit a monument":
-		jump j3monument
+    "Visit a monument":
+        jump j3monument
 
-	"Go to the beach":
-		jump j3beach
+    "Go to the beach":
+        jump j3beach
 
 
 # Shop
@@ -1016,18 +1016,18 @@ label j3wke:
 
 menu j3talk:
 "I talk to..."
-	"Gomer":
-		jump j3gomer
-	"Splinters":
-		jump j3splinters
-	"Pucci":
-		jump j3pucci
-	"Yuri":
-		jump j3yuri
-	"Frankie":
-		jump j3frankie
-	"Continue...":
-		jump j1hangout
+    "Gomer":
+        jump j3gomer
+    "Splinters":
+        jump j3splinters
+    "Pucci":
+        jump j3pucci
+    "Yuri":
+        jump j3yuri
+    "Frankie":
+        jump j3frankie
+    "Continue...":
+        jump j1hangout
 
 
 
@@ -1056,26 +1056,26 @@ jump j3talk
 
 menu j1hangout:
 
-	"I'm ready to choose someone to hang out with":
-		jump jk3hangoutchoice
+    "I'm ready to choose someone to hang out with":
+        jump jk3hangoutchoice
 
-	"I'm not done talking to everyone...":
-		jump j3talk
+    "I'm not done talking to everyone...":
+        jump j3talk
 
 
 label j3hangoutchoice:
 
-	"Gomer":
-		jump j3gomerhangout
+    "Gomer":
+        jump j3gomerhangout
 
     "Splinters":
-		jump j3splintershangout
+        jump j3splintershangout
 
-	"Pucci":
-		jump j3puccihangout
+    "Pucci":
+        jump j3puccihangout
 
-	"Frankie":
-		jump j3frankiehangout
+    "Frankie":
+        jump j3frankiehangout
 
 
 label j3gomerhangout:
@@ -1100,26 +1100,26 @@ jump j4
 
 menu j4:
     "My potion making strategy is to..."
-	"Just vibe it up":
-		jump j4vibe
+    "Just vibe it up":
+        jump j4vibe
 
-	"Do it by the book":
-		jump j4book
+    "Do it by the book":
+        jump j4book
 
-	"Trial and error. Drink the potion!":
-		jump j4error
+    "Trial and error. Drink the potion!":
+        jump j4error
 # IF DATES HAVE BEEN DATED...
-	"Gomer's hair dye potion":
-		jump j4potion_gomer
+    "Gomer's hair dye potion":
+        jump j4potion_gomer
 
-	"Pucci's outsourcing":
-		jump j4potion_pucci
+    "Pucci's outsourcing":
+        jump j4potion_pucci
 
-	"Frankie's ":
-		jump j4potion_frankie
+    "Frankie's ":
+        jump j4potion_frankie
 
-	"Splinters' ":
-		jump j4potion_splinters
+    "Splinters' ":
+        jump j4potion_splinters
 
 
 label j4vibe:
@@ -1151,23 +1151,23 @@ label j4wke:
 menu j4talk:
     "I talk to..."
 
-	"Gomer":
-		jump j4gomer
+    "Gomer":
+        jump j4gomer
 
-	"Splinters":
-		jump j4splinters
+    "Splinters":
+        jump j4splinters
 
-	"Pucci":
-		jump j4pucci
+    "Pucci":
+        jump j4pucci
 
-	"Yuri":
-		jump j4yuri
+    "Yuri":
+        jump j4yuri
 
-	"Frankie":
-		jump j4frankie
+    "Frankie":
+        jump j4frankie
 
-	"Continue...":
-		jump j1hangout
+    "Continue...":
+        jump j1hangout
 
 
 
@@ -1191,27 +1191,27 @@ jump j4talk
 
 menu j1hangout:
 
-	"I'm ready to choose someone to hang out with":
-		jump j4hangoutchoice
+    "I'm ready to choose someone to hang out with":
+        jump j4hangoutchoice
 
-	"I'm not done talking to everyone...":
-		jump j4talk
+    "I'm not done talking to everyone...":
+        jump j4talk
 
 
 # hangouts are all about dealing with the bastard mice
 menu j4hangoutchoice:
 
-	"Gomer":
-		jump j4gomerhangout
+    "Gomer":
+        jump j4gomerhangout
 
-	"Splinters":
-		jump j4splintershangout
+    "Splinters":
+        jump j4splintershangout
 
-	"Pucci":
-		jump j4puccihangout
+    "Pucci":
+        jump j4puccihangout
 
-	"Frankie":
-		jump j4frankiehangout
+    "Frankie":
+        jump j4frankiehangout
 
 
 label j4gomerhangout:
