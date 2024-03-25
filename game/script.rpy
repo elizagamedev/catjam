@@ -244,7 +244,7 @@ label end_intro:
 # Lay of the land
 label j1:
 
-	"My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances. Now we have a week to get acquainted with the town to \"learn its secrets\" or something and then we'll find out what we're gonna need to do."
+    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances. Now we have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
 	"I should probably buckle down and try making some solid friendships in case we have to do any group projects. The test could be {i}anything{/i}."
 
