@@ -620,7 +620,7 @@ label j1wke:
     "It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning. I have enough time today to make my rounds and then hang out with someone, if they're free."
 
 menu j1talk:
-"I talk to..."
+    "I talk to..."
     "Gomer":
         jump j1gomer
     "Splinters":
@@ -659,7 +659,7 @@ label j1splinters:
 
     splinters "You gotta try this coffee."
 
-menu j1splinters_coffee
+menu j1splinters_coffee:
 
     "Drink it":
         jump j1splinters_coffeeyes
@@ -715,7 +715,7 @@ label j1yuri:
 
     yuri "Oh! Hi! I'm writing a haiku, but I can't figure out the last line. Here's what I have: Feathers like petals, Fall gently singing silent..."
 
-menu j1yuri_haiku
+menu j1yuri_haiku:
 
     "All the leaves are black":
         jump j1yuri_haiku_black
@@ -811,7 +811,7 @@ label j2:
     "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur. Before we get started brewing the potion, we're going to have to find some ingredients. My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
-"To get the ingredients, I'm going to..."
+    "To get the ingredients, I'm going to..."
     "Haggle":
         jump j2haggle
     "Synthesize":
@@ -868,12 +868,12 @@ jump j2wke
 
 
 # --weekend 2--
-label j2wke
+label j2wke:
 # On Sunday we'll brew the potion's base just to test it out, but I have a little time to kill.
 
 
 menu j2talk:
-"I talk to..."
+    "I talk to..."
     "Gomer":
         jump j2gomer
 
@@ -920,10 +920,10 @@ jump j2talk
 
 menu j2hangout:
 
-    "I'm ready to choose someone to hang out with"
+    "I'm ready to choose someone to hang out with":
         jump j2hangoutchoice
 
-    "I'm not done talking to everyone..."
+    "I'm not done talking to everyone...":
         jump j2talk
 
 
@@ -1015,7 +1015,7 @@ label j3wke:
 
 
 menu j3talk:
-"I talk to..."
+    "I talk to..."
     "Gomer":
         jump j3gomer
     "Splinters":
@@ -1096,9 +1096,10 @@ jump j4
 
 
 # --Week 4--
+label j4:
     "Time to make the actual potion this week!"
 
-menu j4:
+menu j4wk:
     "My potion making strategy is to..."
     "Just vibe it up":
         jump j4vibe
