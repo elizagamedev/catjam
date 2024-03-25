@@ -295,16 +295,16 @@ label j1records:
 
 menu j1records_alec:
 
-    pc "You got any games on your phone?":
+    "You got any games on your phone?":
         jump j1records_games
 
-    pc "I'm here to find out what your secrets are.":
+    "I'm here to find out what your secrets are.":
         jump j1records_secrets
 
-    pc "What are you reading?":
+    "What are you reading?":
         jump j1records_reading
 
-    pc "Nevermind.":
+    "Nevermind.":
         jump j1records_outro
 
 label j1records_games:
@@ -1079,18 +1079,22 @@ label j3hangoutchoice:
 
 
 label j3gomerhangout:
+pass
 jump j4
 
 
 label j3splintershangout:
+pass
 jump j4
 
 
 label j3puccihangout:
+pass
 jump j4
 
 
 label j3frankiehangout:
+pass
 jump j4
 
 
