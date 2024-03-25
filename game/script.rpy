@@ -388,7 +388,7 @@ jump j1explorechoice
 label j1study:
 	"The best way to learn secrets is through research. I think. So this week I'll study and see where it gets me."
 	"I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
-	"The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber. I know this because of the enormous sign hanging above the front desk that says {q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply. If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}”
+    "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber. I know this because of the enormous sign hanging above the front desk that says {q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply. If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}"
 	"It's beautiful here, and the scent of parchment and ink swirls around me. My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
 	"Librarian" "SPLINTERS."
 	"A classic library whisper-yell."
@@ -403,7 +403,7 @@ label j1study:
 	"At this point an intervention might be a mercy."
 
 menu j1study_choice:
-	"{q}Psst, hey Splinters, can you help me with something?{/q}":
+    "{q}Psst, hey Splinters, can you help me with something?{/q}":
 		jump j1study_helpsplinters
 	"That's so not my business.":
 		jump j1study_walkaway
