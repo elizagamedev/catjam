@@ -1109,6 +1109,19 @@ menu j3hangout:
         jump j3talk
 
 #Add in j3hangoutchoice menu here lol I am deleting it for now because I couldn't figure out how to use the pass thing
+menu j3hangoutchoice
+
+    "Gomer":
+        jump j3gomerhangout
+
+    "Splinters":
+        jump j3splintershangout
+
+    "Pucci":
+        jump j3puccihangout
+
+    "Frankie":
+        jump j3frankiehangout
 
 label j3gomerhangout:
 jump j4
@@ -1200,7 +1213,7 @@ menu j4talk:
         jump j4frankie
 
     "Continue...":
-        jump j1hangout
+        jump j4hangout
 
 
 
@@ -1261,7 +1274,7 @@ jump outro
 
 # --outro--
 label outro:
-
+    "To be continued..."
 
     # This ends the game.
 
