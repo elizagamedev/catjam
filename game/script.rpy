@@ -760,7 +760,7 @@ label j1yuri:
     yuri "Oh! Hi! I'm writing a haiku, but I can't figure out the last line. Here's what I have: Feathers like petals, Fall gently singing silent..."
 
 menu j1yuri_haiku:
-
+    "{q}Feathers like petals, Fall gently singing silent...{/q}"
     "All the leaves are black":
         jump j1yuri_haiku_black
     "Summer fades away":
