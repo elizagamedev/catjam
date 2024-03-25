@@ -2,14 +2,15 @@ define unlucky_expletives = ["Merlin's Beard", "Salacious Salamanders", "Hexes",
 define unlucky_dates = ["unlucky_date_1", "unlucky_date_2", "unlucky_date_3"]
 default unlucky_call_count = 0
 default unlucky_date_count = 0
+default splinters_failed = False
 
 label unlucky_date:
     scene bg home
 
-    "I wondered what Splinter was getting themselves into. I decided to paw them up."
+    "I wondered what Splinters was getting themselves into. I decided to paw them up."
 
     play sound "sound/crackle.opus"
-    "{i}The crystal ball crackles as it connects to Splinter's end.{/i}"
+    "{i}The crystal ball crackles as it connects to Splinters' end.{/i}"
 
     play sound ["sound/thud.opus", "sound/pain.opus"]
     pause 1.0
@@ -18,7 +19,7 @@ label unlucky_date:
 
     play music "music/Brandenburg No4-1 BWV1049.mp3"
 
-    "Splinter crackles into view, licking a freshly-tenderized paw. They're adjusting the very cracked crystal ball back into place."
+    "Splinters crackles into view, licking a freshly-tenderized paw. They're adjusting the very cracked crystal ball back into place."
 
     unlucky "S-sorry about that. Oh! [pc], what's up?"
 

@@ -1,8 +1,7 @@
-default unlucky_quest1_menuset = set()
-default unlucky_quest1 = 0
+default unlucky_date_1_attempted = False
 
 label unlucky_date_1:
-    if (unlucky_quest1 == 0):
+    if not unlucky_date_1_attempted:
         unlucky "S-so, what's up? Can I help with anything"
         pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
         unlucky "Sure, I can give you pointers over coffee. There's a cafe nearby with a neat l-local twirl. I mean, twist."
@@ -16,6 +15,7 @@ label unlucky_date_1:
         "Coffee would be great!":
             pass
         "I don't drink caffeine. That's disgusting.":
+            $ splinters_failed = True
             "Splinters is quite visibly taken aback."
             unlucky "S-sure, that's fine but..."
             unlucky "You don't... *sniff* You don't have to put it that way..."
@@ -45,6 +45,8 @@ label unlucky_date_1:
 
     menu(screen="dialog_choice"):
         "A pretty latte with their signature hay design.":
+            $ unlucky_date_1_attempted = True
+
             hide splinters with dissolve
             "As Splinters makes the order, you admire the very photogenic lattes at the other tables."
             "It seemed difficult to drink without spilling; the lattes were practically overflowing..."
@@ -65,7 +67,6 @@ label unlucky_date_1:
             "Splinters brings over the two paper cups."
             unlucky "I got you the silver vine special, hope that's okay."
             unlucky "They get it from the enchanted forest near the school."
-            pass
 
     pc "Neat, there's an enchanted forest near here?"
 
@@ -83,10 +84,12 @@ label unlucky_date_1:
 
     menu(screen="dialog_choice"):
         "Oh wow, you know a lot about this stuff.":
+            $ splinters_failed = True
             unlucky moe "Oh, it's nothing special. They teach what the most common plants do in elemem-elemenar-elementary s-school."
             unlucky "Y-You'll pick it up in no time."
-            pass
+
         "Ugh, {i}snore{/i}. It tasted pretty, I don't care. Zip it, nerd":
+
             show splinters neutral
             "Splinters looks taken aback."
             unlucky "W-wow. You sound like Frankie right now."
@@ -111,9 +114,9 @@ label unlucky_date_1:
     play sound "sound/pain.opus"
     $ expletive = renpy.random.choice(unlucky_expletives)
     unlucky "[expletive]!"
-    "The 'sparkle' hits them in the face."
+    "The {sq}sparkle{/sq} hits them in the face."
     "Splinter's large right eye was now watering and clamped shut."
-    "They fish the 'sparkle' from their cup. It's a half-submerged guitar string."
+    "They fish the {sq}sparkle{/sq} from their cup. It's a half-submerged guitar string."
 
     define guitarist = Character("Guitarist", who_color="#8376F7")
 
@@ -142,6 +145,7 @@ label unlucky_date_1:
 
     menu(screen="dialog_choice"):
         "Haha, you're so weird Splinters.":
+            $ unlucky_date_1_attempted = False
             pc "It would have been more normal if you salted your coffee."
             show splinters talking
             "Splinters' expression grew strained."
@@ -157,7 +161,6 @@ label unlucky_date_1:
         "Oh, I see. Wow, you're... very serious about this bad luck stuff.":
             unlucky talking "Oh, my whole family is like this to be honest."
             unlucky neutral "I know this probably seems weird and paranoid to everyone else."
-            pass
 
     pc "Whatever gives you guys a peace of mind. I'm not judging."
     pc "So... you mentioned common plants. What are the ones everyone knows about?"
@@ -172,6 +175,7 @@ label unlucky_date_1:
 
     menu(screen="dialog_choice"):
         "You know... you seem smart. Why the bogus luck stuff?":
+            $ unlucky_date_1_attempted = True
             unlucky neutral "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
             unlucky "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
             unlucky "Maybe you should talk with {i}the familiar owned by the librarian that I don't remember{/i}. They're more the logical type."
@@ -215,6 +219,5 @@ label unlucky_date_1:
     unlucky "Until next time, keep away from cracks in the sidewalk and don't walk under the ladders!"
 
     $ unlucky_date_count += 1
-    $ unlucky_quest1 = 1
 
     return

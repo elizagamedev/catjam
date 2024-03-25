@@ -223,6 +223,8 @@ label .bottle:
         "Do you want to hang out next weekend?":
             pass
         "Spit it out, you pile of garbage.":
+            $ gomer_failed = True
+
             gomer talking "..."
             gomer upset "..."
 

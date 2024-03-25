@@ -1,6 +1,6 @@
 default trashcat_time_menuset = set()
 default trashcat_quest1_menuset = set()
-default trashcat_quest1 = 0
+default gomer_failed = False
 
 label gomer_date_1:
     gomer "..."
@@ -134,6 +134,8 @@ label gomer_date_1:
             gomer "Alright, see you inside."
 
         "I'm going home.":
+            $ gomer_failed = True
+
             "Gomer stops mid-scratch and slowly lowers their paw back on St. Gertrude's palm."
 
             gomer talking "What? Uh... Ok. Sure."
@@ -182,7 +184,7 @@ label gomer_date_1:
             gomer happy "Haha... Yeah... Okay. It's not just me. Thought, thought maybe it was just me, haha."
             gomer "Alright, I'll let you in on something good, dog. You're gonna love this."
 
-    gomer neutral "So I was watching this movie, right? This like, human chick starts out all ugly but then she like, gets her hair done and takes her glasses off and--{b}BAM{/b}--everyone's like, wow, she's a babe, what a transformation."
+    gomer neutral "So I was watching this movie, right? This like, human chick starts out all ugly but then she like, gets her hair done and takes her glasses off and--{b}BAM{/b}--everyone's like, wow, she's a babe, it's like {i}magic{/i}."
     gomer "That's when it hit me, dog... That's magic right there. Right on TV."
 
     pc "What do you mean?"
@@ -225,6 +227,8 @@ label gomer_date_1:
             gomer "Look, they said this was all about using our brains and stuff, right? Well this is some real big brain hour stuff if you ask me, dog."
             jump .quest1
         "That's a terrible idea.":
+            $ gomer_failed = True
+
             show gomer upset
             "Gomer looks at the ground."
 
@@ -240,8 +244,6 @@ label gomer_date_1:
             "Gomer trods away, leaving me alone in the lamplight."
 
             return
-
-    $ trashcat_quest1 = 1
 
     play sound "sound/happy.opus"
     show gomer blushing

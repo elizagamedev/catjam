@@ -4,7 +4,7 @@ label frankie_date_1:
     frankie "Free as a bird. What're you thinking?"
 
     menu(screen="dialog_choice"):
-        "You know any good workout spots?":
+        "I'm looking to start a workout routine.":
             pass
 
         "Well... you have any ideas?":
@@ -112,6 +112,8 @@ label frankie_date_1:
 
     menu(screen="dialog_choice"):
         "That sounds dangerous...":
+            $ frankie_failed = True
+
             play sound "sound/growl.opus"
             "Frankie narrows their peculiar eyes at me."
 

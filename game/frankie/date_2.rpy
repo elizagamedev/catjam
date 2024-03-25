@@ -42,6 +42,7 @@ label frankie_date_2:
         "The pumpkin spice latte.":
             pc "They even add this cute hay pattern in the latte with the milk!"
 
+            play sound "sound/happy.opus"
             frankie "Oh, that's the cat's meow. If you don't have at least one of those before the fall's up, you're wasting your life, jack."
         "Just a black coffee. The more bitter the better.":
             frankie "Frankly, jack, that's applesauce. Completely wack."
@@ -66,6 +67,8 @@ label frankie_date_2:
             frankie "You're a surprisingly artless goober."
             frankie "Whatever. If all you've got is the capacity for the corporeal, that's your cross to bear, jack."
         "I didn't think you were such a flimsy wimp." if frankie_hates_your_drink:
+            $ frankie_failed = True
+
             frankie "You hungry, jack? 'Cuz I've got a knuckle sandwich with your name on it."
             frankie "Whatever. I don't got time for finks."
 
@@ -98,6 +101,8 @@ label frankie_date_2:
 
     menu(screen="dialog_choice"):
         "That's utterly disgusting.":
+            $ frankie_failed = True
+
             play sound "sound/hiss.opus"
 
             "I shudder at Frankie's glower."
@@ -113,6 +118,8 @@ label frankie_date_2:
 
             return
         "You're always on the grind, Frankie! You're so cool!":
+            play sound "sound/happy.opus"
+
             "Frankie does an exaggerated bow."
 
             frankie "When life gives you lemons, jack, you make lemonade."
@@ -205,6 +212,7 @@ label frankie_date_2:
 
     scene black with dissolve
     stop music fadeout 3.0
+    stop bg fadeout 3.0
 
     "Frankie and I spent the afternoon testing out hypotheses on time dilation."
     "While we weren't able to quite reach our goal, we made some breakthroughs."
