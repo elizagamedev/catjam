@@ -55,7 +55,7 @@ label goforth:
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house.."
 
-    menu intro_expqloring:
+    menu intro_exploring:
         "I go check out..."
 
         "Diner":
@@ -101,7 +101,9 @@ label dinerintro:
 
     gomer "Check this out."
 
-    "The human looks around the alleyway, spots me, and looks confused for a moment. Then Gomer hops down from the milk crates and rubs up against the human's ankles. They lean down to give the orange tomcat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
+    "The human looks around the alleyway, spots me, and looks confused for a moment. Then Gomer hops down from the milk crates and rubs up against the human's ankles."
+
+    "They lean down to give the orange tomcat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
 
     "Gomer meows happily as they dig into the platter."
 
@@ -111,7 +113,9 @@ label dinerintro:
 
     "As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. The flash of a pink ribbon glints in the sun. I'm mesmerized."
 
-    "The crowd seamlessly parts before the impeccable feline strutting through their midst. Their fluffy tail swooshes languorously from side to side. Before I know it, we're face to face in front of the diner. They pause and give me a look."
+    "The crowd seamlessly parts before the impeccable feline strutting through their midst. Their fluffy tail swooshes languorously from side to side."
+
+    "Before I know it, we're face to face in front of the diner. They pause and give me a look."
 
     pc "H-hi, can I help you?"
 
@@ -1102,10 +1106,10 @@ menu j4wk:
     "Pucci's outsourcing":
         jump j4potion_pucci
 
-    "Frankie's ":
+    "Frankie's IDEA":
         jump j4potion_frankie
 
-    "Splinters' ":
+    "Splinters' IDEA":
         jump j4potion_splinters
 
 
