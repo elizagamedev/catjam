@@ -1103,7 +1103,7 @@ jump j3talk
 menu j3hangout:
 
     "I'm ready to choose someone to hang out with":
-        jump jk3hangoutchoice
+        jump j3hangoutchoice
 
     "I'm not done talking to everyone...":
         jump j3talk
