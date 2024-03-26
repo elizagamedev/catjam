@@ -27,10 +27,14 @@ label splashscreen:
 label after_warp:
     jump initialize
 
-label awaken:
+label awaken(day = None):
+    if day is not None:
+        $ calendar_day = day
+    scene black
     pause 1.0
     play bg "sound/morning.wav" noloop
-    pause 0.5
+    show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    pause 1.5
     scene bg room with Dissolve(1.0)
     return
 
@@ -48,11 +52,12 @@ label start:
     call initialize
     call ask_name_and_pronouns
 
+    scene black
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    pause 2.0
-
+    show expression Text(october[0], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    pause 1.5
     scene bg central_station with Dissolve(1.0)
 
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday life coming from the cozy little college town we'll call home for at least the next month."
@@ -332,9 +337,9 @@ label end_intro:
 # Lay of the land
 label j1:
     play sound "sound/rooster.opus"
-    call awaken
+    call awaken(1)
 
-    "Monday morning I awake and stretch off the drowsiness."
+    "The next morning I awake and stretch off the drowsiness."
 
     "We have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
@@ -356,13 +361,13 @@ menu j1wk:
 
 # Explore
 label j1explore:
-
     "There's still a lot around town I haven't seen. There's a record shop, the university itself, a vineyard... any of these could be crucial to the test, but there's just no way to know. So I'm going to check out all of them. For research."
 
 label j1explorechoice:
     if len(j1explorechoice_menuset) >= 3:
         jump j1witch
     elif j1explorechoice_menuset:
+        $ calendar_day += 1
         call awaken
     menu:
         "Where should I go today?"
@@ -558,6 +563,8 @@ label explore_vineyard_outro:
 
 # Explore - Study
 label j1study:
+    stop bg fadeout 0.5
+
     "The best way to learn secrets is through research. I think. So this week I'll study and see where it gets me."
 
     scene bg library with fade
@@ -689,6 +696,7 @@ label j1study_outro:
     jump j1witch
 
 label j1gym:
+    stop bg fadeout 0.5
     scene bg gym with fade
     play music "music/Funky Boxstep.mp3"
 
@@ -788,7 +796,7 @@ label j1witch:
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
-    call awaken
+    call awaken(5)
     "It's Saturday! Something something scry someone!"
 
     menu .scry:
@@ -817,7 +825,7 @@ label j1wke:
 
 # --Week 2--
 label j2:
-    call awaken
+    call awaken(7)
     "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur."
     "Before we get started brewing the potion, we're going to have to find some ingredients."
     "My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
