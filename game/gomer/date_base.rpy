@@ -3,7 +3,7 @@ default gomer_call_count = 0
 default gomer_date_count = 0
 
 label gomer_date:
-    "I decided to contact Gomer on my crystal ball."
+    "I decided to hit up Gomer."
 
     play music "music/Goblin_Tinker_Soldier_Spy.mp3"
     play sound "sound/crackle.opus"

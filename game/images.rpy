@@ -17,3 +17,5 @@
 image bg cafe silver:
     "bg cafe"
     matrixcolor SaturationMatrix(0.2) * BrightnessMatrix(0.2)
+
+define flashback = SepiaMatrix()

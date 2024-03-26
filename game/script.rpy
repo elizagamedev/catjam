@@ -32,10 +32,51 @@ label awaken(day = None):
         $ calendar_day = day
     scene black
     pause 1.0
-    play bg "sound/morning.wav" noloop
+    play bg "sound/morning.opus" noloop
     show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
     pause 1.5
     scene bg room with Dissolve(1.0)
+    return
+
+label weekend(day, menuset):
+    call awaken(day)
+    "It's Saturday! Something something scry someone!"
+
+    menu .scry:
+        set menuset
+        "I scry..."
+        "Gomer":
+            if gomer_failed:
+                "There's no response..."
+                jump .scry
+            else:
+                stop bg fadeout 2.0
+                call gomer_date
+        "Splinters":
+            if splinters_failed:
+                "There's no response..."
+                jump .scry
+            else:
+                stop bg fadeout 2.0
+                call splinters_date
+        "Pucci":
+            # TODO
+            stop bg fadeout 2.0
+        "Frankie":
+            if frankie_failed:
+                "There's no response..."
+                jump .scry
+            else:
+                stop bg fadeout 2.0
+                call frankie_date
+
+    if scry_redo:
+        $ scry_redo = False
+        if len(j1wke_menuset) == 4:
+            "I guess I'll spend the weekend by myself..."
+        else:
+            "Well, I can always try another cat."
+        jump .scry
     return
 
 # The game starts here.
@@ -44,6 +85,7 @@ default intro_exploring_menuset = set()
 default j1explorechoice_menuset = set()
 default j1records_alec_menuset = set()
 default j1wke_menuset = set()
+default j2wke_menuset = set()
 default scry_redo = False
 
 label start:
@@ -796,32 +838,7 @@ label j1witch:
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
-    call awaken(5)
-    "It's Saturday! Something something scry someone!"
-
-    menu .scry:
-        set j1wke_menuset
-        "I scry..."
-        "Gomer":
-            stop bg fadeout 2.0
-            call gomer_date
-        "Splinters":
-            stop bg fadeout 2.0
-            call splinters_date
-        "Pucci":
-            # TODO
-            stop bg fadeout 2.0
-        "Frankie":
-            stop bg fadeout 2.0
-            call frankie_date
-
-    if scry_redo:
-        $ scry_redo = False
-        if len(j1wke_menuset) == 4:
-            "I guess I'll spend the day by myself..."
-        else:
-            "Well, I can always try another cat."
-        jump .scry
+    call weekend(5, j1wke_menuset)
 
 # --Week 2--
 label j2:
@@ -842,10 +859,12 @@ menu j2wk:
 
 # Haggle
 label j2haggle:
+    stop bg fadeout 0.5
+    scene bg market with fade
+    play music "music/Funky Boxstep.mp3"
     "The best thing I can do is find a source for our ingredient. I head to the marketplace, head full of lofty aspirations for how the day should go."
     "I did not know how quickly I'd be humbled when I set out that morning."
-    "The first thing we need is the third eye from a golden basilisk. This is not a resource easily acquired, and I had no idea what it'll cost,"
-    "but my witch gave me gold to trade with, so I should be fine. Right? That's what I thought."
+    "The first thing we need is the third eye from a golden basilisk. This is not a resource easily acquired, and I had no idea what it'll cost, but my witch gave me gold to trade with, so I should be fine. Right? That's what I thought."
     "I am not fine."
     "After chasing leads for a couple days, I finally found a supplier. Their name is Estelle. Estelle is very old."
     "Estelle won't take gold, no matter how much I offer."
@@ -853,18 +872,31 @@ label j2haggle:
     "A very specific candy from a shop with no name, no sign, and no front door."
     "I'm an excellent sleuth and spend a little coin to get a lead on this new target. It isn't long before I head to the location my spy indicated."
     "What I find is a building with no door--as promised--but with a big ol' bouncer outside anyway."
+    show frankie neutral at center with dissolve
     "The bouncer is Frankie."
-    frankie "Oh hey how's it hangin'?"
+    frankie "How's it hangin', jack?"
     pc "I mean, it's busy, we're trying to work on a potion."
-    frankie "Tubular, pussycat. Keep your eyes peeled, though--never know when someone might try to hustle you."
+    frankie "Sounds hotsy-totsy. Keep those eyes peeled, though--never know when someone might try to hustle you."
     pc "Speaking of, I think I need to get into this building."
-    frankie "No can do, joe. 'Fraid I'm getting moolah for this gig, can't let down the old boss-man."
+    frankie "No can do, jack. 'Fraid I'm getting bread for this gig. Can't let down the big cheese."
     pc "But-but we're friends, surely...?"
-    frankie "You know we're thick as thieves, but I gotta do this job okay? These bucks supply the whey. You know de whey?"
+    if frankie_failed:
+        play sound "sound/hiss.opus"
+        frankie "Don't flatter yourself, jack."
+    else:
+        frankie "You know we're thick as thieves. But a gig's a gig."
     pc "Okay, can you at least tell me how to get in?"
-    frankie "Totes. You gotta find this kid."
+    if frankie_failed:
+        frankie "If it gets you out of my hair."
+    else:
+        frankie "As sure as eggs. You've gotta find this kid, see..."
+
+    stop music fadeout 1.0
+    scene black with dissolve
     "I get a helpful description out of Frankie and have... a lead!"
+    play music "music/Android Sock Hop.mp3"
     "So I go find the kid."
+    scene bg market with dissolve
 
     pc "Am I supposed to be talking to you about the candy?"
     "Kid" "You're in the right place. I can get you in there."
@@ -875,12 +907,18 @@ label j2haggle:
     pc "Sigh. What's the game?"
     "Kid" "You gotta find all 5 of my friends."
     pc "Oh my god that's like a full on quest."
+
+    scene black with dissolve
+
     "I find the first two kids playing near the railroad tracks. They 'fess up their numbers, 4 and 0, and I make them promise to not play so near the tracks."
     pc "It's dangerous!"
     "The third kid is hiding under a table in the diner. She's spooked that she got separated from the group, so it's easy to get her number: 6."
     "So far I have 4, 0, 6."
     "I find the last two kids trying to climb onto the roof of the record shop and threaten to tell on them unless they give me their numbers. 9 and 2. Easy."
     "There's only one number this could be."
+
+    scene bg market with dissolve
+
     "I return to the leader of the kids and look them dead in the eyes."
     pc "It can only be one number."
     "Kid" "And what would that be?"
@@ -889,13 +927,27 @@ label j2haggle:
     pc "420...69."
     "Kid" "By golly you've done it. You've actually done it. I hope you find what you're looking for."
     "And with that ominous sentence, they flit away like a leaf in the wind."
+
+    scene bg market with fade
+
     "I head back to the shop."
+
+    show frankie neutral at center with dissolve
+
     frankie "You're back! Got a code to bust this shindig?"
     pc "Absolutely I do. 42069"
-    frankie "Bada-bing, bada-boom, those are the magic words I needed to hear."
+    frankie "Bada-bing, bada-boom. That's the ticket."
+
+    scene bg alley
+    show frankie neutral at center
+    with dissolve
+
     "They wave me over to a hatch in an alleyway."
     frankie "It's down here."
     pc "Thanks!"
+
+    hide frankie with dissolve
+    show black with dissolve
 
     "The inside of the candy shop is laid out well, with a reception area next to many samples of candies."
     "There are three employees milling about, two of whom are making candies while the third waits at the reception desk."
@@ -913,33 +965,48 @@ label j2haggle:
     "All 3 Foxes" "Thank you!"
     "The receptionist fox brings me a tin full of small strawberry candies. I'm offered a couple free samples of them to take with me too."
     "I pop one in my mouth and gently bite it. It has a soft gel core, also strawberry flavored."
+    scene bg alley with dissolve
+    scene bg market
+    show frankie neutral at center
+    with dissolve
     "On my way out I pass by Frankie again."
 
 menu j2candy:
     "Maybe Frankie would like one...? But I only have one left."
 
-    "Give the candy to Frankie":
+    "I give the candy to Frankie.":
         frankie "Why thank you! *nom* This is doggone delicious."
-        frankie "I'll get you back later. Just you wait and see!"
-    "Keep the candy for myself":
-        frankie "Take care! Get home safe. I'll see you at the gym, yeah?"
-    "Eat the last piece in front of Frankie":
-        frankie "That looked real good, glad you got yourself a treat. Sure would be nice to have... one... but it's alright..."
+        frankie "Next one's on me, jack."
+    "I keep it for myself.":
+        frankie "Take care! Get home safe. Don't slack on those reps, dig?"
+    "I eat the last piece staring them dead in the eyes.":
+        frankie "..."
+        frankie "You tryin' to prove something?"
         pc "I'll uh, bring you one next time."
 label j2haggle2:
+    stop music fadeout 3.0
+    scene black with dissolve
     "I bring the strawberry candies back to Estelle and make the exchange."
-    "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long day."
-jump j2witch
+    "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long week."
+    jump j2witch
 
 
 # Synthesize
 label j2synthesize:
     "One of the ingredients we need for my witch's potion is a relatively expensive compound syrup made from relatively inexpensive materials."
     "So, we're going to make it ourselves."
+    stop bg fadeout 0.5
+    scene bg market with fade
+    play bg "sound/train-station.opus" fadein 1.0
     "We head to the marketplace to pick up the materials: frog legs, slime eyes, fish bones, leeks, persimmons, yew charcoal, and sunflower seeds."
+    show yuri neutral at center with dissolve
     "Yuri waves at us as we walk by the flower stand and tucks a buttercup behind my ear."
     yuri "For good luck!"
+    scene black with dissolve
     "After a full day of shopping, haggling, and hustling, we take a bus to the university."
+    stop bg fadeout 1.0
+    scene bg potions with dissolve
+    play music "music/Gagool.mp3"
     "The university has cauldrons prepared for students to use for synthesizing potions, like we're doing now. The cauldrons are prepared with all the tools a witch could need."
     "My Witch" "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
     pc "Of course! I'll be right here."
@@ -949,19 +1016,40 @@ label j2synthesize:
     "It sputters."
     "An eyeball bounces upwards from the force of a particularly enthusiastic bubble, but I manage to block it so it just falls back in."
     "For the most part, though, the waiting and monitoring is an uneventful process. {i}It just requires patience{/i}--"
+    play sound "sound/door.opus"
     "The door slams open."
+    show splinters neutral at center, vibrate with easeinleft
     splinters "IT IS YOU OH MY GOD you're exactly who I was hoping to run into today!"
     "Splinters stumbles through the door, tiny arms struggling to bear the weight of the very tall glass jar filled with a concerningly brownish-orangeish viscous liquid."
     "They step through the door, and the top of the jar wavers forwards. The momentum pulls them towards me."
     "And towards my potion."
     "I take a defensive stance, trying to think of what Frankie would do in this situation."
+    play sound "sound/crackle.opus"
+    scene bg cafe:
+        matrixcolor flashback
+    show frankie neutral at left:
+        matrixcolor flashback
+    show splinters neutral at right, mirror:
+        matrixcolor flashback
+    with flash
 # Make this seem like a "flashback"
     frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
+    play sound "sound/crackle.opus"
+    scene bg potions
+    show splinters neutral at center, vibrate
+    with flash
     "That's right. I don't skip leg day {i}or{/i} brain day. I got this."
     splinters "LOOK OUT I CAN'T STOP"
     "I step forward and reach my hands out, angling my body, and redirect Splinters' momentum."
+    play sound "sound/collapse.opus"
+    show splinters at Transform(xpos=2.0) with MoveTransition(1.0, time_warp=_warper.easein):
+        rotate 0
+        linear 0.15 rotate 360
+        repeat
     "The jar hits the counter and shatters, sending the burnished goop splattering across the ground--but not into our precious potion. Phew."
+    hide splinters
     pc "Are you okay?!"
+    show splinters neutral at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
     splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
     pc "Yeah, I think so!"
     splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
@@ -972,13 +1060,17 @@ label j2synthesize:
     splinters "It wasn't a potion, that was supposed to be a protein shake."
     "Seems like Splinters dodged a bullet with that one."
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
+    scene bg potions with fade
     "My Witch" "I'm back!"
     "My witch is back with an armfull of funky lookin' plants."
     "I help her prep them and we toss them into the concoction together."
     "I stir the cauldron while she casts spells to control the temperature and provide a stable environment."
     "Splinters stays a polite and safe distance away, sitting on a wooden stool next to a different cauldron."
     "After a whole eon, we end up with a stable ingredient for my witch's potion idea. This is great! Now to let it sit for a week and see if it turns out how we intended."
-jump j2witch
+    # TODO: stretch this out for the whole week
+    stop music fadeout 3.0
+    scene black with dissolve
+    jump j2witch
 
 
 # Forage
@@ -994,6 +1086,7 @@ jump j2witch
 
 # at home
 label j2witch:
+    call awaken(11)
 # Outline
 # I got to spend a lot of time with my witch this week and I'm feeling like a real good familiar. Cute scene where we play a board game together.
 jump j2wke
@@ -1003,37 +1096,8 @@ jump j2wke
 
 # --weekend 2--
 label j2wke:
-# Scry time!
+    call weekend(12, j1wke_menuset)
 
-menu j2hangoutchoice:
-
-    "Gomer":
-        jump j2gomerhangout
-
-    "Splinters":
-        jump j2splintershangout
-
-    "Pucci":
-        jump j2puccihangout
-
-    "Frankie":
-        jump j2frankiehangout
-
-
-label j2gomerhangout:
-jump j3
-
-
-label j2splintershangout:
-jump j3
-
-
-label j2puccihangout:
-jump j3
-
-
-label j2frankiehangout:
-jump j3
 
 
 # --Week 3--

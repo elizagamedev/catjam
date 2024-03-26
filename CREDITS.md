@@ -62,7 +62,7 @@ https://freesound.org/people/Czarcazas/sounds/330800/
 rooster.opus
 https://freesound.org/people/PianoFarm/sounds/583020/
 
-morning.wav
+morning.opus
 https://freesound.org/people/barkenov/sounds/251231/
 
 collapse.opus
@@ -70,3 +70,6 @@ https://freesound.org/people/craigsmith/sounds/487142/
 
 clocktower.opus
 https://freesound.org/people/craigsmith/sounds/438210/
+
+door.opus
+https://freesound.org/people/bennychico11/sounds/29542/

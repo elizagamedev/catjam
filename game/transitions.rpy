@@ -10,3 +10,10 @@ transform mirror:
     xzoom -1.0
 
 define flash = Fade(.25, 0.0, .75, color="#fff")
+
+transform vibrate:
+    xcenter 0.505
+    pause 0.02
+    xcenter 0.495
+    pause 0.02
+    repeat
