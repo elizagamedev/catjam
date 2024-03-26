@@ -1,6 +1,8 @@
 define gomer_dates = ["gomer_date_1", "gomer_date_2", "gomer_date_3"]
 default gomer_call_count = 0
 default gomer_date_count = 0
+default gomer_failed = False
+default gomer_potion = False
 
 label gomer_date:
     "I decided to hit up Gomer."

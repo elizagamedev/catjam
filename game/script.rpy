@@ -60,8 +60,12 @@ label weekend(day, menuset):
                 stop bg fadeout 2.0
                 call splinters_date
         "Pucci":
-            # TODO
-            stop bg fadeout 2.0
+            if pucci_failed:
+                "There's no response..."
+                jump .scry
+            else:
+                stop bg fadeout 2.0
+                call pucci_date
         "Frankie":
             if frankie_failed:
                 "There's no response..."
@@ -72,7 +76,7 @@ label weekend(day, menuset):
 
     if scry_redo:
         $ scry_redo = False
-        if len(j1wke_menuset) == 4:
+        if len(menuset) == 4:
             "I guess I'll spend the weekend by myself..."
         else:
             "Well, I can always try another cat."
@@ -86,6 +90,8 @@ default j1explorechoice_menuset = set()
 default j1records_alec_menuset = set()
 default j1wke_menuset = set()
 default j2wke_menuset = set()
+default j3wke_menuset = set()
+default j4wke_menuset = set()
 default scry_redo = False
 
 label start:
@@ -1096,7 +1102,7 @@ jump j2wke
 
 # --weekend 2--
 label j2wke:
-    call weekend(12, j1wke_menuset)
+    call weekend(12, j2wke_menuset)
 
 
 
@@ -1154,87 +1160,7 @@ jump j3wke
 
 # --weekend 3--
 label j3wke:
-
-
-menu j3talk:
-    "I talk to..."
-    "Gomer":
-        jump j3gomer
-    "Splinters":
-        jump j3splinters
-    "Pucci":
-        jump j3pucci
-    "Yuri":
-        jump j3yuri
-    "Frankie":
-        jump j3frankie
-    "Continue...":
-        jump j3hangout
-
-
-
-
-label j3gomer:
-jump j3talk
-
-
-label j3splinters:
-jump j3talk
-
-
-label j3pucci:
-jump j3talk
-
-
-label j3yuri:
-jump j3talk
-
-
-label j3frankie:
-jump j3talk
-
-
-
-
-menu j3hangout:
-
-    "I'm ready to choose someone to hang out with":
-        jump j3hangoutchoice
-
-    "I'm not done talking to everyone...":
-        jump j3talk
-
-#Add in j3hangoutchoice menu here lol I am deleting it for now because I couldn't figure out how to use the pass thing
-menu j3hangoutchoice:
-
-    "Gomer":
-        jump j3gomerhangout
-
-    "Splinters":
-        jump j3splintershangout
-
-    "Pucci":
-        jump j3puccihangout
-
-    "Frankie":
-        jump j3frankiehangout
-
-label j3gomerhangout:
-jump j4
-
-
-label j3splintershangout:
-jump j4
-
-
-label j3puccihangout:
-jump j4
-
-
-label j3frankiehangout:
-jump j4
-
-
+    call weekend(18, j3wke_menuset)
 
 # --Week 4--
 label j4:
@@ -1251,16 +1177,16 @@ menu j4wk:
     "Trial and error. Drink the potion!":
         jump j4error
 # IF DATES HAVE BEEN DATED...
-    "Gomer's hair dye potion":
+    "Gomer's hair dye {q}potion{/q}" if gomer_potion:
         jump j4potion_gomer
 
-    "Pucci's outsourcing":
+    "Pucci's outsourcing" if pucci_potion:
         jump j4potion_pucci
 
-    "Frankie's IDEA":
+    "Frankie's time-dilation potion" if frankie_potion:
         jump j4potion_frankie
 
-    "Splinters' IDEA":
+    "Splinters' IDEA" if splinters_potion:
         jump j4potion_splinters
 
 
@@ -1285,88 +1211,9 @@ jump j4wke
 label j4potion_splinters:
 jump j4wke
 
-
-
 # --weekend 4--
 label j4wke:
-
-menu j4talk:
-    "I talk to..."
-
-    "Gomer":
-        jump j4gomer
-
-    "Splinters":
-        jump j4splinters
-
-    "Pucci":
-        jump j4pucci
-
-    "Yuri":
-        jump j4yuri
-
-    "Frankie":
-        jump j4frankie
-
-    "Continue...":
-        jump j4hangout
-
-
-
-
-label j4gomer:
-jump j4talk
-
-label j4splinters:
-jump j4talk
-
-label j4pucci:
-jump j4talk
-
-label j4yuri:
-jump j4talk
-
-label j4frankie:
-jump j4talk
-
-
-
-menu j4hangout:
-
-    "I'm ready to choose someone to hang out with":
-        jump j4hangoutchoice
-
-    "I'm not done talking to everyone...":
-        jump j4talk
-
-
-# hangouts are all about dealing with the bastard mice
-menu j4hangoutchoice:
-
-    "Gomer":
-        jump j4gomerhangout
-
-    "Splinters":
-        jump j4splintershangout
-
-    "Pucci":
-        jump j4puccihangout
-
-    "Frankie":
-        jump j4frankiehangout
-
-
-label j4gomerhangout:
-jump outro
-
-label j4splintershangout:
-jump outro
-
-label j4puccihangout:
-jump outro
-
-label j4frankiehangout:
-jump outro
+    call weekend(24, j4wke_menuset)
 
 # --outro--
 label outro:

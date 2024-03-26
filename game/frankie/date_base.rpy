@@ -2,6 +2,7 @@ define frankie_dates = ["frankie_date_1", "frankie_date_2", "frankie_date_3"]
 default frankie_call_count = 0
 default frankie_date_count = 0
 default frankie_failed = False
+default frankie_potion = False
 
 # coolcat vocabulary
 

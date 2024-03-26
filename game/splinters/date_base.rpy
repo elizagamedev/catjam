@@ -3,6 +3,7 @@ define splinters_dates = ["splinters_date_1", "splinters_date_2", "splinters_dat
 default splinters_call_count = 0
 default splinters_date_count = 0
 default splinters_failed = False
+default splinters_potion = False
 
 label splinters_date:
     "I wondered what Splinters was getting themselves into. I decided to paw them up."

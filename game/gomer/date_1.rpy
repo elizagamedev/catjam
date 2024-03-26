@@ -1,6 +1,5 @@
 default trashcat_time_menuset = set()
 default trashcat_quest1_menuset = set()
-default gomer_failed = False
 
 label gomer_date_1:
     gomer "..."
