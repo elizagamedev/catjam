@@ -13,3 +13,7 @@
 #             d = talking if _last_say_who == speaker else neutral
 #             return d, None
 #         return DynamicDisplayable(func)
+
+image bg cafe silver:
+    "bg cafe"
+    matrixcolor SaturationMatrix(0.2) * BrightnessMatrix(0.2)

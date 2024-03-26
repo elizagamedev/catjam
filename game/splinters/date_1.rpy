@@ -185,6 +185,8 @@ label splinters_date_1:
             splinters "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
             splinters "Maybe you should talk with Yuri. They're more the logical type."
             "Yuri, huh? They seemed up your alley."
+            stop bg fadeout 3.0
+            stop music fadeout 3.0
             scene black with dissolve
             "You guys finish talking for the evening and part ways amicably."
             return
@@ -226,5 +228,6 @@ label splinters_date_1:
 
     $ splinters_date_count += 1
 
+    stop bg fadeout 3.0
     scene black with dissolve
     return

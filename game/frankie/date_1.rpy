@@ -32,7 +32,7 @@ label frankie_date_1:
 
     "And like that, the crystal went dark."
 
-    scene bg diner with fade
+    scene bg diner with longfade
 
     "I check the clock tower again through the window. {i}12:58{/i}."
     "And to be sure, I glance around the interior of the diner to make sure that I hadn't just somehow missed them on the way in."
@@ -98,7 +98,7 @@ label frankie_date_1:
 
             frankie "Am I good or what?"
         "If you say so...":
-            frankie "I ain't here to sell you a dog, jack. Learn to take a compliment."
+            frankie "I don't flatter people, jack. Learn to take a compliment."
             "Frankie sighs."
 
     frankie "If only there were more hours in a day. Imagine being able to fit arm and leg day in the same day--It'd just be a day."

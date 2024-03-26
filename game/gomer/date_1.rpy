@@ -54,7 +54,7 @@ label gomer_date_1:
 
     "So went my first scry with Gomer."
 
-    scene bg central_station with fade
+    scene bg central_station with longfade
     play bg "sound/train-station.opus" fadein 1.0
 
     "I squinted from the shade of a promenade tree at the crowds bustling to and from the station."
@@ -160,11 +160,11 @@ label gomer_date_1:
 
     stop music fadeout 3.0
     scene bg alley
-    show gomer neutral at center
+    show gomer moe at center
     with longfade
     play bg "sound/night.opus" fadein 1.0
 
-    gomer moe "Oh man, and like, the part where they were all like, {b}DURN DURN DUUUURN{/b}, dog, I thought I was gonna like, have a stroke, but like, in a good way."
+    gomer "Oh man, and like, the part where they were all like, {b}DURN DURN DUUUURN{/b}, dog, I thought I was gonna like, have a stroke, but like, in a good way."
 
     "We walked home, sharing in our excitement."
 
@@ -258,6 +258,6 @@ label gomer_date_1:
     gomer "Alright. Wow, what a load off, haha. Man... Feel like I can breathe again, haha."
     gomer "Okay. Next Saturday, let's work it out, right? We gotta get a proper like, bottle for it and stuff."
 
-    stop music fadeout 3.0
+    stop bg fadeout 3.0
     scene black with dissolve
     return

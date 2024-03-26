@@ -8,6 +8,7 @@ label splinters_date:
     "I wondered what Splinters was getting themselves into. I decided to paw them up."
 
     play sound "sound/crackle.opus"
+    with flash
     "{i}The crystal ball crackles as it connects to Splinters' end.{/i}"
 
     play sound ["sound/thud.opus", "sound/pain.opus"]

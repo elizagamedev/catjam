@@ -8,3 +8,5 @@ transform right:
 
 transform mirror:
     xzoom -1.0
+
+define flash = Fade(.25, 0.0, .75, color="#fff")

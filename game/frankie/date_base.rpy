@@ -41,6 +41,7 @@ label frankie_date:
 
     play music "music/Funky Boxstep.mp3"
     play sound "sound/crackle.opus"
+    with flash
 
     frankie "Oh, it's you. What's the skinny?"
 

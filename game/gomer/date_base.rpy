@@ -7,6 +7,7 @@ label gomer_date:
 
     play music "music/Goblin_Tinker_Soldier_Spy.mp3"
     play sound "sound/crackle.opus"
+    with flash
 
     gomer "Huh? Hey, uh... huh? Yeah?"
 
