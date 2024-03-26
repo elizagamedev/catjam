@@ -810,6 +810,26 @@ menu j2wk:
 
 # Haggle
 label j2haggle:
+    "The best thing I can do is find a source for our ingredient. I head to the marketplace, head full of lofty aspirations for how the day should go."
+    "I did not know how quickly I'd be humbled when I set out that morning."
+    "The first thing we need is the third eye from a golden basilisk. This is not a resource easily acquired, and I had no idea what it'll cost,"
+    "but my witch gave me gold to trade with, so I should be fine. Right? That's what I thought."
+    "I am not fine."
+    "After chasing leads for a couple days, I finally found a supplier. Their name is Estelle. Estelle is very old."
+    "Estelle won't take gold, no matter how much I offer."
+    "What Estelle wants is... candy."
+    "A very specific candy from a shop with no name, no sign, and no front door."
+    "I'm an excellent sleuth and spend a little coin to get a lead on this new target. It isn't long before I head to the location my spy indicated."
+    "What I find there was not a shop, but some kid."
+    pc "Am I supposed to be talking to you about the candy?"
+    "Kid" "You're in the right place. I can tell you where the candy shop is."
+    pc "Great! ... How much?"
+    "The kid chuckles."
+    "Kid" "You haven't figured it out by now? This isn't about money."
+    "Kid" "You gotta play the game, pal."
+    pc "Sigh. What's the game?"
+    "Kid" "You gotta find all 5 of my friends"
+
 # Outline:
 # Go to the market
 # Argue with a vendor
