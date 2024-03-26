@@ -445,18 +445,21 @@ label j1records_outro:
 # Explore - University
 label j1university:
     stop bg fadeout 0.5
-    scene bg university_front with fade
+    scene black with dissolve
     play music "music/Valse Gymnopedie.mp3"
 
     "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful."
     "Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
+
+    show bg university_front with dissolve
+    play sound "sound/clocktower.opus"
 
     "The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building."
     "I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
 
     "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
 
-    scene bg university_front with fade
+    scene bg university_front with longfade
 
     "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
 
@@ -489,11 +492,13 @@ label j1university:
 # Explore - Vineyard
 label j1vineyard:
     stop bg fadeout 0.5
-    scene bg vineyard with fade
+    scene black with dissolve
     play music "music/Deuces.mp3"
 
     "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical."
     "In fact, it might even be magical."
+
+    scene bg vineyard with dissolve
 
     "I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour."
     "It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
@@ -522,7 +527,7 @@ label explore_vineyard_alone:
 
     "The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
 
-    scene bg vineyard with fade
+    scene bg vineyard with longfade
 
     "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical."
     "Powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops."

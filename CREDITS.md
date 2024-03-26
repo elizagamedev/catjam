@@ -67,3 +67,6 @@ https://freesound.org/people/barkenov/sounds/251231/
 
 collapse.opus
 https://freesound.org/people/craigsmith/sounds/487142/
+
+clocktower.opus
+https://freesound.org/people/craigsmith/sounds/438210/
