@@ -41,6 +41,6 @@ handle everything for you.
 - Splinters: Brandenburg No4-1 BWV1049.mp3
 - Frankie: Funky Boxstep.mp3, Shaving Mirror.mp3
 - Gomer: Goblin_Tinker_Soldier_Spy.mp3
-- Designer Cat: In Your Arms.mp3, Night in Venice.mp3
+- Designer Cat: Deuces.mp3
 - Bastard Rats: I Can Feel it Coming.mp3, Twisted.mp3
 - Crow: Valse Gymnopedie.mp3

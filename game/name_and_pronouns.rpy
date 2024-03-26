@@ -40,7 +40,7 @@ screen name_and_pronouns():
 
 
 label ask_name_and_pronouns:
-    call screen name_and_pronouns
+    call screen name_and_pronouns with dissolve
     python:
         if pc_pronouns == "they":
             they = "they"

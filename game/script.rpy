@@ -4,10 +4,15 @@
 # name of the character.
 
 define gomer = Character("Gomer", image="gomer", who_color="#fcaa58")
+define gomer_unk = Character("???", image="gomer", who_color="#fcaa58")
 define frankie = Character("Frankie", image="frankie", who_color="#c43830")
+define frankie_unk = Character("???", image="frankie", who_color="#c43830")
 define pucci = Character("Pucci", image="pucci", who_color="#8e522e")
+define pucci_unk = Character("???", image="pucci", who_color="#8e522e")
 define splinters = Character("Splinters", image="splinters", who_color="#F9C254")
+define splinters_unk = Character("???", image="splinters", who_color="#F9C254")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
+define yuri_unk = Character("???", image="yuri", who_color="#706ed1")
 
 label initialize:
     window auto show
@@ -16,17 +21,37 @@ label initialize:
 label splashscreen:
     if not persistent.set_volumes:
         $ persistent.set_volumes = True
-        $ _preferences.volumes['music'] *= .75
+        $ preferences.set_mixer("music", 0.8)
     return
 
 label after_warp:
     jump initialize
 
+label awaken:
+    pause 1.0
+    play sound "sound/morning.wav"
+    pause 0.5
+    scene bg room with Dissolve(1.0)
+    return
+
 # The game starts here.
 
+default intro_exploring_menuset = set()
+default j1explorechoice_menuset = set()
+default j1records_alec_menuset = set()
+
 label start:
+    with dissolve
+
     call initialize
     call ask_name_and_pronouns
+
+    pause 1.0
+    play sound "sound/train.opus"
+    play bg "sound/train-station.opus" fadein 2.0 volume 0.5
+    pause 2.0
+
+    scene bg central_station with Dissolve(1.0)
 
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday life coming from the cozy little college town we'll call home for at least the next month."
 
@@ -53,10 +78,15 @@ label nervous:
 
 label goforth:
 
-    "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house.."
+    "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house..."
 
-    menu intro_exploring:
-        "I go check out..."
+label intro_exploring:
+    if len(intro_exploring_menuset) == 3:
+        jump end_intro
+    menu:
+        set intro_exploring_menuset
+
+        "I go check out the..."
 
         "Diner":
             jump dinerintro
@@ -72,28 +102,35 @@ label goforth:
         # Meet splinter here
         # Meet francis here
 
-        "Continue...":
-            jump end_intro
-
-    jump intro_exploring
+    jump end_intro
 
 label dinerintro:
+    stop sound fadeout 1.0
+    scene bg market
+    with dissolve
 
     "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
 
     "It's a cozy little town with diners and old record shops lining the streets."
 
+    stop bg fadeout 1.0
+    scene bg alley with dissolve
+
     "As we approach the diner, a disheveled orange cat on all fours perched precariously on a stack of milk crates catches my eye."
 
-    gomer "{i}Psssst over here dog, I got somethin' to show you{/i}"
+    show gomer neutral at center with dissolve
+
+    gomer_unk "{i}Psssst over here dog, I got somethin' to show you.{/i}"
+
+    play music "music/Goblin_Tinker_Soldier_Spy.mp3"
 
     "I look around and behind me, but don't see anyone else looking back towards the orange cat. I certainly don't see a {i}dog{/i}."
 
     "It takes a moment to connect the dots."
 
-    pc "...? Wait, do you mean me?"
+    pc "Huh? Wait, do you mean me?"
 
-    gomer "Yeah dog! You. You're gonna like, love this. Trust me. Name's Gomer, by the way."
+    gomer_unk smug "Yeah dog! You. You're gonna like, love this. Trust me. Name's Gomer, by the way."
 
     "I cautiously approach and see that they're on the precarious perch to get a better view through a high window, where there's a string on a little lever. Gomer waggles their eyebrows at me and gives it a tug. Inside, a small bell jingles softly."
 
@@ -103,37 +140,42 @@ label dinerintro:
 
     "The human looks around the alleyway, spots me, and looks confused for a moment. Then Gomer hops down from the milk crates and rubs up against the human's ankles."
 
-    "They lean down to give the orange tomcat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
+    "They lean down to give the orange cat some good chin scritches. They set out a steel bowl filled with scraps of chicken and tuna."
+
+    play sound "sound/happy.opus"
 
     "Gomer meows happily as they dig into the platter."
 
     gomer "Seeeee? Whad'd I tell ya? This diner's the best in town, dog."
 
-    "I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat, I wonder if I'll see more of them?"
+    stop music fadeout 1.0
+    scene bg market with dissolve
+    play bg "sound/train-station.opus" fadein 1.0 volume 0.5
+
+    "I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat. I wonder if I'll see more of them?"
 
     "As my witch and I start to walk away, I catch a flash of luxurious brown fur in the crowd of people. The flash of a pink ribbon glints in the sun. I'm mesmerized."
 
     "The crowd seamlessly parts before the impeccable feline strutting through their midst. Their fluffy tail swooshes languorously from side to side."
 
+    play music "music/Deuces.mp3"
+    show pucci neutral at center with dissolve
+
     "Before I know it, we're face to face in front of the diner. They pause and give me a look."
 
-    pc "H-hi, can I help you?"
+    pc "H-Hi, can I help you?"
 
-    "???" "Do you know who I am?"
+    pucci_unk "I don't recognize you. Do you know who I am?"
 
     pc "Uh... no?"
 
-    "???" "You must be new here. Don't worry, everyone is at one point."
+    pucci_unk "You must be new here. Don't worry, everyone is at one point."
 
     "They reach out a soft paw and pat my shoulder."
 
-    "???" "This is perfect. What do you think of my new ribbon?"
+    pucci_unk "This is perfect. What do you think of my new ribbon?"
 
-menu pucci_ribbon:
-
-    "It's very pink":
-        jump p_r_pink
-
+menu pucci_ribbon(screen="dialog_choice"):
     "It suits your fur so nicely!":
         jump p_r_nicely
 
@@ -143,38 +185,41 @@ menu pucci_ribbon:
     "Eh.":
         jump p_r_eh
 
-label p_r_pink:
-    "???" "You noticed! I would say {q}try again{/q} buuuuut I already know my drip is immaculate."
-    jump meeting_pucci
-
 label p_r_nicely:
-    "???" "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
+    pucci_unk "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
 
     "They go on for a while, recounting ther. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
     jump meeting_pucci
 
 label p_r_good:
-    "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
+    pucci_unk "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
     jump meeting_pucci
 
 label p_r_eh:
-    "Just {q}eh{/q}? You clearly lack taste, but that's your prerogative."
+    pucci_unk "Just {q}eh{/q}? You clearly lack taste, but that's your prerogative."
     jump meeting_pucci
 
 label meeting_pucci:
-    "???" "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
+    pucci_unk "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
     pucci "I need to go, someone's waiting for me. But you should totally come back here on the weekend. It gets real lively, you'll love it."
+    stop music fadeout 1.0
+    hide pucci with dissolve
     jump intro_exploring
 
 label marketplaceintro:
+    stop sound fadeout 1.0
+    scene bg market with dissolve
 
-    "The marketplace is a side street branching off of Main Street. The vendors are offering fresh vegetables, bookbinding, beeswax products, knitted clothing and blankets,"
+    "The marketplace is a side street branching off of Main Street."
 
-    "and flower arrangements, among other crafted and grown products."
+    "The vendors are offering fresh vegetables, bookbinding, beeswax products, knitted clothing and blankets, and flower arrangements, among other crafted and grown products."
 
     "My witch asks me to wait by the entrance sign so I don't get lost in the crowd. I wait for five minutes, then ten, and start to wonder how long I'll be here."
 
     "That's when I notice someone napping on a bench."
+
+    play music "music/Valse Gymnopedie.mp3"
+    show yuri neutral at center with dissolve
 
     "It's another familiar! I don't know why or how, but somehow I can tell. The crow seems to be lightly dozing, hugging a canvas bag overflowing with flowers."
 
@@ -184,9 +229,9 @@ label marketplaceintro:
 
     pc "Naw, I'm just waiting for my... my witch."
 
-    yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here."
+    yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here?"
 
-    pc "Haha yeah, we just got into town today. This market is cool, do you live around here?"
+    pc "Haha yeah, we just got into town today. This market is cool! Do you live around here?"
 
     yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there."
 
@@ -198,29 +243,45 @@ label marketplaceintro:
 
     yuri "It's more durable than it looks. Just give it some water when you get home and you'll be golden! Not literally golden, just figuratively."
 
-    pc "Thank you, this is lovely."
+    pc "Thank you. This is lovely."
 
-    yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town feel free to give me a scry and ask, I'll be around!"
+    yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town, feel free to give me a scry and ask, I'll be around!"
+
+    stop music fadeout 1.0
+    hide yuri with dissolve
+    pause 1.0
 
     "My witch comes back with a big canvas bag full of odds and ends from the market. She got me my own portable scrying orb!"
 
-    "I'll be able to scry Yuri later, if I want to. I look back at the crow and see them smiling and handing a yellow daisy to a young human holding their parent's hand."
+    "I'll be able to scry with Yuri later, if I want to. I look back at the crow and see them smiling and handing a yellow daisy to a young human holding their parent's hand."
 
     "It'll be nice to see them again."
 
     jump intro_exploring
 
 label cafeintro:
+    stop bg fadeout 1.0
+    scene bg cafe with dissolve
+    play bg "sound/cafe.mp3" fadein 1.0
 
     "The cafe is serene, the dappled light shining gently through the leaves of plants filling the window."
 
+    play sound ["sound/shatter.mp3", "sound/pain.opus"]
     "The peace is broken by a yelp and the shattering of glass from inside."
 
-    "???" "oh my god I am sooooo sorry I didn't mean to spill your drink please let me pay for it it's the least I can do"
+    $ expletive = renpy.random.choice(splinters_expletives)
+    splinters_unk "[expletive]! I am sooooo sorry! I didn't mean to spill your drink! P-Please let me pay for it, it's the least I can do!"
+
+    play sound "sound/chimes.opus"
+
+    show splinters talking at center, mirror with dissolve
 
     "I push the door open, a bell tied to the door chiming with the motion, and see a shrimp sized black cat in a preppy vest waving money at a witch who looks miffed that her coffee has ended up on the floor instead of in her belly."
 
-    "???" "Splinter, kid, listen. If you'd been doing those 100 pushups and 100 situps every day like I said you prolly wouldn't have dropped that drink. Just sayin, you dig?"
+    show splinters at right with ease
+    show frankie neutral at left with dissolve
+
+    frankie_unk "Splinters, you dizzard. If you'd been doing those hundred pushups and situps every day like I said you wouldn't have dropped that drink, dig?"
 
     splinters "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
 
@@ -228,32 +289,42 @@ label cafeintro:
 
     "The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
 
-    frankie "Naw, naw, that biz is for cats who can't get their scratch from working hard. It's a cat eat cat world out there Splinter and you gotta look out for numero uno."
+    frankie "Is there anything behind those fuzzed out eyes of yours? Someone's trying to sell you a dog, jack. You're being hornswoggled."
 
     "The calico points a clawed finger at me."
 
-    frankie "Now that's a cool cat who doesn't skip the gym. Amiright?"
-
-    "The question was directed at me."
+    frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
 
     pc "Uh, right?"
 
-    frankie "That's right. Now listen kid, you listen to ol' Frankie here and you'll be top dog in no time. I know you must be dyin' to get those noodle arms beefed up. Now drop and gimme 20!"
+    frankie "That's right. Listen up, dork. No more pussyfooting. Drop and gimme 20!"
 
     "Splinters looks confused and hands the tall cat a $20 bill."
 
-    splinters "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and—"
+    splinters "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and--"
 
     "They look at me."
 
-    splinters "--whoever you are"
+    splinters "--whoever you are."
+
+    hide splinters with dissolve
+    play sound "sound/chimes.opus"
 
     "They scurry out the door, the door's bell jingling as they go, and hop up onto a broom being flown by a taxi witch."
+
+    stop bg fadeout 1.0
+    play sound "sound/chimes.opus"
+    scene black with dissolve
+    play bg "sound/train-station.opus" fadein 1.0 volume 0.5
 
     jump intro_exploring
 
 
 label end_intro:
+    stop bg fadeout 1.0
+    stop sound fadeout 1.0
+    stop music fadeout 1.0
+    call awaken
 
     "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
 
@@ -287,21 +358,29 @@ label j1explore:
 
     "There's still a lot around town I haven't seen. There's a record shop, the university itself, a vineyard... any of these could be crucial to the test, but there's just no way to know. So I'm going to check out all of them. For research."
 
-menu j1explorechoice:
-
-    "Record Shop":
-         jump j1records
-
-    "University":
-        jump j1university
-
-    "Vineyard":
-        jump j1vineyard
-
-    "I'm done exploring.":
+label j1explorechoice:
+    if len(j1explorechoice_menuset) >= 3:
         jump j1witch
+    elif j1explorechoice_menuset:
+        call awaken
+    menu:
+        "Where should I go today?"
+        set j1explorechoice_menuset
+        "Record Shop":
+             jump j1records
+
+        "University":
+            jump j1university
+
+        "Vineyard":
+            jump j1vineyard
+    jump j1witch
 
 label j1records:
+    stop sound fadeout 0.5
+    scene bg records with fade
+    play music "music/ZigZag.mp3"
+
     "{q}Schrodinger's Records{/q} is the kind of store that seems like it's always been there, and always will be. String lights twinkle across the tops of shelves where records are displayed in a cozy disarray from people shuffling through the stacks."
 # Description of the music that's playing in the shop
     "The vibes are warm and welcoming. A red-haired human sitting at the checkout counter is quietly reading what's clearly a steamy bodice-ripper as he waits for customers to approach."
@@ -314,8 +393,8 @@ label j1records:
 
     "Alec" "Hey what's up, lookin' for somethin'?"
 
-
-menu j1records_alec:
+menu j1records_alec(screen="dialog_choice"):
+    set j1records_alec_menuset
 
     "You got any games on your phone?":
         jump j1records_games
@@ -326,42 +405,48 @@ menu j1records_alec:
     "What are you reading?":
         jump j1records_reading
 
-    "Nevermind.":
+    "Nice talking to you." if j1records_alec_menuset:
         jump j1records_outro
 
 label j1records_games:
     "Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit."
 
-    "You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
+    "Alec" "You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
 
     pc "Secret gamer. Got it."
 
     "Alec" "What?"
 
     pc "Don't worry about it."
-jump  j1records_alec
+
+    jump j1records_alec
 
 label j1records_secrets:
-    "Alec" "Oh you're here for the exam. Well the secrets here are that we don't have an actual database except this baby right here,"
+    "Alec" "Oh, you're here for the exam. Well the secrets here are that we don't have an actual database except this baby right here..."
 
     "He taps his forehead."
 
-    "Alec" "and I know every hand, paw, or claw that's walked out of this grand repository with a vinyl."
-    "The other Schrodinger's Records secret is that my name's not actually Alec but you'll have to pry my real name out of me with a crowbar or the purchase of at least 3 vinyls."
-jump  j1records_alec
+    "Alec" "And I know every hand, paw, or claw that's walked out of this grand repository with a vinyl."
+    "Alec" "The other Schrodinger's Records secret is that my name's not actually Alec, but you'll have to pry my real name out of me with a crowbar or the purchase of at least three vinyls."
+    jump j1records_alec
 
 label j1records_reading:
     "Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffeeshop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
-jump  j1records_alec
+    jump j1records_alec
 
 label j1records_outro:
+    stop music fadeout 1.0
+    scene black with irisin
     "Data acquired. I'll remember this for later. For some reason I feel confident that this was absolutely crucial information."
-    "Time to keep exploring..."
-jump j1explorechoice
+    jump j1explorechoice
 
 
 # Explore - University
 label j1university:
+    stop sound fadeout 0.5
+    scene bg university_front with fade
+    play music "music/Valse Gymnopedie.mp3"
+
     "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful."
     "Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
 
@@ -370,25 +455,42 @@ label j1university:
 
     "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
 
+    scene bg university_front with fade
+
     "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
 
     "I bump into Yuri outside the cafeteria hall."
 
+    show yuri neutral at center with dissolve
+
     yuri "Oh hey you! I was just on my way in, wanna join me?"
+
+    scene black with dissolve
 
     "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences."
     "Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
 
     "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
 
+    scene bg university_front
+    show yuri neutral at center
+    with dissolve
+
     yuri "It was really nice catching up! Tell me how the rest of your exploring goes, okay?"
 
-    "I head home after a long day of recon. I can't wait to tell my witch."
-jump j1explorechoice
+    stop music fadeout 1.0
+    scene black with irisin
 
+    "I head home after a long day of recon. I can't wait to tell my witch."
+
+    jump j1explorechoice
 
 # Explore - Vineyard
 label j1vineyard:
+    stop sound fadeout 0.5
+    scene bg vineyard with fade
+    play music "music/Deuces.mp3"
+
     "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical."
     "In fact, it might even be magical."
 
@@ -396,6 +498,8 @@ label j1vineyard:
     "It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
 
     pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
+
+    show pucci neutral at center with dissolve
 
     "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way."
     "I suspect they might just be a little rude."
@@ -413,12 +517,16 @@ menu explore_vineyard_question:
 label explore_vineyard_alone:
     pucci "Okay! Enjoy yourself."
 
+    hide pucci with dissolve
+
     "The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
+
+    scene bg vineyard with fade
 
     "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical."
     "Powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops."
     "The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
-jump explore_vineyard_outro
+    jump explore_vineyard_outro
 
 label explore_vineyard_wpucci:
     pucci "Perfect. I can't wait to show you my family's pride and joy :3"
@@ -434,11 +542,13 @@ label explore_vineyard_wpucci:
     pc "I honestly dig it. This place is (hic) totally sick. Thanks for spilling the beans, Pucci."
 
     pucci "Anytime, just give me a scry, darling."
-jump explore_vineyard_outro
+    jump explore_vineyard_outro
 
 label explore_vineyard_outro:
+    stop music fadeout 1.0
+    scene black with irisin
     "At the end of the day I'm full of information and enough wine to make me a little bit spinny. All in all, it was a successful mission."
-jump j1explorechoice
+    jump j1explorechoice
 
 # Explore - Study
 label j1study:
@@ -553,12 +663,12 @@ label j1study_walkaway:
     "There's so much information here that I couldn't possibly learn it all, but at least I'll have heard of these places in case we need to go find them later."
 
     "All in all, this was pretty dang successful."
-jump j1study_outro
+    jump j1study_outro
 
 label j1study_outro:
-"It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening,"
-"sun still peering above the horizon for one last glance across the surrounding landscapes."
-jump j1witch
+    "It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening,"
+    "sun still peering above the horizon for one last glance across the surrounding landscapes."
+    jump j1witch
 
 label j1gym:
     frankie "...and THAT'S why creatinine is good for the body, you dig?"
@@ -640,10 +750,14 @@ jump j1witch
 
 # At home
 label j1witch:
+    play bg "sound/night.opus" fadein 2.0
+    pause 2.0
     "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
-    "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths—not totally unusual for us,"
-    "but we're usually pretty tight-knit."
+    show bg home_front with dissolve
+
+    "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths."
+    "That's not totally unusual for us, but we're usually pretty tight-knit."
 
     pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
 
@@ -654,12 +768,16 @@ label j1witch:
     "She gives my head a few pats and I purr. It's good to be home together."
 
     "My Witch" "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
-jump j1wke
+
+    stop bg fadeout 1.0
+    scene black with irisin
+    jump j1wke
 
 
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
+    call awaken
     "It's Saturday! I should make sure people are okay with me scrying them. I'm sure they're mostly at the diner or cafe this morning."
     "I have enough time today to make my rounds and then hang out with someone, if they're free."
 

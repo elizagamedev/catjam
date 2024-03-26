@@ -52,3 +52,15 @@ https://freesound.org/people/Anthousai/sounds/405644/
 
 crackle.opus
 https://freesound.org/people/NoahBangs/sounds/636082/
+
+train.opus
+https://freesound.org/people/keithpeter/sounds/125211/
+
+shatter.mp3
+https://freesound.org/people/Czarcazas/sounds/330800/
+
+rooster.opus
+https://freesound.org/people/PianoFarm/sounds/583020/
+
+morning.wav
+https://freesound.org/people/barkenov/sounds/251231/
