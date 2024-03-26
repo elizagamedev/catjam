@@ -917,33 +917,59 @@ menu j2candy:
         frankie "Take care! Get home safe. I'll see you at the gym, yeah?"
     "Eat the last piece in front of Frankie":
         frankie "That looked real good, glad you got yourself a treat. Sure would be nice to have... one... but it's alright..."
-
+        pc "I'll uh, bring you one next time."
 label j2haggle2:
-    "I bring back the strawberry candies and make the exchange."
+    "I bring the strawberry candies back to Estelle and make the exchange."
     "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long day."
-
-# Outline:
-# Go to the market
-# Argue with a vendor
-# Price is not money, you have to pay with candy. A specific kind of candy.
-# Side quest time! You have to fetch a bag of handmade candies from a shop that only opens if you know the password, which you can only earn by doing an elaborate set of puzzles (it's not elaborate)
-# Finding the shop - buff cat bouncer, crow familiar sitting on the roof eating kettle corn
-# Getting the password from some kids majora's mask style or some shit - its hide and seek with a bunch of kids who each have a number to give you
-# Diner alley, record store, town hall, rail station, cafe
-# Going back to the shop with the password, which is 42069
-# It's a secret handmade candy store where all the employees wear fox masks
-# They give me the candy and tell  me if I share the password they'll have to kill me. I don't know if they're being literal.
 jump j2witch
 
 
 # Synthesize
 label j2synthesize:
-# Outline:
-# One of the ingredients we need is a relatively expensive compound syrup made from relatively inexpensive materials. So, we're going to make  it ourselves.
-# Go to the marketplace and pick up the materials. They're very witchy, like frog legs and eyeballs and fish bones, and then also very generic like leeks, persimmons, charcoal, and sunflower seeds.
-# We take it back to the university to use the lab to synthesize the materials. There are already cauldrons prepared, with all the tools a witch could need.
-# This task I do directly with my witch and it's very adorable.
-# Splinters peeks in to see what we're doing and  almost fucks up the mixture but we stop them just in time.
+    "One of the ingredients we need for my witch's potion is a relatively expensive compound syrup made from relatively inexpensive materials."
+    "So, we're going to make it ourselves."
+    "We head to the marketplace to pick up the materials: frog legs, slime eyes, fish bones, leeks, persimmons, yew charcoal, and sunflower seeds."
+    "Yuri waves at us as we walk by the flower stand and tucks a buttercup behind my ear."
+    yuri "For good luck!"
+    "After a full day of shopping, haggling, and hustling, we take a bus to the university."
+    "The university has cauldrons prepared for students to use for synthesizing potions, like we're doing now. The cauldrons are prepared with all the tools a witch could need."
+    "My Witch" "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
+    pc "Of course! I'll be right here."
+    "My Witch" "Thanks so much! I'll be back before you know it."
+    "She gives me a reassuring pat on the shoulder and heads outside."
+    "The potion bubbles."
+    "It sputters."
+    "An eyeball bounces upwards from the force of a particularly enthusiastic bubble, but I manage to block it so it just falls back in."
+    "For the most part, though, the waiting and monitoring is an uneventful process. {i}It just requires patience{/i}--"
+    "The door slams open."
+    splinters "IT IS YOU OH MY GOD you're exactly who I was hoping to run into today!"
+    "Splinters stumbles through the door, tiny arms struggling to bear the weight of the very tall glass jar filled with a concerningly brownish-orangeish viscous liquid."
+    "They step through the door, and the top of the jar wavers forwards. The momentum pulls them towards me."
+    "And towards my potion."
+    "I take a defensive stance, trying to think of what Frankie would do in this situation."
+# Make this seem like a "flashback"
+    frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
+    "That's right. I don't skip leg day {i}or{/i} brain day. I got this."
+    splinters "LOOK OUT I CAN'T STOP"
+    "I step forward and reach my hands out, angling my body, and redirect Splinters' momentum."
+    "The jar hits the counter and shatters, sending the burnished goop splattering across the ground--but not into our precious potion. Phew."
+    pc "Are you okay?!"
+    splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
+    pc "Yeah, I think so!"
+    splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
+    "I almost ask them to help clean up, but I remember the shattered glass and thnk twice."
+    pc "How about you hold the dustpan and I pick this stuff up?"
+    splinters "Sure!"
+    pc "What is this potion, anyway?"
+    splinters "It wasn't a potion, that was supposed to be a protein shake."
+    "Seems like Splinters dodged a bullet with that one."
+    "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
+    "My Witch" "I'm back!"
+    "My witch is back with an armfull of funky lookin' plants."
+    "I help her prep them and we toss them into the concoction together."
+    "I stir the cauldron while she casts spells to control the temperature and provide a stable environment."
+    "Splinters stays a polite and safe distance away, sitting on a wooden stool next to a different cauldron."
+    "After a whole eon, we end up with a stable ingredient for my witch's potion idea. This is great! Now to let it sit for a week and see if it turns out how we intended."
 jump j2witch
 
 
