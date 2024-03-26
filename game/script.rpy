@@ -995,63 +995,7 @@ jump j2wke
 
 # --weekend 2--
 label j2wke:
-# On Sunday we'll brew the potion's base just to test it out, but I have a little time to kill.
-
-
-menu j2talk:
-    "I talk to..."
-    "Gomer":
-        jump j2gomer
-
-    "Splinters":
-        jump j2splinters
-
-    "Pucci":
-        jump j2pucci
-
-    "Yuri":
-        jump j2yuri
-
-    "Frankie":
-        jump j2frankie
-
-    "Continue...":
-        jump j2hangout
-
-
-label j2gomer:
-# Gomer discovered a new dish using an unholy combo
-jump j2talk
-
-
-label j2splinters:
-# Splinters started playing a video game (it's the same one Alec from the record store plays)
-jump j2talk
-
-
-label j2pucci:
-# Pucci has a very serious conversation with me about how familiars need to be appreciated in order for the witch-familiar bond to be healthy and robust. # It's a surprisingly deep conversation, but they're very passionate about it.
-jump j2talk
-
-
-label j2yuri:
-# Yuri talks about the flower clippings they collected this week and how they tried a fancy focaccia bread from one of the market stalls this morning
-jump j2talk
-
-
-label j2frankie:
-# Frankie talks about eating 24 eggs a day in addition to the rest of their macros and micros.
-jump j2talk
-
-
-menu j2hangout:
-
-    "I'm ready to choose someone to hang out with":
-        jump j2hangoutchoice
-
-    "I'm not done talking to everyone...":
-        jump j2talk
-
+# Scry time!
 
 menu j2hangoutchoice:
 
