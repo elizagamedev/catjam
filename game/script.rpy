@@ -913,7 +913,7 @@ menu j2candy:
     "Eat the last piece in front of Frankie":
         frankie "That looked real good, glad you got yourself a treat. Sure would be nice to have... one... but it's alright..."
 
-label j2haggle2
+label j2haggle2:
     "I bring back the strawberry candies and make the exchange."
     "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long day."
 
