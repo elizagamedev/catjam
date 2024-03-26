@@ -29,7 +29,7 @@ label after_warp:
 
 label awaken:
     pause 1.0
-    play sound "sound/morning.wav"
+    play bg "sound/morning.wav" noloop
     pause 0.5
     scene bg room with Dissolve(1.0)
     return
@@ -39,6 +39,8 @@ label awaken:
 default intro_exploring_menuset = set()
 default j1explorechoice_menuset = set()
 default j1records_alec_menuset = set()
+default j1wke_menuset = set()
+default scry_redo = False
 
 label start:
     with dissolve
@@ -113,9 +115,6 @@ label dinerintro:
 
     "It's a cozy little town with diners and old record shops lining the streets."
 
-    stop bg fadeout 1.0
-    scene bg alley with dissolve
-
     "As we approach the diner, a disheveled orange cat on all fours perched precariously on a stack of milk crates catches my eye."
 
     show gomer neutral at center with dissolve
@@ -148,9 +147,8 @@ label dinerintro:
 
     gomer "Seeeee? Whad'd I tell ya? This diner's the best in town, dog."
 
+    hide gomer with dissolve
     stop music fadeout 1.0
-    scene bg market with dissolve
-    play bg "sound/train-station.opus" fadein 1.0 volume 0.5
 
     "I head back to the diner's entrance and meet my witch there. Guess we should keep going. What a strange cat. I wonder if I'll see more of them?"
 
@@ -324,18 +322,21 @@ label end_intro:
     stop bg fadeout 1.0
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    call awaken
+    pause 1.0
 
     "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
 
+    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances."
 
 # --Week 1--
 # Lay of the land
 label j1:
+    play sound "sound/rooster.opus"
+    call awaken
 
-    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances."
+    "Monday morning I awake and stretch off the drowsiness."
 
-    "Now we have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
+    "We have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
     "I should probably buckle down and try making some solid friendships in case we have to do any group projects. The test could be {i}anything{/i}."
 
@@ -377,7 +378,7 @@ label j1explorechoice:
     jump j1witch
 
 label j1records:
-    stop sound fadeout 0.5
+    stop bg fadeout 0.5
     scene bg records with fade
     play music "music/ZigZag.mp3"
 
@@ -443,7 +444,7 @@ label j1records_outro:
 
 # Explore - University
 label j1university:
-    stop sound fadeout 0.5
+    stop bg fadeout 0.5
     scene bg university_front with fade
     play music "music/Valse Gymnopedie.mp3"
 
@@ -487,7 +488,7 @@ label j1university:
 
 # Explore - Vineyard
 label j1vineyard:
-    stop sound fadeout 0.5
+    stop bg fadeout 0.5
     scene bg vineyard with fade
     play music "music/Deuces.mp3"
 
@@ -554,28 +555,36 @@ label explore_vineyard_outro:
 label j1study:
     "The best way to learn secrets is through research. I think. So this week I'll study and see where it gets me."
 
+    scene bg library with fade
+    play music "music/Brandenburg No4-1 BWV1049.mp3"
+
     "I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
 
     "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber."
     "I know this because of the enormous sign hanging above the front desk that says,"
-    "{q}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply.{/q}"
-    "{q}If you don't know if you are one, then you are NOT one. GOOD DAY. -Library Management{/q}"
+    "{q}{i}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply.{/i}{/q}"
+    "{q}{i}If you don't know if you are one, then you are NOT one. GOOD DAY. --Library Management{/i}{/q}"
+    "It's beautiful here, and the scent of parchment and ink swirls around me."
 
-    "It's beautiful here, and the scent of parchment and ink swirls around me. My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
+    play sound "sound/collapse.opus"
+
+    "My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
 
     "Librarian" "SPLINTERS."
 
     "A classic library whisper-yell."
 
-    "Librarian" "HOW DO YOU MANAGE TO TIP THESE OVER? GODDAMMIT SPLINTERS"
+    "Librarian" "HOW DO YOU MANAGE TO TIP THESE OVER? GODDAMMIT SPLINTERS."
 
     "I turn and see the little black cat dangling from an upper shelf, a tipped-over cart beneath them."
 
-    "Librarian" "WHAT THE HECK, SPLINTERS"
+    "Librarian" "WHAT THE HECK, SPLINTERS."
 
     splinters "listen there was this book I {i}needed{/i} and I couldn't wait okay and it was right there and I just figured I'd climb up here—"
 
     "Librarian" "SPLINTERS THAT'S WHAT TALL PEOPLE ARE LITERALLY MADE FOR OKAY?"
+
+    show splinters neutral at center with MoveTransition(1.0, enter=Transform(yoffset=1.0, ypos=0.0), enter_time_warp=_warper.easein_bounce)
 
     "Splinters grabs a book, presumably the intended one, grasps it by the spine with his teeth, and drops down from the shelf."
 
@@ -594,8 +603,7 @@ menu j1study_choice:
         jump j1study_walkaway
 
 label j1study_helpsplinters:
-    "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian"
-    "who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
+    "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
 
     splinters "Oh hey how's it going what did you need my help with fam?"
 
@@ -643,12 +651,16 @@ label j1study_helpsplinters:
     "It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
 
     "I think this means we're friends! Two objectives completed, hurrah!"
-jump j1study_outro
+    jump j1study_outro
 
 label j1study_walkaway:
+    hide splinters with dissolve
+
     "The rest of the library is a vast maze of stacks and shelves. Librarians young and old bustle around sorting stacks while familiars help guide guests to the books they seek."
 
     "There's a wall with slots for rolled-up maps, which a couple people study. I rummage through the index and find what I'm looking for."
+
+    show diagram map at truecenter with dissolve
 
     "{i}A map of the whole town. Perfect.{/i}"
 
@@ -666,87 +678,81 @@ label j1study_walkaway:
     jump j1study_outro
 
 label j1study_outro:
-    "It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening,"
-    "sun still peering above the horizon for one last glance across the surrounding landscapes."
+    stop music fadeout 1.0
+    scene black with dissolve
+    "It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening, sun still peering above the horizon for one last glance across the surrounding landscapes."
     jump j1witch
 
 label j1gym:
-    frankie "...and THAT'S why creatinine is good for the body, you dig?"
+    scene bg gym with fade
+    play music "music/Funky Boxstep.mp3"
 
-    "Lanky Cat" "Dang that's sick, I'll definitely get some"
+    frankie "...and {i}that's{/i} why creatinine is the cat's pajamas, dig?"
 
-    frankie "Hell yeah breh."
+    "Lanky Cat" "Dang that's sick, I'll definitely get some supplements."
+
+    frankie "You heard it here first."
 
     "The gym is pleasantly busy with conversation between nerds. Fitness nerds are, after all, still nerds. And every nerd up in this house is filled with determination."
 
     "Frankie wraps up their conversation and then comes up to me to strike a pose."
 
-    frankie "Welcome in fam-bam, if you're looking to build that muscle mass you're in the right place to kick some ass. What's your deal? Arms? Legs? Core?"
+    show frankie neutral at center with dissolve
 
-menu j1gym_choice:
+    frankie "I knew you were as cool as a cucumber the moment I saw you. So what's the skinny for today? Pumping iron? Ass to grass?"
 
-    "Arms.":
+menu j1gym_choice(screen="dialog_choice"):
+    "Pumping iron.":
         jump j1gym_arms
-    "Legs.":
+    "Ass to grass.":
         jump j1gym_legs
-    "Core.":
-        jump j1gym_core
-    "Everything.":
-        jump j1gym_everything
     "I'm just watching.":
         jump j1gym_none
-    "Oh god I don't work out.":
-        jump j1gym_none
-
 
 label j1gym_arms:
-    frankie "Hell yeah, let's pump some iron. I noticed you're here alone, I'll spot you."
-jump j1gym_cont
-
+    frankie "Let's head to the rack. I'll spot you."
+    jump j1gym_cont
 
 label j1gym_legs:
-    frankie "Hell yeah, leg day. We got machines, we can do some sissy squats, we got a squat rack, whatever you feelin'."
-jump j1gym_cont
-
-
-label j1gym_core:
-    frankie "Oh, dip? Let's goooo. I bet I can out-plank you, how 'bout you come find out?"
-jump j1gym_cont
-
-
-label j1gym_everything:
-    frankie "That's wack, pussycat. But I'm happy to show you around and give you a good looksee of what we have goin' on here. There's plenty to give you that full-body workout you're craving."
-jump j1gym_cont
-
+    frankie "Leg days are where the real work happens. Show me what you've got, jack."
+    jump j1gym_cont
 
 label j1gym_none:
-    frankie "You know what? I respect that. Ask questions if you're curious about anything, you dig?"
-jump j1gym_outro
-
+    frankie "You know what? I respect that. Ask questions if you're curious about anything, dig?"
+    jump j1gym_outro
 
 label j1gym_cont:
+    scene bg gym with fade
     "Frankie shows me around the gym and helps me get going on my exercise routine."
 
     "A couple times they come close and gently adjust my form, explaining how the small shifts change which muscles the exercise targets."
 
     "Sometimes they get {i}real{/i} close."
 
-    frankie "I'm going to put my hand here, okay?"
+    show frankie neutral:
+        xalign 0.5
+        yalign 0.6
+        zoom 3.0
+    with dissolve
 
-    pc "Sure"
+    frankie "I'm going to put my paw here, dig?"
 
-    frankie "So just flex that muscle and keep your core tight. And don't forget to breathe, homie."
+    pc "Sure."
+
+    frankie "So just flex that muscle and keep your core tight. And don't forget to breathe, jack."
     "It's a great workout."
-jump j1gym_outro
-
+    scene bg gym with fade
+    jump j1gym_outro
 
 label j1gym_outro:
     "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself."
     "In my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
 
-    "Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
-jump j1witch
+    scene black with dissolve
 
+    "Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
+    stop music fadeout 1.0
+    jump j1witch
 
 # At home
 label j1witch:
@@ -780,20 +786,33 @@ label j1wke:
     call awaken
     "It's Saturday! Something something scry someone!"
 
-menu:
-    "I scry..."
-    "Gomer":
-        call gomer_date
-    "Splinters":
-        call splinters_date
-    "Pucci":
-        # todo
-        return
-    "Frankie":
-        call frankie_date
+    menu .scry:
+        set j1wke_menuset
+        "I scry..."
+        "Gomer":
+            stop bg fadeout 2.0
+            call gomer_date
+        "Splinters":
+            stop bg fadeout 2.0
+            call splinters_date
+        "Pucci":
+            # TODO
+            stop bg fadeout 2.0
+        "Frankie":
+            stop bg fadeout 2.0
+            call frankie_date
+
+    if scry_redo:
+        $ scry_redo = False
+        if len(j1wke_menuset) == 4:
+            "I guess I'll spend the day by myself..."
+        else:
+            "Well, I can always try another cat."
+        jump .scry
 
 # --Week 2--
 label j2:
+    call awaken
     "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur."
     "Before we get started brewing the potion, we're going to have to find some ingredients."
     "My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."

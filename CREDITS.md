@@ -64,3 +64,6 @@ https://freesound.org/people/PianoFarm/sounds/583020/
 
 morning.wav
 https://freesound.org/people/barkenov/sounds/251231/
+
+collapse.opus
+https://freesound.org/people/craigsmith/sounds/487142/

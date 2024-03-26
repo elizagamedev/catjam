@@ -4,7 +4,7 @@ label frankie_date_1:
     frankie "Free as a bird. What're you thinking?"
 
     menu(screen="dialog_choice"):
-        "I'm looking to start a workout routine.":
+        "I'm looking to take my workout to the next level.":
             pass
 
         "Well... you have any ideas?":
@@ -13,6 +13,8 @@ label frankie_date_1:
             frankie "Frankly, I'm a busy cat. I don't got time for pussyfooting. Dig?"
 
             "And like that, the crystal went dark."
+            stop music fadeout 1.0
+            $ scry_redo = True
             return
 
     "Frankie tilts their head."
@@ -73,7 +75,7 @@ label frankie_date_1:
     frankie "Alright, we're wasting time yapping we could be spending doing pushups. Show me what you've got."
 
     stop music fadeout 3.0
-    scene bg field
+    scene bg home_front
     with longfade
     play bg "sound/night.opus" fadein 1.0
 
@@ -121,7 +123,10 @@ label frankie_date_1:
             frankie "Whatever, jack. Hope you learned a thing or two today, at least."
             frankie "Be seeing you. {w=1.0}From behind the podium when I give my valedictorian speech."
 
+            hide frankie with dissolve
             "Frankie turns and heads back to town."
+            stop bg fadeout 3.0
+            scene black with dissolve
             return
         "That sounds amazing!":
             pass

@@ -2,7 +2,7 @@ default splinters_date_1_attempted = False
 
 label splinters_date_1:
     if not splinters_date_1_attempted:
-        splinters "S-so, what's up? Can I help with anything"
+        splinters "S-so, what's up? Can I help with anything?"
         pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
         splinters "Sure, I can give you pointers over coffee. There's a cafe nearby with a neat l-local twirl. I mean, twist."
     else:
@@ -20,8 +20,10 @@ label splinters_date_1:
             splinters "S-sure, that's fine but..."
             splinters "You don't... *sniff* You don't have to put it that way..."
             "Their eyes are watering up again. {i}Disgusting{/i}, you think to yourself."
-            splinters "F-fine then. H-have fun in your joyless life without caffeine!"
+            splinters "F-Fine then. H-Have fun in your joyless life without caffeine!"
+            stop music fadeout 1.0
             "You see their paws reach forward to end the connection, and static as the ball falls off the table."
+            $ scry_redo = True
             return
 
     splinters "G-great, see you tomorrow then!"
@@ -59,6 +61,7 @@ label splinters_date_1:
             "The cafe goes silent. Some patrons can't help but giggle."
             splinters "*Sniff* S-sorry. I... I'm gonna go now."
             "Splinters runs off, a coffee-stained blushing mess."
+            scene black with dissolve
             return
         "A simple pourover to go works for me.":
             hide splinters with dissolve
@@ -98,6 +101,7 @@ label splinters_date_1:
             hide splinters with dissolve
             "Splinters takes their cup and practically runs out, sad and embarassed."
             "There's a yelp, and you see that they've spilled their coffee. They stop, wipe up the mess, then continue their exit."
+            scene black with dissolve
             return
 
     pc "Oh wow, that's neat. Yeah, this silver vine is pretty great!"
@@ -157,6 +161,7 @@ label splinters_date_1:
             pc "I think what you mean is... {i}salty{/i}."
             hide splinters dissolve
             "They just stare at you, quietly grabbing their cup before taking their leave."
+            scene black with dissolve
             return
         "Oh, I see. Wow, you're... very serious about this bad luck stuff.":
             splinters talking "Oh, my whole family is like this to be honest."
@@ -178,8 +183,9 @@ label splinters_date_1:
             $ splinters_date_1_attempted = True
             splinters neutral "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
             splinters "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
-            splinters "Maybe you should talk with {i}the familiar owned by the librarian that I don't remember{/i}. They're more the logical type."
-            "{i}the familiar owned by the librarian that I don't remember{/i}, huh? They seemed up your alley."
+            splinters "Maybe you should talk with Yuri. They're more the logical type."
+            "Yuri, huh? They seemed up your alley."
+            scene black with dissolve
             "You guys finish talking for the evening and part ways amicably."
             return
         "You mean like four-leaf clovers? Rad, how powerful are they?":
@@ -220,4 +226,5 @@ label splinters_date_1:
 
     $ splinters_date_count += 1
 
+    scene black with dissolve
     return

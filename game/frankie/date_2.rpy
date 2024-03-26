@@ -78,6 +78,9 @@ label frankie_date_2:
 
             "Frankie yowls as they jump from the table and head back to the barista."
             "Maybe that was a really stupid thing to say, in retrospect..."
+            stop music fadeout 3.0
+            stop bg fadeout 3.0
+            scene black with dissolve
             return
 
     "Barista" "Cappuccino and eggs for Frankie."
@@ -116,6 +119,9 @@ label frankie_date_2:
 
             frankie "Oops. Shame that Cassie has to clean that mess up."
 
+            stop music fadeout 3.0
+            stop bg fadeout 3.0
+            scene black with dissolve
             return
         "You're always on the grind, Frankie! You're so cool!":
             play sound "sound/happy.opus"
@@ -149,7 +155,7 @@ label frankie_date_2:
             "Splinters' eyes glaze over for a moment."
 
             splinters "Oh, I've heard that one before. Haha. Very funny."
-            splinters "Why don't you take that glass and shove it up your--{w=0.5}{nw}"
+            splinters "Why don't you take that glass and shove it up your--{w=1.0}{nw}"
 
             play sound ["sound/pain.opus", "sound/crash.wav"]
             stop bg fadeout 0.5

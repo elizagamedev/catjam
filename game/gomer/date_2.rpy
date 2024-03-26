@@ -101,6 +101,7 @@ label gomer_date_2:
 
             "Gomer fights back tears as they run off into the market."
 
+            scene black with dissolve
             return
         "Uh, hi.":
             gomer "Hi."
@@ -209,6 +210,12 @@ label .bottle:
             gomer annoyed "Haha... Uh..."
             gomer "Maybe."
             gomer upset "Dammit."
+
+            scene black with dissolve
+
+            "We nervously shuffle off our separate ways."
+            "I'm beginning to really regret this idea..."
+
             return
 
     gomer blushing "Wow, dog. You're like, some kind of genius or something."
@@ -231,6 +238,7 @@ label .bottle:
             hide gomer with dissolve
 
             "Gomer wordlessly scurries away into the night."
+            scene black with dissolve
             return
 
     gomer moe "...Yes."
@@ -243,4 +251,5 @@ label .bottle:
 
     "Wait... Leftovers?"
 
+    scene black with dissolve
     return

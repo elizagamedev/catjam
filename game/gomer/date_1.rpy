@@ -25,7 +25,10 @@ label gomer_date_1:
             gomer "But like. Call me again sometime."
             gomer "Uh. Bye."
 
-            stop music fadeout 3.0
+            "Gomer's face fades and the crystal goes completely dark."
+
+            stop music fadeout 1.0
+            $ scry_redo = True
             return
 
     gomer "Sweet. I got tickets-- {w=1.0}Well, I know how to get tickets for this live music place. Really cool vibe, you know, compared to like, you know, most things."
@@ -152,6 +155,7 @@ label gomer_date_1:
 
             "They stare down at me, looking just as petrified as the saint as I leave for home."
 
+            scene black with dissolve
             return
 
     stop music fadeout 3.0
@@ -243,6 +247,7 @@ label gomer_date_1:
 
             "Gomer trods away, leaving me alone in the lamplight."
 
+            scene black with dissolve
             return
 
     play sound "sound/happy.opus"
@@ -254,4 +259,5 @@ label gomer_date_1:
     gomer "Okay. Next Saturday, let's work it out, right? We gotta get a proper like, bottle for it and stuff."
 
     stop music fadeout 3.0
+    scene black with dissolve
     return

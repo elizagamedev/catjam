@@ -3,8 +3,6 @@ default gomer_call_count = 0
 default gomer_date_count = 0
 
 label gomer_date:
-    scene bg home
-
     "I decided to contact Gomer on my crystal ball."
 
     play music "music/Goblin_Tinker_Soldier_Spy.mp3"

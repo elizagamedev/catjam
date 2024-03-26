@@ -5,8 +5,6 @@ default splinters_date_count = 0
 default splinters_failed = False
 
 label splinters_date:
-    scene bg home
-
     "I wondered what Splinters was getting themselves into. I decided to paw them up."
 
     play sound "sound/crackle.opus"
