@@ -120,7 +120,8 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 240
+init python:
+    preferences.text_cps = 240
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -231,3 +232,7 @@ init python:
     config.window_auto_hide.remove("menu")
 
     renpy.music.register_channel("bg", "sfx", loop=True)
+
+    _dismiss_pause = False
+
+    config.skip_delay = 100

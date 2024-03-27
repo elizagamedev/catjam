@@ -14,6 +14,9 @@ define splinters_unk = Character("???", image="splinters", who_color="#F9C254")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 define yuri_unk = Character("???", image="yuri", who_color="#706ed1")
 
+init python:
+    import patches
+
 label initialize:
     window auto show
     return

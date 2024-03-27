@@ -6,6 +6,7 @@
 *.rpym text
 *.sh text
 *.md text
+*.py text
 
 # Data
 *.png lfs
