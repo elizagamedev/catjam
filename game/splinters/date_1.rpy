@@ -61,7 +61,7 @@ label splinters_date_1:
             "The cafe goes silent. Some patrons can't help but giggle."
             splinters "*Sniff* S-sorry. I... I'm gonna go now."
             "Splinters runs off, a coffee-stained blushing mess."
-            scene black with dissolve
+            scene black with irisin
             return
         "A simple pourover to go works for me.":
             hide splinters with dissolve
@@ -101,7 +101,7 @@ label splinters_date_1:
             hide splinters with dissolve
             "Splinters takes their cup and practically runs out, sad and embarassed."
             "There's a yelp, and you see that they've spilled their coffee. They stop, wipe up the mess, then continue their exit."
-            scene black with dissolve
+            scene black with irisin
             return
 
     pc "Oh wow, that's neat. Yeah, this silver vine is pretty great!"
@@ -161,7 +161,7 @@ label splinters_date_1:
             pc "I think what you mean is... {i}salty{/i}."
             hide splinters dissolve
             "They just stare at you, quietly grabbing their cup before taking their leave."
-            scene black with dissolve
+            scene black with irisin
             return
         "Oh, I see. Wow, you're... very serious about this bad luck stuff.":
             splinters talking "Oh, my whole family is like this to be honest."
@@ -187,7 +187,7 @@ label splinters_date_1:
             "Yuri, huh? They seemed up your alley."
             stop bg fadeout 3.0
             stop music fadeout 3.0
-            scene black with dissolve
+            scene black with irisin
             "You guys finish talking for the evening and part ways amicably."
             return
         "You mean like four-leaf clovers? Rad, how powerful are they?":
@@ -206,7 +206,7 @@ label splinters_date_1:
 
     stop music fadeout 3.0
     stop bg fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     "Splinters continued telling you about the common lucky weeds as you exit the cafe together."
 
     scene bg home_front
@@ -229,5 +229,5 @@ label splinters_date_1:
     $ splinters_date_count += 1
 
     stop bg fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     return

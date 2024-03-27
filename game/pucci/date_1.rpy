@@ -4,5 +4,5 @@ label pucci_date_1:
     pucci "talk talk talk"
 
     stop music fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     return

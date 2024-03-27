@@ -80,7 +80,7 @@ label frankie_date_2:
             "Maybe that was a really stupid thing to say, in retrospect..."
             stop music fadeout 3.0
             stop bg fadeout 3.0
-            scene black with dissolve
+            scene black with irisin
             return
 
     "Barista" "Cappuccino and eggs for Frankie."
@@ -121,7 +121,7 @@ label frankie_date_2:
 
             stop music fadeout 3.0
             stop bg fadeout 3.0
-            scene black with dissolve
+            scene black with irisin
             return
         "You're always on the grind, Frankie! You're so cool!":
             play sound "sound/happy.opus"
@@ -216,7 +216,7 @@ label frankie_date_2:
 
     frankie "Anyway, you finished that [pc_drink] yet, jack? I'm raring to get started on my idea."
 
-    scene black with dissolve
+    scene black with irisin
     stop music fadeout 3.0
     stop bg fadeout 3.0
 

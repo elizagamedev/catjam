@@ -126,7 +126,7 @@ label frankie_date_1:
             hide frankie with dissolve
             "Frankie turns and heads back to town."
             stop bg fadeout 3.0
-            scene black with dissolve
+            scene black with irisin
             return
         "That sounds amazing!":
             pass
@@ -143,4 +143,6 @@ label frankie_date_1:
 
     frankie "What do you say to another round of burgers before we head home?"
 
+    stop bg fadeout 3.0
+    scene black with irisin
     return

@@ -154,7 +154,7 @@ label gomer_date_1:
 
             "They stare down at me, looking just as petrified as the saint as I leave for home."
 
-            scene black with dissolve
+            scene black with irisin
             return
 
     stop music fadeout 3.0
@@ -246,7 +246,7 @@ label gomer_date_1:
 
             "Gomer trods away, leaving me alone in the lamplight."
 
-            scene black with dissolve
+            scene black with irisin
             return
 
     play sound "sound/happy.opus"
@@ -258,5 +258,5 @@ label gomer_date_1:
     gomer "Okay. Next Saturday, let's work it out, right? We gotta get a proper like, bottle for it and stuff."
 
     stop bg fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     return

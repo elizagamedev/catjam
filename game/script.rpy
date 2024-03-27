@@ -34,8 +34,22 @@ label awaken(day = None):
     pause 1.0
     play bg "sound/morning.opus" noloop
     show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     scene bg room with Dissolve(1.0)
+    return
+
+label titlecard(day = None):
+    $ _skipping = False
+    if day is not None:
+        $ calendar_day = day
+    scene black
+    pause 1.0
+    show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
+    pause 1.5
+    scene black with Dissolve(1.0)
+    $ _skipping = True
     return
 
 label weekend(day, menuset):
@@ -105,6 +119,7 @@ label start:
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
     show expression Text(october[0], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text("September", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
@@ -375,6 +390,7 @@ label end_intro:
     stop bg fadeout 1.0
     stop sound fadeout 1.0
     stop music fadeout 1.0
+    scene black with dissolve
     pause 1.0
 
     "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
@@ -739,7 +755,7 @@ label j1study_walkaway:
 
 label j1study_outro:
     stop music fadeout 1.0
-    scene black with dissolve
+    scene black with irisin
     "It starts to get late and the library closes for the day. I step out cheerfully and start my walk home in the crisp autumn evening, sun still peering above the horizon for one last glance across the surrounding landscapes."
     jump j1witch
 
@@ -809,7 +825,7 @@ label j1gym_outro:
     "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself."
     "In my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
 
-    scene black with dissolve
+    scene black with irisin
 
     "Frankie continues to offer to be my gym buddy, so I always have a spotter. By the end of the week I feel strong and ready to face whatever challenges the upcoming exam is going to throw at us."
     stop music fadeout 1.0
@@ -818,7 +834,7 @@ label j1gym_outro:
 # At home
 label j1witch:
     play bg "sound/night.opus" fadein 2.0
-    pause 2.0
+    call titlecard(4)
     "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
     show bg home_front with dissolve
@@ -987,11 +1003,11 @@ menu j2candy:
         frankie "Take care! Get home safe. Don't slack on those reps, dig?"
     "I eat the last piece staring them dead in the eyes.":
         frankie "..."
-        frankie "You tryin' to prove something?"
+        frankie "You tryin' to say something?"
         pc "I'll uh, bring you one next time."
 label j2haggle2:
     stop music fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     "I bring the strawberry candies back to Estelle and make the exchange."
     "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long week."
     jump j2witch
@@ -1059,7 +1075,7 @@ label j2synthesize:
     splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
     pc "Yeah, I think so!"
     splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
-    "I almost ask them to help clean up, but I remember the shattered glass and thnk twice."
+    "I almost ask them to help clean up, but I remember the shattered glass and think twice."
     pc "How about you hold the dustpan and I pick this stuff up?"
     splinters "Sure!"
     pc "What is this potion, anyway?"
@@ -1068,14 +1084,14 @@ label j2synthesize:
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
     scene bg potions with fade
     "My Witch" "I'm back!"
-    "My witch is back with an armfull of funky lookin' plants."
+    "My witch is back with an armful of funky lookin' plants."
     "I help her prep them and we toss them into the concoction together."
     "I stir the cauldron while she casts spells to control the temperature and provide a stable environment."
     "Splinters stays a polite and safe distance away, sitting on a wooden stool next to a different cauldron."
     "After a whole eon, we end up with a stable ingredient for my witch's potion idea. This is great! Now to let it sit for a week and see if it turns out how we intended."
     # TODO: stretch this out for the whole week
     stop music fadeout 3.0
-    scene black with dissolve
+    scene black with irisin
     jump j2witch
 
 

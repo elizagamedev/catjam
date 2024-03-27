@@ -1,5 +1,5 @@
 define october = [
-    "Monday the Thirtieth",
+    "Saturday the Twenty-eighth",
     "Tuesday the First",
     "Wednesday the Second",
     "Thursday the Third",

@@ -101,7 +101,7 @@ label gomer_date_2:
 
             "Gomer fights back tears as they run off into the market."
 
-            scene black with dissolve
+            scene black with irisin
             return
         "Uh, hi.":
             gomer "Hi."
@@ -211,7 +211,7 @@ label .bottle:
             gomer "Maybe."
             gomer upset "Dammit."
 
-            scene black with dissolve
+            scene black with irisin
 
             "We nervously shuffle off our separate ways."
             "I'm beginning to really regret this idea..."
@@ -238,7 +238,7 @@ label .bottle:
             hide gomer with dissolve
 
             "Gomer wordlessly scurries away into the night."
-            scene black with dissolve
+            scene black with irisin
             return
 
     gomer moe "...Yes."
@@ -251,5 +251,5 @@ label .bottle:
 
     "Wait... Leftovers?"
 
-    scene black with dissolve
+    scene black with irisin
     return
