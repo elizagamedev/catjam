@@ -1194,10 +1194,13 @@ label j3shop:
 menu j3shop_minis:
     "That's so cool!":
         splinters "Thanks, I just got into the hobby so I don't really know what I'm doing."
+        jump j3shopcont
     "That's... interesting":
         splinters "Uh, yeah."
+        jump j3shopcont
     "Wow. Lame."
         splinters "Wehhhhh you said you wouldn't make fun of me!"
+        jump j3shopcont
 
 label j3shopcont
     splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
