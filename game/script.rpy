@@ -43,7 +43,6 @@ label awaken(day = None):
     return
 
 label titlecard(day = None):
-    $ _skipping = False
     if day is not None:
         $ calendar_day = day
     scene black
@@ -52,7 +51,6 @@ label titlecard(day = None):
     show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     scene black with Dissolve(1.0)
-    $ _skipping = True
     return
 
 label weekend(day, menuset):
