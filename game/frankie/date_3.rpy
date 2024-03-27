@@ -40,7 +40,7 @@ label frankie_date_3:
     "Frankie flashes a grin and the crystal goes dark."
 
     scene bg beach with fade
-    play bg "sound/beach.ogg" fadein 1.0
+    play bg "sound/beach.opus" fadein 1.0
     play music "music/Surf Shimmy.mp3"
 
     "Even for October, the beach is pretty empty."
@@ -147,13 +147,14 @@ label frankie_date_3:
     frankie "Stardust! That's the missing spice for the sauce!"
     frankie "Come here, you little rascal!"
 
-    show disclaimer:
-        xalign 0.5
-        yalign 0.1
     show frankie at center with MoveTransition(0.2)
     play sound "sound/pain.opus"
     show gomer annoyed at truecenter with hpunch:
         zoom 0.75
+
+    show disclaimer:
+        xalign 0.5
+        yalign 0.1
 
     "Frankie grabs Gomer into a tight bear hug. They struggle and scratch to break free, but it's futile against Frankie's guns."
     frankie "Stardust will cause a chain reaction with the eye of newt and werewolf blood to rip open a localized space-time portal! That's it!"

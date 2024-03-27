@@ -527,6 +527,7 @@ label j1university:
 
     "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
 
+    stop sound fadeout 1.0
     scene bg university_front with longfade
 
     "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
@@ -861,7 +862,7 @@ label j1witch:
 label j1wke:
     call awaken(5)
     "It's Saturday! Something something scry someone!"
-    call weekend(5, j1wke_menuset)
+    call weekend(j1wke_menuset)
 
 # --Week 2--
 label j2:
@@ -989,6 +990,7 @@ label j2haggle:
     "The receptionist fox brings me a tin full of small strawberry candies. I'm offered a couple free samples of them to take with me too."
     "I pop one in my mouth and gently bite it. It has a soft gel core, also strawberry flavored."
     scene bg alley with dissolve
+    pause 0.5
     scene bg market
     show frankie neutral at center
     with dissolve
