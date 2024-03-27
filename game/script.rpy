@@ -1395,11 +1395,11 @@ menu j3shop_minis:
         splinters "Uh, yeah."
         jump j3shopcont
 
-    "Wow. Lame."
+    "Wow. Lame.":
         splinters "Wehhhhh you said you wouldn't make fun of me!"
         jump j3shopcont
 
-label j3shopcont
+label j3shopcont:
 
     splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
 
@@ -1538,7 +1538,7 @@ label j3beach:
 
     "I reach a paw down and help Gomer up."
 
-menu j3beach_board
+menu j3beach_board:
 
     "Heck yes.":
         jump j3boardyes
@@ -1546,7 +1546,7 @@ menu j3beach_board
     "No thanks.":
         jump j3boardno
 
-label j3boardyes
+label j3boardyes:
 
     "Gomer explains the basics to me: where to put my feet, how to move and stop, how to shift my weight."
 
