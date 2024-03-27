@@ -1175,6 +1175,43 @@ menu j3wk:
 
 # Shop
 label j3shop:
+    "I'm about to head out to do some shopping when I get a scry from Splinters."
+    splinters "Hey are you busy?"
+    pc "Well, I'm on my way to do some good old fashioned retail therapy."
+    splinters "Can I come with you? I have some stuff to pick up, too, and maybe we could go together?"
+    pc "Yeah! Let's do it."
+    "We meet outside Schrodinger's Records."
+    splinters "Heyyyyy what did you need to get today?"
+    pc "Not sure, but I'll know it when I see it. How 'bout you?"
+    splinters "Well I was thinking I'd get some, um, hobby supplies."
+    pc "What kind of hobby?"
+    splinters "..."
+    pc "...?"
+    splinters "Don't make fun of me..."
+    pc "I'm not gonna make fun of you."
+    splinters "I'm painting some minifigures and I wanted to get new colors."
+
+menu j3shop_minis:
+    "That's so cool!":
+        splinters "Thanks, I just got into the hobby so I don't really know what I'm doing."
+    "That's... interesting":
+        splinters "Uh, yeah."
+    "Wow. Lame."
+        splinters "Wehhhhh you said you wouldn't make fun of me!"
+
+label j3shopcont
+    splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
+    splinters "There're lots of people who make fun of me because I'm kind of a little guy."
+    splinters "The one exception is Frankie. They mean well and are actually really defensive of me if somebody's giving me a hard time."
+    splinters "I've been... trying to be a little more like them. They told me it matters to feel good in your own fur and to know yourself, even if other people don't get it."
+    splinters "Sorry I'm so chatty today I just, it's been on my mind, and I keep thinking that just like with me other people might have more to them than it seems."
+    splinters "...and it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside. As long as I know myself, I'm good."
+    "Splinters flushes, ears turning even pinker than normal."
+    pc "Wow, Splinters, I didn't realize you thought about that stuff."
+    splinters "Haha I know right?"
+    pc "Let's go do that shopping and see if we can't find you some paint."
+    "They light up with excitement."
+    splinters "Let's do it!"
 # Shopping with Splinters
 # They talk about how much it matters to feel good in your own fur in a world where things aren't always what they seem. It's best to know yourself, since nobody else can know you better, not even your witch.
 # That's why they always want to talk about the projects they're working on
