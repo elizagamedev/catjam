@@ -333,7 +333,8 @@ label cafeintro:
 
     "The cafe is serene, the dappled light shining gently through the leaves of plants filling the window."
 
-    play sound ["sound/shatter.mp3", "sound/pain.opus"]
+    play sound "sound/shatter.mp3" volume 0.1
+    queue sound "sound/pain.opus"
     "The peace is broken by a yelp and the shattering of glass from inside."
 
     $ expletive = renpy.random.choice(splinters_expletives)
