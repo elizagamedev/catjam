@@ -136,7 +136,7 @@ label frankie_date_1:
 
     frankie "What can I say?"
     frankie "You really impressed me today, jack. I'll share a slice of the pie with you. You're a perfect fit for my assistant."
-    frankie "Look into the elemental binding for me this week, will you? We can have another shindig next weekend to talk progress."
+    frankie "Look into the elemental binding for me this week, will you? We can have another shindig sometime to talk progress."
     frankie "And don't slack off on those gains, either. I don't want some scrawny twig on the byline of my paper."
 
     "Frankie starts to head back towards town before pausing."

@@ -53,10 +53,7 @@ label titlecard(day = None):
     scene black with Dissolve(1.0)
     return
 
-label weekend(day, menuset):
-    call awaken(day)
-    "It's Saturday! Something something scry someone!"
-
+label weekend(menuset):
     menu .scry:
         set menuset
         "I scry..."
@@ -862,6 +859,8 @@ label j1witch:
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
+    call awaken(5)
+    "It's Saturday! Something something scry someone!"
     call weekend(5, j1wke_menuset)
 
 # --Week 2--
@@ -1147,7 +1146,9 @@ jump j2wke
 
 # --weekend 2--
 label j2wke:
-    call weekend(12, j2wke_menuset)
+    call awaken(12)
+    "It's Saturday! Something something scry someone!"
+    call weekend(j2wke_menuset)
 
 
 
@@ -1207,7 +1208,9 @@ jump j3wke
 
 # --weekend 3--
 label j3wke:
-    call weekend(18, j3wke_menuset)
+    call awaken(18)
+    "It's Saturday! Something something scry someone!"
+    call weekend(j3wke_menuset)
 
 # --Week 4--
 label j4:
@@ -1260,7 +1263,9 @@ jump j4wke
 
 # --weekend 4--
 label j4wke:
-    call weekend(24, j4wke_menuset)
+    call awaken(24)
+    "It's Saturday! Something something scry someone!"
+    call weekend(j4wke_menuset)
 
 # --outro--
 label outro:

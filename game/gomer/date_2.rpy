@@ -227,7 +227,7 @@ label .bottle:
     gomer neutral "..."
 
     menu(screen = "dialog_choice"):
-        "Do you want to hang out next weekend?":
+        "Do you want to hang out again sometime?":
             pass
         "Spit it out, you pile of garbage.":
             $ gomer_failed = True
