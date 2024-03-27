@@ -823,6 +823,7 @@ label j1gym_cont:
 
 label j1gym_outro:
     "The gym is a sacred space for those who follow the way of mastering the body. Working out is a kind of magic in itself."
+
     "In my time here day over day I learn many gymbro secrets. Everyone's focused on their  mission, but always happy to trade secrets or offer tips and tricks."
 
     scene black with irisin
@@ -840,6 +841,7 @@ label j1witch:
     show bg home_front with dissolve
 
     "She's leaning against the front porch like she was waiting for me to come home. It's been such a busy week that we've barely crossed paths."
+
     "That's not totally unusual for us, but we're usually pretty tight-knit."
 
     pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
@@ -868,7 +870,9 @@ label j1wke:
 label j2:
     call awaken(7)
     "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur."
+
     "Before we get started brewing the potion, we're going to have to find some ingredients."
+
     "My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
@@ -886,70 +890,116 @@ label j2haggle:
     stop bg fadeout 0.5
     scene bg market with fade
     play music "music/Funky Boxstep.mp3"
+
     "The best thing I can do is find a source for our ingredient. I head to the marketplace, head full of lofty aspirations for how the day should go."
+
     "I did not know how quickly I'd be humbled when I set out that morning."
+
     "The first thing we need is the third eye from a golden basilisk. This is not a resource easily acquired, and I had no idea what it'll cost, but my witch gave me gold to trade with, so I should be fine. Right? That's what I thought."
+
     "I am not fine."
+
     "After chasing leads for a couple days, I finally found a supplier. Their name is Estelle. Estelle is very old."
+
     "Estelle won't take gold, no matter how much I offer."
+
     "What Estelle wants is... candy."
+
     "A very specific candy from a shop with no name, no sign, and no front door."
+
     "I'm an excellent sleuth and spend a little coin to get a lead on this new target. It isn't long before I head to the location my spy indicated."
+
     "What I find is a building with no door--as promised--but with a big ol' bouncer outside anyway."
     show frankie neutral at center with dissolve
+
     "The bouncer is Frankie."
+
     frankie "How's it hangin', jack?"
+
     pc "I mean, it's busy, we're trying to work on a potion."
+
     frankie "Sounds hotsy-totsy. Keep those eyes peeled, though--never know when someone might try to hustle you."
+
     pc "Speaking of, I think I need to get into this building."
+
     frankie "No can do, jack. 'Fraid I'm getting bread for this gig. Can't let down the big cheese."
+
     pc "But-but we're friends, surely...?"
+
     if frankie_failed:
         play sound "sound/hiss.opus"
         frankie "Don't flatter yourself, jack."
+
     else:
         frankie "You know we're thick as thieves. But a gig's a gig."
+
     pc "Okay, can you at least tell me how to get in?"
+
     if frankie_failed:
         frankie "If it gets you out of my hair."
+
     else:
         frankie "As sure as eggs. You've gotta find this kid, see..."
 
     stop music fadeout 1.0
     scene black with dissolve
+
     "I get a helpful description out of Frankie and have... a lead!"
+
     play music "music/Android Sock Hop.mp3"
+
     "So I go find the kid."
+
     scene bg market with dissolve
 
     pc "Am I supposed to be talking to you about the candy?"
+
     "Kid" "You're in the right place. I can get you in there."
+
     pc "Great! ... How much?"
+
     "The kid chuckles."
+
     "Kid" "You haven't figured it out by now? This isn't about money."
+
     "Kid" "You gotta play the game, pal."
+
     pc "Sigh. What's the game?"
+
     "Kid" "You gotta find all 5 of my friends."
+
     pc "Oh my god that's like a full on quest."
 
     scene black with dissolve
 
     "I find the first two kids playing near the railroad tracks. They 'fess up their numbers, 4 and 0, and I make them promise to not play so near the tracks."
+
     pc "It's dangerous!"
+
     "The third kid is hiding under a table in the diner. She's spooked that she got separated from the group, so it's easy to get her number: 6."
+
     "So far I have 4, 0, 6."
+
     "I find the last two kids trying to climb onto the roof of the record shop and threaten to tell on them unless they give me their numbers. 9 and 2. Easy."
+
     "There's only one number this could be."
 
     scene bg market with dissolve
 
     "I return to the leader of the kids and look them dead in the eyes."
+
     pc "It can only be one number."
+
     "Kid" "And what would that be?"
+
     pc "The funny number, funny number."
+
     "Kid" "Which is...?"
+
     pc "420...69."
+
     "Kid" "By golly you've done it. You've actually done it. I hope you find what you're looking for."
+
     "And with that ominous sentence, they flit away like a leaf in the wind."
 
     scene bg market with fade
@@ -959,7 +1009,9 @@ label j2haggle:
     show frankie neutral at center with dissolve
 
     frankie "You're back! Got a code to bust this shindig?"
+
     pc "Absolutely I do. 42069"
+
     frankie "Bada-bing, bada-boom. That's the ticket."
 
     scene bg alley
@@ -967,87 +1019,138 @@ label j2haggle:
     with dissolve
 
     "They wave me over to a hatch in an alleyway."
+
     frankie "It's down here."
+
     pc "Thanks!"
 
     hide frankie with dissolve
     show black with dissolve
 
     "The inside of the candy shop is laid out well, with a reception area next to many samples of candies."
+
     "There are three employees milling about, two of whom are making candies while the third waits at the reception desk."
+
     "All three of them are wearing fox masks."
+
     "Fox 1" "Welcome in, weary traveler. What is it you seek?"
+
     pc "Uh, hi! I'm looking for a candy for Estelle the trader. They said you'd know the ones?"
+
     "Fox 2" "Estelle."
+
     "Fox 3" "It must be {i}that{/i} Estelle."
+
     "Fox 1" "It can only be {i}that{/i} Estelle."
+
     pc "Do you... have an issue with Estelle?"
+
     "All 3 Foxes" "No, not really."
+
     pc "Ohhhkay. Well um, can I get the candy? What does it cost?"
+
     "Fox 1" "You've already paid our price. We do so hope you enjoyed the game."
+
     pc "It was... a game. I like your masks."
+
     "All 3 Foxes" "Thank you!"
+
     "The receptionist fox brings me a tin full of small strawberry candies. I'm offered a couple free samples of them to take with me too."
+
     "I pop one in my mouth and gently bite it. It has a soft gel core, also strawberry flavored."
+
     scene bg alley with dissolve
     pause 0.5
     scene bg market
     show frankie neutral at center
     with dissolve
+
     "On my way out I pass by Frankie again."
 
 menu j2candy:
     "Maybe Frankie would like one...? But I only have one left."
 
     "I give the candy to Frankie.":
+
         frankie "Why thank you! *nom* This is doggone delicious."
+
         frankie "Next one's on me, jack."
+
     "I keep it for myself.":
+
         frankie "Take care! Get home safe. Don't slack on those reps, dig?"
+
     "I eat the last piece staring them dead in the eyes.":
+
         frankie "..."
+
         frankie "You tryin' to say something?"
+
         pc "I'll uh, bring you one next time."
+
 label j2haggle2:
     stop music fadeout 3.0
     scene black with irisin
+
     "I bring the strawberry candies back to Estelle and make the exchange."
+
     "I finally have... the third eye from a golden basilisk. Time to head home with my prize after a long, long, long week."
     jump j2witch
 
 
 # Synthesize
 label j2synthesize:
+
     "One of the ingredients we need for my witch's potion is a relatively expensive compound syrup made from relatively inexpensive materials."
+
     "So, we're going to make it ourselves."
+
     stop bg fadeout 0.5
     scene bg market with fade
     play bg "sound/train-station.opus" fadein 1.0
+
     "We head to the marketplace to pick up the materials: frog legs, slime eyes, fish bones, leeks, persimmons, yew charcoal, and sunflower seeds."
     show yuri neutral at center with dissolve
+
     "Yuri waves at us as we walk by the flower stand and tucks a buttercup behind my ear."
+
     yuri "For good luck!"
     scene black with dissolve
+
     "After a full day of shopping, haggling, and hustling, we take a bus to the university."
     stop bg fadeout 1.0
     scene bg potions with dissolve
     play music "music/Gagool.mp3"
+
     "The university has cauldrons prepared for students to use for synthesizing potions, like we're doing now. The cauldrons are prepared with all the tools a witch could need."
+
     "My Witch" "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
+
     pc "Of course! I'll be right here."
+
     "My Witch" "Thanks so much! I'll be back before you know it."
+
     "She gives me a reassuring pat on the shoulder and heads outside."
+
     "The potion bubbles."
+
     "It sputters."
+
     "An eyeball bounces upwards from the force of a particularly enthusiastic bubble, but I manage to block it so it just falls back in."
+
     "For the most part, though, the waiting and monitoring is an uneventful process. {i}It just requires patience{/i}--"
     play sound "sound/door.opus"
+
     "The door slams open."
     show splinters neutral at center, vibrate with easeinleft
     splinters "IT IS YOU OH MY GOD you're exactly who I was hoping to run into today!"
+
     "Splinters stumbles through the door, tiny arms struggling to bear the weight of the very tall glass jar filled with a concerningly brownish-orangeish viscous liquid."
+
     "They step through the door, and the top of the jar wavers forwards. The momentum pulls them towards me."
+
     "And towards my potion."
+
     "I take a defensive stance, trying to think of what Frankie would do in this situation."
     play sound "sound/crackle.opus"
     scene bg cafe:
@@ -1057,40 +1160,62 @@ label j2synthesize:
     show splinters neutral at right, mirror:
         matrixcolor flashback
     with flash
+
 # Make this seem like a "flashback"
     frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
     play sound "sound/crackle.opus"
     scene bg potions
     show splinters neutral at center, vibrate
     with flash
+
     "That's right. I don't skip leg day {i}or{/i} brain day. I got this."
+
     splinters "LOOK OUT I CAN'T STOP"
+
     "I step forward and reach my hands out, angling my body, and redirect Splinters' momentum."
     play sound "sound/collapse.opus"
     show splinters at Transform(xpos=2.0) with MoveTransition(1.0, time_warp=_warper.easein):
         rotate 0
         linear 0.15 rotate 360
         repeat
+
     "The jar hits the counter and shatters, sending the burnished goop splattering across the ground--but not into our precious potion. Phew."
     hide splinters
+
     pc "Are you okay?!"
     show splinters neutral at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
+
     splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
+
     pc "Yeah, I think so!"
+
     splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
+
     "I almost ask them to help clean up, but I remember the shattered glass and think twice."
+
     pc "How about you hold the dustpan and I pick this stuff up?"
+
     splinters "Sure!"
+
     pc "What is this potion, anyway?"
+
     splinters "It wasn't a potion, that was supposed to be a protein shake."
+
     "Seems like Splinters dodged a bullet with that one."
+
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
     scene bg potions with fade
+
     "My Witch" "I'm back!"
+
     "My witch is back with an armful of funky lookin' plants."
+
     "I help her prep them and we toss them into the concoction together."
+
     "I stir the cauldron while she casts spells to control the temperature and provide a stable environment."
+
     "Splinters stays a polite and safe distance away, sitting on a wooden stool next to a different cauldron."
+
     "After a whole eon, we end up with a stable ingredient for my witch's potion idea. This is great! Now to let it sit for a week and see if it turns out how we intended."
     # TODO: stretch this out for the whole week
     stop music fadeout 3.0
@@ -1100,37 +1225,69 @@ label j2synthesize:
 
 # Forage
 label j2forage:
+
     "The forests to the north are full of flora and fauna rich with magical energy, thanks to the longstanding presence of witches who have carefully tended the region's ley lines."
+
     "My witch and I decide to go forage for fresh ingredients ourselves, bringing baskets for plants and stackable plastic enclosures for critters. She can carry a lot more than I can, but I have better vision."
+
     "My Witch" "Stay close to me, okay? I brought us some protection wards but I don't want to risk you getting hurt."
+
     "My Witch" "There are bristlecone boars roaming the area where we're trying to go, and we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
+
     "My Witch" "This makes it an actually pretty dangerous task, but we have to get these ingredients for the exam, so go we must."
+
     "We see telltale tracks but only the most obvious ones--we're not locals and don't really know what we're looking at."
+
     "Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from."
+
     yuri "Hi there :) What brings you out here?"
+
     pc "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
+
     yuri "I'm trying to fill this basket with flower clippings! The soil here is pretty rich in mana thanks to the ley lines. Here, let me show you."
+
     "They lead us to a meadow clear of any debris--no loose stones or branches."
+
     "At the center of the meadow is a ring of mushrooms."
+
     yuri "This is called a fairy ring! They're rumored to be magical, and in a place like this they really are. Let's not step in it today, I'm not sure where this one would take us."
+
     "My Witch" "That's good advice! I'll lead us back."
+
     "She turns around and starts retracing our steps."
+
     "I look at the fairy ring with curiosity, and the longer I look the more it seems to fill my vision. It's so... enticing. I feel like this is a solvable mystery, if only I just took one step--"
+
     yuri "[pc]!! Hey! Eyes on me, okay?"
+
     "I blink and realize Yuri's pulling my arm to get my attention, a concerned look on their face."
+
     yuri "I'm so sorry, I didn't think it'd be acting this tricksy when I suggested we come see it. Ley lines, amiright?"
+
     yuri "Let's get back to your witch."
+
     "They take my hand in theirs and we walk back to my witch together."
+
     "We take some more flower cuttings as we go, and when we catch up to my witch she's already filled a couple more containers with critters, plants, and fungi for our potion."
+
     "My Witch" "There you are! Welcome back, check out what I caught!"
+
     "She holds up a giant toad, its legs dangling in the air."
+
     "My Witch" "It's adorable! Anyways, we should head home, it's going to get late soon. Yuri, thanks for joining us today!"
+
     yuri "Any time! I love being out here."
+
     "Yuri gets a wistful look in their eyes."
+
     yuri "My witch is a florist. Her whole thing is that she wants to make beautiful arrangements using enchanted flowers that act as wards of happiness and protection."
+
     yuri "She always tries to make people's days brighter, so I do too."
+
     yuri "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
+
     pc "You bet!"
+
     "We all head home in companionable silence, listening to the birds sing their evening songs. No boars were encountered and we had a great day. Success!"
 
 jump j2witch
@@ -1139,8 +1296,9 @@ jump j2witch
 # at home
 label j2witch:
     call awaken(11)
-# Outline
+
     "I got to spend a lot of time with my witch this week and I'm feeling like a real good familiar."
+
     "We take it easy and sip lemonades over a board game."
 jump j2wke
 
@@ -1157,10 +1315,13 @@ label j2wke:
 
 # --Week 3--
 label j3:
+
     "This is our last week to get a potion ready for the exam next week, where we'll start all over and make it from scratch to prove we've learned our stuff."
+
     "We can stick to my witch's plan--she keeps telling me that what the potion does is a {q}surprise{/q}--or we can go with something else and see if it works better."
 
 menu j3wk:
+
     "I spend most of my time helping my witch with the potion, but on my day off I set out to..."
 
     "Shop":
@@ -1175,81 +1336,138 @@ menu j3wk:
 
 # Shop
 label j3shop:
+
     "I'm about to head out to do some shopping when I get a scry from Splinters."
+
     splinters "Hey are you busy?"
+
     pc "Well, I'm on my way to do some good old fashioned retail therapy."
+
     splinters "Can I come with you? I have some stuff to pick up, too, and maybe we could go together?"
+
     pc "Yeah! Let's do it."
+
     "We meet outside Schrodinger's Records."
+
     splinters "Heyyyyy what did you need to get today?"
+
     pc "Not sure, but I'll know it when I see it. How 'bout you?"
+
     splinters "Well I was thinking I'd get some, um, hobby supplies."
+
     pc "What kind of hobby?"
+
     splinters "..."
+
     pc "...?"
+
     splinters "Don't make fun of me..."
+
     pc "I'm not gonna make fun of you."
+
     splinters "I'm painting some minifigures and I wanted to get new colors."
 
 menu j3shop_minis:
+
     "That's so cool!":
+
         splinters "Thanks, I just got into the hobby so I don't really know what I'm doing."
         jump j3shopcont
+
     "That's... interesting":
         splinters "Uh, yeah."
         jump j3shopcont
+
     "Wow. Lame."
         splinters "Wehhhhh you said you wouldn't make fun of me!"
         jump j3shopcont
 
 label j3shopcont
+
     splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
+
     splinters "There're lots of people who make fun of me because I'm kind of a little guy."
+
     splinters "The one exception is Frankie. They mean well and are actually really defensive of me if somebody's giving me a hard time."
+
     splinters "I've been... trying to be a little more like them. They told me it matters to feel good in your own fur and to know yourself, even if other people don't get it."
+
     splinters "Sorry I'm so chatty today I just, it's been on my mind, and I keep thinking that just like with me other people might have more to them than it seems."
+
     splinters "...and it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside. As long as I know myself, I'm good."
+
     "Splinters flushes, ears turning even pinker than normal."
+
     pc "Wow, Splinters, I didn't realize you thought about that stuff."
+
     splinters "Haha I know right?"
+
     pc "Let's go do that shopping and see if we can't find you some paint."
+
     "They light up with excitement."
+
     splinters "Let's do it!"
-# Shopping with Splinters
-# They talk about how much it matters to feel good in your own fur in a world where things aren't always what they seem. It's best to know yourself, since nobody else can know you better, not even your witch.
-# That's why they always want to talk about the projects they're working on
+
 jump j3witch
 
 
 # Monument
 label j3monument:
+
     "I decide to visit the festival grounds. After exams are over, this place will be a spectacle of light and sound, but for now it's serene and still. Some birds flit between trees and the river sloshes quietly at the banks."
+
     "This place has been here almost as long as the record shop, and has been the site for all manner of goings-on."
+
     "I walk through paths lined with empty buildings. The concession stand is silent and unattended."
+
     "There's an empty stage area where a couple humans are hanging up signs and banners."
+
     "Beyond the stage is the center of the festival grounds, where a sculpture fountain overlooks the area."
+
     "The sculpture depicts a cat tree, atop which is a hunched over cat. Water spills from the stone cat's mouth, trickling gracefully down the different levels of the cat tree and splashing into the basin below."
+
     "The bottom of the basin is glittering with gold coins that have been tossed in for good luck. There's a sign posted beside {q}Lucky Fountain{/q} explaining that stealing coins from the fountain will 100 percent curse you."
+
     "I figure I probably shouldn't test that out."
+
     "I fish out a couple gold coins that my witch gave me and toss them in, making one wish for our potion's success."
+
     "The other wish is for Splinters."
+
     pc "That feller seems like they need all the luck they can get."
+
     "I keep walking through the grounds and make my way to an open field lined with bleacher stands. A big, strong calico is running up and down the bleacher steps."
+
     "They see me and wave, adjusting their trajectory to head towards me."
+
     frankie "Holy moly that's a good workout, really gets your heart going, jack. Hoooooooooooo boy."
+
     "Frankie wipes their sweaty paws against their running pants."
+
     frankie "Whatcha doing here, jack?"
+
     pc "I thought I'd explore the festival grounds! It's so quiet here."
+
     frankie "It really is! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
+
     frankie "You make a wish in that fountain?"
+
     pc "Sure did"
+
     frankie "Don't tell me, that'd be bad luck. But let me show you these smaller fountains, you're gonna be gobsmacked."
+
     "Frankie leads us down some paths between buildings to show me the little drinking fountains dispersed through the grounds."
+
     "They're sick."
+
     "We end up by a vending machine near the bus stop. Frankie leans against the machine and I sit on the bench."
+
     "They push some buttons and the machine rattles. The big calico tosses me a juice box."
+
     frankie "Gotta stay fueled, jack."
+
     pc "Thanks!"
+
     frankie "I gotchu."
 
 jump j3witch
