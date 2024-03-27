@@ -1555,7 +1555,7 @@ label j3boardyes:
     "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten 3 lemonades, one for each of us."
 
 
-label j3boardno
+label j3boardno:
 # Ice cream stand
 # Gomer's at the beach
 # Skateboarding with Gomer on the pier
