@@ -17,6 +17,8 @@ label frankie_date_1:
             $ scry_redo = True
             return
 
+    $ frankie_date_count += 1
+
     "Frankie tilts their head."
 
     frankie "Oh? You're talking to the right cat."

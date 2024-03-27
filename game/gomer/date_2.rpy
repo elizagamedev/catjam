@@ -1,4 +1,6 @@
 label gomer_date_2:
+    $ gomer_date_count += 1
+
     gomer "So, you uh, you ready to carry out the, uh, do the {q}thing{/q}?"
 
     menu(screen="dialog_choice"):

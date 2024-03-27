@@ -26,6 +26,8 @@ label splinters_date_1:
             $ scry_redo = True
             return
 
+    $ splinters_date_count += 1
+
     splinters "G-great, see you tomorrow then!"
 
     stop music fadeout 1.0

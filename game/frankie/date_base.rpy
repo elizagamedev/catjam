@@ -60,3 +60,8 @@ label debug_frankie_date_2:
     $ frankie_call_count = 1
     $ frankie_date_count = 1
     jump frankie_date
+
+label debug_frankie_date_3:
+    $ frankie_call_count = 2
+    $ frankie_date_count = 2
+    jump frankie_date

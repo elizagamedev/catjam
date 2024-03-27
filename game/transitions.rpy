@@ -2,9 +2,11 @@ define longfade = Fade(1.0, 1.0, 1.0)
 
 transform left:
     xalign 0.25
+    yalign 1.0
 
 transform right:
     xalign 0.75
+    yalign 1.0
 
 transform mirror:
     xzoom -1.0

@@ -30,6 +30,8 @@ label gomer_date_1:
             $ scry_redo = True
             return
 
+    $ gomer_date_count += 1
+
     gomer "Sweet. I got tickets-- {w=1.0}Well, I know how to get tickets for this live music place. Really cool vibe, you know, compared to like, you know, most things."
 
     menu .time(screen = "dialog_choice"):

@@ -73,3 +73,13 @@ https://freesound.org/people/craigsmith/sounds/438210/
 
 door.opus
 https://freesound.org/people/bennychico11/sounds/29542/
+
+beach.opus
+https://freesound.org/people/klankbeeld/sounds/396172/
+
+skateboard.opus
+https://freesound.org/people/temawas/sounds/256811/
+https://freesound.org/people/Bruno_Garcez/sounds/243762/
+
+skateboard-spike.opus
+https://freesound.org/people/temawas/sounds/256811/

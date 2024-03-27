@@ -3,6 +3,8 @@ default pc_is_dizzard = False
 default pc_drink = "joe"
 
 label frankie_date_2:
+    $ frankie_date_count += 1
+
     pc "You wanted to get started on that potion, right?"
 
     frankie "Hole in one."
