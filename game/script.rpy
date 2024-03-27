@@ -1138,7 +1138,8 @@ jump j2witch
 label j2witch:
     call awaken(11)
 # Outline
-# I got to spend a lot of time with my witch this week and I'm feeling like a real good familiar. Cute scene where we play a board game together.
+    "I got to spend a lot of time with my witch this week and I'm feeling like a real good familiar."
+    "We take it easy and sip lemonades over a board game."
 jump j2wke
 
 
@@ -1154,9 +1155,11 @@ label j2wke:
 
 # --Week 3--
 label j3:
-# Outline
-# This is the last week we have to get the potion ready for the exam next week, where we'll make everything from scratch. We can stick to the plan we're already working on, or we can try something else and  see  if it works better.
+    "This is our last week to get a potion ready for the exam next week, where we'll start all over and make it from scratch to prove we've learned our stuff."
+    "We can stick to my witch's plan--she keeps telling me that what the potion does is a {q}surprise{/q}--or we can go with something else and see if it works better."
+
 menu j3wk:
+    "I spend most of my time helping my witch with the potion, but on my day off I set out to..."
 
     "Shop":
         jump j3shop
@@ -1182,12 +1185,31 @@ label j3monument:
     "This place has been here almost as long as the record shop, and has been the site for all manner of goings-on."
     "I walk through paths lined with empty buildings. The concession stand is silent and unattended."
     "There's an empty stage area where a couple humans are hanging up signs and banners."
-    "Beyond the stage is the center of the festival grounds, where a sculpture fountain"
-# Lucky fountain is being lucky, and I make a couple wishes for poor Splinters and their awful luck.
-# There's a field lined with bleacher stands, and I see Frankie running up and down the steps.
-# Frankie comes here to clear their mind when they need some fresh air instead of the gym.
-# They show us the water fountains and we get drinks from a vending machine.
-# It's an easy camaraderie.
+    "Beyond the stage is the center of the festival grounds, where a sculpture fountain overlooks the area."
+    "The sculpture depicts a cat tree, atop which is a hunched over cat. Water spills from the stone cat's mouth, trickling gracefully down the different levels of the cat tree and splashing into the basin below."
+    "The bottom of the basin is glittering with gold coins that have been tossed in for good luck. There's a sign posted beside {q}Lucky Fountain{/q} explaining that stealing coins from the fountain will 100 percent curse you."
+    "I figure I probably shouldn't test that out."
+    "I fish out a couple gold coins that my witch gave me and toss them in, making one wish for our potion's success."
+    "The other wish is for Splinters."
+    pc "That feller seems like they need all the luck they can get."
+    "I keep walking through the grounds and make my way to an open field lined with bleacher stands. A big, strong calico is running up and down the bleacher steps."
+    "They see me and wave, adjusting their trajectory to head towards me."
+    frankie "Holy moly that's a good workout, really gets your heart going, jack. Hoooooooooooo boy."
+    "Frankie wipes their sweaty paws against their running pants."
+    frankie "Whatcha doing here, jack?"
+    pc "I thought I'd explore the festival grounds! It's so quiet here."
+    frankie "It really is! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
+    frankie "You make a wish in that fountain?"
+    pc "Sure did"
+    frankie "Don't tell me, that'd be bad luck. But let me show you these smaller fountains, you're gonna be gobsmacked."
+    "Frankie leads us down some paths between buildings to show me the little drinking fountains dispersed through the grounds."
+    "They're sick."
+    "We end up by a vending machine near the bus stop. Frankie leans against the machine and I sit on the bench."
+    "They push some buttons and the machine rattles. The big calico tosses me a juice box."
+    frankie "Gotta stay fueled, jack."
+    pc "Thanks!"
+    frankie "I gotchu."
+
 jump j3witch
 
 
@@ -1197,6 +1219,8 @@ label j3beach:
 # Ice cream stand
 # Gomer's at the beach
 # Skateboarding with Gomer on the pier
+# Pucci's walking and shopping
+# They take some
 
 jump j3witch
 
