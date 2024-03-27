@@ -1099,12 +1099,39 @@ label j2synthesize:
 
 # Forage
 label j2forage:
-# Outline
-# The forests to the north are full of flora and fauna rich with magical energy, thanks to the longstanding presence of witches who have carefully tended the region's ley lines. We decide to go forage for fresh ingredients ourselves, bringing baskets for plants and stackable plastic enclosures for critters.
-# There are bristlecone boars roaming the area where we're trying to go, and we need to be careful of them. They're named for their curved and twisted tusks, and they can be pretty territorial. This is actually a pretty dangerous task, but we have to get these ingredients for the exam, so go we must.
-# We see telltale tracks but only the most obvious ones--we're not locals and don't really know what we're looking at.
-# Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from. We decide to walk together, and they're able to steer us away from the denser parts of the woods where bristlecone boars stomp around moodily.
-# We get a heartfelt scene where Yuri talks about their witch being a florist who wants to make beautiful arrangements for people using enchanted flowers to act as wards of happiness and protection. Yuri's very proud of their witch and doesn't mind that it means they're not very available to hang out on the weekends. Yuri's personal dream is to tend to a beautiful bonsai and see it flourish year over year.
+    "The forests to the north are full of flora and fauna rich with magical energy, thanks to the longstanding presence of witches who have carefully tended the region's ley lines."
+    "My witch and I decide to go forage for fresh ingredients ourselves, bringing baskets for plants and stackable plastic enclosures for critters. She can carry a lot more than I can, but I have better vision."
+    "My Witch" "Stay close to me, okay? I brought us some protection wards but I don't want to risk you getting hurt."
+    "My Witch" "There are bristlecone boars roaming the area where we're trying to go, and we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
+    "My Witch" "This makes it an actually pretty dangerous task, but we have to get these ingredients for the exam, so go we must."
+    "We see telltale tracks but only the most obvious ones--we're not locals and don't really know what we're looking at."
+    "Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from."
+    yuri "Hi there :) What brings you out here?"
+    pc "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
+    yuri "I'm trying to fill this basket with flower clippings! The soil here is pretty rich in mana thanks to the ley lines. Here, let me show you."
+    "They lead us to a meadow clear of any debris--no loose stones or branches."
+    "At the center of the meadow is a ring of mushrooms."
+    yuri "This is called a fairy ring! They're rumored to be magical, and in a place like this they really are. Let's not step in it today, I'm not sure where this one would take us."
+    "My Witch" "That's good advice! I'll lead us back."
+    "She turns around and starts retracing our steps."
+    "I look at the fairy ring with curiosity, and the longer I look the more it seems to fill my vision. It's so... enticing. I feel like this is a solvable mystery, if only I just took one step--"
+    yuri "[pc]!! Hey! Eyes on me, okay?"
+    "I blink and realize Yuri's pulling my arm to get my attention, a concerned look on their face."
+    yuri "I'm so sorry, I didn't think it'd be acting this tricksy when I suggested we come see it. Ley lines, amiright?"
+    yuri "Let's get back to your witch."
+    "They take my hand in theirs and we walk back to my witch together."
+    "We take some more flower cuttings as we go, and when we catch up to my witch she's already filled a couple more containers with critters, plants, and fungi for our potion."
+    "My Witch" "There you are! Welcome back, check out what I caught!"
+    "She holds up a giant toad, its legs dangling in the air."
+    "My Witch" "It's adorable! Anyways, we should head home, it's going to get late soon. Yuri, thanks for joining us today!"
+    yuri "Any time! I love being out here."
+    "Yuri gets a wistful look in their eyes."
+    yuri "My witch is a florist. Her whole thing is that she wants to make beautiful arrangements using enchanted flowers that act as wards of happiness and protection."
+    yuri "She always tries to make people's days brighter, so I do too."
+    yuri "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
+    pc "You bet!"
+    "We all head home in companionable silence, listening to the birds sing their evening songs. No boars were encountered and we had a great day. Success!"
+
 jump j2witch
 
 
@@ -1142,18 +1169,19 @@ menu j3wk:
 
 # Shop
 label j3shop:
-# Shopping with Pucci, who is so fucking glad to be able to take you shopping
+# Shopping with Splinters
 # They talk about how much it matters to feel good in your own fur in a world where things aren't always what they seem. It's best to know yourself, since nobody else can know you better, not even your witch.
-# Pucci gets put to the test and is actually bullied by some other familiars who think they're all looks and no brains, but they're completely unphased and it just rolls off their back. They assert their good qualities and then says we should keep shopping so I don't look so poor. Ouch?
+# That's why they always want to talk about the projects they're working on
 jump j3witch
 
 
 # Monument
 label j3monument:
-# I decide to go visit the festival grounds early. After the exams this place will be a spectacle of lights and sounds, but for now it's serene and still. Some birds flit between trees and the river water sloshes quietly at the banks.
-# This place has been here almost as long as the record shop, and has been the site for all manner of goings-on.
-# Concession stand is silent and unattended
-# Stage area is empty, but for a couple humans hanging up signs and banners.
+    "I decide to visit the festival grounds. After exams are over, this place will be a spectacle of light and sound, but for now it's serene and still. Some birds flit between trees and the river sloshes quietly at the banks."
+    "This place has been here almost as long as the record shop, and has been the site for all manner of goings-on."
+    "I walk through paths lined with empty buildings. The concession stand is silent and unattended."
+    "There's an empty stage area where a couple humans are hanging up signs and banners."
+    "Beyond the stage is the center of the festival grounds, where a sculpture fountain"
 # Lucky fountain is being lucky, and I make a couple wishes for poor Splinters and their awful luck.
 # There's a field lined with bleacher stands, and I see Frankie running up and down the steps.
 # Frankie comes here to clear their mind when they need some fresh air instead of the gym.
@@ -1168,6 +1196,7 @@ label j3beach:
 # Ice cream stand
 # Gomer's at the beach
 # Skateboarding with Gomer on the pier
+
 jump j3witch
 
 
