@@ -19,7 +19,8 @@ label splinters_date:
 
     play music "music/Brandenburg No4-1 BWV1049.mp3"
 
-    "Splinters crackles into view, licking a freshly-tenderized paw. They're adjusting the very cracked crystal ball back into place."
+    $ state = "newly" if splinters_date_count == 3 else "very"
+    "Splinters crackles into view, licking a freshly-tenderized paw. They're adjusting the [state] cracked crystal ball back into place."
 
     splinters "S-sorry about that. Oh! [pc], what's up?"
 
