@@ -252,7 +252,7 @@ menu pucci_ribbon(screen="dialog_choice"):
 label p_r_nicely:
     pucci_unk "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
 
-    "They go on for a while, recounting ther. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
+    "They go on for a while. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
     jump meeting_pucci
 
 label p_r_good:
@@ -496,6 +496,7 @@ label j1records_secrets:
     "He taps his forehead."
 
     "Alec" "And I know every hand, paw, or claw that's walked out of this grand repository with a vinyl."
+
     "Alec" "The other Schrodinger's Records secret is that my name's not actually Alec, but you'll have to pry my real name out of me with a crowbar or the purchase of at least three vinyls."
     jump j1records_alec
 
@@ -517,12 +518,14 @@ label j1university:
     play music "music/Valse Gymnopedie.mp3"
 
     "I take a bus to the university. It's a quiet ride, and the scenery outside of the little town is beautiful."
+
     "Rippling fields of crops and grains almost ready to be harvested, the forest to the north dappled with the burnished golds and vibrant scarlets of autumn. Beautiful."
 
     show bg university_front with dissolve
     play sound "sound/clocktower.opus"
 
     "The bus pulls into the campus. The buildings are old brick and climbing ivy, and an old clocktower ticks away above the main building."
+
     "I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
 
     "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
@@ -541,6 +544,7 @@ label j1university:
     scene black with dissolve
 
     "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences."
+
     "Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
 
     "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
@@ -565,11 +569,13 @@ label j1vineyard:
     play music "music/Deuces.mp3"
 
     "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical."
+
     "In fact, it might even be magical."
 
     scene bg vineyard with dissolve
 
     "I hop on a tour bus, which is actually more of a glorified van full of wine moms and college kids excited for a bougie guided tour."
+
     "It's a nice short drive to the vineyard. As we step out of the packed van I hear someone call my name."
 
     pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
@@ -577,6 +583,7 @@ label j1vineyard:
     show pucci neutral at center with dissolve
 
     "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way."
+
     "I suspect they might just be a little rude."
 
     pucci "Is this your first time to the Vineyards? Let's walk together!"
@@ -599,7 +606,9 @@ label explore_vineyard_alone:
     scene bg vineyard with longfade
 
     "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical."
+
     "Powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops."
+
     "The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
     jump explore_vineyard_outro
 
@@ -636,12 +645,17 @@ label j1study:
 
     "I go to the traditional repository of all knowledge, forbidden and permitted--the local library."
 
-    "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber."
-    "I know this because of the enormous sign hanging above the front desk that says,"
-    "{q}{i}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply.{/i}{/q}"
-    "{q}{i}If you don't know if you are one, then you are NOT one. GOOD DAY. --Library Management{/i}{/q}"
-    "It's beautiful here, and the scent of parchment and ink swirls around me."
 
+
+    "The door greets me as I walk up and opens itself. To my delight, this library is in fact magical and does in fact have a forbidden AKA restricted access chamber."
+
+    "I know this because of the enormous sign hanging above the front desk that says,"
+
+    "{q}{i}For the love of mana please stop asking about this, YES we have a restricted section, YES it is forbidden, NO you cannot go in anyway. Special exceptions apply.{/i}{/q}"
+
+    "{q}{i}If you don't know if you are one, then you are NOT one. GOOD DAY. --Library Management{/i}{/q}"
+
+    "It's beautiful here, and the scent of parchment and ink swirls around me."
     play sound "sound/collapse.opus"
 
     "My whiskers twitch at a sudden shift in the air right before I hear the dismal sound of a very large cart of books tipping over."
@@ -690,6 +704,7 @@ label j1study_helpsplinters:
     "They actually say L-O-L... out loud."
 
     splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week."
+
     splinters "I'm not doing that now but you can fer suuuure find me racking books"
 
     "They flex their non-existent muscles."
@@ -707,6 +722,7 @@ label j1study_helpsplinters:
     pc "Yes..."
 
     splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
+
     splinters "I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
 
     pc "Oooooo..."
@@ -724,6 +740,7 @@ label j1study_helpsplinters:
     pc "Sure, why not?"
 
     "We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed."
+
     "It's a lot of EDM and the bass could probably send the tiny cat flying if it was played through a speaker."
 
     "I think this means we're friends! Two objectives completed, hurrah!"
@@ -1475,7 +1492,70 @@ jump j3witch
 
 # Beach
 label j3beach:
-# There's no better place to go for a break than the beach, so I head west to Dewclaw Beach. The weather is starting to cool, but it's still sunny out and the waves lapping at the shore are pleasantly cool.
+
+    "There's no better place to go for a break than the beach, so I head west to Dewclaw Beach. The weather is starting to cool, but it's still sunny out and the waves lapping at the shore are pleasantly cool."
+
+    "I stop to get some ice cream from a cart and listen to the seagull cries."
+
+    pc "I wonder if there are seagull familiars? I guess, probably? Huh."
+
+    "I walk along the beach for a while, watching my pawprints leave tracks in the sand. The tracks are quickly washed away by gentle waves caressing the beach."
+
+    "When I've had my fill of sand between my beans, I head back to the pier."
+
+    gomer "LOOK OUT!!!"
+
+    "I turn towards the shout just in time to react, diving left to avoid screeching wheels and tumbling and crashing in the spot I had just been standing."
+
+    "I open my eyes and see soft brown paws in front of me. Then I look up."
+
+    pucci "Oh goodness. Careful, there."
+
+    "Pucci looks like a moviestar, scarf billowing softly in a breeze that hadn't been there a moment ago. They smooth a tuft of fluff behind their whiskers."
+
+# record scratch here
+
+    gomer "Yooooo I almost got that trick down, dog."
+
+    "Gomer is splayed on the ground next to a skateboard that's slowly rolling away from them."
+
+    gomer "Pucci! You mind, uh, catching that for me?"
+
+    pucci "I don't really want to. But, sure."
+
+    "I stand up and dust myself off."
+
+# gomer happy
+    gomer "Appreciate it."
+
+    pc "Uh, you okay down there?"
+
+    gomer "Oh yeah this happens all the time, part and parcel, dog. You ever boarded?"
+
+    pc "No, I've never tried. It seems cool though."
+
+    gomer "You wanna give it a try?"
+
+    "I reach a paw down and help Gomer up."
+
+menu j3beach_board
+
+    "Heck yes.":
+        jump j3boardyes
+
+    "No thanks.":
+        jump j3boardno
+
+label j3boardyes
+
+    "Gomer explains the basics to me: where to put my feet, how to move and stop, how to shift my weight."
+
+    "They let me hold their paw to keep me steady while I catch my balance."
+
+    "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten 3 lemonades, one for each of us."
+
+
+label j3boardno
 # Ice cream stand
 # Gomer's at the beach
 # Skateboarding with Gomer on the pier
