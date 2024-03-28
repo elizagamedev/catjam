@@ -1,15 +1,16 @@
 default splinters_date_1_attempted = False
+define guitarist = Character("Guitarist", who_color="#8376F7")
 
 label splinters_date_1:
     if not splinters_date_1_attempted:
-        splinters "S-so, what's up? Can I help with anything?"
+        splinters "S-So, what's up? Can I help with anything?"
         pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
         splinters "Sure, I can give you pointers over coffee. There's a cafe nearby with a neat l-local twirl. I mean, twist."
     else:
         pc "Maybe something warm will help with your paw."
         splinters "Like your heart?"
         pc "..."
-        splinters "H-haha, just kidding. Maybe coffee?"
+        splinters "H-Haha, just kidding. Maybe coffee?"
 
     menu(screen="dialog_choice"):
         "Coffee would be great!":
@@ -19,10 +20,11 @@ label splinters_date_1:
             "Splinters is quite visibly taken aback."
             splinters "S-sure, that's fine but..."
             splinters "You don't... *sniff* You don't have to put it that way..."
-            "Their eyes are watering up again. {i}Disgusting{/i}, you think to yourself."
+            "Their eyes are watering up again."
+            "{i}Disgusting.{/i}"
             splinters "F-Fine then. H-Have fun in your joyless life without caffeine!"
             stop music fadeout 1.0
-            "You see their paws reach forward to end the connection, and static as the ball falls off the table."
+            "I see their paws reach forward to end the connection, then static as the ball falls off the table."
             $ scry_redo = True
             return
 
@@ -40,7 +42,7 @@ label splinters_date_1:
     play sound "sound/chair.opus"
     "I grab a seat near the guitarist."
     play sound "sound/chimes.opus"
-    "There is a jingle and a sequence of harried 'sorries.' Splinters must be here."
+    "There is a jingle and a sequence of harried {q}sorries{/q}. Splinters must be here."
 
     show splinters neutral at center with dissolve
 
@@ -52,10 +54,10 @@ label splinters_date_1:
             $ splinters_date_1_attempted = True
 
             hide splinters with dissolve
-            "As Splinters makes the order, you admire the very photogenic lattes at the other tables."
+            "As Splinters makes the order, I admire the very photogenic lattes at the other tables."
             "It seemed difficult to drink without spilling; the lattes were practically overflowing..."
             $ expletive = renpy.random.choice(splinters_expletives)
-            splinters "[expletive]! W-watch out!"
+            splinters "[expletive]! W-Watch out!"
             play sound "sound/crash.wav"
             stop bg fadeout 0.5
             stop music
@@ -65,7 +67,7 @@ label splinters_date_1:
             "Splinters runs off, a coffee-stained blushing mess."
             scene black with irisin
             return
-        "A simple pourover to go works for me.":
+        "A simple pour-over to go works for me.":
             hide splinters with dissolve
             pause 1.0
             show splinters neutral with dissolve
@@ -79,7 +81,7 @@ label splinters_date_1:
 
     show bg cafe silver with dissolve
 
-    "You feel a cool, sparkling sensation, and before your eyes a silver cast washes over the scene."
+    "I feel a cool, sparkling sensation, and before my eyes a silver cast washes over the scene."
     "Around happy cats is a glow and sparkles of joy and laughter."
 
     play sound "sound/happy.opus"
@@ -97,11 +99,11 @@ label splinters_date_1:
 
             show splinters neutral
             "Splinters looks taken aback."
-            splinters "W-wow. You sound like Frankie right now."
+            splinters "W-Wow. You sound like Frankie right now."
             splinters "Well, s-sorry for boring you. *sniff*"
             splinters "I was hoping we could be friends."
             hide splinters with dissolve
-            "Splinters takes their cup and practically runs out, sad and embarassed."
+            "Splinters takes their cup and practically runs out, sad and embarrassed."
             "There's a yelp, and you see that they've spilled their coffee. They stop, wipe up the mess, then continue their exit."
             scene black with irisin
             return
@@ -115,7 +117,7 @@ label splinters_date_1:
     pc "Ooh, pretty sparkle..."
 
     show splinters talking
-    splinters "S-sparkle?"
+    splinters "S-Sparkle?"
 
     play sound "sound/pain.opus"
     $ expletive = renpy.random.choice(splinters_expletives)
@@ -123,8 +125,6 @@ label splinters_date_1:
     "The {sq}sparkle{/sq} hits them in the face."
     "Splinter's large right eye was now watering and clamped shut."
     "They fish the {sq}sparkle{/sq} from their cup. It's a half-submerged guitar string."
-
-    define guitarist = Character("Guitarist", who_color="#8376F7")
 
     guitarist "Hey man, you all right?"
 
@@ -157,7 +157,7 @@ label splinters_date_1:
             "Splinters' expression grew strained."
             pc "Oh, I didn't mean to offend you. It's all in good fun. Weird is better than normal."
             splinters "I-I don't think I'm that weird. Just a little cursed."
-            "You both sit there awkwardly in silence."
+            "We sit there in awkward silence."
             splinters "You know, i-if weird is what you're after, then... then you should be talking to Gromer, not me."
             splinters "Sorry, I'm always sore and sensitive."
             pc "I think what you mean is... {i}salty{/i}."
@@ -173,7 +173,7 @@ label splinters_date_1:
     pc "So... you mentioned common plants. What are the ones everyone knows about?"
 
     splinters happy "Well, there are our common exports. You should probably know about that."
-    splinters "We have enchanted pumpkins, transm-mute- Er, transmutable hay, and jewel apples."
+    splinters "We have enchanted pumpkins, transm-mute-- Er, transmutable hay, and jewel apples."
     splinters "We also have spirit willows. We have other trees too but I don't remember."
 
     pc "There are also special plants in the academy greenhouse, right?"
@@ -190,13 +190,13 @@ label splinters_date_1:
             stop bg fadeout 3.0
             stop music fadeout 3.0
             scene black with irisin
-            "You guys finish talking for the evening and part ways amicably."
+            "We finish talking for the evening and part ways amicably."
             return
         "You mean like four-leaf clovers? Rad, how powerful are they?":
             splinters "There are different kinds."
             splinters "Gold ones get you lots of money."
             splinters "Silver ones protect you from evil."
-            splinters "Tecnicolor ones are like, all of them c-c-combined."
+            splinters "Technicolor ones are like, all of them c-c-combined."
             show splinters moe
             "Splinters looked longingly misty-eyed."
             splinters "They're super rare though."
@@ -209,7 +209,7 @@ label splinters_date_1:
     stop music fadeout 3.0
     stop bg fadeout 3.0
     scene black with irisin
-    "Splinters continued telling you about the common lucky weeds as you exit the cafe together."
+    "Splinters continued telling me about the common lucky weeds as we exit the cafe together."
 
     scene bg home_front
     show splinters neutral at center

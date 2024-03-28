@@ -20,7 +20,7 @@ label frankie_date_2:
     "The cafe is bustling with witches and their familiars cramming along the small tables, preparing for their weekend study routines."
     if splinters_date_count >= 1:
         "The live music area is vacant today, but a hip tune gently drifts from the speakers."
-    "It doesn't seem like Frankie is here yet. It'd be hard to miss them in the crowd, even amongst all the humans."
+    "It doesn't seem like Frankie is here yet. It'd be hard to miss them in the crowd, even amidst all the humans."
 
     play sound "sound/chimes.opus"
 
@@ -29,7 +29,7 @@ label frankie_date_2:
 
     play sound "sound/purr.opus"
 
-    frankie "Hey, pussycat. I'll have my cappacino with the... Let's do the Ecuadorian beans today."
+    frankie "Hey, pussycat. I'll have my cappuccino with the... Let's do the Ecuadorian beans today."
     frankie "Oh, and my eggs."
 
     show frankie neutral at center with dissolve

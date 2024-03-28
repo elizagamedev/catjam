@@ -34,7 +34,7 @@ label frankie_date_3:
 
     frankie "You making fun of me, jack?"
     frankie "Well, whatever. You know what they say about imitation and flattery."
-    frankie "I'm thinking beach pilates. Meet me at the pier, dig?"
+    frankie "I'm thinking beach Pilates. Meet me at the pier, dig?"
 
     stop music fadeout 1.0
     "Frankie flashes a grin and the crystal goes dark."
@@ -161,7 +161,7 @@ label frankie_date_3:
     hide gomer with easeoutbottom
     hide disclaimer
 
-    "At last Gomer manages to wiggle out of Frankies arms and back to their skateboard."
+    "At last Gomer manages to wiggle out of Frankie's arms and back to their skateboard."
 
     play sound "sound/skateboard.opus"
 
@@ -171,14 +171,14 @@ label frankie_date_3:
 
     "While I appreciate the compliment from Frankie of all people, I wasn't ready to meet the same fate as Gomer."
 
-    pc "R-Right. Hey, we're here to do pilates, right?"
+    pc "R-Right. Hey, we're here to do Pilates, right?"
 
     frankie "Son of a gun. I almost forgot."
     frankie "Alright, let's start with the stretches like I showed you."
 
     scene black with irisin
 
-    "I stayed well into the evening doing pilates with Frankie."
+    "I stayed well into the evening doing Pilates with Frankie."
     "The salty October breeze kept me cool even as I pushed myself to my limit."
     "I wonder... Did Frankie mean it when they said they could kiss me?"
 

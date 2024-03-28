@@ -209,7 +209,7 @@ label dinerintro:
 
     "Gomer meows happily as they dig into the platter."
 
-    gomer "Seeeee? Whad'd I tell ya? This diner's the best in town, dog."
+    gomer "Seeeee? What'd I tell ya? This diner's the best in town, dog."
 
     hide gomer with dissolve
     stop music fadeout 1.0
@@ -497,7 +497,7 @@ label j1records_secrets:
     jump j1records_alec
 
 label j1records_reading:
-    "Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffeeshop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
+    "Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffee Shop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
     jump j1records_alec
 
 label j1records_outro:
@@ -619,7 +619,7 @@ label explore_vineyard_wpucci:
 
     pucci "So, what do you think so far?"
 
-    pc "I honestly dig it. This place is (hic) totally sick. Thanks for spilling the beans, Pucci."
+    pc "I honestly dig it. This place is *hic* totally sick. Thanks for spilling the beans, Pucci."
 
     pucci "Anytime, just give me a scry, darling."
     jump explore_vineyard_outro
@@ -1548,7 +1548,7 @@ label j3beach:
 
     pucci "Oh goodness. Careful, there."
 
-    "Pucci looks like a moviestar, scarf billowing softly in a breeze that hadn't been there a moment ago. They smooth a tuft of fluff behind their whiskers."
+    "Pucci looks like a movie star, scarf billowing softly in a breeze that hadn't been there a moment ago. They smooth a tuft of fluff behind their whiskers."
 
     stop music
     play sound "sound/scratch.opus" volume 0.1
@@ -1646,7 +1646,7 @@ label j3beach_umbrella:
     show pucci at right with ease
     show gomer happy at left with dissolve
 
-    gomer "Thanks for the lemondade, Pooch!"
+    gomer "Thanks for the lemonade, Pooch!"
 
     pucci "Pucc-I. With an I. PUCCI." with hpunch
 
@@ -1678,7 +1678,7 @@ label j3witch:
 
     pc "Just got back!"
 
-    "I go to her room to check on her and find that she'd fallen alseep writing her magic thesis at her desk."
+    "I go to her room to check on her and find that she'd fallen asleep writing her magic thesis at her desk."
 
     "I grab a knit blanket from the bed and pull it over her shoulders."
 
