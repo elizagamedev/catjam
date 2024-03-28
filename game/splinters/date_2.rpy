@@ -30,7 +30,7 @@ label splinters_date_2:
     "He wrings his hand nervously, contemplating."
     splinters "You know what? That sounds fun. I-I'll see you there then."
 
-    scene bg marketplace with fade
+    scene bg market with fade
 
     show splinters neutral at center with dissolve
 

@@ -57,13 +57,13 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "default"
+define gui.text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "default"
+define gui.name_text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "default"
+define gui.interface_text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 36
@@ -481,8 +481,6 @@ init python:
 
 ################################################################################
 ## Custom stuff
-
-define config.font_name_map["default"] = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
 init python:
     for (name, bold, italic) in [

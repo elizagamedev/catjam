@@ -121,7 +121,7 @@ label gomer_date_2:
 
     "Gomer averts their eyes and starts to trod towards the market in a sudden hurry."
 
-    scene market
+    scene bg market
     show gomer neutral
     with fade
 
@@ -141,7 +141,7 @@ label gomer_date_2:
             gomer neutral "Uh."
             gomer "Let's go to a different store."
 
-    scene market
+    scene bg market
     show gomer neutral
     with longfade
 
@@ -192,7 +192,7 @@ label gomer_date_2:
     gomer "I guess I overreacted."
 
 label .bottle:
-    scene alley with longfade
+    scene bg alley with longfade
     play bg "sound/night.opus" fadein 1.0
 
     "I stare at my newly blackened paw in the lamplight."

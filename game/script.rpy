@@ -170,11 +170,9 @@ label intro_exploring:
         # Meet splinter here
         # Meet francis here
 
-    jump end_intro
-
 label dinerintro:
     stop sound fadeout 1.0
-    scene bg market
+    scene bg main_street
     with dissolve
 
     "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
@@ -442,7 +440,6 @@ label j1explorechoice:
 
         "Vineyard":
             jump j1vineyard
-    jump j1witch
 
 label j1records:
     stop bg fadeout 0.5
@@ -906,7 +903,7 @@ menu j2wk:
 # Haggle
 label j2haggle:
     stop bg fadeout 0.5
-    scene bg market with fade
+    scene bg main_street with fade
     play music "music/Funky Boxstep.mp3"
 
     "The best thing I can do is find a source for our ingredient. I head to the marketplace, head full of lofty aspirations for how the day should go."
@@ -1020,7 +1017,7 @@ label j2haggle:
 
     "And with that ominous sentence, they flit away like a leaf in the wind."
 
-    scene bg market with fade
+    scene bg main_street with fade
 
     "I head back to the shop."
 
@@ -1079,7 +1076,7 @@ label j2haggle:
 
     scene bg alley with dissolve
     pause 0.5
-    scene bg market
+    scene bg main_street
     show frankie neutral at center
     with dissolve
 
@@ -1386,7 +1383,7 @@ label j3shop:
 
     pc "Yeah! Let's do it."
 
-    scene bg market
+    scene bg main_street
     show splinters neutral at center
     with longfade
 
