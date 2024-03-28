@@ -36,8 +36,8 @@ label awaken(day = None):
     scene black
     pause 1.0
     play bg "sound/morning.opus" noloop
-    show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
-    show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     scene bg room with Dissolve(1.0)
     return
@@ -47,8 +47,8 @@ label titlecard(day = None):
         $ calendar_day = day
     scene black
     pause 1.0
-    show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
-    show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     return
 
@@ -115,8 +115,8 @@ label start:
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    show expression Text(october[0], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
-    show expression Text("September", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
+    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
+    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
@@ -398,7 +398,6 @@ label end_intro:
 # --Week 1--
 # Lay of the land
 label j1:
-    play sound "sound/rooster.opus"
     call awaken(1)
 
     "The next morning I awake and stretch off the drowsiness."
