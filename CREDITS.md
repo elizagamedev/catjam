@@ -90,3 +90,6 @@ https://freesound.org/people/miastodzwiekow/sounds/427977/
 vending-machine.opus
 https://freesound.org/people/courter/sounds/448673/
 https://freesound.org/people/calivintage/sounds/95708/
+
+scratch.opus
+https://freesound.org/people/musicvision31/sounds/431779/

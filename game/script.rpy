@@ -50,7 +50,6 @@ label titlecard(day = None):
     show expression Text(october[calendar_day], size=100, xalign=0.5, yalign=0.5) with Dissolve(1.0)
     show expression Text("October", size=50, xalign=0.5, yalign=0.6) with Dissolve(0.5)
     pause 1.5
-    scene black with Dissolve(1.0)
     return
 
 label weekend(menuset):
@@ -853,6 +852,8 @@ label j1gym_outro:
 label j1witch:
     play bg "sound/night.opus" fadein 2.0
     call titlecard(4)
+    scene black with Dissolve(1.0)
+
     "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
     show bg home_front with dissolve
@@ -1527,7 +1528,6 @@ label j3monument:
 label j3beach:
     scene bg beach with fade
     play bg "sound/beach.opus" fadein 1.0
-    play music "music/Surf Shimmy.mp3"
 
     "There's no better place to go for a break than the beach, so I head west to Dewclaw Beach. The weather is starting to cool, but it's still sunny out and the waves lapping at the shore are pleasantly cool."
 
@@ -1539,7 +1539,7 @@ label j3beach:
 
     "When I've had my fill of sand between my beans, I head back to the pier."
 
-    gomer "LOOK OUT!!!"
+    gomer "{b}LOOK OUT!!!{/b}"
 
     play sound "sound/skateboard.opus"
 
@@ -1547,15 +1547,19 @@ label j3beach:
 
     "I open my eyes and see soft brown paws in front of me. Then I look up."
 
+    play music "music/Deuces.mp3"
     show pucci neutral at center with dissolve
 
     pucci "Oh goodness. Careful, there."
 
     "Pucci looks like a moviestar, scarf billowing softly in a breeze that hadn't been there a moment ago. They smooth a tuft of fluff behind their whiskers."
 
-# record scratch here
+    stop music
+    play sound "sound/scratch.opus" volume 0.1
 
     gomer "Yooooo I almost got that trick down, dog."
+
+    play music "music/Surf Shimmy.mp3"
 
     show pucci at right with ease
     show gomer neutral at left with dissolve
@@ -1578,22 +1582,19 @@ label j3beach:
 
     pc "No, I've never tried. It seems cool though."
 
-    gomer "You wanna give it a try?"
+    gomer happy "You wanna give it a try?"
 
     show gomer at center with ease
 
     "I reach a paw down and help Gomer up."
 
-menu j3beach_board:
-
+menu j3beach_board(screen="dialog_choice"):
     "Heck yes.":
         jump j3boardyes
-
     "No thanks.":
         jump j3boardno
 
 label j3boardyes:
-
     "Gomer explains the basics to me: where to put my feet, how to move and stop, how to shift my weight."
 
     "They let me hold their paw to keep me steady while I catch my balance."
@@ -1602,22 +1603,29 @@ label j3boardyes:
 
     "Gomer takes back his board and does some tricks while Pucci and I watch from the umbrella table."
 
-jump j3beach_umbrella
+    hide gomer with dissolve
+    pause 1.0
+
+    jump j3beach_umbrella
 
 label j3boardno:
-    "No problem! If you're hangin' out I can show you the tricks I've been working on."
+    gomer "No biggie. I'd rather just show off anyways, haha."
+    gomer "Not the one I biffed it on. Other tricks."
 
-    "Not the one I biffed it on. Well, that one too, but mostly the ones I've already figured out."
+    hide gomer with dissolve
 
     "I sit down at an umbrella table with Pucci, who has fetched three lemonades to share."
 
 label j3beach_umbrella:
+    show pucci neutral at center with dissolve
 
     pucci "I love coming to the beach on days like this. Nothing's quite as refreshing as the salt breeze ruffling my fur."
 
     "They take a long sip of lemonade."
 
     pucci "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to look bad if I fail."
+
+    play sound "sound/skateboard-spike.opus"
 
     "I stir my lemonade with the bright green straw I've been sipping from and listen as we watch Gomer struggling to do a kickflip."
 
@@ -1635,21 +1643,36 @@ label j3beach_umbrella:
 
     pucci "But! While we're here! I just got this issue of {q}Inscriber's Weekly{/q} and thought of you. You should borrow it and let me know what you think."
 
+    play sound "sound/skateboard.opus"
+
     "Gomer comes back to the table, out of breath and disheveled."
+
+    show pucci at right with ease
+    show gomer happy at left with dissolve
 
     gomer "Thanks for the lemondade, Pooch!"
 
-    pucci "Pucc-I. With an I. PUCCI."
+    pucci "Pucc-I. With an I. PUCCI." with hpunch
+
+    show gomer blushing
 
     "Gomer blushes."
 
     gomer "Right right right, sorry dog."
 
+    stop music fadeout 3.0
+    scene black with irisin
+
     "The three of us spend the rest of the day hanging out together on the pier, sipping lemonades and listening to the cries of circling seagulls."
 
+    stop bg fadeout 3.0
 
 label j3witch:
-    scene bg room with dissolve
+    play sound "sound/night.opus" fadein 2.0
+    call titlecard(17)
+    scene bg room with Dissolve(1.0)
+
+    # TODO: no beach here
 
     "While I went to the beach, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
 
@@ -1669,7 +1692,9 @@ label j3witch:
 
     "She's been working so hard. We're so close!"
 
-jump j3wke
+    stop bg fadeout 3.0
+    scene black with irisin
+    jump j3wke
 
 
 # --weekend 3--
