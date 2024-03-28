@@ -31,15 +31,16 @@ handle everything for you.
 - The Show Must Be Go.mp3: shenanigans
 - Hyperfun.mp3: shenanigans
 
+- Android Sock Hop.mp3: utterly insane. used for number quest
+
 ## Not so sure about
 
 - Glitter Blast.mp3: kinda insurance commercially
-- Android Sock Hop.mp3: utterly insane
 
 ## Characters
 
 - Splinters: Brandenburg No4-1 BWV1049.mp3
-- Frankie: Funky Boxstep.mp3, Shaving Mirror.mp3
+- Frankie: Funky Boxstep.mp3
 - Gomer: Goblin_Tinker_Soldier_Spy.mp3
 - Designer Cat: Deuces.mp3
 - Bastard Rats: I Can Feel it Coming.mp3, Twisted.mp3
