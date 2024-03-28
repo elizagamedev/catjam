@@ -1604,14 +1604,14 @@ label j3boardyes:
 
 jump j3beach_umbrella
 
-label j3boardno
+label j3boardno:
     "No problem! If you're hangin' out I can show you the tricks I've been working on."
 
     "Not the one I biffed it on. Well, that one too, but mostly the ones I've already figured out."
 
     "I sit down at an umbrella table with Pucci, who has fetched three lemonades to share."
 
-label j3beach_umbrella
+label j3beach_umbrella:
 
     pucci "I love coming to the beach on days like this. Nothing's quite as refreshing as the salt breeze ruffling my fur."
 
