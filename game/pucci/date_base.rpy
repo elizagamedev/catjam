@@ -5,15 +5,31 @@ default pucci_failed = False
 default pucci_potion = False
 
 label pucci_date:
-    "Pucci pucci pucci."
+    "I should see what Pucci's up to."
 
     play music "music/Deuces.mp3"
     play sound "sound/crackle.opus"
     with flash
+    "The crystal ball hums softly as it connects me with Pucci."
 
-    pucci "wat up"
+    "As the image comes into view, I see Pucci settling in. They're at their desk, string lights and posters decorating the wall behind them."
 
-    "PUCCIが見える"
+$ state = "getting ready to go out" if pucci_date_count == 3 else "getting my day started"
+    pucci "Hey there, [pc]. I was just [state]. What're you calling me for this time?"
+
+ if (pucci_call_count == 0):
+        pc "I was figuring out what to wear today and thought of you."
+        pucci "Oh, looking for fashion advice? I can help you out, sure."
+    elif (pucci_call_count == 1):
+        pc "I really enjoyed spending time with you last time and was wondering if you want to hang out again."
+        pucci "I'd like that. Pick me up at 7, okay? We'll make it a date."
+        pc "A-a date? You mean...?"
+        pucci "A date!"
+    else:
+        pc "You down for another date?"
+        pucci "Let's do it. You know the drill, right? See you at 7. Look sharp!"
+
+
 
     $ date_id = pucci_date_count % len(pucci_dates)
     $ next_pucci_date = pucci_dates[date_id]
@@ -31,3 +47,5 @@ label debug_pucci_date_3:
     $ pucci_call_count = 2
     $ pucci_date_count = 2
     jump pucci_date
+
+    return
