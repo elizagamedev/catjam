@@ -1242,6 +1242,9 @@ label j2synthesize:
 
 # Forage
 label j2forage:
+    stop bg fadeout 0.5
+    scene bg forest with fade
+    play music "music/Valse Gymnopedie.mp3"
 
     "The forests to the north are full of flora and fauna rich with magical energy, thanks to the longstanding presence of witches who have carefully tended the region's ley lines."
 
@@ -1257,7 +1260,9 @@ label j2forage:
 
     "Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from."
 
-    yuri "Hi there :) What brings you out here?"
+    show yuri neutral at center with dissolve
+
+    yuri "Hi there! What brings you out here?"
 
     pc "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
 
@@ -1267,17 +1272,22 @@ label j2forage:
 
     "At the center of the meadow is a ring of mushrooms."
 
-    yuri "This is called a fairy ring! They're rumored to be magical, and in a place like this they really are. Let's not step in it today, I'm not sure where this one would take us."
+    yuri "This is called a fairy ring! They're rumored to be magical, but in a place like this, they really are."
+    yuri "Let's not step in it today. I'm not sure where this one would take us."
 
     "My Witch" "That's good advice! I'll lead us back."
 
     "She turns around and starts retracing our steps."
+
+    hide yuri with dissolve
 
     "I look at the fairy ring with curiosity, and the longer I look the more it seems to fill my vision. It's so... enticing. I feel like this is a solvable mystery, if only I just took one step--"
 
     yuri "[pc]!! Hey! Eyes on me, okay?"
 
     "I blink and realize Yuri's pulling my arm to get my attention, a concerned look on their face."
+
+    show yuri neutral at center with dissolve
 
     yuri "I'm so sorry, I didn't think it'd be acting this tricksy when I suggested we come see it. Ley lines, amiright?"
 
@@ -1287,11 +1297,16 @@ label j2forage:
 
     "We take some more flower cuttings as we go, and when we catch up to my witch she's already filled a couple more containers with critters, plants, and fungi for our potion."
 
-    "My Witch" "There you are! Welcome back, check out what I caught!"
+    scene bg forest with longfade
+
+    "My Witch" "There you are! Welcome back! Check out what I caught!"
 
     "She holds up a giant toad, its legs dangling in the air."
 
-    "My Witch" "It's adorable! Anyways, we should head home, it's going to get late soon. Yuri, thanks for joining us today!"
+    "My Witch" "It's adorable! Anyways, we should head home. It's going to get late soon."
+    "My Witch" "Yuri, thanks for joining us today!"
+
+    show yuri neutral at center with dissolve
 
     yuri "Any time! I love being out here."
 
@@ -1305,19 +1320,21 @@ label j2forage:
 
     pc "You bet!"
 
-    "We all head home in companionable silence, listening to the birds sing their evening songs. No boars were encountered and we had a great day. Success!"
+    stop music fadeout 3.0
+    scene black with irisin
 
-jump j2witch
+    "We all head home in companionable silence, listening to the birds sing their evening songs."
+    "No boars were encountered and we had a great day. Success!"
 
+    jump j2witch
 
 # at home
 label j2witch:
-    call awaken(11)
-
-    "I got to spend a lot of time with my witch this week and I'm feeling like a real good familiar."
-
-    "We take it easy and sip lemonades over a board game."
-jump j2wke
+    scene bg room with dissolve
+    "I got to spend a lot of time with my witch this week, and I've been feeling like a really good familiar lately."
+    "We spend the rest of the week taking it easy, sipping lemonades over board games."
+    scene black with irisin
+    jump j2wke
 
 
 
@@ -1332,6 +1349,7 @@ label j2wke:
 
 # --Week 3--
 label j3:
+    call awaken(14)
 
     "This is our last week to get a potion ready for the exam next week, where we'll start all over and make it from scratch to prove we've learned our stuff."
 
@@ -1353,8 +1371,12 @@ menu j3wk:
 
 # Shop
 label j3shop:
-
+    stop bg fadeout 0.5
     "I'm about to head out to do some shopping when I get a scry from Splinters."
+
+    play music "music/Brandenburg No4-1 BWV1049.mp3"
+    play sound "sound/crackle.opus"
+    with flash
 
     splinters "Hey are you busy?"
 
@@ -1363,6 +1385,10 @@ label j3shop:
     splinters "Can I come with you? I have some stuff to pick up, too, and maybe we could go together?"
 
     pc "Yeah! Let's do it."
+
+    scene bg market
+    show splinters neutral at center
+    with longfade
 
     "We meet outside Schrodinger's Records."
 
@@ -1382,12 +1408,10 @@ label j3shop:
 
     pc "I'm not gonna make fun of you."
 
-    splinters "I'm painting some minifigures and I wanted to get new colors."
+    splinters "I'm painting some figures and I wanted to get new colors."
 
 menu j3shop_minis:
-
     "That's so cool!":
-
         splinters "Thanks, I just got into the hobby so I don't really know what I'm doing."
         jump j3shopcont
 
@@ -1400,7 +1424,6 @@ menu j3shop_minis:
         jump j3shopcont
 
 label j3shopcont:
-
     splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
 
     splinters "There're lots of people who make fun of me because I'm kind of a little guy."
@@ -1425,11 +1448,15 @@ label j3shopcont:
 
     splinters "Let's do it!"
 
-jump j3witch
+    stop music fadeout 3.0
+    scene black with irisin
+    jump j3witch
 
 
 # Monument
 label j3monument:
+    scene bg festival with fade
+    play bg "sound/meadow.opus" fadein 1.0
 
     "I decide to visit the festival grounds. After exams are over, this place will be a spectacle of light and sound, but for now it's serene and still. Some birds flit between trees and the river sloshes quietly at the banks."
 
@@ -1457,41 +1484,50 @@ label j3monument:
 
     "They see me and wave, adjusting their trajectory to head towards me."
 
+    show frankie neutral at center with dissolve
+
     frankie "Holy moly that's a good workout, really gets your heart going, jack. Hoooooooooooo boy."
 
     "Frankie wipes their sweaty paws against their running pants."
 
-    frankie "Whatcha doing here, jack?"
+    frankie "So what's the buzz? Stayin' out of trouble?"
 
     pc "I thought I'd explore the festival grounds! It's so quiet here."
 
-    frankie "It really is! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
+    frankie "You said it, jack! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
 
     frankie "You make a wish in that fountain?"
 
-    pc "Sure did"
+    pc "Sure did."
 
     frankie "Don't tell me, that'd be bad luck. But let me show you these smaller fountains, you're gonna be gobsmacked."
 
+    scene bg festival with longfade
+
     "Frankie leads us down some paths between buildings to show me the little drinking fountains dispersed through the grounds."
-
     "They're sick."
-
     "We end up by a vending machine near the bus stop. Frankie leans against the machine and I sit on the bench."
 
+    play sound "sound/vending-machine.opus"
+
     "They push some buttons and the machine rattles. The big calico tosses me a juice box."
+
+    show frankie neutral at center with dissolve
 
     frankie "Gotta stay fueled, jack."
 
     pc "Thanks!"
 
-    frankie "I gotchu."
-
-jump j3witch
+    stop bg fadeout 3.0
+    scene black with irisin
+    jump j3witch
 
 
 # Beach
 label j3beach:
+    scene bg beach with fade
+    play bg "sound/beach.opus" fadein 1.0
+    play music "music/Surf Shimmy.mp3"
 
     "There's no better place to go for a break than the beach, so I head west to Dewclaw Beach. The weather is starting to cool, but it's still sunny out and the waves lapping at the shore are pleasantly cool."
 
@@ -1505,9 +1541,13 @@ label j3beach:
 
     gomer "LOOK OUT!!!"
 
+    play sound "sound/skateboard.opus"
+
     "I turn towards the shout just in time to react, diving left to avoid screeching wheels and tumbling and crashing in the spot I had just been standing."
 
     "I open my eyes and see soft brown paws in front of me. Then I look up."
+
+    show pucci neutral at center with dissolve
 
     pucci "Oh goodness. Careful, there."
 
@@ -1517,24 +1557,30 @@ label j3beach:
 
     gomer "Yooooo I almost got that trick down, dog."
 
+    show pucci at right with ease
+    show gomer neutral at left with dissolve
+
     "Gomer is splayed on the ground next to a skateboard that's slowly rolling away from them."
 
     gomer "Pucci! You mind, uh, catching that for me?"
 
     pucci "I don't really want to. But, sure."
 
+    hide pucci with dissolve
+
     "I stand up and dust myself off."
 
-# gomer happy
-    gomer "Appreciate it."
+    gomer happy "Thanks, dog."
 
     pc "Uh, you okay down there?"
 
-    gomer "Oh yeah this happens all the time, part and parcel, dog. You ever boarded?"
+    gomer neutral "Wiping out's just part of the board life, dog. You ever do a kickflip?"
 
     pc "No, I've never tried. It seems cool though."
 
     gomer "You wanna give it a try?"
+
+    show gomer at center with ease
 
     "I reach a paw down and help Gomer up."
 
@@ -1552,7 +1598,7 @@ label j3boardyes:
 
     "They let me hold their paw to keep me steady while I catch my balance."
 
-    "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten 3 lemonades, one for each of us."
+    "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten three lemonades, one for each of us."
 
 
 label j3boardno:

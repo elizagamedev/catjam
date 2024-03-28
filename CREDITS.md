@@ -83,3 +83,10 @@ https://freesound.org/people/Bruno_Garcez/sounds/243762/
 
 skateboard-spike.opus
 https://freesound.org/people/temawas/sounds/256811/
+
+meadow.opus
+https://freesound.org/people/miastodzwiekow/sounds/427977/
+
+vending-machine.opus
+https://freesound.org/people/courter/sounds/448673/
+https://freesound.org/people/calivintage/sounds/95708/
