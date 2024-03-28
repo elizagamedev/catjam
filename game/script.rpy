@@ -1600,19 +1600,75 @@ label j3boardyes:
 
     "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten three lemonades, one for each of us."
 
+    "Gomer takes back his board and does some tricks while Pucci and I watch from the umbrella table."
 
-label j3boardno:
-# Ice cream stand
-# Gomer's at the beach
-# Skateboarding with Gomer on the pier
-# Pucci's walking and shopping
-# They take some
+jump j3beach_umbrella
 
-jump j3witch
+label j3boardno
+    "No problem! If you're hangin' out I can show you the tricks I've been working on."
+
+    "Not the one I biffed it on. Well, that one too, but mostly the ones I've already figured out."
+
+    "I sit down at an umbrella table with Pucci, who has fetched three lemonades to share."
+
+label j3beach_umbrella
+
+    pucci "I love coming to the beach on days like this. Nothing's quite as refreshing as the salt breeze ruffling my fur."
+
+    "They take a long sip of lemonade."
+
+    pucci "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to look bad if I fail."
+
+    "I stir my lemonade with the bright green straw I've been sipping from and listen as we watch Gomer struggling to do a kickflip."
+
+    "They look happy."
+
+    pucci "I guess that's the problem with worrying about your image. You miss out on fun."
+
+    pc "It's not too late, I'm sure they'd teach you if you asked."
+
+    "Pucci watches Gomer contemplatively."
+
+    pucci "Maybe someday."
+
+    "They perk up."
+
+    pucci "But! While we're here! I just got this issue of {q}Inscriber's Weekly{/q} and thought of you. You should borrow it and let me know what you think."
+
+    "Gomer comes back to the table, out of breath and disheveled."
+
+    gomer "Thanks for the lemondade, Pooch!"
+
+    pucci "Pucc-I. With an I. PUCCI."
+
+    "Gomer blushes."
+
+    gomer "Right right right, sorry dog."
+
+    "The three of us spend the rest of the day hanging out together on the pier, sipping lemonades and listening to the cries of circling seagulls."
 
 
 label j3witch:
-# My witch spent the whole week napping, basically, and she's so gosh dang happy.
+    scene bg room with dissolve
+
+    "While I went to the beach, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
+
+    "I hear her murmur from her bedroom."
+
+    "My Witch" "[pc], is that you? You made it... {i}yawn{/i}... you made it back okay?"
+
+    pc "Just got back from the beach!"
+
+    "I go to her room to check on her and find that she'd fallen alseep writing her magic thesis at her desk."
+
+    "I grab a knit blanket from the bed and pull it over her shoulders."
+
+    "My Witch" "Mmmhhrrgh... thank you..."
+
+    "Her head falls back into her arms and I hear her start to snore softly."
+
+    "She's been working so hard. We're so close!"
+
 jump j3wke
 
 
