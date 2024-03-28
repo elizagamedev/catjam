@@ -1727,10 +1727,13 @@ menu j4wk:
 
 label j4potion_witch:
 
-menu j4style
+menu j4style:
     "Just vibe it up":
+        pass
     "Do it by the book":
+        pass
     "Trial and error. Drink the potion!":
+        pass
 
 jump j4wke
 
