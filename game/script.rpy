@@ -1679,7 +1679,7 @@ label j3witch:
 
     "My Witch" "[pc], is that you? You made it... {i}yawn{/i}... you made it back okay?"
 
-    pc "Just got back from the beach!"
+    pc "Just got back!"
 
     "I go to her room to check on her and find that she'd fallen alseep writing her magic thesis at her desk."
 
@@ -1707,15 +1707,10 @@ label j4:
     "Time to make the actual potion this week!"
 
 menu j4wk:
-    "My potion making strategy is to..."
-    "Just vibe it up":
-        jump j4vibe
+    "Time to make..."
+    "My witch's potion":
+        jump j4potion_witch
 
-    "Do it by the book":
-        jump j4book
-
-    "Trial and error. Drink the potion!":
-        jump j4error
 # IF DATES HAVE BEEN DATED...
     "Gomer's hair dye {q}potion{/q}" if gomer_potion:
         jump j4potion_gomer
@@ -1730,13 +1725,13 @@ menu j4wk:
         jump j4potion_splinters
 
 
-label j4vibe:
-jump j4wke
+label j4potion_witch:
 
-label j4book:
-jump j4wke
+menu j4style
+    "Just vibe it up":
+    "Do it by the book":
+    "Trial and error. Drink the potion!":
 
-label j4error:
 jump j4wke
 
 label j4potion_gomer:
