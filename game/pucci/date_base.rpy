@@ -14,10 +14,10 @@ label pucci_date:
 
     "As the image comes into view, I see Pucci settling in. They're at their desk, string lights and posters decorating the wall behind them."
 
-$ state = "getting ready to go out" if pucci_date_count == 3 else "getting my day started"
+    $ state = "getting ready to go out" if pucci_date_count == 3 else "getting my day started"
     pucci "Hey there, [pc]. I was just [state]. What're you calling me for this time?"
 
- if (pucci_call_count == 0):
+    if (pucci_call_count == 0):
         pc "I was figuring out what to wear today and thought of you."
         pucci "Oh, looking for fashion advice? I can help you out, sure."
     elif (pucci_call_count == 1):
