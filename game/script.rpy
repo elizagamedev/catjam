@@ -104,6 +104,7 @@ default j2wke_menuset = set()
 default j3wke_menuset = set()
 default j4wke_menuset = set()
 default scry_redo = False
+default ending = None
 
 label start:
     with dissolve
@@ -1178,7 +1179,6 @@ label j2synthesize:
         matrixcolor flashback
     with flash
 
-# Make this seem like a "flashback"
     frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
     play sound "sound/crackle.opus"
     scene bg potions
@@ -1704,15 +1704,19 @@ label j3wke:
 
 # --Week 4--
 label j4:
-    "Time to make the actual potion this week!"
+    call awaken(20)
+    "It's about time we prepare our potion demonstration!"
 
 menu j4wk:
-    "Time to make..."
+    "Which potion should I go with?"
+
     "My witch's potion":
+        if gomer_angry and gomer_potion:
+            jump j4potion_gomer_apology
         jump j4potion_witch
 
 # IF DATES HAVE BEEN DATED...
-    "Gomer's hair dye {q}potion{/q}" if gomer_potion:
+    "Gomer's hair dye {q}potion{/q}" if gomer_potion and not gomer_angry:
         jump j4potion_gomer
 
     "Pucci's outsourcing" if pucci_potion:
@@ -1726,28 +1730,76 @@ menu j4wk:
 
 
 label j4potion_witch:
+    "Something something help witch out with potion but rats appear"
 
-menu j4style:
-    "Just vibe it up":
-        pass
-    "Do it by the book":
-        pass
-    "Trial and error. Drink the potion!":
-        pass
+    jump j4rats
 
-jump j4wke
+label j4potion_gomer_apology:
+    "As I was about to leave the room, a sudden flash of light came from my crystal."
+    play sound "sound/crackle.opus"
+    with flash
+
+    gomer "Uh. [pc]? You there?"
+
+    menu(screen="dialog_choice"):
+        "Yes.":
+            pass
+        "No.":
+            gomer "Haha. That's funny."
+
+    gomer "Uh."
+    gomer "I'm really sorry. Like, about the dinner."
+    gomer "Stealing is wrong."
+    gomer "..."
+    gomer "Getting on your case like that was even wronger, though."
+    gomer "Sorry."
+    gomer "I can't do this alone, dog. I need you."
+
+    menu(screen="dialog_choice"):
+        "Well, {i}I{/i} can. {i}Ciao{/i}.":
+            $ gomer_failed = True
+            $ gomer_potion = False
+            "I wave my paw and the crystal goes dark."
+            jump j4wk
+        "Let's do this.":
+            play sound "sound/happy.opus"
+            gomer "You're the best, dog."
+            jump j4potion_gomer
 
 label j4potion_gomer:
-jump j4wke
+    $ ending = "gomer"
+    stop bg fadeout 0.5
+    scene bg room with fade
+    "I go over the details of the {q}potion{/q} once more with Gomer."
+    "I'm not exactly the most confident about this plan, but I can't let them down."
+    jump j4rats
 
 label j4potion_pucci:
-jump j4wke
+    $ ending = "pucci"
+    stop bg fadeout 0.5
+    scene bg room with fade
+    "pucci pucci pucci"
+    jump j4rats
 
 label j4potion_frankie:
-jump j4wke
+    $ ending = "frankie"
+    stop bg fadeout 0.5
+    scene bg room with fade
+    "I contact Frankie to ask about their potion."
+    "To my surprise, they'd already spent all of Sunday perfecting it."
+    "I'm feeling really good about our chances!"
+    jump j4rats
 
 label j4potion_splinters:
-jump j4wke
+    $ ending = "splinters"
+    stop bg fadeout 0.5
+    scene bg room with fade
+    "splinter splinter splinters"
+    jump j4rats
+
+label j4rats:
+    "We're rats, we're rats, we're the rats"
+    jump j4wke
 
 # --weekend 4--
 label j4wke:

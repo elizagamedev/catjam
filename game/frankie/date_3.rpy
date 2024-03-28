@@ -182,6 +182,8 @@ label frankie_date_3:
     "The salty October breeze kept me cool even as I pushed myself to my limit."
     "I wonder... Did Frankie mean it when they said they could kiss me?"
 
+    $ frankie_potion = True
+
     stop music fadeout 3.0
     stop bg fadeout 3.0
     return

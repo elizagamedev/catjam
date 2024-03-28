@@ -218,6 +218,7 @@ label .bottle:
             "We nervously shuffle off our separate ways."
             "I'm beginning to really regret this idea..."
 
+            $ gomer_potion = True
             return
 
     gomer blushing "Wow, dog. You're like, some kind of genius or something."
@@ -242,6 +243,8 @@ label .bottle:
             "Gomer wordlessly scurries away into the night."
             scene black with irisin
             return
+
+    $ gomer_potion = True
 
     gomer moe "...Yes."
     gomer happy "Yeah. {w=0.5}If you're not like, busy. Haha."

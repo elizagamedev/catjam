@@ -1,5 +1,6 @@
 default knows_french = False
 default clueless_about_french = False
+default gomer_angry = False
 
 label gomer_date_3:
     pc "Hey! Are you free today?"
@@ -162,7 +163,7 @@ label gomer_date_3:
 
     menu(screen="dialog_choice"):
         "How could you do that!?":
-            $ gomer_failed = True
+            $ gomer_angry = True
             play sound "sound/growl.opus"
             gomer annoyed "What? Dog. I'm gonna be real with you."
             gomer "I'm a cat."
