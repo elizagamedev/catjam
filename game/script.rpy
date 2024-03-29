@@ -587,7 +587,7 @@ label j1vineyard:
 
     pucci talking "Is this your first time to the Vineyards? Let's walk together!"
 
-menu explore_vineyard_question:
+menu explore_vineyard_question(screen="dialog_choice"):
 
     "Uh, no thanks. I'll stay with the tour group.":
         jump explore_vineyard_alone

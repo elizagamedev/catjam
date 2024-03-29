@@ -60,19 +60,19 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
+define gui.name_text_font = "fonts/Itim-Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
+define gui.interface_text_font = "fonts/Itim-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 36
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 50
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 36
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 36
