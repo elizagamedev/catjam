@@ -91,13 +91,12 @@ label splinters_date_1:
 
     menu(screen="dialog_choice"):
         "Oh wow, you know a lot about this stuff.":
-            $ splinters_failed = True
             splinters moe "Oh, it's nothing special. They teach what the most common plants do in elemem-elemenar-elementary s-school."
             splinters "Y-You'll pick it up in no time."
 
         "Ugh, {i}snore{/i}. It tasted pretty, I don't care. Zip it, nerd":
-
-            show splinters neutral
+            $ splinters_failed = True
+            show splinters upset
             "Splinters looks taken aback."
             splinters "W-Wow. You sound like Frankie right now."
             splinters "Well, s-sorry for boring you. *sniff*"
@@ -136,7 +135,7 @@ label splinters_date_1:
     play music "music/Easy Lemon.mp3"
     "The guitarist went back to strumming, adapting to the missing string."
 
-    splinters "Sorry about that. It's my darn bad luck."
+    splinters upset "Sorry about that. It's my darn bad luck."
 
     pc neutral "Er, it's okay. It can happen."
 
@@ -156,9 +155,9 @@ label splinters_date_1:
             show splinters talking
             "Splinters' expression grew strained."
             pc neutral "Oh, I didn't mean to offend you. It's all in good fun. Weird is better than normal."
-            splinters "I-I don't think I'm that weird. Just a little cursed."
+            splinters neutral "I-I don't think I'm that weird. Just a little cursed."
             "We sit there in awkward silence."
-            splinters "You know, i-if weird is what you're after, then... then you should be talking to Gromer, not me."
+            splinters "You know, i-if weird is what you're after, then... then you should be talking to Gomer, not me."
             splinters "Sorry, I'm always sore and sensitive."
             pc happy "I think what you mean is... {i}salty{/i}."
             hide splinters dissolve

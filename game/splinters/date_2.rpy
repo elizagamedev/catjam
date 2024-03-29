@@ -37,7 +37,7 @@ label splinters_date_2:
     splinters "W-Wow, there sure are a lot of people here."
     "Splinters is making himself small, trying not to get run over. Which is in a way kind of impressive."
     "He stays relatively within a 1-meter circle as the busy pedestrians pushed him around."
-    splinters "...Wow. There are so many goods. And people here."
+    splinters moe "...Wow. There are so many goods. And people here."
     "His very big eyes are amazingly even bigger right now."
 
     "I look around, specifically seeking out a vendor of crystal balls."
@@ -97,16 +97,16 @@ label splinters_date_2:
             show splinters blushing
             splinters "Oh... uh, hmm. I mean, I guess, I guess I can try it…"
 
-            show splinters neutral
             frankie neutral "While you're at it, try doing a piston squat. Like this."
 
+            show splinters neutral
             "The two of us spend the rest of our time in line hopping in place, trying to appease Frankie with sloppy piston squats. By the time we finally get to the front, Splinters looks harried and out of it."
 
             splinters "You know... I'm pretty tired. I think I'm just going to head home."
 
             frankie "Naw, you guys gotta try this out before you go."
 
-            splinters "Er, my-my gut is p-p-pretty sensitive though."
+            splinters talking "Er, my-my gut is p-p-pretty sensitive though."
 
             "Splinters gives in and tries a bite from Frankie's greens. Their face turns immediately green."
 
@@ -158,12 +158,13 @@ label splinters_date_2:
 
             gomer neutral "I heard these are just the baby rats. Of marsh rats."
 
-            splinters "What? Th-that's... f-fu-fundamentally incorrect."
+            splinters talking "What? Th-that's... f-fu-fundamentally incorrect."
 
             show gomer smug
 
             gomer "Hey man, I'm not the one talking about their... tax economy diss track."
 
+            show splinters annoyed
             "Gomer laughs and coughs a bit."
 
             gomer "Rats don't pay taxes. Haha."
@@ -173,11 +174,11 @@ label splinters_date_2:
             show gomer annoyed
             gomer "What-what was that?"
 
-            splinters "N-n-n-nothing!"
+            splinters neutral "N-n-n-nothing!"
 
-            gomer "You-you said something right about now."
+            gomer talking "You-you said something right about now."
 
-            splinters "N-no I didn't!"
+            splinters annoyed "N-no I didn't!"
 
             gomer "Yes yes you did!"
 
@@ -191,11 +192,11 @@ label splinters_date_2:
 
             pc thonk "You know what... I'm just going to head home for today."
 
-            splinters "O-Oh what? Er, okay. See you later."
+            splinters talking "O-Oh what? Er, okay. See you later."
 
             show gomer moe
 
-            gomer "Can I have your corn rats then?"
+            gomer neutral "Can I have your corn rats then?"
 
             pc thonk "Er, sure."
 
@@ -244,7 +245,7 @@ label splinters_date_2:
 
             "At that moment Splinters stepped upon some discarded wrapper on the floor."
 
-            splinters "Noooooo!"
+            splinters talking "Noooooo!"
 
             show splinters:
                 easein 0.5 ypos 0.5 yanchor 0.6
@@ -261,7 +262,7 @@ label splinters_date_2:
 
             "His face is now perfectly caked."
 
-            show splinters talking at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
+            show splinters upset at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
             splinters "*SNIFF* *SOB* WOW IT TASTES GOOD!!!"
             "Splinters seems to be both hyped and also crying at the same time?"
@@ -271,7 +272,6 @@ label splinters_date_2:
             "By now a crowd had gathered and were laughing at the scene."
             "Splinters stood up, wiping the rest of the cake away."
 
-            show splinters neutral
             splinters "..."
             splinters "B-BYE."
 
@@ -286,8 +286,6 @@ label splinters_date_2:
         "Naw, I don't mind waiting with you.":
             show splinters blushing
             splinters "O-Oh… I don't mind waiting with you either."
-
-            pass
 
     show splinters neutral
     splinters "Yeah, growing up, of all the {sq}forbidden{/sq} things I wanted to try, I most wanted to try kerfluffle cakes."
@@ -338,7 +336,7 @@ label splinters_date_2:
         show splinters moe
         splinters "Oh, nice!"
         show splinters neutral
-        splinters "M-my sister thought she won it last year, but it turned out to be a part of someone's hearing aid..."
+        splinters "M-My sister thought she won it last year, but it turned out to be a part of someone's hearing aid..."
     elif charm == "crown":
         "The small crown is surprisingly detailed, with small jewels atop each point."
         "A large red jewel sits on the middle."
@@ -381,7 +379,7 @@ label splinters_date_2:
     else:
         "Something was seriously wrong. The charm has imploded into a series of strange... glitchy patterns."
         "It's constantly morphing and the space around it seems to be increasingly distorted."
-        splinters "Oh Em Gee WHAT'S HAPPENING!"
+        splinters upset "Oh Em Gee WHAT'S HAPPENING!"
         "Splinters is now morphing as well in front of your eyes."
         splinters "WHAT IS HAPPENING???"
         pc concern "I HAVE NO IDEA"
@@ -413,11 +411,11 @@ label splinters_date_2:
     "I point to a smaller one that is made of highly polished crystal, perched atop a classically gilded bronze pedestal."
     "It's small, but it shines brightly."
 
-    splinters "O-Oh. Thanks, but I'm worried I'll accidentally break it o-on the way home."
+    splinters talking "O-Oh. Thanks, but I'm worried I'll accidentally break it o-on the way home."
 
     pc happy "Well, I just won a lucky charm. Maybe my luck will rub off on you."
 
-    splinters "Y-Yeah, maybe."
+    splinters happy "Y-Yeah, maybe."
 
     "Splinters looked around, then pawed over to the charms section."
 
@@ -429,11 +427,11 @@ label splinters_date_2:
     splinters "AND AT SUCH A GOOD PRICE!"
 
     "Splinters sidles over."
-    splinters "You can tell th-they're real because of the way they glint in the dark. But I don't think they know that."
+    splinters smug "You can tell th-they're real because of the way they glint in the dark. But I don't think they know that."
 
     "The vendor seemed suspicious. They narrowed their eyes but didn't catch on."
 
-    splinters "H-here, I'll get one for you too. These are really, really rare."
+    splinters happy "H-here, I'll get one for you too. These are really, really rare."
 
     "Splinters walked off to pay for it at the counter."
 

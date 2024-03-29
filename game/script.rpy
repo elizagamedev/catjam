@@ -677,7 +677,7 @@ label j1study:
 
     "Librarian" "HOLY FUCK YOU DID NOT JUST PUT THAT IN YOUR MOUTH AND THEN STEP ON BOOKS"
 
-    splinters "It's not even going to leave teeth marks it's fine see it was just efficient"
+    splinters talking "It's not even going to leave teeth marks it's fine see it was just efficient"
 
     "At this point an intervention might be a mercy."
 
@@ -692,11 +692,11 @@ menu j1study_choice:
 label j1study_helpsplinters:
     "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
 
-    splinters "Oh hey how's it going what did you need my help with fam?"
+    splinters neutral "Oh hey how's it going what did you need my help with fam?"
 
     pc neutral "Firstly, do you come here often?"
 
-    splinters "Lol,"
+    splinters happy "Lol,"
 
     "They actually say L-O-L... out loud."
 
@@ -706,29 +706,29 @@ label j1study_helpsplinters:
 
     "They flex their non-existent muscles."
 
-    splinters "and picking up ladies."
+    splinters smug "and picking up ladies."
 
     "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored of the tiny cat."
 
     pc neutral "That tracks. So, that's perfect. Do you know any secrets about this place?"
 
-    splinters "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
+    splinters neutral "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
 
     pc thonk "Yes..."
 
-    splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
+    splinters talking "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
 
     splinters "I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
 
     pc neutral "Oooooo..."
 
-    splinters "and basically it's a secret I haven't told anyone about so there you have it!"
+    splinters happy "and basically it's a secret I haven't told anyone about so there you have it!"
 
-    splinters "Now I have a question for you"
+    splinters neutral "Now I have a question for you"
 
     pc concern "Yeah?"
 
-    splinters "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
+    splinters moe "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
 
     "I have no idea what a SoundMeowd is but I believe them."
 
@@ -1156,7 +1156,7 @@ label j2synthesize:
     play sound "sound/door.opus"
 
     "The door slams open."
-    show splinters neutral at center, vibrate with easeinleft
+    show splinters talking at center, vibrate with easeinleft
     splinters "IT IS YOU OH MY GOD you're exactly who I was hoping to run into today!"
 
     "Splinters stumbles through the door, tiny arms struggling to bear the weight of the very tall glass jar filled with a concerningly brownish-orangeish viscous liquid."
@@ -1202,17 +1202,17 @@ label j2synthesize:
 
     pc neutral "Yeah, I think so!"
 
-    splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
+    splinters upset "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
 
     "I almost ask them to help clean up, but I remember the shattered glass and think twice."
 
     pc neutral "How about you hold the dustpan and I pick this stuff up?"
 
-    splinters "Sure!"
+    splinters happy "Sure!"
 
     pc thonk "What is this potion, anyway?"
 
-    splinters "It wasn't a potion, that was supposed to be a protein shake."
+    splinters neutral "It wasn't a potion, that was supposed to be a protein shake."
 
     "Seems like Splinters dodged a bullet with that one."
 
