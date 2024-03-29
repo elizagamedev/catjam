@@ -71,24 +71,24 @@ label gomer_date_3:
     gomer neutral "Relax. It's, uh, it's my treat."
 
     show gomer at left with ease
-    show pucci neutral at right with dissolve
+    show pucci happy at right with dissolve
 
     play sound "sound/purr.opus"
     pucci "I couldn't help but overhear..."
 
     "Pucci saunters over from somewhere. It seems that they're on their way out along with their witch."
 
-    pucci "It doesn't compare to my family's vintage, of course, but the Merlot here is quite special."
-    pucci "You have more taste than meets the eye."
+    pucci smug "It doesn't compare to my family's vintage, of course, but the Merlot here is quite special."
+    pucci talking "You have more taste than meets the eye."
 
     gomer moe "Who? Me? Aw, thanks, dog."
     gomer smug "Yeah. Sometimes I get tired of like, drinking, like, vintage. So I drink a Merlot."
     gomer "You know, to spice it up a bit. Keep things interesting."
 
-    pucci "Fascinating. I'd love to talk more wine with you when you have the time."
-    pucci "I'm usually at the vineyards from Tuesday to Thursday. Tell them I sent you and I'll give you a private tour."
+    pucci blushing "Fascinating. I'd love to talk more wine with you when you have the time."
+    pucci neutral "I'm usually at the vineyards from Tuesday to Thursday. Tell them I sent you and I'll give you a private tour."
     pucci "Here's my card."
-    pucci "{i}Au revoir!{/i}"
+    pucci talking "{i}Au revoir!{/i}"
 
     hide pucci with dissolve
 

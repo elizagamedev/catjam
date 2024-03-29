@@ -227,11 +227,11 @@ label dinerintro:
 
     pc concern "H-Hi, can I help you?"
 
-    pucci_unk "I don't recognize you. Do you know who I am?"
+    pucci_unk talking "I don't recognize you. Do you know who I am?"
 
     pc thonk "Uh... no?"
 
-    pucci_unk "You must be new here. Don't worry, everyone is at one point."
+    pucci_unk happy "You must be new here. Don't worry, everyone is at one point."
 
     "They reach out a soft paw and pat my shoulder."
 
@@ -248,22 +248,22 @@ menu pucci_ribbon(screen="dialog_choice"):
         jump p_r_eh
 
 label p_r_nicely:
-    pucci_unk "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
+    pucci_unk blushing "Thank you darling, you're so right. I got it for an absolutely killer price, you would not BELIEVE, you had to be there..."
 
     "They go on for a while. In extremely fine detail. I learn a profound amount about the current ribbon fashions."
     jump meeting_pucci
 
 label p_r_good:
-    pucci_unk "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
+    pucci_unk annoyed "Whaaaaat you're not even trying with that one, booooo. Tell me it looks great, at least! Superlatives, if you don't mind, darling."
     jump meeting_pucci
 
 label p_r_eh:
-    pucci_unk "Just {q}eh{/q}? You clearly lack taste, but that's your prerogative."
+    pucci_unk annoyed "Just {q}eh{/q}? You clearly lack taste, but that's your prerogative."
     jump meeting_pucci
 
 label meeting_pucci:
-    pucci_unk "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
-    pucci "I need to go, someone's waiting for me. But you should totally come back here on the weekend. It gets real lively, you'll love it."
+    pucci_unk smug "Oh, I didn't even introduce myself. I'm Pucci. Don't forget, okay?"
+    pucci neutral "I need to go, someone's waiting for me. But you should totally come back here on the weekend. It gets real lively, you'll love it."
     stop music fadeout 1.0
     hide pucci with dissolve
     jump intro_exploring
@@ -281,25 +281,26 @@ label marketplaceintro:
     "That's when I notice someone napping on a bench."
 
     play music "music/Valse Gymnopedie.mp3"
-    show yuri neutral at center with dissolve
 
     "It's another familiar! I don't know why or how, but somehow I can tell. The crow seems to be lightly dozing, hugging a canvas bag overflowing with flowers."
 
     "As if they could feel my gaze, their black eyes open and look right into mine."
 
+    show yuri happy at center with dissolve
+
     yuri "O-oh! Hi there! Are you... here by yourself? Are you lost?"
 
     pc neutral "Naw, I'm just waiting for my... my witch."
 
-    yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here?"
+    yuri upset "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here?"
 
     pc neutral "Haha yeah, we just got into town today. This market is cool! Do you live around here?"
 
-    yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there."
+    yuri talking "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there."
 
-    yuri "I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
+    yuri neutral "I was handing out flowers to people as they walked in, but I got sleepy and decided to rest my eyes for a spell. That is, for a minute. I wasn't actually doing any spells."
 
-    yuri "Here, take one."
+    yuri talking "Here, take one."
 
     "The flower is small and blue, the same shade as my eyes. It's fragile and beautiful."
 
@@ -307,7 +308,7 @@ label marketplaceintro:
 
     pc happy "Thank you. This is lovely."
 
-    yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town, feel free to give me a scry and ask, I'll be around!"
+    yuri moe "I'm glad you like it! It was great to meet you. If you ever have questions about this town, feel free to give me a scry and ask, I'll be around!"
 
     stop music fadeout 1.0
     hide yuri with dissolve
@@ -547,7 +548,7 @@ label j1university:
     "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
 
     scene bg university_front
-    show yuri neutral at center
+    show yuri talking at center
     with dissolve
 
     yuri "It was really nice catching up! Tell me how the rest of your exploring goes, okay?"
@@ -577,13 +578,13 @@ label j1vineyard:
 
     pucci "Hey [pc]! Why, if it isn't my favorite moderately unfashionable but ultimately charming gray friend!"
 
-    show pucci neutral at center with dissolve
+    show pucci happy at center with dissolve
 
     "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way."
 
     "I suspect they might just be a little rude."
 
-    pucci "Is this your first time to the Vineyards? Let's walk together!"
+    pucci talking "Is this your first time to the Vineyards? Let's walk together!"
 
 menu explore_vineyard_question:
 
@@ -594,7 +595,7 @@ menu explore_vineyard_question:
         jump explore_vineyard_wpucci
 
 label explore_vineyard_alone:
-    pucci "Okay! Enjoy yourself."
+    pucci neutral "Okay! Enjoy yourself."
 
     hide pucci with dissolve
 
@@ -1128,7 +1129,7 @@ label j2synthesize:
 
     "Yuri waves at us as we walk by the flower stand and tucks a buttercup behind my ear."
 
-    yuri "For good luck!"
+    yuri happy "For good luck!"
     scene black with dissolve
 
     "After a full day of shopping, haggling, and hustling, we take a bus to the university."
@@ -1256,20 +1257,20 @@ label j2forage:
 
     "Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from."
 
-    show yuri neutral at center with dissolve
+    show yuri talking at center with dissolve
 
     yuri "Hi there! What brings you out here?"
 
     pc talking "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
 
-    yuri "I'm trying to fill this basket with flower clippings! The soil here is pretty rich in mana thanks to the ley lines. Here, let me show you."
+    yuri moe "I'm trying to fill this basket with flower clippings! The soil here is pretty rich in mana thanks to the ley lines. Here, let me show you."
 
     "They lead us to a meadow clear of any debris--no loose stones or branches."
 
     "At the center of the meadow is a ring of mushrooms."
 
-    yuri "This is called a fairy ring! They're rumored to be magical, but in a place like this, they really are."
-    yuri "Let's not step in it today. I'm not sure where this one would take us."
+    yuri talking "This is called a fairy ring! They're rumored to be magical, but in a place like this, they really are."
+    yuri neutral "Let's not step in it today. I'm not sure where this one would take us."
 
     "My Witch" "That's good advice! I'll lead us back."
 
@@ -1283,11 +1284,11 @@ label j2forage:
 
     "I blink and realize Yuri's pulling my arm to get my attention, a concerned look on their face."
 
-    show yuri neutral at center with dissolve
+    show yuri upset at center with dissolve
 
     yuri "I'm so sorry, I didn't think it'd be acting this tricksy when I suggested we come see it. Ley lines, amiright?"
 
-    yuri "Let's get back to your witch."
+    yuri neutral "Let's get back to your witch."
 
     "They take my hand in theirs and we walk back to my witch together."
 
@@ -1302,17 +1303,18 @@ label j2forage:
     "My Witch" "It's adorable! Anyways, we should head home. It's going to get late soon."
     "My Witch" "Yuri, thanks for joining us today!"
 
-    show yuri neutral at center with dissolve
+    show yuri happy at center with dissolve
 
     yuri "Any time! I love being out here."
 
+    show yuri blushing
     "Yuri gets a wistful look in their eyes."
 
     yuri "My witch is a florist. Her whole thing is that she wants to make beautiful arrangements using enchanted flowers that act as wards of happiness and protection."
 
     yuri "She always tries to make people's days brighter, so I do too."
 
-    yuri "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
+    yuri talking "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
 
     pc happy "You bet!"
 
@@ -1543,7 +1545,7 @@ label j3beach:
     "I open my eyes and see soft brown paws in front of me. Then I look up."
 
     play music "music/Deuces.mp3"
-    show pucci neutral at center with dissolve
+    show pucci talking at center with dissolve
 
     pucci "Oh goodness. Careful, there."
 
@@ -1556,7 +1558,7 @@ label j3beach:
 
     play music "music/Surf Shimmy.mp3"
 
-    show pucci at right with ease
+    show pucci annoyed at right with ease
     show gomer neutral at left with dissolve
 
     "Gomer is splayed on the ground next to a skateboard that's slowly rolling away from them."
@@ -1612,13 +1614,13 @@ label j3boardno:
     "I sit down at an umbrella table with Pucci, who has fetched three lemonades to share."
 
 label j3beach_umbrella:
-    show pucci neutral at center with dissolve
+    show pucci happy at center with dissolve
 
     pucci "I love coming to the beach on days like this. Nothing's quite as refreshing as the salt breeze ruffling my fur."
 
     "They take a long sip of lemonade."
 
-    pucci "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to look bad if I fail."
+    pucci neutral "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to look bad if I fail."
 
     play sound "sound/skateboard-spike.opus"
 
@@ -1636,7 +1638,7 @@ label j3beach_umbrella:
 
     "They perk up."
 
-    pucci "But! While we're here! I just got this issue of {q}Inscriber's Weekly{/q} and thought of you. You should borrow it and let me know what you think."
+    pucci happy "But! While we're here! I just got this issue of {q}Inscriber's Weekly{/q} and thought of you. You should borrow it and let me know what you think."
 
     play sound "sound/skateboard.opus"
 
@@ -1647,7 +1649,7 @@ label j3beach_umbrella:
 
     gomer "Thanks for the lemonade, Pooch!"
 
-    pucci "Pucc-I. With an I. PUCCI." with hpunch
+    pucci annoyed "Pucc-I. With an I. PUCCI." with hpunch
 
     show gomer blushing
 
