@@ -1,3 +1,5 @@
+default real_magic_takes_time = False
+
 label gomer_date_2:
     $ gomer_date_count += 1
 
@@ -207,6 +209,7 @@ label .bottle:
 
     menu(screen = "dialog_choice"):
         "Real magic takes time.":
+            $ real_magic_takes_time = True
             pass
         "Maybe this was a bad idea after all...":
             gomer annoyed "Haha... Uh..."

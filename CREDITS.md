@@ -93,3 +93,9 @@ https://freesound.org/people/calivintage/sounds/95708/
 
 scratch.opus
 https://freesound.org/people/musicvision31/sounds/431779/
+
+hose.opus
+https://freesound.org/people/KodyTron/sounds/641921/
+
+sad-clapping.opus
+https://freesound.org/people/sportygurl37/sounds/120210/
