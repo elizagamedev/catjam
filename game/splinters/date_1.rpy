@@ -100,7 +100,7 @@ label splinters_date_1:
             "Splinters looks taken aback."
             splinters "W-Wow. You sound like Frankie right now."
             splinters "Well, s-sorry for boring you. *sniff*"
-            splinters "I was hoping we could be friends."
+            splinters crying "I was hoping we could be friends."
             hide splinters with dissolve
             "Splinters takes their cup and practically runs out, sad and embarrassed."
             "There's a yelp, and you see that they've spilled their coffee. They stop, wipe up the mess, then continue their exit."

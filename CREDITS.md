@@ -99,3 +99,6 @@ https://freesound.org/people/KodyTron/sounds/641921/
 
 sad-clapping.opus
 https://freesound.org/people/sportygurl37/sounds/120210/
+
+applause.opus
+https://freesound.org/people/Debsound/sounds/395414/

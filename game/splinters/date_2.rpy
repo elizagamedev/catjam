@@ -262,7 +262,7 @@ label splinters_date_2:
 
             "His face is now perfectly caked."
 
-            show splinters upset at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
+            show splinters crying at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
             splinters "*SNIFF* *SOB* WOW IT TASTES GOOD!!!"
             "Splinters seems to be both hyped and also crying at the same time?"

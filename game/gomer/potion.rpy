@@ -1,10 +1,10 @@
 label gomer_potion:
     scene bg festival
-    show gomer at center
+    show gomer talking at center
     with fade
     play music "music/One-eyed Maestro.mp3"
 
-    gomer talking "Ladies and gentlemen. {w}And others."
+    gomer "Ladies and gentlemen. {w}And others."
     gomer "You stand here before, stand here before me to witness, to see, you will see..."
     gomer smug "I have a potion."
 
@@ -43,9 +43,8 @@ label gomer_potion:
 
     "Gomer sprays me down with a garden hose."
 
-    $ dyed = True
-    pc concern "T-T-That's freezing! Y-You really owe me one a-after this!"
-    pc thonk "Oh. Huh."
+    pc dyed concern "T-T-That's freezing! Y-You really owe me one a-after this!"
+    pc dyed thonk "Oh. Huh."
 
     "My arms are covered in black fur. I guess it worked."
     play sound "sound/sad-clapping.opus"
@@ -67,7 +66,7 @@ label gomer_potion:
     gomer "Uh."
     gomer neutral "Here's to another year of witch school? Haha."
 
-    pc thonk "Guess so."
+    pc dyed thonk "Guess so."
 
     scene black with irisin
     jump credits

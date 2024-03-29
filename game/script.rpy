@@ -1780,7 +1780,7 @@ menu j4style:
     "Trial and error. Drink the potion!":
         jump j4style_trial
 
-j4style_vibe
+label j4style_vibe:
 
     "I'm pretty sure my witch has this on lock, so I'm not too worried about helping her out."
 
@@ -1792,7 +1792,7 @@ j4style_vibe
 
 jump j4mice
 
-j4style_book
+label j4style_book:
 
     "We've practiced our potion and now it's time to test our mettle."
 
@@ -1815,7 +1815,7 @@ j4style_book
 jump j4mice
 
 
-j4style_trial
+label j4style_trial:
 
     "My Witch" "So I think we got the amounts right but we will probably need to finnagle it here and there."
 
@@ -1852,7 +1852,7 @@ j4style_trial
     "I step outside to get a breath of fresh air. That's when I hear a shout from inside."
 
 jump j4mice
-label j4mice
+label j4mice:
 
     "I rush inside to see my witch trying to fend off three mice."
 
