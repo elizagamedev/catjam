@@ -1,4 +1,4 @@
-label pucci_date_4:
+label pucci_potion:
     pc neutral "talk talk talk"
 
     pucci "talk talk talk"
