@@ -1725,6 +1725,37 @@ menu j4wk:
     "Splinters' IDEA" if splinters_potion:
         jump j4potion_splinters
 
+label j4potion_gomer_apology:
+    "As I was about to leave the room, a sudden flash of light came from my crystal."
+    play sound "sound/crackle.opus"
+    with flash
+
+    gomer "Uh. [pc]? You there?"
+
+    menu(screen="dialog_choice"):
+        "Yes.":
+            pass
+        "No.":
+            gomer "Haha. That's funny."
+
+    gomer "Uh."
+    gomer "I'm really sorry. Like, about the dinner."
+    gomer "Stealing is wrong."
+    gomer "..."
+    gomer "Getting on your case like that was even wronger, though."
+    gomer "Sorry."
+    gomer "I can't do this alone, dog. I need you."
+
+    menu(screen="dialog_choice"):
+        "Well, {i}I{/i} can. {i}Ciao{/i}.":
+            $ gomer_failed = True
+            $ gomer_potion = False
+            "I wave my paw and the crystal goes dark."
+            jump j4wk
+        "Let's do this.":
+            play sound "sound/happy.opus"
+            gomer "You're the best, dog."
+            jump j4potion_gomer
 
 label j4potion_witch:
     "We decide to go with my witch's idea. We've been working so hard at this over the last month, and it's finally time to see the fruits of our labor."
