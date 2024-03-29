@@ -7,7 +7,7 @@ image disclaimer:
 
 
 label frankie_date_3:
-    pc "How's your potion idea coming along?"
+    pc neutral "How's your potion idea coming along?"
 
     frankie "Wall and a hard place, jack. My muse has left me in the cold."
     frankie "Not even the Double Burglarburger was enough to stimulate my own brain meats."
@@ -46,17 +46,17 @@ label frankie_date_3:
     "Even for October, the beach is pretty empty."
     "Frankie's already at the pier, midway through their stretching routine."
 
-    show frankie neutral at center with dissolve
+    show frankie annoyed at center with dissolve
 
     frankie "What, the fuzz hold you up or something? Not like you to be so late."
 
-    pc "I took the earliest train I could. I'm surprised you're already here."
+    pc concern "I took the earliest train I could. I'm surprised you're already here."
 
     "Frankie winces."
 
     frankie "You took the train?"
-    frankie "This is the difference between me and you, jack. I don't ride trains. I don't ride cars."
-    frankie "I {i}run{/i}."
+    frankie neutral "This is the difference between me and you, jack. I don't ride trains. I don't ride cars."
+    frankie smug "I {i}run{/i}."
 
     play sound "sound/skateboard.opus"
     pause 1.0
@@ -72,7 +72,7 @@ label frankie_date_3:
 
     play sound "sound/growl.opus"
 
-    frankie "Watch the merchandise, you quadrupedal hobbledehoy!"
+    frankie annoyed "Watch the merchandise, you quadrupedal hobbledehoy!"
 
     gomer talking "Huh? Quadrupedal... quadrupedal what?"
 
@@ -89,7 +89,7 @@ label frankie_date_3:
     gomer "N-Nothing. Can I have my skateboard back. Please."
 
     frankie "You want this hunk of junk back? Then earn it."
-    frankie "Give me three laps around the perimeter of the dock."
+    frankie neutral "Give me three laps around the perimeter of the dock."
 
     gomer talking "Huh? What? Laps? Why?"
 
@@ -97,17 +97,17 @@ label frankie_date_3:
 
     gomer annoyed "W-Why are you like this?"
 
-    frankie "Five."
+    frankie talking "Five."
 
     menu(screen = "dialog_choice"):
         "Go easy on them, Frankie!":
             play sound "sound/hiss.opus"
             show gomer neutral
 
-            frankie "You're a regular comedian."
-            frankie "Trust me, jack. This is Mr. Nice Guy. You don't wanna meet Mr. Not Nice Guy."
+            frankie annoyed "You're a regular comedian."
+            frankie neutral "Trust me, jack. This is Mr. Nice Guy. You don't wanna meet Mr. Not Nice Guy."
             play sound "sound/growl.opus"
-            frankie "Now get to it!"
+            frankie talking "Now get to it!"
             hide gomer with dissolve
             "Gomer scurries off and begins a pained trod around the pier."
         "You heard the cat! Get to it!":
@@ -137,7 +137,7 @@ label frankie_date_3:
     gomer "I feel like... I feel like I'm seeing stars..."
 
     frankie "Stars...?"
-    frankie "That's it, [pc]!"
+    frankie talking "That's it, [pc]!"
 
     play sound "sound/skateboard-spike.opus"
     with hpunch
@@ -164,16 +164,16 @@ label frankie_date_3:
     "At last Gomer manages to wiggle out of Frankie's arms and back to their skateboard."
 
     play sound "sound/skateboard.opus"
-
+    show frankie blushing
     "Frankie turns to me, arms outstretched."
 
     frankie "I could kiss you, jack. It's all thanks to you that we were able to iron out all these wrinkles."
 
     "While I appreciate the compliment from Frankie of all people, I wasn't ready to meet the same fate as Gomer."
 
-    pc "R-Right. Hey, we're here to do Pilates, right?"
+    pc concern "R-Right. Hey, we're here to do Pilates, right?"
 
-    frankie "Son of a gun. I almost forgot."
+    frankie happy "Son of a gun. I almost forgot."
     frankie "Alright, let's start with the stretches like I showed you."
 
     scene black with irisin

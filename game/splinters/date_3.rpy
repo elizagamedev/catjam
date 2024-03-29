@@ -1,9 +1,9 @@
 default splinters_date_3_attempted = False
 
 label splinters_date_3:
-    pc "Oh."
-    pc "..."
-    pc "Anyways, I wanted to know if you're free to hang out?"
+    pc thonk "Oh."
+    pc thonk "..."
+    pc neutral "Anyways, I wanted to know if you're free to hang out?"
 
     splinters "Oh... darn, I promised my parents to stop by the town hall today."
 
@@ -54,7 +54,7 @@ label splinters_date_3:
                 splinters "..."
                 splinters "A-are you being sarcastic? I can't tell."
                 splinters "{i}Who doesn't like secret rooms?{/i}"
-                pc "Me. Joyless people like me."
+                pc thonk "Me. Joyless people like me."
                 splinters "Er... okay. See you later then?"
                 return
 

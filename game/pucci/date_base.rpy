@@ -18,15 +18,15 @@ label pucci_date:
     pucci "Hey there, [pc]. I was just [state]. What're you calling me for this time?"
 
     if (pucci_call_count == 0):
-        pc "I was figuring out what to wear today and thought of you."
+        pc neutral "I was figuring out what to wear today and thought of you."
         pucci "Oh, looking for fashion advice? I can help you out, sure."
     elif (pucci_call_count == 1):
-        pc "I really enjoyed spending time with you last time and was wondering if you want to hang out again."
+        pc neutral "I really enjoyed spending time with you last time and was wondering if you want to hang out again."
         pucci "I'd like that. Pick me up at 7, okay? We'll make it a date."
-        pc "A-a date? You mean...?"
+        pc blushing "A-a date? You mean...?"
         pucci "A date!"
     else:
-        pc "You down for another date?"
+        pc blushing "You down for another date?"
         pucci "Let's do it. You know the drill, right? See you at 7. Look sharp!"
 
 

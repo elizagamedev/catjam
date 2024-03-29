@@ -1,4 +1,4 @@
-default pc_name = "Peanut"
+default pc_name = "Smoky"
 default pc_pronouns = "they"
 default they = "they"
 default them = "them"
@@ -13,7 +13,7 @@ default dont = "don't"
 default xs = ""
 default xes = ""
 default xies = "y"
-define pc = Character("[pc_name!q]", who_color='#aaaaaa')
+define pc = Character("[pc_name!q]", who_color='#7d8294', image="pc")
 
 screen name_and_pronouns():
     modal True

@@ -191,7 +191,7 @@ label dinerintro:
 
     "It takes a moment to connect the dots."
 
-    pc "Huh? Wait, do you mean me?"
+    pc concern "Huh? Wait, do you mean me?"
 
     gomer_unk smug "Yeah dog! You. You're gonna like, love this. Trust me. Name's Gomer, by the way."
 
@@ -225,11 +225,11 @@ label dinerintro:
 
     "Before I know it, we're face to face in front of the diner. They pause and give me a look."
 
-    pc "H-Hi, can I help you?"
+    pc concern "H-Hi, can I help you?"
 
     pucci_unk "I don't recognize you. Do you know who I am?"
 
-    pc "Uh... no?"
+    pc thonk "Uh... no?"
 
     pucci_unk "You must be new here. Don't worry, everyone is at one point."
 
@@ -289,11 +289,11 @@ label marketplaceintro:
 
     yuri "O-oh! Hi there! Are you... here by yourself? Are you lost?"
 
-    pc "Naw, I'm just waiting for my... my witch."
+    pc neutral "Naw, I'm just waiting for my... my witch."
 
     yuri "Another familiar, duh! I should've guessed. I'm Yuri, and you seem like you're new here?"
 
-    pc "Haha yeah, we just got into town today. This market is cool! Do you live around here?"
+    pc neutral "Haha yeah, we just got into town today. This market is cool! Do you live around here?"
 
     yuri "Sorta! I'm here because {i}my{/i} witch is working at the flower stand over there."
 
@@ -305,7 +305,7 @@ label marketplaceintro:
 
     yuri "It's more durable than it looks. Just give it some water when you get home and you'll be golden! Not literally golden, just figuratively."
 
-    pc "Thank you. This is lovely."
+    pc happy "Thank you. This is lovely."
 
     yuri "I'm glad you like it! It was great to meet you. If you ever have questions about this town, feel free to give me a scry and ask, I'll be around!"
 
@@ -352,16 +352,17 @@ label cafeintro:
 
     "The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
 
-    frankie "Is there anything behind those fuzzed out eyes of yours? Someone's trying to sell you a dog, jack. You're being hornswoggled."
+    frankie annoyed "Is there anything behind those fuzzed out eyes of yours? Someone's trying to sell you a dog, jack. You're being hornswoggled."
 
     "The calico points a clawed finger at me."
 
-    frankie "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
+    frankie happy "Now that's a cool cat who doesn't skip leg day {i}or{/i} brain day. Am I right or what?"
 
-    pc "Uh, right?"
+    pc concern "Uh, right?"
 
-    frankie "That's right. Listen up, dork. No more pussyfooting. Drop and gimme 20!"
+    frankie talking "That's right. Listen up, dork. No more pussyfooting. Drop and gimme 20!"
 
+    show frankie neutral
     "Splinters looks confused and hands the tall cat a $20 bill."
 
     splinters "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and--"
@@ -452,7 +453,7 @@ label j1records:
 
     "His foot taps along in time with the music, and a glance tells me his nametag reads {q}HELLO MY NAME IS Alec, he/him{/q}."
 
-    pc "Hey mister. Alec."
+    pc talking "Hey mister. Alec."
 
     "The guy looks up from his book at me hesitantly, like he'd rather be reading. Understandable."
 
@@ -478,11 +479,11 @@ label j1records_games:
 
     "Alec" "You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
 
-    pc "Secret gamer. Got it."
+    pc happy "Secret gamer. Got it."
 
     "Alec" "What?"
 
-    pc "Don't worry about it."
+    pc neutral "Don't worry about it."
 
     jump j1records_alec
 
@@ -619,7 +620,7 @@ label explore_vineyard_wpucci:
 
     pucci "So, what do you think so far?"
 
-    pc "I honestly dig it. This place is *hic* totally sick. Thanks for spilling the beans, Pucci."
+    pc talking "I honestly dig it. This place is *hic* totally sick. Thanks for spilling the beans, Pucci."
 
     pucci "Anytime, just give me a scry, darling."
     jump explore_vineyard_outro
@@ -693,7 +694,7 @@ label j1study_helpsplinters:
 
     splinters "Oh hey how's it going what did you need my help with fam?"
 
-    pc "Firstly, do you come here often?"
+    pc neutral "Firstly, do you come here often?"
 
     splinters "Lol,"
 
@@ -709,31 +710,29 @@ label j1study_helpsplinters:
 
     "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored of the tiny cat."
 
-    pc "That tracks. So, that's perfect. Do you know any secrets about this place?"
+    pc neutral "That tracks. So, that's perfect. Do you know any secrets about this place?"
 
     splinters "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
 
-    "From the singular interaction I observed, it does indeed seem like that's Splinters' perception of the situation."
-
-    pc "Yes..."
+    pc thonk "Yes..."
 
     splinters "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
 
     splinters "I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
 
-    pc "Oooooo..."
+    pc neutral "Oooooo..."
 
     splinters "and basically it's a secret I haven't told anyone about so there you have it!"
 
     splinters "Now I have a question for you"
 
-    pc "Yeah?"
+    pc concern "Yeah?"
 
     splinters "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
 
     "I have no idea what a SoundMeowd is but I believe them."
 
-    pc "Sure, why not?"
+    pc happy "Sure, why not?"
 
     "We spend the rest of the afternoon sharing earbuds listening to the music bites Splinters has remixed."
 
@@ -787,7 +786,7 @@ label j1gym:
 
     "Frankie wraps up their conversation and then comes up to me to strike a pose."
 
-    show frankie neutral at center with dissolve
+    show frankie happy at center with dissolve
 
     frankie "I knew you were as cool as a cucumber the moment I saw you. So what's the skinny for today? Pumping iron? Ass to grass?"
 
@@ -827,7 +826,7 @@ label j1gym_cont:
 
     frankie "I'm going to put my paw here, dig?"
 
-    pc "Sure."
+    pc concern "Sure."
 
     frankie "So just flex that muscle and keep your core tight. And don't forget to breathe, jack."
     "It's a great workout."
@@ -859,7 +858,7 @@ label j1witch:
 
     "That's not totally unusual for us, but we're usually pretty tight-knit."
 
-    pc "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
+    pc happy "Hi! It was great. I went places, met people, made some friends... I think we're gonna be good for this exam. I feel prepared."
 
     "My witch reaches down as I walk up and helps lift my satchel off of me."
 
@@ -925,36 +924,36 @@ label j2haggle:
     "I'm an excellent sleuth and spend a little coin to get a lead on this new target. It isn't long before I head to the location my spy indicated."
 
     "What I find is a building with no door--as promised--but with a big ol' bouncer outside anyway."
-    show frankie neutral at center with dissolve
+    show frankie happy at center with dissolve
 
     "The bouncer is Frankie."
 
     frankie "How's it hangin', jack?"
 
-    pc "I mean, it's busy, we're trying to work on a potion."
+    pc neutral "I mean, it's busy, we're trying to work on a potion."
 
-    frankie "Sounds hotsy-totsy. Keep those eyes peeled, though--never know when someone might try to hustle you."
+    frankie talking "Sounds hotsy-totsy. Keep those eyes peeled, though--never know when someone might try to hustle you."
 
-    pc "Speaking of, I think I need to get into this building."
+    pc neutral "Speaking of, I think I need to get into this building."
 
-    frankie "No can do, jack. 'Fraid I'm getting bread for this gig. Can't let down the big cheese."
+    frankie upset "No can do, jack. 'Fraid I'm getting bread for this gig. Can't let down the big cheese."
 
-    pc "But-but we're friends, surely...?"
+    pc concern "But-but we're friends, surely...?"
 
     if frankie_failed:
         play sound "sound/hiss.opus"
-        frankie "Don't flatter yourself, jack."
+        frankie annoyed "Don't flatter yourself, jack."
 
     else:
         frankie "You know we're thick as thieves. But a gig's a gig."
 
-    pc "Okay, can you at least tell me how to get in?"
+    pc thonk "Okay, can you at least tell me how to get in?"
 
     if frankie_failed:
         frankie "If it gets you out of my hair."
 
     else:
-        frankie "As sure as eggs. You've gotta find this kid, see..."
+        frankie smug "As sure as eggs. You've gotta find this kid, see..."
 
     stop music fadeout 1.0
     scene black with dissolve
@@ -967,11 +966,11 @@ label j2haggle:
 
     scene bg market with dissolve
 
-    pc "Am I supposed to be talking to you about the candy?"
+    pc thonk "Am I supposed to be talking to you about the candy?"
 
     "Kid" "You're in the right place. I can get you in there."
 
-    pc "Great! ... How much?"
+    pc talking "Great! ... How much?"
 
     "The kid chuckles."
 
@@ -979,17 +978,17 @@ label j2haggle:
 
     "Kid" "You gotta play the game, pal."
 
-    pc "Sigh. What's the game?"
+    pc thonk "Sigh. What's the game?"
 
     "Kid" "You gotta find all 5 of my friends."
 
-    pc "Oh my god that's like a full on quest."
+    pc thonk "Oh my god that's like a full on quest."
 
     scene black with dissolve
 
     "I find the first two kids playing near the railroad tracks. They 'fess up their numbers, 4 and 0, and I make them promise to not play so near the tracks."
 
-    pc "It's dangerous!"
+    pc concern "It's dangerous!"
 
     "The third kid is hiding under a table in the diner. She's spooked that she got separated from the group, so it's easy to get her number: 6."
 
@@ -1003,15 +1002,15 @@ label j2haggle:
 
     "I return to the leader of the kids and look them dead in the eyes."
 
-    pc "It can only be one number."
+    pc thonk "It can only be one number."
 
     "Kid" "And what would that be?"
 
-    pc "The funny number, funny number."
+    pc thonk "The funny number, funny number."
 
     "Kid" "Which is...?"
 
-    pc "420...69."
+    pc thonk "420...69."
 
     "Kid" "By golly you've done it. You've actually done it. I hope you find what you're looking for."
 
@@ -1021,11 +1020,11 @@ label j2haggle:
 
     "I head back to the shop."
 
-    show frankie neutral at center with dissolve
+    show frankie talking at center with dissolve
 
     frankie "You're back! Got a code to bust this shindig?"
 
-    pc "Absolutely I do. 42069"
+    pc neutral "Absolutely I do. 42069"
 
     frankie "Bada-bing, bada-boom. That's the ticket."
 
@@ -1037,7 +1036,7 @@ label j2haggle:
 
     frankie "It's down here."
 
-    pc "Thanks!"
+    pc talking "Thanks!"
 
     hide frankie with dissolve
     show black with dissolve
@@ -1050,7 +1049,7 @@ label j2haggle:
 
     "Fox 1" "Welcome in, weary traveler. What is it you seek?"
 
-    pc "Uh, hi! I'm looking for a candy for Estelle the trader. They said you'd know the ones?"
+    pc neutral "Uh, hi! I'm looking for a candy for Estelle the trader. They said you'd know the ones?"
 
     "Fox 2" "Estelle."
 
@@ -1058,15 +1057,15 @@ label j2haggle:
 
     "Fox 1" "It can only be {i}that{/i} Estelle."
 
-    pc "Do you... have an issue with Estelle?"
+    pc thonk "Do you... have an issue with Estelle?"
 
     "All 3 Foxes" "No, not really."
 
-    pc "Ohhhkay. Well um, can I get the candy? What does it cost?"
+    pc neutral "Ohhhkay. Well um, can I get the candy? What does it cost?"
 
     "Fox 1" "You've already paid our price. We do so hope you enjoyed the game."
 
-    pc "It was... a game. I like your masks."
+    pc happy "It was... a game. I like your masks."
 
     "All 3 Foxes" "Thank you!"
 
@@ -1087,21 +1086,21 @@ menu j2candy:
 
     "I give the candy to Frankie.":
 
-        frankie "Why thank you! *nom* This is doggone delicious."
+        frankie blushing "Why thank you! *nom* This is doggone delicious."
 
         frankie "Next one's on me, jack."
 
     "I keep it for myself.":
 
-        frankie "Take care! Get home safe. Don't slack on those reps, dig?"
+        frankie talking "Take care! Get home safe. Don't slack on those reps, dig?"
 
     "I eat the last piece staring them dead in the eyes.":
 
-        frankie "..."
+        frankie annoyed "..."
 
         frankie "You tryin' to say something?"
 
-        pc "I'll uh, bring you one next time."
+        pc happy "I'll uh, bring you one next time."
 
 label j2haggle2:
     stop music fadeout 3.0
@@ -1141,7 +1140,7 @@ label j2synthesize:
 
     "My Witch" "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
 
-    pc "Of course! I'll be right here."
+    pc neutral "Of course! I'll be right here."
 
     "My Witch" "Thanks so much! I'll be back before you know it."
 
@@ -1170,7 +1169,7 @@ label j2synthesize:
     play sound "sound/crackle.opus"
     scene bg cafe:
         matrixcolor flashback
-    show frankie neutral at left:
+    show frankie happy at left:
         matrixcolor flashback
     show splinters neutral at right, mirror:
         matrixcolor flashback
@@ -1196,22 +1195,22 @@ label j2synthesize:
     "The jar hits the counter and shatters, sending the burnished goop splattering across the ground--but not into our precious potion. Phew."
     hide splinters
 
-    pc "Are you okay?!"
+    pc concern "Are you okay?!"
     show splinters neutral at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
     splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
 
-    pc "Yeah, I think so!"
+    pc neutral "Yeah, I think so!"
 
     splinters "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
 
     "I almost ask them to help clean up, but I remember the shattered glass and think twice."
 
-    pc "How about you hold the dustpan and I pick this stuff up?"
+    pc neutral "How about you hold the dustpan and I pick this stuff up?"
 
     splinters "Sure!"
 
-    pc "What is this potion, anyway?"
+    pc thonk "What is this potion, anyway?"
 
     splinters "It wasn't a potion, that was supposed to be a protein shake."
 
@@ -1261,7 +1260,7 @@ label j2forage:
 
     yuri "Hi there! What brings you out here?"
 
-    pc "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
+    pc talking "We're looking for some plants out in the bristlecone boar territory. Why are you here by yourself?"
 
     yuri "I'm trying to fill this basket with flower clippings! The soil here is pretty rich in mana thanks to the ley lines. Here, let me show you."
 
@@ -1315,7 +1314,7 @@ label j2forage:
 
     yuri "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
 
-    pc "You bet!"
+    pc happy "You bet!"
 
     stop music fadeout 3.0
     scene black with irisin
@@ -1377,11 +1376,11 @@ label j3shop:
 
     splinters "Hey are you busy?"
 
-    pc "Well, I'm on my way to do some good old fashioned retail therapy."
+    pc neutral "Well, I'm on my way to do some good old fashioned retail therapy."
 
     splinters "Can I come with you? I have some stuff to pick up, too, and maybe we could go together?"
 
-    pc "Yeah! Let's do it."
+    pc happy "Yeah! Let's do it."
 
     scene bg main_street
     show splinters neutral at center
@@ -1391,19 +1390,19 @@ label j3shop:
 
     splinters "Heyyyyy what did you need to get today?"
 
-    pc "Not sure, but I'll know it when I see it. How 'bout you?"
+    pc thonk "Not sure, but I'll know it when I see it. How 'bout you?"
 
     splinters "Well I was thinking I'd get some, um, hobby supplies."
 
-    pc "What kind of hobby?"
+    pc neutral "What kind of hobby?"
 
     splinters "..."
 
-    pc "...?"
+    pc thonk "...?"
 
     splinters "Don't make fun of me..."
 
-    pc "I'm not gonna make fun of you."
+    pc neutral "I'm not gonna make fun of you."
 
     splinters "I'm painting some figures and I wanted to get new colors."
 
@@ -1435,11 +1434,11 @@ label j3shopcont:
 
     "Splinters flushes, ears turning even pinker than normal."
 
-    pc "Wow, Splinters, I didn't realize you thought about that stuff."
+    pc thonk "Wow, Splinters, I didn't realize you thought about that stuff."
 
     splinters "Haha I know right?"
 
-    pc "Let's go do that shopping and see if we can't find you some paint."
+    pc neutral "Let's go do that shopping and see if we can't find you some paint."
 
     "They light up with excitement."
 
@@ -1475,7 +1474,7 @@ label j3monument:
 
     "The other wish is for Splinters."
 
-    pc "That feller seems like they need all the luck they can get."
+    pc thonk "That feller seems like they need all the luck they can get."
 
     "I keep walking through the grounds and make my way to an open field lined with bleacher stands. A big, strong calico is running up and down the bleacher steps."
 
@@ -1487,15 +1486,15 @@ label j3monument:
 
     "Frankie wipes their sweaty paws against their running pants."
 
-    frankie "So what's the buzz? Stayin' out of trouble?"
+    frankie talking "So what's the buzz? Stayin' out of trouble?"
 
-    pc "I thought I'd explore the festival grounds! It's so quiet here."
+    pc neutral "I thought I'd explore the festival grounds! It's so quiet here."
 
-    frankie "You said it, jack! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
+    frankie happy "You said it, jack! I like coming out here to clear my head, you know? Sometimes the ole noggin needs fresh air."
 
     frankie "You make a wish in that fountain?"
 
-    pc "Sure did."
+    pc neutral "Sure did."
 
     frankie "Don't tell me, that'd be bad luck. But let me show you these smaller fountains, you're gonna be gobsmacked."
 
@@ -1509,11 +1508,11 @@ label j3monument:
 
     "They push some buttons and the machine rattles. The big calico tosses me a juice box."
 
-    show frankie neutral at center with dissolve
+    show frankie happy at center with dissolve
 
     frankie "Gotta stay fueled, jack."
 
-    pc "Thanks!"
+    pc talking "Thanks!"
 
     stop bg fadeout 3.0
     scene black with irisin
@@ -1529,7 +1528,7 @@ label j3beach:
 
     "I stop to get some ice cream from a cart and listen to the seagull cries."
 
-    pc "I wonder if there are seagull familiars? I guess, probably? Huh."
+    pc thonk "I wonder if there are seagull familiars? I guess, probably? Huh."
 
     "I walk along the beach for a while, watching my pawprints leave tracks in the sand. The tracks are quickly washed away by gentle waves caressing the beach."
 
@@ -1572,11 +1571,11 @@ label j3beach:
 
     gomer happy "Thanks, dog."
 
-    pc "Uh, you okay down there?"
+    pc concern "Uh, you okay down there?"
 
     gomer neutral "Wiping out's just part of the board life, dog. You ever do a kickflip?"
 
-    pc "No, I've never tried. It seems cool though."
+    pc neutral "No, I've never tried. It seems cool though."
 
     gomer happy "You wanna give it a try?"
 
@@ -1629,7 +1628,7 @@ label j3beach_umbrella:
 
     pucci "I guess that's the problem with worrying about your image. You miss out on fun."
 
-    pc "It's not too late, I'm sure they'd teach you if you asked."
+    pc neutral "It's not too late, I'm sure they'd teach you if you asked."
 
     "Pucci watches Gomer contemplatively."
 
@@ -1676,7 +1675,7 @@ label j3witch:
 
     "My Witch" "[pc], is that you? You made it... {i}yawn{/i}... you made it back okay?"
 
-    pc "Just got back!"
+    pc neutral "Just got back!"
 
     "I go to her room to check on her and find that she'd fallen asleep writing her magic thesis at her desk."
 

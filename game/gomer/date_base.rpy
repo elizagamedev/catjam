@@ -17,7 +17,7 @@ label gomer_date:
         "Gomer's face is barely visible within the near black of their room."
         "I wonder if maybe I caught them in the middle of a ritual."
 
-        pc "I'm sorry, did I catch you at a bad time?"
+        pc concern "I'm sorry, did I catch you at a bad time?"
 
         gomer "What? Bad--bad time? No, not at all, I'm great. I'm thriving."
 

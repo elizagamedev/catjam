@@ -4,12 +4,12 @@ define guitarist = Character("Guitarist", who_color="#8376F7")
 label splinters_date_1:
     if not splinters_date_1_attempted:
         splinters "S-So, what's up? Can I help with anything?"
-        pc "I'm pretty new in town. I was hoping you could help me out with some advice?"
+        pc neutral "I'm pretty new in town. I was hoping you could help me out with some advice?"
         splinters "Sure, I can give you pointers over coffee. There's a cafe nearby with a neat l-local twirl. I mean, twist."
     else:
-        pc "Maybe something warm will help with your paw."
+        pc thonk "Maybe something warm will help with your paw."
         splinters "Like your heart?"
-        pc "..."
+        pc thonk "..."
         splinters "H-Haha, just kidding. Maybe coffee?"
 
     menu(screen="dialog_choice"):
@@ -75,7 +75,7 @@ label splinters_date_1:
             splinters "I got you the silver vine special, hope that's okay."
             splinters "They get it from the enchanted forest near the school."
 
-    pc "Neat, there's an enchanted forest near here?"
+    pc talking "Neat, there's an enchanted forest near here?"
 
     "You take a sip."
 
@@ -108,13 +108,13 @@ label splinters_date_1:
             scene black with irisin
             return
 
-    pc "Oh wow, that's neat. Yeah, this silver vine is pretty great!"
+    pc talking "Oh wow, that's neat. Yeah, this silver vine is pretty great!"
 
     play sound "sound/snap.opus"
     stop music fadeout 0.5
     "There are a lot of silver sparkles coming off the guitar. Suddenly a particularly big sparkle seems to sling towards the table."
 
-    pc "Ooh, pretty sparkle..."
+    pc talking "Ooh, pretty sparkle..."
 
     show splinters talking
     splinters "S-Sparkle?"
@@ -138,11 +138,11 @@ label splinters_date_1:
 
     splinters "Sorry about that. It's my darn bad luck."
 
-    pc "Er, it's okay. It can happen."
+    pc neutral "Er, it's okay. It can happen."
 
     "Splinters rummaged around in their too-large vest, fishing out a big shaker of salt."
 
-    pc "Salt? For... coffee?"
+    pc thonk "Salt? For... coffee?"
 
     splinters talking "Er, n-no. I should have done this when I first got here, actually."
     "They proceed to shake out a pile on their scratched-up paw, wincing as they did so."
@@ -152,15 +152,15 @@ label splinters_date_1:
     menu(screen="dialog_choice"):
         "Haha, you're so weird Splinters.":
             $ splinters_date_1_attempted = False
-            pc "It would have been more normal if you salted your coffee."
+            pc happy "It would have been more normal if you salted your coffee."
             show splinters talking
             "Splinters' expression grew strained."
-            pc "Oh, I didn't mean to offend you. It's all in good fun. Weird is better than normal."
+            pc neutral "Oh, I didn't mean to offend you. It's all in good fun. Weird is better than normal."
             splinters "I-I don't think I'm that weird. Just a little cursed."
             "We sit there in awkward silence."
             splinters "You know, i-if weird is what you're after, then... then you should be talking to Gromer, not me."
             splinters "Sorry, I'm always sore and sensitive."
-            pc "I think what you mean is... {i}salty{/i}."
+            pc happy "I think what you mean is... {i}salty{/i}."
             hide splinters dissolve
             "They just stare at you, quietly grabbing their cup before taking their leave."
             scene black with irisin
@@ -169,14 +169,14 @@ label splinters_date_1:
             splinters talking "Oh, my whole family is like this to be honest."
             splinters neutral "I know this probably seems weird and paranoid to everyone else."
 
-    pc "Whatever gives you guys a peace of mind. I'm not judging."
-    pc "So... you mentioned common plants. What are the ones everyone knows about?"
+    pc thonk "Whatever gives you guys a peace of mind. I'm not judging."
+    pc happy "So... you mentioned common plants. What are the ones everyone knows about?"
 
     splinters happy "Well, there are our common exports. You should probably know about that."
     splinters "We have enchanted pumpkins, transm-mute-- Er, transmutable hay, and jewel apples."
     splinters "We also have spirit willows. We have other trees too but I don't remember."
 
-    pc "There are also special plants in the academy greenhouse, right?"
+    pc neutral "There are also special plants in the academy greenhouse, right?"
 
     splinters "Yeah, I heard they grow l-lucky clovers in there. I'm hoping to try my hand at one this year."
 
@@ -202,7 +202,7 @@ label splinters_date_1:
             splinters "They're super rare though."
             pass
 
-    pc "That's pretty cool! It makes me want to just walk around and see if I recognize the crops you mentioned. Maybe find a clover!"
+    pc talking "That's pretty cool! It makes me want to just walk around and see if I recognize the crops you mentioned. Maybe find a clover!"
 
     splinters happy "Yeah, if we go out back there's a field. If you're really lucky you can find the more normal blue and green lucky clovers."
 
@@ -219,7 +219,7 @@ label splinters_date_1:
     splinters talking "Hey, I-I know I can be a bit much. Thanks for bearing with me. And I hope it was helpful!"
     splinters blushing "I-I know I'm clumsy but I like feeling helpful. Let me know if you want to know anything else!"
 
-    pc "Sure, it was fun! We even found a few of the lucky clovers you mentioned."
+    pc neutral "Sure, it was fun! We even found a few of the lucky clovers you mentioned."
 
     play sound "sound/happy.opus"
     show splinters happy

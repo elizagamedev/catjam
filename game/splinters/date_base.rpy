@@ -25,13 +25,13 @@ label splinters_date:
     splinters "S-sorry about that. Oh! [pc], what's up?"
 
     if (splinters_call_count == 0):
-        pc "Ooh, I was going to check how you're doing, but it looks like I got your paws smushed."
+        pc concern "Ooh, I was going to check how you're doing, but it looks like I got your paws smushed."
         splinters "Eh, it happens all the time."
     elif (splinters_call_count == 1):
-        pc "Ouch, you smushed them again. Are your paws okay?"
+        pc concern "Ouch, you smushed them again. Are your paws okay?"
         splinters "Y-yeah. Don't worry about it."
     else:
-        pc "Are your paws okay getting smushed like that all the time?"
+        pc concern "Are your paws okay getting smushed like that all the time?"
         splinters "..."
         splinters "I'm not sure, to be honest..."
 

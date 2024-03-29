@@ -1,5 +1,5 @@
 label pucci_date_1:
-    pc "talk talk talk"
+    pc neutral "talk talk talk"
 
     pucci "talk talk talk"
 

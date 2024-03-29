@@ -5,7 +5,7 @@ label splinters_date_2:
     splinters "Anyways, how are things with you?"
     splinters "Hope your paws have been doing better than mine."
 
-    pc "I'm good! I was hoping we could meet and catch up in person."
+    pc neutral "I'm good! I was hoping we could meet and catch up in person."
 
     splinters "Oh gee, hmm. Let me think, what would be a good place to meet up?"
 
@@ -85,20 +85,20 @@ label splinters_date_2:
             show splinters neutral at right with ease
             show frankie neutral at left with dissolve
 
-            frankie "Great to see you joined the clean-eating club, jack."
+            frankie talking "Great to see you joined the clean-eating club, jack."
 
             show splinters at mirror
 
             splinters "Oh... you-you're here. You like this stuff?"
 
-            frankie "Naw I'm more about meat."
+            frankie happy "Naw, I'm more about meat."
             frankie "But when I'm cutting, stuff like this can give me an edge."
 
             show splinters blushing
             splinters "Oh... uh, hmm. I mean, I guess, I guess I can try it…"
 
             show splinters neutral
-            frankie "While you're at it, try doing a piston squat. Like this."
+            frankie neutral "While you're at it, try doing a piston squat. Like this."
 
             "The two of us spend the rest of our time in line hopping in place, trying to appease Frankie with sloppy piston squats. By the time we finally get to the front, Splinters looks harried and out of it."
 
@@ -120,7 +120,7 @@ label splinters_date_2:
 
             show frankie at center with ease
 
-            frankie "Poor kid. Always had a sensitive gut."
+            frankie upset "Poor kid. Always had a sensitive gut."
 
             "You were also kind of feeling it. How did Frankie eat this stuff?"
 
@@ -143,7 +143,7 @@ label splinters_date_2:
 
             splinters "I wonder what the taxonomic distance is between these rats and the marsh rats."
 
-            pc "What are the marsh rats?"
+            pc concern "What are the marsh rats?"
 
             show splinters at right with ease
             show gomer smug at left with dissolve
@@ -189,7 +189,7 @@ label splinters_date_2:
 
             show gomer neutral
 
-            pc "You know what... I'm just going to head home for today."
+            pc thonk "You know what... I'm just going to head home for today."
 
             splinters "O-Oh what? Er, okay. See you later."
 
@@ -197,7 +197,7 @@ label splinters_date_2:
 
             gomer "Can I have your corn rats then?"
 
-            pc "Er, sure."
+            pc thonk "Er, sure."
 
             show gomer happy
 
@@ -219,7 +219,7 @@ label splinters_date_2:
         "Ugh, this is going to be a drag.":
             splinters "O-Oh. Well, I can wait and get the food. You can look around."
 
-            pc "Thank you~ Later then!"
+            pc happy "Thank you~ Later then!"
 
             show splinters:
                 xzoom -1.0
@@ -240,7 +240,7 @@ label splinters_date_2:
 
             splinters "H-here's your kerf.. uh... cake."
 
-            pc "Ugh, finally. Thanks!"
+            pc thonk "Ugh, finally. Thanks!"
 
             "At that moment Splinters stepped upon some discarded wrapper on the floor."
 
@@ -298,7 +298,7 @@ label splinters_date_2:
 
     splinters "If you're the lucky one to find the t-token, th-then you're guaranteed luck in something random for the rest of the y-year."
 
-    pc "Oh wow, that's pretty cool. What is the token of?"
+    pc happy "Oh wow, that's pretty cool. What is the token of?"
 
     splinters "The token is one of five random charms. It can be a ruler, a crown, a baby, a pumpkin or a moon."
     splinters "Ruler means you'll be lucky in schoolwork."
@@ -354,9 +354,9 @@ label splinters_date_2:
         show splinters blushing
         splinters "But it's still good luck. And in romance."
         show splinters neutral
-        pc "Oh look, there's a keychain attached to it."
+        pc thonk "Oh look, there's a keychain attached to it."
         splinters "O-oh. Are you... going to carry it around?"
-        pc "..."
+        pc thonk "..."
         "The cherubic naked little baby continued staring, ominously. Smiling."
     elif charm == "pumpkin":
         "It's a little pumpkin. And pretty cute and well made."
@@ -364,7 +364,7 @@ label splinters_date_2:
         splinters "OOOH!"
         "Splinters coos over it."
         splinters "THE CRAFTSMANSHIP IS EXCELLENT!"
-        pc "Oh wow, that's great to know."
+        pc talking "Oh wow, that's great to know."
         "It really was very detailed, for being such a tiny charm."
         splinters "VERY NICE~"
         splinters "It's captured the botanical details of the Cucurbita Cinderellius perfectly!"
@@ -384,7 +384,7 @@ label splinters_date_2:
         splinters "Oh Em Gee WHAT'S HAPPENING!"
         "Splinters is now morphing as well in front of your eyes."
         splinters "WHAT IS HAPPENING???"
-        pc "I HAVE NO IDEA"
+        pc concern "I HAVE NO IDEA"
         "The charm has now degenerated into a black void, sucking everything in."
         "Honestly, I have no idea how I even got to this state. Something is clearly wrong."
         stop music fadeout 3.0
@@ -395,27 +395,27 @@ label splinters_date_2:
     show splinters neutral at center
     with fade
 
-    pc "I'm glad I tagged along. Thanks, Splinters."
+    pc talking "I'm glad I tagged along. Thanks, Splinters."
     splinters "O-Oh don't mention it."
     show splinters blushing
     splinters "I'M JUST EXCITED I GOT TO SEE SOMEONE I LIKE WIN THE CHARM!"
-    pc "Er, what was that?"
+    pc thonk "Er, what was that?"
     show splinters neutral
     splinters "E-er n-nothing. I-I'm just easily ex-ex-excited."
 
     "You then pass by a vendor selling different random goods, including crystal balls."
 
-    pc "Hey, let's stop by here."
+    pc talking "Hey, let's stop by here."
     splinters "S-Sure."
 
-    pc "The crystal balls look really nice. This one kind of resembles you."
+    pc neutral "The crystal balls look really nice. This one kind of resembles you."
 
     "I point to a smaller one that is made of highly polished crystal, perched atop a classically gilded bronze pedestal."
     "It's small, but it shines brightly."
 
     splinters "O-Oh. Thanks, but I'm worried I'll accidentally break it o-on the way home."
 
-    pc "Well, I just won a lucky charm. Maybe my luck will rub off on you."
+    pc happy "Well, I just won a lucky charm. Maybe my luck will rub off on you."
 
     splinters "Y-Yeah, maybe."
 
@@ -423,7 +423,7 @@ label splinters_date_2:
 
     splinters "O-Oh look!"
     "Splinters excitedly held up two rabbit feet charms."
-    pc "Rabbit feet?"
+    pc thonk "Rabbit feet?"
 
     splinters "Yeah! These are from moon hare; they fall and are found near meteorite sites every now and then."
     splinters "AND AT SUCH A GOOD PRICE!"
@@ -439,11 +439,11 @@ label splinters_date_2:
 
     splinters "Hey, sorry for keeping you w-wai-waiting. Here's your rabbit foot!"
 
-    pc "No worries! Wow, I sure got a lot of charms today."
+    pc happy "No worries! Wow, I sure got a lot of charms today."
 
     splinters blushing "I-it's because... It's because y-you're charming..."
 
-    pc "Sorry, what was that?"
+    pc thonk "Sorry, what was that?"
 
     splinters neutral "O-Oh, nothing! Th-Thanks for tagging along with me! I'll be sure to use the new c-crystal!"
 

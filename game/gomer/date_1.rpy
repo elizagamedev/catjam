@@ -5,11 +5,11 @@ label gomer_date_1:
     gomer "..."
     gomer "So uh... you need something?"
 
-    pc "I was actually just wondering if you were free today."
+    pc neutral "I was actually just wondering if you were free today."
 
     gomer "Huh? Oh, sure. You bet. Where we meeting, dog?"
 
-    pc "I was hoping you'd have some ideas, since I'm new around here."
+    pc neutral "I was hoping you'd have some ideas, since I'm new around here."
 
     gomer "Hey, look at us! Two drifters, no place to call home. I dig it."
     gomer "Actually, now you've got me thinking. You like music?"
@@ -80,9 +80,9 @@ label gomer_date_1:
 
         "What's that smell?":
             gomer talking "Smell? Huh? {w=1.0}Oh, like, the train smoke? They just, uh, smell like that."
-            pc "Right..."
+            pc thonk "Right..."
 
-    pc "So is the venue close by?"
+    pc neutral "So is the venue close by?"
 
     gomer talking "Venue? Right, yeah, venue."
     gomer smug "It's kinda crazy, actually, dog. Like uh, we got a like, a real good spot."
@@ -112,7 +112,7 @@ label gomer_date_1:
 
     "They say, perched atop a relief of St. Gertrude."
 
-    pc "They're playing music here?"
+    pc concern "They're playing music here?"
 
     gomer happy "Yeah, dog, it's crazy. They just like, play music here. Like on Saturdays. Not like, church music, either."
     gomer smug "I mean, church music is okay too, like, if you're like, religious."
@@ -148,7 +148,7 @@ label gomer_date_1:
 
             "It seems they weren't expecting that response. Perhaps I was a bit too blunt..."
 
-            pc "See you... Monday?"
+            pc thonk "See you... Monday?"
 
             gomer talking "Haha. Yeah. Uh, Monday."
 
@@ -192,7 +192,7 @@ label gomer_date_1:
     gomer neutral "So I was watching this movie, right? This like, human chick starts out all ugly but then she like, gets her hair done and takes her glasses off and--{b}BAM{/b}--everyone's like, wow, she's a babe, it's like {i}magic{/i}."
     gomer "That's when it hit me, dog... That's magic right there. Right on TV."
 
-    pc "What do you mean?"
+    pc thonk "What do you mean?"
 
     gomer talking "Like... think about it, dog. What comes in a bottle and goes on hair? Or like, what comes in a bottle, goes on hair, and is like, magic?"
 
