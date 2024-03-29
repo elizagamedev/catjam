@@ -13,6 +13,9 @@ screen dialog_choice(items):
             for i in items:
                 textbutton i.caption action i.action style "dialog_choice_button"
 
+    if not renpy.variant("small"):
+        add ImageReference("side pc neutral") xalign 0.0 yalign 1.0
+
 
 style dialog_choice_button is button:
     size gui.text_size

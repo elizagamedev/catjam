@@ -13,6 +13,7 @@ define splinters = Character("Splinters", image="splinters", who_color="#F9C254"
 define splinters_unk = Character("???", image="splinters", who_color="#F9C254")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 define yuri_unk = Character("???", image="yuri", who_color="#706ed1")
+define witch = Character("My Witch", who_color="#9900b0")
 
 init python:
     import patches
@@ -682,11 +683,9 @@ label j1study:
 
     "At this point an intervention might be a mercy."
 
-menu j1study_choice:
-
-    "{q}Psst, hey Splinters, can you help me with something?{/q}":
+menu j1study_choice(screen="dialog_choice"):
+    "Psst, hey Splinters, can you help me with something?":
         jump j1study_helpsplinters
-
     "That's so not my business.":
         jump j1study_walkaway
 
@@ -851,7 +850,7 @@ label j1witch:
     call titlecard(4)
     scene black with Dissolve(1.0)
 
-    "My Witch" "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
+    witch "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
     show bg home_front with dissolve
 
@@ -863,11 +862,11 @@ label j1witch:
 
     "My witch reaches down as I walk up and helps lift my satchel off of me."
 
-    "My Witch" "Oh, you. Always taking the initiative. I appreciate you so much, [pc]."
+    witch "Oh, you. Always taking the initiative. I appreciate you so much, [pc]."
 
     "She gives my head a few pats and I purr. It's good to be home together."
 
-    "My Witch" "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
+    witch "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
 
     stop bg fadeout 1.0
     scene black with irisin
@@ -1139,11 +1138,11 @@ label j2synthesize:
 
     "The university has cauldrons prepared for students to use for synthesizing potions, like we're doing now. The cauldrons are prepared with all the tools a witch could need."
 
-    "My Witch" "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
+    witch "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
 
     pc neutral "Of course! I'll be right here."
 
-    "My Witch" "Thanks so much! I'll be back before you know it."
+    witch "Thanks so much! I'll be back before you know it."
 
     "She gives me a reassuring pat on the shoulder and heads outside."
 
@@ -1220,7 +1219,7 @@ label j2synthesize:
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
     scene bg potions with fade
 
-    "My Witch" "I'm back!"
+    witch "I'm back!"
 
     "My witch is back with an armful of funky lookin' plants."
 
@@ -1247,11 +1246,11 @@ label j2forage:
 
     "My witch and I decide to go forage for fresh ingredients ourselves, bringing baskets for plants and stackable plastic enclosures for critters. She can carry a lot more than I can, but I have better vision."
 
-    "My Witch" "Stay close to me, okay? I brought us some protection wards but I don't want to risk you getting hurt."
+    witch "Stay close to me, okay? I brought us some protection wards but I don't want to risk you getting hurt."
 
-    "My Witch" "There are bristlecone boars roaming the area where we're trying to go, and we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
+    witch "There are bristlecone boars roaming the area where we're trying to go, and we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
 
-    "My Witch" "This makes it an actually pretty dangerous task, but we have to get these ingredients for the exam, so go we must."
+    witch "This makes it an actually pretty dangerous task, but we have to get these ingredients for the exam, so go we must."
 
     "We see telltale tracks but only the most obvious ones--we're not locals and don't really know what we're looking at."
 
@@ -1272,7 +1271,7 @@ label j2forage:
     yuri talking "This is called a fairy ring! They're rumored to be magical, but in a place like this, they really are."
     yuri neutral "Let's not step in it today. I'm not sure where this one would take us."
 
-    "My Witch" "That's good advice! I'll lead us back."
+    witch "That's good advice! I'll lead us back."
 
     "She turns around and starts retracing our steps."
 
@@ -1296,12 +1295,12 @@ label j2forage:
 
     scene bg forest with longfade
 
-    "My Witch" "There you are! Welcome back! Check out what I caught!"
+    witch "There you are! Welcome back! Check out what I caught!"
 
     "She holds up a giant toad, its legs dangling in the air."
 
-    "My Witch" "It's adorable! Anyways, we should head home. It's going to get late soon."
-    "My Witch" "Yuri, thanks for joining us today!"
+    witch "It's adorable! Anyways, we should head home. It's going to get late soon."
+    witch "Yuri, thanks for joining us today!"
 
     show yuri happy at center with dissolve
 
@@ -1675,7 +1674,7 @@ label j3witch:
 
     "I hear her murmur from her bedroom."
 
-    "My Witch" "[pc], is that you? You made it... {i}yawn{/i}... you made it back okay?"
+    witch "[pc], is that you? You made it... {i}yawn{/i}... you made it back okay?"
 
     pc neutral "Just got back!"
 
@@ -1683,7 +1682,7 @@ label j3witch:
 
     "I grab a knit blanket from the bed and pull it over her shoulders."
 
-    "My Witch" "Mmmhhrrgh... thank you..."
+    witch "Mmmhhrrgh... thank you..."
 
     "Her head falls back into her arms and I hear her start to snore softly."
 
