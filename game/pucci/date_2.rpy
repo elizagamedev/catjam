@@ -80,7 +80,7 @@ label pucci_date_2:
 
     pucci moe "How about we do a fashion show???"
 
-    menu fashionyesno
+    menu:
         "I'm in!":
             pucci blushing "YES!!! Okay, call me next weekend and I'll have it all set up for you."
             pc "What do you mean {q}all set up{/q}?"
