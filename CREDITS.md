@@ -114,3 +114,9 @@ https://freesound.org/people/shyguy014/sounds/463789/
 
 angry-mouse.opus
 https://freesound.org/people/shyguy014/sounds/463789/
+
+murmur.opus
+https://freesound.org/people/mglennsound/sounds/678671/
+
+cough.opus
+https://freesound.org/people/midwestdocumentary/sounds/722623/

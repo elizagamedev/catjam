@@ -16,6 +16,7 @@ label frankie_potion:
     frankie "{cps=400}But where it really gets going is the stardust, the reagent that catalyzes the ether into forming a space-time continuum rip in such a way that{/cps}{p=0.5}{nw}"
     frankie "{cps=500}the subjective perception of time for the individual in question accelerates beyond objective reality resulting in the ability to meet supernatural reaction times and{/cps}{p=0.5}{nw}"
 
+    play sound "sound/murmur.opus" volume 3.0
     "Frankie's speech continues to accelerate beyond the point of understanding. It almost feels like watching a recording in fast-motion."
     hide frankie with dissolve
     "While they continue to speak unintelligibly, they zip across to the barbell we arranged before the demonstration and lie beneath it."

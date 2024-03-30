@@ -27,6 +27,7 @@ label gomer_potion:
     gomer "Uh. I guess we'll come back once, like, everyone else is done."
     gomer "Later."
 
+    stop music fadeout 3.0
     scene bg festival with longfade
 
     "After being soaked and shivering in the cold for about two hours, the trial seemed to be approaching its end."
@@ -47,11 +48,15 @@ label gomer_potion:
     pc dyed thonk "Oh. Huh."
 
     "My arms are covered in black fur. I guess it worked."
-    play sound "sound/sad-clapping.opus"
+    play sound "sound/sad-clapping.opus" volume 0.5
     "Somebody in the audience claps."
     "It's my witch, with a pained smile."
 
     scene black with dissolve
+
+    pause 1.0
+    play sound "sound/cough.opus"
+    pause 2.0
 
     "Needless to say, we did not pass."
 
