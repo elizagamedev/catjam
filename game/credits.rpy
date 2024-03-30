@@ -1,6 +1,12 @@
+default in_credits = False
+
 label credits:
     scene black
     $ quick_menu = False
+    $ _skipping = False
+    $ _game_menu_screen = "about"
+    $ in_credits = True
+    $ renpy.block_rollback()
     window hide
     show screen credits with dissolve
     pause

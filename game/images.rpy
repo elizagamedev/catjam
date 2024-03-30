@@ -8,6 +8,14 @@ transform right:
     xalign 0.75
     yalign 1.0
 
+transform farleft:
+    xalign 0.0
+    yalign 1.0
+
+transform farright:
+    xalign 1.0
+    yalign 0.0
+
 transform mirror:
     xzoom -1.0
 

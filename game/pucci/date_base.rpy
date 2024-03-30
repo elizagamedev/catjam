@@ -24,7 +24,7 @@ label pucci_date:
     elif (pucci_call_count == 1):
         pc neutral "I really enjoyed spending time with you last time and was wondering if you want to hang out again."
         pucci "I'd like that. Pick me up at seven, okay? We'll make it a date."
-        pc blushing "A-a date? You mean...?"
+        pc blushing "A-A date? You mean...?"
         pucci "A date!"
     else:
         pc blushing "You down for another date?"

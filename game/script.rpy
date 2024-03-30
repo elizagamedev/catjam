@@ -1925,10 +1925,13 @@ label j4potion_pucci:
     stop bg fadeout 0.5
     play sound "sound/crackle.opus"
     with flash
-    "I get a scry from Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
+    "I rush to scry Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
     pc thonk "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
-    # TODO: not an exam room
-    pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
+    if which_pucci_potion is None:
+        pucci "TODO you didnt date me but I did promise a potion so hijinks probably"
+    else:
+        # TODO: not an exam room
+        pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
     jump j4exam
 
 label j4potion_frankie:
