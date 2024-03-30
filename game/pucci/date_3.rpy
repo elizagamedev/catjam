@@ -1,33 +1,80 @@
 label pucci_date_3:
-    "Since we're meeting at 7 I have time to get something together. Even if I don't want to do the fashion show, I feel like I should still look nice."
+    "Since we're meeting at 7 I have time to get something together. Even if I don't want to do the fashion show, I feel like I should still dress up. To prove a point."
 
-    "I have three possible outfits available to me that might be enough to impress them."
+    "I have three possible aesthetics that I've unpacked from the clothes boxes."
 
     menu fashion_outfit:
         "Vampire-core":
+            $ which_fashion == "vampire"
             jump vampirecore
         "Retro Aerobics-core":
+            $ which_fashion == "aerobics"
             jump aerobicscore
         "Fantasy Hero-core":
-            jump herocore:
+            $ which_fashion == "hero"
+            jump herocore
 
-    label vampirecore
-        pass
+    label vampirecore:
+        "It's spooky season, so of course I brought my vampirecore for Halloween."
+        "It's a white shirt with ruffled sleeves and a lace front and a pair of tight leather pants."
+        "I put on a wig of tousled white hair as an extra touch."
+        "Finally, I draw two dots onto the side of my neck with a permanent marker."
+        "It's perfect."
+    jump runway
 
-    label aerobicscore
-        pass
+    label aerobicscore:
+        "This little town reminds me of something on TV from another time."
+        "A better time."
+        "So I bust out my absolute best 'fit: a retro aerobics workout leotard with matching leg warmers."
+        "The leotard snaps on, skintight."
+        "The leg warmers warm my legs. I'm so dang comfy."
+        "If fashion is about function, then there's no way this won't wow Pucci."
+        "It's perfect."
+    jump runway
 
-    label herocore
-        return
+    label herocore:
+        "If there's one thing I've learned from Pucci, it's that fashion serves a purpose."
+        "And right now, just days from the big exam, I need all the confidence I can get."
+        "So I pull out the green tunic and brown boots."
+        "I buckle a belt around the tunic and put the floppy, conical green hat atop my head."
+        "Finally, I equip my wooden sword across my back."
+        "I'm the spitting image of one of my heroes."
+        "It's perfect."
+    jump runway
 
-    "You've proven yourself to be moderately fashionable."
+
+    label runway:
+        "I meet Pucci outside Catspaw Diner on Main Street."
+        "They've set up a runway with a red carpet and a spotlight."
+        pucci moe "Oh my god, I was so right, you ARE down for the fashion show!"
+
+        menu fashionyesnooo:
+
+            "Actually, fashion sucks. I'm dressed like this ironically.":
+                jump pucci_fail_early
+
+            "Heck yeah I am!":
+                pass
+
+    pucci smug "Excellent. I've put together a panel of judges to give you their most honest feedback about your outfit."
+    pucci happy "All you need to do is strut your stuff down the runway, strike a few poses, and make your way back to the start of the runway. Got that?"
+
+    if which_fashion == "vampire":
+        "text"
+    elif which_fashion == "aerobics":
+        "text"
+    elif which_fashion == "hero":
+        "text"
 
 
-
-
-
-    pucci "talk talk talk"
+    pucci neutral "You've proven yourself to be moderately fashionable."
+    pucci happy "I'm proud of you for trying something new. You did good, darling."
 
     stop music fadeout 3.0
     scene black with irisin
+    return
+
+label pucci_fail_early:
+    pucci annoyed "Wow. I see how it is. I really thought we connected over fashion, but, whatever."
+    pucci annoyed "Don't talk to me again."
     return
