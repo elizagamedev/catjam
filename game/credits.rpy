@@ -11,7 +11,7 @@ define credits_time = 30.0
 transform credits_scroll:
     xcenter 0.5 yanchor 0.0 ypos 0.0
     pause 2.0
-    linear credits_time yanchor 1.0 ypos 0.0
+    linear (credits_time - 2.0) yanchor 1.0 ypos 0.0
 
 screen credits():
     style_prefix "credits"
@@ -36,10 +36,13 @@ screen credits():
             text "Jeanie Choi"
             text "M Ebel"
             text "Eliza Velasquez"
+            null height 50
             label "Music"
             text "Kevin MacLeod (incompetech.com)"
             text "Licensed under Creative Commons: By Attribution 3.0"
-            text "http://creativecommons.org/licenses/by/3.0/"
+            text "http://creativecommons.org/licenses/by/3.0/":
+                color "#aaaaaa"
+            null height 50
             label "Sound Samples"
             text "The following artists created sound samples used or remixed in this work."
             null height 20
@@ -78,19 +81,32 @@ screen credits():
             text "yottasounds, CC 3.0"
             text "Zabuhailo, CC0 1.0"
             null height 20
-            text "https://creativecommons.org/licenses/by-nc/4.0/"
-            text "https://creativecommons.org/licenses/by/3.0/"
-            text "https://creativecommons.org/licenses/by/4.0/"
-            text "https://creativecommons.org/licenses/sampling+/1.0/"
-            text "https://creativecommons.org/publicdomain/zero/1.0/"
+            text "https://creativecommons.org/licenses/by-nc/4.0/":
+                color "#aaaaaa"
+            text "https://creativecommons.org/licenses/by/3.0/":
+                color "#aaaaaa"
+            text "https://creativecommons.org/licenses/by/4.0/":
+                color "#aaaaaa"
+            text "https://creativecommons.org/licenses/sampling+/1.0/":
+                color "#aaaaaa"
+            text "https://creativecommons.org/publicdomain/zero/1.0/":
+                color "#aaaaaa"
+            null height 50
             label "Fonts"
-            text "Atkinson Hyperlegible by the Braille Institute of America, Inc."
+            text "{b}Atkinson Hyperlegible{/b} by the Braille Institute of America, Inc."
             text "Licensed under the Atkinson Hyperlegible Font License"
-            text "https://www.brailleinstitute.org/freefont"
+            text "https://www.brailleinstitute.org/freefont":
+                color "#aaaaaa"
             null height 20
-            text "Itim by Cadson Demak"
+            text "{b}Itim{/b} by Cadson Demak"
             text "Licensed under the Open Font License (OFL)"
-            text "https://openfontlicense.org/"
+            text "https://openfontlicense.org/":
+                color "#aaaaaa"
+            null height 50
+            label "Ren'Py Game Engine"
+            text "Provided under the MIT license and GNU LGPL"
+            text "https://www.renpy.org/doc/html/license.html":
+                color "#aaaaaa"
 
 style credits_hbox:
     spacing 40

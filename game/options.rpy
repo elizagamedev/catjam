@@ -30,6 +30,11 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Created by Jeanie Choi, M Ebel, and Eliza Velasquez.
+
+Source code (Python and Ren'Py files) are licensed under the {a=https://www.gnu.org/licenses/gpl-3.0.en.html}GPL v3.0{/a}. Original art assets are copyright Jeanie Choi, M Ebel, and Eliza Velasquez.
+
+Click {q}Credits{/q} or view CREDITS.txt for a detailed list of third-party attribution and licensing information.
 """)
 
 
@@ -62,7 +67,7 @@ define config.has_voice = False
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "music/Moonlight Hall.mp3"
 
 
 ## Transitions #################################################################
@@ -197,6 +202,7 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+    build.documentation('*.md')
 
 
 ## A Google Play license key is required to perform in-app purchases. It can be

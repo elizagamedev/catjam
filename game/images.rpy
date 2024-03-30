@@ -1,18 +1,24 @@
-# transform splinters_talking:
-#     "splinters talking.png"
-#     pause 0.1
-#     "splinters neutral.png"
-#     pause 0.1
-#     repeat 2
+define longfade = Fade(1.0, 1.0, 1.0)
 
-# image splinters = TalkingDisplayable("unlucky", splinters_talking, "splinters neutral.png")
+transform left:
+    xalign 0.25
+    yalign 1.0
 
-# init python:
-#     def TalkingDisplayable(speaker, talking, neutral):
-#         def func(st, at):
-#             d = talking if _last_say_who == speaker else neutral
-#             return d, None
-#         return DynamicDisplayable(func)
+transform right:
+    xalign 0.75
+    yalign 1.0
+
+transform mirror:
+    xzoom -1.0
+
+define flash = Fade(.25, 0.0, .75, color="#fff")
+
+transform vibrate:
+    xcenter 0.505
+    pause 0.02
+    xcenter 0.495
+    pause 0.02
+    repeat
 
 image bg cafe silver:
     "bg cafe"

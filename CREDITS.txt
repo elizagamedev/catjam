@@ -1,6 +1,12 @@
+# Music
+
 Music by Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
+
+# Sound
+
+This game contains sound effects based on samples from the following sources.
 
 train-station.opus
 https://freesound.org/people/ValentinPetiteau/sounds/656623/
@@ -13,9 +19,6 @@ https://creativecommons.org/licenses/by/4.0/
 creaking.opus
 https://freesound.org/people/SoundDesignForYou/sounds/697746/
 https://creativecommons.org/publicdomain/zero/1.0/
-
-Atkinson Hyperlegible
-https://brailleinstitute.org/wp-content/uploads/2020/11/Atkinson-Hyperlegible-Font-License-2020-1104.pdf
 
 happy.opus, purr.wav
 https://freesound.org/people/14FPanskaZummer_Jakub/sounds/418159/
@@ -100,9 +103,6 @@ https://freesound.org/people/sportygurl37/sounds/120210/
 applause.opus
 https://freesound.org/people/Debsound/sounds/395414/
 
-Itim-Regular.ttf
-https://fonts.google.com/specimen/Itim
-
 plop.opus
 https://freesound.org/people/Robinhood76/sounds/321100/
 
@@ -120,3 +120,11 @@ https://freesound.org/people/mglennsound/sounds/678671/
 
 cough.opus
 https://freesound.org/people/midwestdocumentary/sounds/722623/
+
+# Fonts
+
+Atkinson Hyperlegible
+https://www.brailleinstitute.org/freefont
+
+Itim
+https://fonts.google.com/specimen/Itim

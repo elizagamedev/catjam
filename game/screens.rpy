@@ -319,6 +319,9 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
+        if main_menu:
+            textbutton _("Credits") action Start("credits")
+
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.

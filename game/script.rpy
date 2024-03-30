@@ -108,6 +108,7 @@ default scry_redo = False
 default ending = None
 
 label start:
+    stop music fadeout 3.0
     with dissolve
 
     call initialize
