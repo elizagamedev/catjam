@@ -59,9 +59,6 @@ https://freesound.org/people/keithpeter/sounds/125211/
 shatter.mp3
 https://freesound.org/people/Czarcazas/sounds/330800/
 
-rooster.opus
-https://freesound.org/people/PianoFarm/sounds/583020/
-
 morning.opus
 https://freesound.org/people/barkenov/sounds/251231/
 

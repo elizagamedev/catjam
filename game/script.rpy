@@ -1899,6 +1899,7 @@ label j4potion_nope:
         "Even submitting Gomer's {q}potion{/q} would have been a better outcome than this! Why'd I turn them down like that!?"
     "Oh well. If it means another year in Sablewood, that's not so bad."
     "At least, that's what I tell myself..."
+    pause 1.0
     jump credits
 
 label j4potion_gomer:
@@ -1987,9 +1988,3 @@ label outro_frankie:
 
 label outro_splinters:
     jump credits
-
-label credits:
-
-    # This ends the game.
-
-    return

@@ -5,21 +5,6 @@ label pucci_potion:
     pucci happy "Hello, headmistress! I'm here to present the potion that the three of us worked on together."
     "My witch looks at me in confusion, and I mouth back {q}Just go with it!{/q}"
 
-if pucci_light:
-    label exam_light:
-        pass
-jump pucci_exam
-
-if pucci_transmute:
-    label exam_transmute:
-        pass
-jump pucci_exam
-
-if pucci_poison:
-    label exam_poison
-        pass
-jump pucci_exam
-
 label pucci_exam:
     pucci "Thank you for your time, headmistress."
 
