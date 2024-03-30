@@ -1914,7 +1914,7 @@ label j4potion_pucci:
     stop bg fadeout 0.5
     scene bg room with fade
     "I get a scry from Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
-    pc "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
+    pc thonk "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
     pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
     jump j4exam
 

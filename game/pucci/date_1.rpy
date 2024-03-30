@@ -1,13 +1,17 @@
 label pucci_date_1:
     pc talking "I'd like that!"
 
-    pucci smug "Meet me at Catspaw Diner at 7."
+    pucci smug "Meet me at Catspaw Diner at seven."
 
     pc neutral "See you there!"
 
+    scene bg diner
+    show pucci neutral at center
+    with longfade
+
     pucci neutral "So! Fashion. The thing about fashion is you have to think about what you're trying to accomplish with it."
 
-    pucci talking "Form AND function matters, darling."
+    pucci talking "Form {i}and{/i} function matters, darling."
 
     pucci smug "Picture this: I'm decked out in the most eye-catching attire you can imagine--a neon pink suit that's not just vibrant, but actually flashes in sync with my purring."
 
@@ -23,7 +27,7 @@ label pucci_date_1:
 
     pucci happy "That's what fashion's all about."
 
-    pc thunk "Attention?"
+    pc thonk "Attention?"
 
     pucci blushing "Getting what you want!"
 
@@ -39,13 +43,13 @@ label pucci_date_1:
 
     "They say it with a waggle of their eyebrows and it makes me laugh."
 
-    pc thunk "I wish. But I should probably focus on this potion I've been working on with my witch..."
+    pc thonk "I wish. But I should probably focus on this potion I've been working on with my witch..."
 
     "Pucci blinks at me."
 
     pucci neutral "Why don't you just outsource it?"
 
-    pc thunk "Outsource?"
+    pc thonk "Outsource?"
 
     pucci neutral "You know, like, hire someone else to do it?"
 
@@ -58,6 +62,9 @@ label pucci_date_1:
     "Pucci holds up a paw and stops me."
 
     pucci talking "Let me take care of this, darling. It's no trouble, you just leave it to me."
+
+    $ pucci_potion = True
+    $ pucci_date_count += 1
 
     stop music fadeout 3.0
     scene black with irisin

@@ -22,14 +22,12 @@ label pucci_date:
         pucci "Oh, looking for fashion advice? I can help you out, sure."
     elif (pucci_call_count == 1):
         pc neutral "I really enjoyed spending time with you last time and was wondering if you want to hang out again."
-        pucci "I'd like that. Pick me up at 7, okay? We'll make it a date."
+        pucci "I'd like that. Pick me up at seven, okay? We'll make it a date."
         pc blushing "A-a date? You mean...?"
         pucci "A date!"
     else:
         pc blushing "You down for another date?"
-        pucci "Let's do it. You know the drill, right? See you at 7. Look sharp!"
-
-
+        pucci "Let's do it. You know the drill, right? See you at seven. Look sharp!"
 
     $ date_id = pucci_date_count % len(pucci_dates)
     $ next_pucci_date = pucci_dates[date_id]
