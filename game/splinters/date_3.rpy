@@ -19,7 +19,7 @@ label splinters_date_3:
         "Ooh, the memorial? Sounds interesting. Can I tag along?":
             pass
         "Aw, sorry to hear that. Maybe later then.":
-            splinters "Yeah, maybe some other time! L-later then!"
+            splinters "Yeah, maybe some other time! L-Later then!"
             "They smack the ball {q}off{/q}, then open up a book with a dopey grin on their face."
             "Are those... pictures of Frankie!?"
             "They don't realize that the crystal is still online. I quickly and awkwardly disconnect."
@@ -53,7 +53,7 @@ label splinters_date_3:
 
     show splinters neutral at center with dissolve
 
-    splinters "O-oh hey, [pc]. Th-Thanks for showing up."
+    splinters "O-Oh hey, [pc]. Th-Thanks for showing up."
     pc neutral "Who are your friends?"
 
     mean_ghost "Ooh, who's this? The pipsqueak has a friend?"
@@ -128,7 +128,7 @@ label splinters_date_3:
 
     "We all happily dig into the ghostly pie."
 
-    splinters happy "Y-you know, we could market this into a new venture!"
+    splinters happy "Y-You know, we could market this into a new venture!"
     splinters "We can leverage the ectoplasmic nature of the pie as a new line of diet products."
     splinters moe "IT'LL BE A REVOLUTION IN THE FOOD INDUSTRY!"
 
@@ -220,7 +220,7 @@ label splinters_date_3:
     gertrude "Ooh, isn't this wonderful! Youth is so exuberant!"
     betty "You'll have to indulge me with the details later. I’ve been intrigued by the recipe for a while now."
     betty "This calls for a new vest for our little prince."
-    splinters blushing "A-aw, thanks Betty."
+    splinters blushing "A-Aw, thanks Betty."
     freddy "Darned right, yer finally taking responsibility and manning up to your problems!"
     splinters annoyed "Er, thanks. Freddy. So much help you've b-been."
     nancy "Ugh, you're such a pushover, pipsqueak."
