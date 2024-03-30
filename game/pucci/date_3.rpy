@@ -54,21 +54,26 @@ label pucci_date_3:
                 jump pucci_fail_early
 
             "Heck yeah I am!":
-                pass
+                pucci smug "Excellent. I've put together a panel of judges to give you their most honest feedback about your outfit."
 
-    pucci smug "Excellent. I've put together a panel of judges to give you their most honest feedback about your outfit."
     pucci happy "All you need to do is strut your stuff down the runway, strike a few poses, and make your way back to the start of the runway. Got that?"
+    "I strut my stuff, Yuri managing the spotlight to keep a beam on me as I walk. I almost trip on the carpet at one point but do manage to catch my balance."
+    "When I step off the runway, I'm surrounded by Pucci and their {q}judges{/q}."
 
     if which_fashion == "vampire":
-        "text"
+        splinters "Th-that's so seasonal! Probably good luck. I love it."
+        frankie "That looks hard to work out in. 0 out of 10. Terrible."
     elif which_fashion == "aerobics":
-        "text"
+        splinters "Not... my aesthetic."
+        frankie "That's what I'm talking about! Ready for GAINZ, pussycat!"
+        gomer "This is sooo in style, it's never going out of style, forever sicknasty, dog."
     elif which_fashion == "hero":
-        "text"
+        pucci "Yes! Darling! You look EMPOWERED and READY for adventure! This is the whole POINT of fashion!"
+        yuri "I'm so excited to see you having so much fun! Your outfit is cool :)"
 
 
     pucci neutral "You've proven yourself to be moderately fashionable."
-    pucci happy "I'm proud of you for trying something new. You did good, darling."
+    pucci happy "I'm proud of you for trying something new. You did good, darling. I think you're ready for anything, now."
 
     stop music fadeout 3.0
     scene black with irisin
