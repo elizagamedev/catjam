@@ -1983,7 +1983,7 @@ label festivalscene:
 
     "After the ceremony, my witch and I make our way past the crowd to enjoy the rest of the festival. At the exit leading from the ceremony to the rest of the grounds, a cat catches my eye."
     "My witch gives me a knowing look and tilts her chin towards the cat."
-    "My Witch" "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
+    witch "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
     "I blush and give her a nod."
 
     if ending == "pucci":
@@ -2009,7 +2009,27 @@ label outro_pucci:
     jump credits
 
 label outro_frankie:
-    # TODO FRANKIE
+    "Frankie is busy pretending like they didn't notice me approach."
+
+    show frankie neutral at center with dissolve
+
+    frankie "Oh, jack. Didn't see you there."
+    pc neutral "We both made it, huh?"
+    frankie "Yeah."
+    frankie annoyed "..."
+    frankie "Listen up, jack, 'cuz I'm only gonna do this just once."
+    frankie "As a reward for being such a good assistant."
+    frankie "I'll give you..."
+    pc concern "Give me...?"
+    play sound "sound/purr.opus"
+    frankie "The right to squeeze my guns."
+    frankie neutral "One good squeeze, right here, dig?"
+    "Frankie flexes their right arm at me."
+    frankie smug "Well? Quit lollygagging! Time is money, jack!"
+    scene black with irisin
+    pause 1.0
+    "It was everything I ever imagined."
+    pause 1.0
     jump credits
 
 label outro_splinters:
