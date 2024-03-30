@@ -80,6 +80,7 @@ label pucci_date_3:
     return
 
 label pucci_fail_early:
+    $ pucci_failed == True
     pucci annoyed "Wow. I see how it is. I really thought we connected over fashion, but, whatever."
     pucci annoyed "Don't talk to me again."
     return
