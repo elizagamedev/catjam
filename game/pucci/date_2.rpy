@@ -78,7 +78,19 @@ label pucci_date_2b:
 
     pucci happy "Yeah! But you have to tell me I look AMAZING, I won't accept anything less."
 
+    pucci talking "You know... I'd love to test out your sense of style. I've only seen you in this outfit."
 
+    pucci moe "How about we do a fashion show???"
+
+    menu fashionyesno
+        "I'm in!":
+            pucci blushing "YES!!! Okay, call me next weekend and I'll have it all set up for you."
+            pc "What do you mean {q}all set up{/q}?"
+            pucci talking "Trust the process, darling. It's gonna be GREAT."
+        "No!":
+            pucci smug "Fine, but you're missing out on a fabulous time. I'll ask you again next week to see if you've changed your mind."
+
+    "I wonder what they have in store for me?"
 
 
 
