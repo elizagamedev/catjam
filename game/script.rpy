@@ -1902,7 +1902,8 @@ label j4potion_pucci:
     $ ending = "pucci"
     stop bg fadeout 0.5
     scene bg room with fade
-    "pucci pucci pucci"
+    "I get a scry from Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
+    pucci "Great news! The potion is ready, I'll bring it with me and meet you at the exam."
     jump j4exam
 
 label j4potion_frankie:
@@ -1928,9 +1929,54 @@ label j4exam:
     stop bg fadeout 1.0
     call expression ending + "_potion"
 
-# --outro--
-label outro:
-    "To be continued..."
+
+
+label festivalscene
+
+    "I climb onto the float shaped like a big cauldron, taking a seat on the rim while my feet dangle off the side."
+    "I've joined the other graduates in the parade. Homonculi pull our colorful and wacky floats."
+    "All our witches fly overhead, casting illusory--and some pyromanic--fireworks in celebration of each duo's hard work."
+    "The crowds gathered to watch the parade cheer and shower us with streamers and confetti."
+    "Our efforts paid off. We made it. Now there's just one final ceremony left to do, and we'll be fully fledged witches and familiars."
+
+    "The parade reaches its end and each witch-familiar duo lines up. We take turns being called up to the dias where the headmistress waits."
+    "When we walk up, it's like all I can see is that moment right in front of me. Everything else becomes a blur."
+    "Headmistress" "Congratulations, you two. I am proud to present you with your Witch For Hire license. You're now free to work anywhere with a WFH policy."
+    "I smile up at my witch, who smiles back down at me."
+
+    "After the ceremony, my witch and I make our way past the crowd to enjoy the rest of the festival. At the exit leading from the ceremony to the rest of the grounds, a cat catches my eye."
+    "My witch gives me a knowing look and tilts her chin towards the cat."
+    "My Witch" "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
+    "I blush and give her a nod."
+
+if pucci_potion:
+    jump outro_pucci
+
+if frankie_potion:
+    jump outro_frankie
+
+if splinters_potion:
+    jump outro_splinters
+
+label outro_pucci
+    "I walk over to the fluffy brown cat waiting for me."
+    pc "Pucci! We made it!!"
+    pucci "[pc]! We really did!"
+    pc "What's next for you?"
+    pucci "Well, I was hoping you'd be able to tell me."
+    pc "What do you mean?"
+    pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
+    # put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
+    pucci "What do you think? Should we go out for realsies?"
+jump credits
+
+label outro_frankie
+pass
+jump credits
+
+label outro_splinters
+pass
+jump credits
 
     # This ends the game.
 
