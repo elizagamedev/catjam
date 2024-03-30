@@ -1665,7 +1665,7 @@ label j3beach_umbrella:
 
 label j3witch:
     play sound "sound/night.opus" fadein 2.0
-    call titlecard(17)
+    call titlecard(18)
     scene bg room with Dissolve(1.0)
 
     # TODO: no beach here
@@ -1695,25 +1695,149 @@ label j3witch:
 
 # --weekend 3--
 label j3wke:
-    call awaken(18)
+    call awaken(19)
     "It's Saturday! Something something scry someone!"
     call weekend(j3wke_menuset)
 
 # --Week 4--
 label j4:
-    call awaken(20)
+    call awaken(21)
     "It's about time we prepare our potion demonstration!"
 
-menu j4wk:
-    "Which potion should I go with?"
+    "We've been working so hard at this over the last month, and it's finally time to see the fruits of our labor."
 
-    "My witch's potion":
-        if gomer_angry and gomer_potion:
+    "Everything was ready to go... and then the mice arrived."
+
+    "They seemed like regular ol' mice. Just a few of them noticed here and there."
+
+    "But then they started showing up in numbers, wreaking havoc on the witches."
+
+    "Even so, we still have to get this potion made."
+
+    "My approach this week is..."
+
+menu:
+    "Just vibe it up.":
+        jump j4style_vibe
+
+    "Do it by the book.":
+        jump j4style_book
+
+    "Trial and error. Drink the potion!":
+        jump j4style_trial
+
+label j4style_vibe:
+
+    "I'm pretty sure my witch has this on lock, so I'm not too worried about helping her out."
+
+    "I am, however, worried about these mice."
+
+    "I try my best to Just Vibe It Up, but despite my best efforts these mice have developed a nasty pattern of showing up where they're least wanted."
+
+    "I'm chilling with Gomer in the field in front of my house when we hear a shout from inside."
+
+    jump j4mice
+
+label j4style_book:
+
+    "We've practiced our potion and now it's time to test our mettle."
+
+    "We set up the cauldron at home. I toss in ingredients as my witch measures them out and reads off the instructions."
+
+    witch "Three ounces of chicken of the woods, one stick of silvervine..."
+
+    pc "Witch? What's this potion supposed to do, anyway?"
+
+    witch "I told you, it's a surprise!"
+
+    "I grumble. How am I supposed to know it's going right if I don't know what it's supposed to do?"
+
+    "I guess I should just trust the process."
+
+    "I step outside to sip some catnip tea when we take a lunch break."
+
+    "That's when I hear a shout from inside."
+
+    jump j4mice
+
+label j4style_trial:
+
+    witch "So I think we got the amounts right but we will probably need to finnagle it here and there."
+
+    pc "What's this potion supposed to do, anyway?"
+
+    witch "Well, it's supposed to make you as light as a feather."
+
+    pc "Sooo how do we know if it works?"
+
+    witch "..."
+
+    pc "No."
+
+    witch "I mean, so listen..."
+
+    pc "I'm not going to drink it!"
+
+    witch "What if I say preeetty pleaaase???"
+
+    pc "..."
+
+    witch "Eh??"
+
+    pc "Okay. I'll do it."
+
+    "I lower a spoon into the bubbling cauldron mixture and raise the spoonful to my lips."
+
+    "Nothing happens. Just a gurgling in my stomach."
+
+    pc "I don't feel lighter, my tummy just feels weird."
+
+    witch "Back to the drawing board!"
+
+    "I step outside to get a breath of fresh air. That's when I hear a shout from inside."
+
+    jump j4mice
+
+label j4mice:
+
+    "I rush inside to see my witch trying to fend off three mice."
+
+    "One of the mice jumps into the cauldron."
+
+    "It swallows a good bit of the mixture and starts to float. Then it throws up into the potion."
+
+    witch "NO!"
+
+    pc "NO!"
+
+    "The Floating Mouse" "Squeak?!"
+
+    "Another mouse is scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
+
+    witch "GET OFF ME!!!"
+
+    "The Slipper Mouse" "SQUEAK!"
+
+    "Glass shatters on the stone floor."
+
+    "This is a disaster."
+
+    jump j4wke
+
+label j4wke:
+    call awaken(26)
+    # TODO: explain how the potion is unsalvageable, etc.
+
+menu .ending:
+    "Do I have any backup options?"
+
+    "Nope." if not pucci_potion and not frankie_potion and not splinters_potion and not (gomer_potion and not gomer_angry and not gomer_failed):
+        if gomer_angry and gomer_potion and not gomer_failed:
             jump j4potion_gomer_apology
-        jump j4potion_witch
+        jump j4potion_nope
 
 # IF DATES HAVE BEEN DATED...
-    "Gomer's hair dye {q}potion{/q}" if gomer_potion and not gomer_angry:
+    "Gomer's hair dye {q}potion{/q}" if gomer_potion and not gomer_angry and not gomer_failed:
         jump j4potion_gomer
 
     "Pucci's outsourcing" if pucci_potion:
@@ -1726,7 +1850,7 @@ menu j4wk:
         jump j4potion_splinters
 
 label j4potion_gomer_apology:
-    "As I was about to leave the room, a sudden flash of light came from my crystal."
+    "As I was about to give up all hope, a sudden flash of light came from my crystal."
     play sound "sound/crackle.opus"
     with flash
 
@@ -1749,134 +1873,22 @@ label j4potion_gomer_apology:
     menu(screen="dialog_choice"):
         "Well, {i}I{/i} can. {i}Ciao{/i}.":
             $ gomer_failed = True
-            $ gomer_potion = False
             "I wave my paw and the crystal goes dark."
-            jump j4wk
+            jump j4wke.ending
         "Let's do this.":
             play sound "sound/happy.opus"
             gomer "You're the best, dog."
             jump j4potion_gomer
 
-label j4potion_witch:
-    "We decide to go with my witch's idea. We've been working so hard at this over the last month, and it's finally time to see the fruits of our labor."
-
-    "Everything was ready to go... and then the mice arrived."
-
-    "They seemed like regular ol' mice. Just a few of them noticed here and there."
-
-    "But then they started showing up in numbers, wreaking havoc on the witches."
-
-    "Even so, we still have to get this potion made."
-
-menu j4style:
-    "My approach this week is..."
-
-    "Just vibe it up":
-        jump j4style_vibe
-
-    "Do it by the book":
-        jump j4style_book
-
-    "Trial and error. Drink the potion!":
-        jump j4style_trial
-
-label j4style_vibe:
-
-    "I'm pretty sure my witch has this on lock, so I'm not too worried about helping her out."
-
-    "I am, however, worried about these mice."
-
-    "I try my best to Just Vibe It Up, but despite my best efforts these mice have developed a nasty pattern of showing up where they're least wanted."
-
-    "I'm chilling with Gomer in the field in front of my house when we hear a shout from inside."
-
-jump j4mice
-
-label j4style_book:
-
-    "We've practiced our potion and now it's time to test our mettle."
-
-    "We set up the cauldron at home. I toss in ingredients as my witch measures them out and reads off the instructions."
-
-    "My Witch" "Three ounces of chicken of the woods, one stick of silvervine..."
-
-    pc "Witch? What's this potion supposed to do, anyway?"
-
-    "My Witch" "I told you, it's a surprise!"
-
-    "I grumble. How am I supposed to know it's going right if I don't know what it's supposed to do?"
-
-    "I guess I should just trust the process."
-
-    "I step outside to sip some catnip tea when we take a lunch break."
-
-    "That's when I hear a shout from inside."
-
-jump j4mice
-
-
-label j4style_trial:
-
-    "My Witch" "So I think we got the amounts right but we will probably need to finnagle it here and there."
-
-    pc "What's this potion supposed to do, anyway?"
-
-    "My Witch" "Well, it's supposed to make you as light as a feather."
-
-    pc "Sooo how do we know if it works?"
-
-    "My Witch" "..."
-
-    pc "No."
-
-    "My Witch" "I mean, so listen..."
-
-    pc "I'm not going to drink it!"
-
-    "My Witch" "What if I say preeetty pleaaase???"
-
-    pc "..."
-
-    "My Witch" "Eh??"
-
-    pc "Okay. I'll do it."
-
-    "I lower a spoon into the bubbling cauldron mixture and raise the spoonful to my lips."
-
-    "Nothing happens. Just a gurgling in my stomach."
-
-    pc "I don't feel lighter, my tummy just feels weird."
-
-    "My Witch" "Back to the drawing board!"
-
-    "I step outside to get a breath of fresh air. That's when I hear a shout from inside."
-
-jump j4mice
-label j4mice:
-
-    "I rush inside to see my witch trying to fend off three mice."
-
-    "One of the mice jumps into the cauldron."
-
-    "It swallows a good bit of the mixture and starts to float. Then it throws up into the potion."
-
-    "My Witch" "NO!"
-
-    pc "NO!"
-
-    "The Floating Mouse" "Squeak?!"
-
-    "Another mouse is scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
-
-    "My Witch" "GET OFF ME!!!"
-
-    "The Slipper Mouse" "SQUEAK!"
-
-    "Glass shatters on the stone floor."
-
-    "This is a disaster."
-
-jump j4wke
+label j4potion_nope:
+    play music "music/Porch Blues.mp3"
+    scene black with irisin
+    "With no potion to present during the exam, my witch and I were left with no choice but to spend another year apprenticing."
+    if gomer_potion:
+        "Even submitting Gomer's {q}potion{/q} would have been a better outcome than this! Why'd I turn them down like that!?"
+    "Oh well. If it means another year in Sablewood, that's not so bad."
+    "At least, that's what I tell myself..."
+    jump credits
 
 label j4potion_gomer:
     $ ending = "gomer"
@@ -1898,7 +1910,7 @@ label j4potion_frankie:
     stop bg fadeout 0.5
     scene bg room with fade
     "I contact Frankie to ask about their potion."
-    "To my surprise, they'd already spent all of Sunday perfecting it."
+    "To my relief, they'd already spent all week perfecting it."
     "I'm feeling really good about our chances!"
     jump j4rats
 
@@ -1912,12 +1924,6 @@ label j4potion_splinters:
 label j4rats:
     "We're rats, we're rats, we're the rats"
     jump j4wke
-
-# --weekend 4--
-label j4wke:
-    call awaken(24)
-    "It's Saturday! Something something scry someone!"
-    call weekend(j4wke_menuset)
 
 # --outro--
 label outro:
