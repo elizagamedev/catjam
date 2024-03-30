@@ -1,3 +1,5 @@
+default which_fashion = None
+
 label pucci_date_3:
     "Since we're meeting at 7 I have time to get something together. Even if I don't want to do the fashion show, I feel like I should still dress up. To prove a point."
 
@@ -5,13 +7,13 @@ label pucci_date_3:
 
     menu fashion_outfit:
         "Vampire-core":
-            $ which_fashion == "vampire"
+            $ which_fashion = "vampire"
             jump vampirecore
         "Retro Aerobics-core":
-            $ which_fashion == "aerobics"
+            $ which_fashion = "aerobics"
             jump aerobicscore
         "Fantasy Hero-core":
-            $ which_fashion == "hero"
+            $ which_fashion = "hero"
             jump herocore
 
     label vampirecore:
@@ -49,7 +51,6 @@ label pucci_date_3:
         pucci moe "Oh my god, I was so right, you ARE down for the fashion show!"
 
         menu fashionyesnooo:
-
             "Actually, fashion sucks. I'm dressed like this ironically.":
                 jump pucci_fail_early
 
@@ -80,7 +81,7 @@ label pucci_date_3:
     return
 
 label pucci_fail_early:
-    $ pucci_failed == True
+    $ pucci_failed = True
     pucci annoyed "Wow. I see how it is. I really thought we connected over fashion, but, whatever."
     pucci annoyed "Don't talk to me again."
     return
