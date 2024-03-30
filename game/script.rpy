@@ -1903,7 +1903,8 @@ label j4potion_pucci:
     stop bg fadeout 0.5
     scene bg room with fade
     "I get a scry from Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
-    pucci "Great news! The potion is ready, I'll bring it with me and meet you at the exam."
+    pc "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
+    pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
     jump j4exam
 
 label j4potion_frankie:
@@ -1925,7 +1926,10 @@ label j4potion_splinters:
 label j4exam:
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
-    "something something something gonna present a thing woo"
+    "We get to the exam room at the university. It's full of empty desk chairs, and the only other person in the room is the headmistress."
+    "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to hearing about the potion you've prepared."
+    "My witch and I look at each other nervously."
+    "The door slides open with a crash, the impact causing a piece of chalk to fall from the whiteboard ledge."
     stop bg fadeout 1.0
     jump expression ending + "_potion"
 
