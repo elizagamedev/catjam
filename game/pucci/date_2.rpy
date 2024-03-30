@@ -1,3 +1,5 @@
+default which_pucci_potion = None
+
 label pucci_date_2:
 
     "Pucci invites me to the horticultural center."
@@ -16,7 +18,7 @@ label pucci_date_2:
 
     pucci talking "How do you feel about getting dirty?"
 
-    menu dirty:
+    menu:
 
         "I don't mind it.":
             pucci moe "Great! That's great. Oh, thank goodness."
@@ -53,20 +55,16 @@ label pucci_date_2:
 
     pucci talking "Speaking of the outsourcing, I narrowed down a few options for you: a light potion, a transmutation potion, or a potion of poison resistance. Which do you want?"
 
-    menu pucci_potion_choice:
-
+    menu:
         "Light potion":
+            $ which_pucci_potion = "light"
             pucci moe "I'm pretty sure they can make it like a rave. Amazing choice, darling."
-                jump pucci_date_2b
         "Transmutation potion":
+            $ which_pucci_potion = "transmutation"
             pucci talking "You won't regret it. Heehee."
-                jump pucci_date_2b
         "Potion of poison resistance":
+            $ which_pucci_potion = "resistance"
             pucci talking "That's what I'm talkin' about. Let's freaking go."
-                jump pucci_date_2b
-
-
-label pucci_date_2b:
 
     pucci neutral "With that sorted out, let's keep walking! I wanna get eyes on the veggies I've been keeping track of. I'm {i}not{/i} going to be pulling them up, though."
 
