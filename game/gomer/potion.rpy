@@ -69,4 +69,5 @@ label gomer_potion:
     pc dyed thonk "Guess so."
 
     scene black with irisin
+    pause 1.0
     jump credits
