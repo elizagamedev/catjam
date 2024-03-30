@@ -1895,15 +1895,15 @@ label j4potion_gomer:
     stop bg fadeout 0.5
     scene bg room with fade
     "I go over the details of the {q}potion{/q} once more with Gomer."
-    "I'm not exactly the most confident about this plan, but I can't let them down."
-    jump j4rats
+    "I'm not exactly the most confident about this plan, but I don't have much of a choice..."
+    jump j4exam
 
 label j4potion_pucci:
     $ ending = "pucci"
     stop bg fadeout 0.5
     scene bg room with fade
     "pucci pucci pucci"
-    jump j4rats
+    jump j4exam
 
 label j4potion_frankie:
     $ ending = "frankie"
@@ -1912,18 +1912,21 @@ label j4potion_frankie:
     "I contact Frankie to ask about their potion."
     "To my relief, they'd already spent all week perfecting it."
     "I'm feeling really good about our chances!"
-    jump j4rats
+    jump j4exam
 
 label j4potion_splinters:
     $ ending = "splinters"
     stop bg fadeout 0.5
     scene bg room with fade
     "splinter splinter splinters"
-    jump j4rats
+    jump j4exam
 
-label j4rats:
-    "We're rats, we're rats, we're the rats"
-    jump j4wke
+label j4exam:
+    scene bg festival with fade
+    play bg "sound/meadow.opus" fadein 1.0
+    "something something something gonna present a thing woo"
+    stop bg fadeout 1.0
+    call expression ending + "_potion"
 
 # --outro--
 label outro:
