@@ -30,4 +30,4 @@ label frankie_potion:
     "The headmistress seemed really impressed with our work."
     "Well, really, Frankie's work--but they were willing to cut me in on the credit."
     "It looks like we'll both be graduating together!"
-    return
+    jump festivalscene

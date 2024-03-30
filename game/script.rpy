@@ -1927,11 +1927,9 @@ label j4exam:
     play bg "sound/meadow.opus" fadein 1.0
     "something something something gonna present a thing woo"
     stop bg fadeout 1.0
-    call expression ending + "_potion"
+    jump expression ending + "_potion"
 
-
-
-label festivalscene
+label festivalscene:
 
     "I climb onto the float shaped like a big cauldron, taking a seat on the rim while my feet dangle off the side."
     "I've joined the other graduates in the parade. Homonculi pull our colorful and wacky floats."
@@ -1949,16 +1947,16 @@ label festivalscene
     "My Witch" "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
     "I blush and give her a nod."
 
-if pucci_potion:
-    jump outro_pucci
+    if pucci_potion:
+        jump outro_pucci
 
-if frankie_potion:
-    jump outro_frankie
+    if frankie_potion:
+        jump outro_frankie
 
-if splinters_potion:
-    jump outro_splinters
+    if splinters_potion:
+        jump outro_splinters
 
-label outro_pucci
+label outro_pucci:
     "I walk over to the fluffy brown cat waiting for me."
     pc "Pucci! We made it!!"
     pucci "[pc]! We really did!"
@@ -1968,15 +1966,15 @@ label outro_pucci
     pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
     # put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
     pucci "What do you think? Should we go out for realsies?"
-jump credits
+    jump credits
 
-label outro_frankie
-pass
-jump credits
+label outro_frankie:
+    jump credits
 
-label outro_splinters
-pass
-jump credits
+label outro_splinters:
+    jump credits
+
+label credits:
 
     # This ends the game.
 

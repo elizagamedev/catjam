@@ -5,4 +5,4 @@ label pucci_potion:
 
     stop music fadeout 3.0
     scene black with irisin
-    return
+    jump festivalscene
