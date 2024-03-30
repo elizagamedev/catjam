@@ -18,4 +18,8 @@ image bg cafe silver:
     "bg cafe"
     matrixcolor SaturationMatrix(0.2) * BrightnessMatrix(0.2)
 
+image bg festival night:
+    "bg festival"
+    matrixcolor SaturationMatrix(0.4) * TintMatrix("#6289ff")
+
 define flashback = SepiaMatrix()

@@ -22,6 +22,7 @@ label splinters_date:
     $ state = "newly" if splinters_date_count == 3 else "very"
     "Splinters crackles into view, licking a freshly-tenderized paw. They're adjusting the [state] cracked crystal ball back into place."
 
+    # TODO: splinters may not no PC name
     splinters "S-sorry about that. Oh! [pc], what's up?"
 
     if (splinters_call_count == 0):

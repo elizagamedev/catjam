@@ -30,7 +30,7 @@ define october = [
     ("Monday", "Twenty-eighth"),
     ("Tuesday", "Twenty-ninth"),
     ("Wednesday", "Thirtieth"),
-    ("Thursday", "Thirty-first"),
+    ("Halloween", "Thirty-first"),
 ]
 
 default calendar_day = 0

@@ -9,7 +9,7 @@ label gomer_date_2:
         "Ten-Four.":
             gomer "Ten... ten four? {w=1.0}What? Oh, wait. Oh. Oh, I get it."
             gomer "Roger. Ten-Four. Uh. Let's, uh... {w=.5}twenty... {w=.5}at... {w=.5}four o'clock."
-            gomer "Two o'clock like, the time. Not like, the--not like the, direction."
+            gomer "Four o'clock like, the time. Not like, the--not like the, direction."
             gomer "Let's four o'clock-- {w=.5}Let's twenty-- {w=.5}Let's meet behind the Catspaw Diner. Over."
 
             "The crystal goes dark."
@@ -52,7 +52,7 @@ label gomer_date_2:
     scene bg market with fade
     play music "music/Cattails.mp3"
 
-    "For such a remote town, TOWN NAME HERE's marketplace is almost as busy as some of the streets in my old city."
+    "For such a remote town, Sablewood's marketplace is almost as busy as some of the streets in my old city."
     "I climb up on a balcony above a grocer to get a better view above the crowd."
     "Oh, I think I see it."
 
@@ -193,6 +193,20 @@ label gomer_date_2:
     "Gomer wipes their paw off it on the bark of a tree."
     gomer "I guess I overreacted."
 
+    scene bg alley with longfade
+    play bg "sound/night.opus" fadein 1.0
+
+    gomer "Okay... wait... okay, done."
+
+    show gomer smug at center with dissolve
+
+    gomer "Now that's a potion right there, dog."
+
+    "Gomer proudly holds up the newly topped-off, rhinestone-studded bottle."
+    "I'd say the real magic is how much it makes my head hurt just by looking at it."
+
+    jump .invitation
+
 label .bottle:
     scene bg alley with longfade
     play bg "sound/night.opus" fadein 1.0
@@ -225,6 +239,8 @@ label .bottle:
             return
 
     gomer blushing "Wow, dog. You're like, some kind of genius or something."
+
+label .invitation:
     gomer talking "Hey, uh..."
     gomer neutral "..."
     gomer "You wanna like..."

@@ -35,7 +35,7 @@ label pucci_date_2:
 
     pucci smug "But I hate getting dirty."
 
-    pc thunk "Is this your {q}getting dirty{/q} outfit?"
+    pc thonk "Is this your {q}getting dirty{/q} outfit?"
 
     pucci happy "Heavens, no. I dressed for function, and I didn't intend to get dirty."
 

@@ -37,8 +37,7 @@ label splinters_date_3:
 
             splinters "..."
 
-            show splinters worried
-            splinter "Oh, oh no… I-I DIDN'T MEAN IT LIKE THAT. ER…"
+            splinters "Oh, oh no… I-I DIDN'T MEAN IT LIKE THAT. ER…"
             "Splinters hangs up abruptly."
             stop music fadeout 1.0
             $ scry_redo = True
@@ -237,4 +236,5 @@ label splinters_date_3:
     "It looked like Splinters’ luck was turning around after all."
     stop music fadeout 3.0
     $ splinters_date_count += 1
+    $ splinters_potion = True
     return

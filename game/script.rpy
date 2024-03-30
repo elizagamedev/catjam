@@ -122,6 +122,8 @@ label start:
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
+    # TODO: mention town name here
+
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday life coming from the cozy little college town we'll call home for at least the next month."
 
     "We're here for the regional finals test being held at the nearby university. There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us the ropes."
@@ -858,6 +860,7 @@ label j1witch:
 # talk to each character, choose 1 to hangout with
 label j1wke:
     call awaken(5)
+    # TODO: placeholder dialog
     "It's Saturday! Something something scry someone!"
     call weekend(j1wke_menuset)
 
@@ -1320,6 +1323,7 @@ label j2witch:
 # --weekend 2--
 label j2wke:
     call awaken(12)
+    # TODO: placeholder dialog
     "It's Saturday! Something something scry someone!"
     call weekend(j2wke_menuset)
 
@@ -1677,6 +1681,7 @@ label j3witch:
 # --weekend 3--
 label j3wke:
     call awaken(19)
+    # TODO: placeholder dialog
     "It's Saturday! Something something scry someone!"
     call weekend(j3wke_menuset)
 
@@ -1838,6 +1843,7 @@ label j4mice:
 label j4wke:
     call awaken(26)
     # TODO: explain how the potion is unsalvageable, etc.
+    "oh no shit's fucked help what do i do"
 
 menu .ending:
     "Do I have any backup options?"
@@ -1857,7 +1863,7 @@ menu .ending:
     "Frankie's time-dilation potion" if frankie_potion:
         jump j4potion_frankie
 
-    "Splinters' IDEA" if splinters_potion:
+    "Splinters' good luck potion" if splinters_potion:
         jump j4potion_splinters
 
 label j4potion_gomer_apology:
@@ -1887,9 +1893,11 @@ label j4potion_gomer_apology:
             "I wave my paw and the crystal goes dark."
             jump j4wke.ending
         "Let's do this.":
+            $ ending = "gomer"
             play sound "sound/happy.opus"
             gomer "You're the best, dog."
-            jump j4potion_gomer
+            pc happy "I'll see you at the exam."
+            jump j4exam
 
 label j4potion_nope:
     play music "music/Porch Blues.mp3"
@@ -1905,38 +1913,50 @@ label j4potion_nope:
 label j4potion_gomer:
     $ ending = "gomer"
     stop bg fadeout 0.5
-    scene bg room with fade
-    "I go over the details of the {q}potion{/q} once more with Gomer."
-    "I'm not exactly the most confident about this plan, but I don't have much of a choice..."
+    play sound "sound/crackle.opus"
+    with flash
+    pc thonk "Hey, Gomer."
+    pc thonk "Let's uh... Let's do this."
     jump j4exam
 
 label j4potion_pucci:
     $ ending = "pucci"
     stop bg fadeout 0.5
-    scene bg room with fade
+    play sound "sound/crackle.opus"
+    with flash
     "I get a scry from Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
     pc thonk "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
+    # TODO: not an exam room
     pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
     jump j4exam
 
 label j4potion_frankie:
     $ ending = "frankie"
     stop bg fadeout 0.5
-    scene bg room with fade
-    "I contact Frankie to ask about their potion. To my relief, they'd already spent all week perfecting it."
-    "I'm feeling really good about our chances!"
+    "I contact Frankie in a panic."
+    play sound "sound/crackle.opus"
+    with flash
+    pc concern "Hey, Frankie. Please tell me you finished that potion you were talking about?"
+    frankie "Take it easy, jack. I've got it right here."
+    pc concern "Thank the stars. Are you still willing to have me as your assistant?"
+    frankie "Can't believe you'd even ask that, jack. Of course I am."
+    play sound "sound/happy.opus"
+    pc happy "Okay! I'll see you at the exam!"
     jump j4exam
 
 label j4potion_splinters:
     $ ending = "splinters"
     stop bg fadeout 0.5
-    scene bg room with fade
-    "splinter splinter splinters"
+    "I call up Splinters. If anyone could empathize with my bad luck, it was them."
+    splinters "Oh, hey [pc]! What's up?"
+    pc thonk "Listen, my luck turned on me and now I need a new potion, stat. Do you think we could partner up?"
+    splinters "Oh, of course! I c-couldn't have g-gotten this far without you! See you there!"
     jump j4exam
 
 label j4exam:
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
+    # TODO: not a university hall
     "We get to the exam room at the university. It's full of empty desk chairs, and the only other person in the room is the headmistress."
     "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to hearing about the potion you've prepared."
     "My witch and I look at each other nervously."
@@ -1945,6 +1965,9 @@ label j4exam:
     jump expression ending + "_potion"
 
 label festivalscene:
+    call titlecard(31)
+    scene bg festival night with Dissolve(1.0)
+    play music "music/When The Wind Blows.mp3"
 
     "I climb onto the float shaped like a big cauldron, taking a seat on the rim while my feet dangle off the side."
     "I've joined the other graduates in the parade. Homonculi pull our colorful and wacky floats."
@@ -1962,14 +1985,15 @@ label festivalscene:
     "My Witch" "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
     "I blush and give her a nod."
 
-    if pucci_potion:
+    if ending == "pucci":
         jump outro_pucci
-
-    if frankie_potion:
+    elif ending == "frankie":
         jump outro_frankie
-
-    if splinters_potion:
+    elif ending == "splinters":
         jump outro_splinters
+    else:
+        "You must be a witch if you made it here!"
+        return
 
 label outro_pucci:
     "I walk over to the fluffy brown cat waiting for me."
@@ -1984,7 +2008,55 @@ label outro_pucci:
     jump credits
 
 label outro_frankie:
+    # TODO FRANKIE
     jump credits
 
 label outro_splinters:
+    show splinters happy with dissolve
+    splinters "[pc]! Hey!"
+
+    "Splinters is beaming. They hug me."
+
+    splinters "WE MADE IT!"
+    show splinters moe
+    splinters "WE WERE AWESOME!"
+
+    pc happy "Yeah, looks like we make a pretty good team."
+
+    show splinters happy
+    splinters "I… I owe you a lot, [pc]. Thanks for putting up with me."
+
+    pc neutral "Sure, it was fun. I like talking to you."
+    pc talking "You're unique and have interesting ideas."
+
+    show splinters blushing
+
+    splinters "Yeah? Thanks!"
+    splinters "I… I like how upbeat you are!"
+
+    show splinters neutral
+
+    splinters "I think, even without the cure, I learned how to be happy with the good parts of life, thanks to you."
+    splinters "It wasn't that I was unlucky. I just got stuck on the bad parts of life."
+
+    show splinters blushing
+
+    splinters "Thanks to you, though, I remembered all the good parts of life."
+
+    show splinters happy
+
+    splinters "It was fun! And I forgot about being scared!"
+
+    pc neutral "Thanks, Splinters. Same. I had fun too."
+    pc happy "We can always back each other up when luck turns for the worse."
+
+    show splinters blushing
+
+    splinters "Yeah. I… I like the sound of that!"
+
+    "With that, Splinters and I walk off with our paws together."
+    "We can face anything as long as we’re there for each other."
+
+    scene black with irisin
+    pause 1.0
     jump credits
