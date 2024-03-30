@@ -14,9 +14,9 @@ label frankie_date_3:
     frankie "I need a diversion. You in?"
 
     menu(screen="dialog_choice"):
-        "You bet your boots!":
+        "You bet your boots!" ("happy"):
             pass
-        "No. I just called to waste your time. LOL.":
+        "No. I just called to waste your time. LOL." ("talking"):
             $ frankie_failed = True
             $ scry_redo = True
             play sound "sound/growl.opus"
@@ -99,8 +99,8 @@ label frankie_date_3:
 
     frankie talking "Five."
 
-    menu(screen = "dialog_choice"):
-        "Go easy on them, Frankie!":
+    menu(screen="dialog_choice"):
+        "Go easy on them, Frankie!" ("concern"):
             play sound "sound/hiss.opus"
             show gomer neutral
 
@@ -110,7 +110,7 @@ label frankie_date_3:
             frankie talking "Now get to it!"
             hide gomer with dissolve
             "Gomer scurries off and begins a pained trod around the pier."
-        "You heard the cat! Get to it!":
+        "You heard the cat! Get to it!" ("talking"):
             if gomer_date_count >= 1 and not gomer_failed:
                 show gomer upset
                 "Gomer stares at me, tears welling up in their eyes, before scurrying off."

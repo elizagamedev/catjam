@@ -15,9 +15,9 @@ label gomer_date_1:
     gomer "Actually, now you've got me thinking. You like music?"
 
     menu(screen="dialog_choice"):
-        "Sure.":
+        "Sure." ("talking"):
             pass
-        "Not really.":
+        "Not really." ("thonk"):
             gomer "Oh."
             gomer "..."
             gomer "Actually, I just remembered I had, like, a dentist appointment."
@@ -34,17 +34,17 @@ label gomer_date_1:
 
     gomer "Sweet. I got tickets-- {w=1.0}Well, I know how to get tickets for this live music place. Really cool vibe, you know, compared to like, you know, most things."
 
-    menu .time(screen = "dialog_choice"):
+    menu .time(screen="dialog_choice"):
         set trashcat_time_menuset
-        "What kind of music?":
+        "What kind of music?" ("thonk"):
             gomer "You know... the kind you listen to."
             jump .time
 
-        "What time should we meet?":
+        "What time should we meet?" ("thonk"):
             gomer "Time? Uh... is now good?"
             jump .time
 
-        "Where should we meet?":
+        "Where should we meet?" ("thonk"):
             pass
 
     gomer "Uh, how about central station?"
@@ -70,15 +70,15 @@ label gomer_date_1:
 
     gomer "What's crackin'?"
 
-    menu(screen = "dialog_choice"):
-        "Sorry, I got lost. Did I make you wait?":
+    menu(screen="dialog_choice"):
+        "Sorry, I got lost. Did I make you wait?" ("concern"):
             gomer "Huh? No. I just got here."
 
-        "Deez nuts!":
+        "Deez nuts!" ("talking"):
             gomer happy "Oh, haha. You got me good, dog."
             gomer smug "Hah. Been a while since I heard that one. {i}Sniff.{/i}"
 
-        "What's that smell?":
+        "What's that smell?" ("concern"):
             gomer talking "Smell? Huh? {w=1.0}Oh, like, the train smoke? They just, uh, smell like that."
             pc thonk "Right..."
 
@@ -118,26 +118,26 @@ label gomer_date_1:
     gomer smug "I mean, church music is okay too, like, if you're like, religious."
     gomer "Oh yeah, uh, like, keep your voice down."
 
-    menu(screen = "dialog_choice"):
-        "I thought you got tickets?":
+    menu(screen="dialog_choice"):
+        "I thought you got tickets?" ("concern"):
             gomer talking "Huh? Tickets? Oh, haha, uh. That was like, a metaphor."
             gomer smug "Don't worry, dog. Nobody even, like, looks up. And its dark and loud."
 
             "Gomer scratches the back of their ear."
 
-        "Why aren't we going through the door?":
+        "Why aren't we going through the door?" ("thonk"):
             gomer talking "What? The door? Oh, uh. Haha. Look, I, uh, those tickets? They were all sold out, haha... Actually though."
             gomer smug "But hey, like, nobody's gonna care about a couple of, like, little guys like us. Up here."
 
-    menu(screen = "dialog_choice"):
-        "If you say so...":
+    menu(screen="dialog_choice"):
+        "If you say so..." ("thonk"):
             show gomer blushing
             "Gomer lights up."
 
             gomer "Sicknasty. Right on. Yeah, I got the vibe you'd be like, chill about this stuff, haha."
             gomer "Alright, see you inside."
 
-        "I'm going home.":
+        "I'm going home." ("thonk"):
             $ gomer_failed = True
 
             "Gomer stops mid-scratch and slowly lowers their paw back on St. Gertrude's palm."
@@ -173,17 +173,17 @@ label gomer_date_1:
     gomer smug "I'm gonna be real, dog. I haven't made any progress at all on our thing."
     gomer "Like, I like, I dunno. I think they should have made it more clear that, like, some of the textbooks were in Latin? On the pamphlet? Was I supposed to know that?"
 
-    menu(screen = "dialog_choice"):
-        "Maybe I could help.":
+    menu(screen="dialog_choice"):
+        "Maybe I could help." ("happy"):
             play sound "sound/purr.opus"
             show gomer blushing
             "Gomer purrs and turns their head away, embarrassed."
 
             gomer "Haha. Thanks. Actually, uh, I have an idea."
-        "How is your witch handling it?":
+        "How is your witch handling it?" ("concern"):
             gomer talking "My witch? Huh? Oh. She's like, uh, she can't read, like, that stuff either."
             gomer neutral "I actually, kinda have an idea."
-        "Me neither, honestly...":
+        "Me neither, honestly..." ("thonk"):
             "A relieved smile creeps across Gomer's face."
 
             gomer happy "Haha... Yeah... Okay. It's not just me. Thought, thought maybe it was just me, haha."
@@ -196,19 +196,19 @@ label gomer_date_1:
 
     gomer talking "Like... think about it, dog. What comes in a bottle and goes on hair? Or like, what comes in a bottle, goes on hair, and is like, magic?"
 
-    menu(screen = "dialog_choice"):
-        "Shampoo?":
+    menu(screen="dialog_choice"):
+        "Shampoo?" ("thonk"):
             show gomer smug
             "Gomer grins."
 
             gomer "Nah, dog, even better."
-        "Conditioner?":
+        "Conditioner?" ("thonk"):
             show gomer neutral
             "Gomer tilts their head."
 
             gomer "Conditioner...? What? No, dog, I looked at the rules all over and I didn't see any, like, conditions."
             gomer "Anyway, like..."
-        "Dye?":
+        "Dye?" ("thonk"):
             show gomer happy
             "Gomer grins."
 
@@ -223,15 +223,15 @@ label gomer_date_1:
 
     gomer "I just need, well, you know, a cat, to uh, transform."
 
-    menu .quest1(screen = "dialog_choice"):
+    menu .quest1(screen="dialog_choice"):
         set trashcat_quest1_menuset
-        "Let's do it.":
+        "Let's do it." ("happy"):
             pass
-        "Isn't that cheating?":
+        "Isn't that cheating?" ("concern"):
             gomer annoyed "Huh? What? Cheating? I don't cheat, dog. This isn't cheating."
             gomer "Look, they said this was all about using our brains and stuff, right? Well this is some real big brain hour stuff if you ask me, dog."
             jump .quest1
-        "That's a terrible idea.":
+        "That's a terrible idea." ("thonk"):
             $ gomer_failed = True
 
             show gomer upset

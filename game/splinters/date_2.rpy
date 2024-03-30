@@ -12,9 +12,9 @@ label splinters_date_2:
     "I stare at his cracked, blurry visage in the ball."
 
     menu(screen="dialog_choice"):
-        "We could go to the marketplace? Get some new items, replacement items...":
+        "We could go to the marketplace? Get some new items, replacement items..." ("talking"):
             pass
-        "Let's hit up the donation center, because your crystal ball is a charity case.":
+        "Let's hit up the donation center, because your crystal ball is a charity case." ("thonk"):
             $ splinters_failed = True
             $ scry_redo = True
             splinters "Er... okay. How about you go by yourself?"
@@ -70,7 +70,7 @@ label splinters_date_2:
     splinters "Let's dig in! What do you want? My treat!"
 
     menu(screen="dialog_choice"):
-        "Let's get the carrot cornucopia. I heard it's the latest health craze.":
+        "Let's get the carrot cornucopia. I heard it's the latest health craze." ("talking"):
             show splinters neutral
             splinters "Carrots? Like, like vegetables?"
             splinters "..."
@@ -129,14 +129,14 @@ label splinters_date_2:
             "You marveled at the buffness of Frankie's gut, both inside and out, and then you sprint off yourself for the day."
 
             return
-        "The kerfluffle cakes sound good!":
+        "The kerfluffle cakes sound good!" ("happy"):
             show splinters blushing
 
             "Splinter's eyes shine with excitement."
 
             splinters "Alright, let's do it then!"
 
-        "How about cornrats?":
+        "How about cornrats?" ("talking"):
             splinters "Sure, cornrats sound good!"
             "We head over to the vendor, where they hand us a half dozen stalks of nice, juicy roasted rats wrapped in cricket meal."
             "The hot crispy exterior gives way to a soft, tender juicy interior. The rats have been expertly deboned."

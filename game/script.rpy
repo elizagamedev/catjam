@@ -223,13 +223,13 @@ label dinerintro:
     pucci_unk "This is perfect. What do you think of my new ribbon?"
 
 menu pucci_ribbon(screen="dialog_choice"):
-    "It suits your fur so nicely!":
+    "It suits your fur so nicely!" ("happy"):
         jump p_r_nicely
 
-    "It's... good?":
+    "It's... good?" ("thonk"):
         jump p_r_good
 
-    "Eh.":
+    "Eh." ("thonk"):
         jump p_r_eh
 
 label p_r_nicely:
@@ -448,16 +448,16 @@ label j1records:
 menu j1records_alec(screen="dialog_choice"):
     set j1records_alec_menuset
 
-    "You got any games on your phone?":
+    "You got any games on your phone?" ("happy"):
         jump j1records_games
 
-    "I'm here to find out what your secrets are.":
+    "I'm here to find out what your secrets are." ("talking"):
         jump j1records_secrets
 
-    "What are you reading?":
+    "What are you reading?" ("concern"):
         jump j1records_reading
 
-    "Nice talking to you." if j1records_alec_menuset:
+    "Nice talking to you." ("happy") if j1records_alec_menuset:
         jump j1records_outro
 
 label j1records_games:
@@ -573,10 +573,10 @@ label j1vineyard:
 
 menu explore_vineyard_question(screen="dialog_choice"):
 
-    "Uh, no thanks. I'll stay with the tour group.":
+    "Uh, no thanks. I'll stay with the tour group." ("thonk"):
         jump explore_vineyard_alone
 
-    "Sure, why not?":
+    "Sure, why not?" ("happy"):
         jump explore_vineyard_wpucci
 
 label explore_vineyard_alone:
@@ -668,9 +668,9 @@ label j1study:
     "At this point an intervention might be a mercy."
 
 menu j1study_choice(screen="dialog_choice"):
-    "Psst, hey Splinters, can you help me with something?":
+    "Psst, hey Splinters, can you help me with something?" ("concern"):
         jump j1study_helpsplinters
-    "That's so not my business.":
+    "That's so not my business." ("thonk"):
         jump j1study_walkaway
 
 label j1study_helpsplinters:
@@ -775,11 +775,11 @@ label j1gym:
     frankie "I knew you were as cool as a cucumber the moment I saw you. So what's the skinny for today? Pumping iron? Ass to grass?"
 
 menu j1gym_choice(screen="dialog_choice"):
-    "Pumping iron.":
+    "Pumping iron." ("talking"):
         jump j1gym_arms
-    "Ass to grass.":
+    "Ass to grass." ("talking"):
         jump j1gym_legs
-    "I'm just watching.":
+    "I'm just watching." ("thonk"):
         jump j1gym_none
 
 label j1gym_arms:
@@ -1571,9 +1571,9 @@ label j3beach:
     "I reach a paw down and help Gomer up."
 
 menu j3beach_board(screen="dialog_choice"):
-    "Heck yes.":
+    "Heck yes." ("happy"):
         jump j3boardyes
-    "No thanks.":
+    "No thanks." ("neutral"):
         jump j3boardno
 
 label j3boardyes:
@@ -1875,9 +1875,9 @@ label j4potion_gomer_apology:
     gomer "Uh. [pc]? You there?"
 
     menu(screen="dialog_choice"):
-        "Yes.":
+        "Yes." ("talking"):
             pass
-        "No.":
+        "No." ("thonk"):
             gomer "Haha. That's funny."
 
     gomer "Uh."
@@ -1889,11 +1889,11 @@ label j4potion_gomer_apology:
     gomer "I can't do this alone, dog. I need you."
 
     menu(screen="dialog_choice"):
-        "Well, {i}I{/i} can. {i}Ciao{/i}.":
+        "Well, {i}I{/i} can. {i}Ciao{/i}." ("thonk"):
             $ gomer_failed = True
             "I wave my paw and the crystal goes dark."
             jump j4wke.ending
-        "Let's do this.":
+        "Let's do this." ("happy"):
             $ ending = "gomer"
             play sound "sound/happy.opus"
             gomer "You're the best, dog."
@@ -2001,11 +2001,11 @@ label festivalscene:
 
 label outro_pucci:
     "I walk over to the fluffy brown cat waiting for me."
-    pc "Pucci! We made it!!"
+    pc happy "Pucci! We made it!!"
     pucci "[pc]! We really did!"
-    pc "What's next for you?"
+    pc neutral "What's next for you?"
     pucci "Well, I was hoping you'd be able to tell me."
-    pc "What do you mean?"
+    pc concern "What do you mean?"
     pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
     # put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
     pucci "What do you think? Should we go out for realsies?"

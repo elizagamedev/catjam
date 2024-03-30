@@ -41,34 +41,34 @@ label frankie_date_2:
     frankie "What'd you order?"
 
     menu(screen="dialog_choice"):
-        "The pumpkin spice latte.":
+        "The pumpkin spice latte." ("talking"):
             pc blushing "They even add this cute hay pattern in the latte with the milk!"
 
             play sound "sound/happy.opus"
             frankie smug "Oh, that's the cat's meow. If you don't have at least one of those before the fall's up, you're wasting your life, jack."
-        "Just a black coffee. The more bitter the better.":
+        "Just a black coffee. The more bitter the better." ("thonk"):
             frankie annoyed "Frankly, jack, that's applesauce. Completely wack."
             frankie "Don't you have any appreciation for the sweet, subtle notes of the bean? You ask for it bitter and black and you might as well be drinking dog soup."
             frankie "I thought you had better taste. You tryin' to prove somethin' to me?"
             $ frankie_hates_your_drink = True
-        "Oh, it's oolong tea. Coffee's not my thing.":
+        "Oh, it's oolong tea. Coffee's not my thing." ("talking"):
             $ pc_drink = "tea"
 
             frankie neutral "I'd bet you a horse you just haven't had the good stuff."
             frankie "The oolong isn't too bad here, though. Just make sure you don't leave the leaves in too long or you might as well be drinkin' dirt."
 
     menu(screen="dialog_choice"):
-        "You have excellent taste!" if not frankie_hates_your_drink:
+        "You have excellent taste!" ("happy") if not frankie_hates_your_drink:
             play sound "sound/purr.opus"
 
             frankie blushing "There's only one kind of pleasure in this world, jack: gains."
             frankie "Whether its physical gains or emotional, gains are gains. Treat yourself to delightful things."
-        "You have a surprisingly sensitive palate...":
+        "You have a surprisingly sensitive palate..." ("thonk"):
             play sound "sound/hiss.opus"
 
             frankie annoyed "You're a surprisingly artless goober."
             frankie "Whatever. If all you've got is the capacity for the corporeal, that's your cross to bear, jack."
-        "I didn't think you were such a flimsy wimp." if frankie_hates_your_drink:
+        "I didn't think you were such a flimsy wimp." ("thonk") if frankie_hates_your_drink:
             $ frankie_failed = True
 
             frankie annoyed "You hungry, jack? 'Cuz I've got a knuckle sandwich with your name on it."
@@ -105,7 +105,7 @@ label frankie_date_2:
     "I watch agape as Frankie lifts the glass about half a foot above his face and upturns the glass. A pair of raw eggs slide out into their open mouth."
 
     menu(screen="dialog_choice"):
-        "That's utterly disgusting.":
+        "That's utterly disgusting." ("thonk"):
             $ frankie_failed = True
 
             play sound "sound/hiss.opus"
@@ -125,7 +125,7 @@ label frankie_date_2:
             stop bg fadeout 3.0
             scene black with irisin
             return
-        "You're always on the grind, Frankie! You're so cool!":
+        "You're always on the grind, Frankie! You're so cool!" ("happy"):
             play sound "sound/happy.opus"
             show frankie happy
             "Frankie does an exaggerated bow."
@@ -147,7 +147,7 @@ label frankie_date_2:
     "Splinters shifts in place nervously, paw adjusting their collar."
 
     menu(screen="dialog_choice"):
-        "Ugh, take a hike, dork.":
+        "Ugh, take a hike, dork." ("thonk"):
             splinters "Oh, um... I'm actually planning on j-just studying today. I didn't bring my camping gear."
 
             frankie smug "[theyre!c] telling you to make like a tree, nerd."
@@ -166,7 +166,7 @@ label frankie_date_2:
             show frankie neutral
             "Before they could finish, a hurried busser trips over Splinters and drops a tray of dirty dishes on the ground."
 
-        "You're right! The weather here is so comfortable.":
+        "You're right! The weather here is so comfortable." ("happy"):
             $ pc_is_dizzard = True
 
             splinters happy "D-Days like this are perfect for knocking out a few chapters of {i}Magica Probata{/i}."

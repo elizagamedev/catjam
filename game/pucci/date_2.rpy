@@ -24,13 +24,13 @@ label pucci_date_2:
     pucci talking "How do you feel about getting dirty?"
 
     menu(screen="dialog_choice"):
-        "I don't mind it.":
+        "I don't mind it." ("happy"):
             pucci moe "Great! That's great. Oh, thank goodness."
             "She hands me a pair of shears and a trowel."
             pucci smug "We're going to collect some vegetables."
             pass
 
-        "I hate it.":
+        "I hate it." ("thonk"):
             pucci annoyed "Me too, honestly. Oh posh, I was hoping you might want to pull the vegetables."
             # TODO: kinda abrupt
             stop music fadeout 3.0
@@ -50,11 +50,11 @@ label pucci_date_2:
 
     pucci smug "Like getting dirty, or making potions."
 
-    pc "Right, you're outsourcing your potion."
+    pc concern "Right, you're outsourcing your potion."
 
     pucci happy "Outsourcing."
 
-    pc "You sure you can do that?"
+    pc concern "You sure you can do that?"
 
     pucci talking "Of course I {i}can{/i}! It's par for the course, darling."
 
@@ -63,13 +63,13 @@ label pucci_date_2:
     pucci talking "Speaking of the outsourcing, I narrowed down a few options for you: a light potion, a transmutation potion, or a potion of poison resistance. Which do you want?"
 
     menu(screen="dialog_choice"):
-        "Light potion":
+        "Light potion" ("talking"):
             $ which_pucci_potion = "light"
             pucci moe "I'm pretty sure they can make it like a rave. Amazing choice, darling."
-        "Transmutation potion":
+        "Transmutation potion" ("talking"):
             $ which_pucci_potion = "transmutation"
             pucci talking "You won't regret it. Heehee."
-        "Potion of poison resistance":
+        "Potion of poison resistance" ("talking"):
             $ which_pucci_potion = "resistance"
             pucci talking "That's what I'm talkin' about. Let's freaking go."
 
@@ -81,7 +81,7 @@ label pucci_date_2:
 
     pucci blushing "The dress I had made based on this orchid was to DIE for, it was soooo so pretty. I'll show you sometime!"
 
-    pc "Really?"
+    pc happy "Really?"
 
     pucci happy "Yeah! But you have to tell me I look AMAZING, I won't accept anything less."
 
@@ -90,11 +90,11 @@ label pucci_date_2:
     pucci moe "How about we do a fashion show???"
 
     menu(screen="dialog_choice"):
-        "I'm in!":
+        "I'm in!" ("happy"):
             pucci blushing "YES! Okay, scry me next weekend and I'll have it all set up for you."
-            pc "What do you mean {q}all set up{/q}?"
+            pc thonk "What do you mean {q}all set up{/q}?"
             pucci talking "Trust the process, darling. It's gonna be GREAT."
-        "No!":
+        "No!" ("thonk"):
             pucci smug "Fine, but you're missing out on a fabulous time."
             pucci "But give me a scry if you ever reconsider."
 

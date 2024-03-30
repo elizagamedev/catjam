@@ -6,14 +6,14 @@ label gomer_date_2:
     gomer "So, you uh, you ready to carry out the, uh, do the {q}thing{/q}?"
 
     menu(screen="dialog_choice"):
-        "Ten-Four.":
+        "Ten-Four." ("talking"):
             gomer "Ten... ten four? {w=1.0}What? Oh, wait. Oh. Oh, I get it."
             gomer "Roger. Ten-Four. Uh. Let's, uh... {w=.5}twenty... {w=.5}at... {w=.5}four o'clock."
             gomer "Four o'clock like, the time. Not like, the--not like the, direction."
             gomer "Let's four o'clock-- {w=.5}Let's twenty-- {w=.5}Let's meet behind the Catspaw Diner. Over."
 
             "The crystal goes dark."
-        "You mean, the hair dye?":
+        "You mean, the hair dye?" ("thonk"):
             "Gomer's eyes go wide."
 
             gomer "Dog, like... We don't know if this is a secure line. The {sq}man{/sq} could be watching."
@@ -26,15 +26,15 @@ label gomer_date_2:
             gomer "NO, SORRY, I REALLY DON'T NEED ANYTHING. OKAY, HAVE A NICE WEEKEND."
 
             "The crystal goes dark."
-        "What thing?":
+        "What thing?" ("thonk"):
             gomer "Dog, the... you know..."
 
             "Gomer raises their right forepaw and pantomimes squeezing the contents of a bottle out and kneading the air."
 
             gomer "The stuff."
 
-            menu(screen = "dialog_choice"):
-                "What stuff?":
+            menu(screen="dialog_choice"):
+                "What stuff?" ("thonk"):
                     "Gomer waves their forepaws about the air, frustrated."
 
                     gomer "The, the..."
@@ -43,7 +43,7 @@ label gomer_date_2:
 
                     gomer "The hair dye."
                     gomer "You're still in, right?"
-                "Oh, {i}that{/i} stuff.":
+                "Oh, {i}that{/i} stuff." ("happy"):
                     gomer "Right."
             gomer "Let's uh, let's meet behind the Catspaw Diner at four o'clock."
             gomer "Later."
@@ -75,13 +75,13 @@ label gomer_date_2:
     play music "music/Cattails.mp3" fadein 1.0
     gomer "Hey dog."
 
-    menu(screen = "dialog_choice"):
-        "Are... are you doing okay?":
+    menu(screen="dialog_choice"):
+        "Are... are you doing okay?" ("concern"):
             gomer talking "Doing okay? What? Yeah, I'm, like, fine, I guess."
             gomer "Oh, you mean like, why was I in a dumpster? Haha."
             gomer neutral "Actually, I live here."
 
-            pc "Wow. I didn't realize you were struggling so much..."
+            pc concern "Wow. I didn't realize you were struggling so much..."
 
             gomer "What? No dog, I'm like, fine. Like, actually."
             gomer smug "If you ask me, dog, housing is a scam. Like, the whole system, dog."
@@ -89,7 +89,7 @@ label gomer_date_2:
             gomer "It's called #freeliving, dog. Google it. It's like, a movement."
             gomer annoyed "Cats aren't like, wired, for the domestic life. We're predators, dog. We're tigers."
             gomer neutral "Anyway..."
-        "That's... revolting.":
+        "That's... revolting." ("thonk"):
             "Gomer looks at the ground."
 
             gomer talking "R-Revolting? Oh... I uh... Yeah, haha..."
@@ -107,7 +107,7 @@ label gomer_date_2:
 
             scene black with irisin
             return
-        "Uh, hi.":
+        "Uh, hi." ("thonk"):
             gomer "Hi."
 
     gomer "Okay, so, we've gotta buy two things."
@@ -131,12 +131,12 @@ label gomer_date_2:
     gomer "Like, they were looking this way. Right at me. Right into my eyes, dog."
     gomer "They're gonna like... Oh man. I'm finished."
 
-    menu(screen = "dialog_choice"):
-        "Relax, it's okay.":
+    menu(screen="dialog_choice"):
+        "Relax, it's okay." ("thonk"):
             play sound "sound/hiss.opus"
             gomer annoyed "Relax?"
             gomer "You're in this with me, dog. If I go down, you go down. You know that?"
-        "We were just buying shampoo.":
+        "We were just buying shampoo." ("happy"):
             gomer talking "Shampoo? Dog, what--"
             gomer smug "Oh, right. Yeah. Shampoo. In the hair isle. Shampoo is with all the other hair products."
             gomer "All of them. Haha."
@@ -156,18 +156,18 @@ label gomer_date_2:
     gomer neutral "Dog, I'm not like, saying, like, I'm a pet. I'm my own cat. But."
     gomer "But like, the human writing this label was probably like... {q}Oh, you know cats, they're all, like, pets.{/q}"
 
-    menu(screen = "dialog_choice"):
-        "Probably.":
+    menu(screen="dialog_choice"):
+        "Probably." ("talking"):
             pass
-        "I hate when they do that.":
+        "I hate when they do that." ("thonk"):
             gomer smug "Yeah."
             gomer "But that's like, not what I mean."
 
     gomer talking "So is this like, cat poison? You know, like, are you gonna melt if I put this on you?"
     gomer "I don't need that in my life, dog. I got enough problems."
 
-    menu(screen = "dialog_choice"):
-        "They probably just meant dogs.":
+    menu(screen="dialog_choice"):
+        "They probably just meant dogs." ("thonk"):
             gomer happy "Haha. Yeah. Dogs are dumb."
             gomer smug "Ha. Stupid dogs."
             gomer "I bet they'd try to eat the whole bottle. Haha."
@@ -175,9 +175,9 @@ label gomer_date_2:
             gomer neutral "I hate dogs."
             stop music fadeout 3.0
             jump .bottle
-        "You'd better test it out first...":
+        "You'd better test it out first..." ("thonk"):
             gomer talking "R-Right... Haha..."
-        "You know, on second thought...":
+        "You know, on second thought..." ("concern"):
             gomer talking "Dog... You can't back out now."
             gomer neutral "I'll uh... I'll test it out first."
             gomer "I'm as good as dead if this doesn't work, anyway..."
@@ -221,11 +221,11 @@ label .bottle:
     "Gomer approaches from my flank and studies my paw. They must have finished transferring the dye to the potion flask we bought."
     "I protested, but Gomer insisted that we get the rhinestone-studded squeeze flask."
 
-    menu(screen = "dialog_choice"):
-        "Real magic takes time.":
+    menu(screen="dialog_choice"):
+        "Real magic takes time." ("blushing"):
             $ real_magic_takes_time = True
             pass
-        "Maybe this was a bad idea after all...":
+        "Maybe this was a bad idea after all..." ("thonk"):
             gomer annoyed "Haha... Uh..."
             gomer "Maybe."
             gomer upset "Dammit."
@@ -248,10 +248,10 @@ label .invitation:
     gomer smug "Are you like..."
     gomer neutral "..."
 
-    menu(screen = "dialog_choice"):
-        "Do you want to hang out again sometime?":
+    menu(screen="dialog_choice"):
+        "Do you want to hang out again sometime?" ("blushing"):
             pass
-        "Spit it out, you pile of garbage.":
+        "Spit it out, you pile of garbage." ("thonk"):
             $ gomer_failed = True
 
             gomer talking "..."

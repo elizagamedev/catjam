@@ -13,9 +13,9 @@ label splinters_date_1:
         splinters "H-Haha, just kidding. Maybe coffee?"
 
     menu(screen="dialog_choice"):
-        "Coffee would be great!":
+        "Coffee would be great!" ("happy"):
             pass
-        "I don't drink caffeine. That's disgusting.":
+        "I don't drink caffeine. That's disgusting." ("thonk"):
             $ splinters_failed = True
             "Splinters is quite visibly taken aback."
             splinters "S-sure, that's fine but..."
@@ -50,7 +50,7 @@ label splinters_date_1:
     splinters "You're new here so I-I'll get the drinks. Do you know what you want?"
 
     menu(screen="dialog_choice"):
-        "A pretty latte with their signature hay design.":
+        "A pretty latte with their signature hay design." ("talking"):
             $ splinters_date_1_attempted = True
 
             hide splinters with dissolve
@@ -67,7 +67,7 @@ label splinters_date_1:
             "Splinters runs off, a coffee-stained blushing mess."
             scene black with irisin
             return
-        "A simple pour-over to go works for me.":
+        "A simple pour-over to go works for me." ("talking"):
             hide splinters with dissolve
             pause 1.0
             show splinters neutral with dissolve
@@ -90,11 +90,11 @@ label splinters_date_1:
     splinters "The local flora used to get treated like w-weeds. It's good we're giving them a shot, now."
 
     menu(screen="dialog_choice"):
-        "Oh wow, you know a lot about this stuff.":
+        "Oh wow, you know a lot about this stuff." ("concern"):
             splinters moe "Oh, it's nothing special. They teach what the most common plants do in elemem-elemenar-elementary s-school."
             splinters "Y-You'll pick it up in no time."
 
-        "Ugh, {i}snore{/i}. It tasted pretty, I don't care. Zip it, nerd":
+        "Ugh, {i}snore{/i}. It tasted pretty, I don't care. Zip it, nerd." ("thonk"):
             $ splinters_failed = True
             show splinters upset
             "Splinters looks taken aback."
@@ -149,7 +149,7 @@ label splinters_date_1:
     "Splinters then proceeded to toss the salt over the shoulder, mutter some words, then make the rosary cross."
 
     menu(screen="dialog_choice"):
-        "Haha, you're so weird Splinters.":
+        "Haha, you're so weird Splinters." ("talking"):
             $ splinters_date_1_attempted = False
             pc happy "It would have been more normal if you salted your coffee."
             show splinters talking
@@ -164,7 +164,7 @@ label splinters_date_1:
             "They just stare at you, quietly grabbing their cup before taking their leave."
             scene black with irisin
             return
-        "Oh, I see. Wow, you're... very serious about this bad luck stuff.":
+        "Oh, I see. Wow, you're... very serious about this bad luck stuff." ("concern"):
             splinters talking "Oh, my whole family is like this to be honest."
             splinters neutral "I know this probably seems weird and paranoid to everyone else."
 
@@ -180,7 +180,7 @@ label splinters_date_1:
     splinters "Yeah, I heard they grow l-lucky clovers in there. I'm hoping to try my hand at one this year."
 
     menu(screen="dialog_choice"):
-        "You know... you seem smart. Why the bogus luck stuff?":
+        "You know... you seem smart. Why the bogus luck stuff?" ("concern"):
             $ splinters_date_1_attempted = True
             splinters neutral "Well, my family's in the spirit business so I was never a pure logic kind of cat, I guess."
             splinters "Also, it really seems like w-we're cursed. There are so many improbable things that happen..."
@@ -191,7 +191,7 @@ label splinters_date_1:
             scene black with irisin
             "We finish talking for the evening and part ways amicably."
             return
-        "You mean like four-leaf clovers? Rad, how powerful are they?":
+        "You mean like four-leaf clovers? Rad, how powerful are they?" ("talking"):
             splinters "There are different kinds."
             splinters "Gold ones get you lots of money."
             splinters "Silver ones protect you from evil."

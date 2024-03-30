@@ -16,9 +16,9 @@ label splinters_date_3:
     splinters "Oh... darn, I promised my parents to stop by the Sablewood Memorial today."
 
     menu(screen="dialog_choice"):
-        "Ooh, the memorial? Sounds interesting. Can I tag along?":
+        "Ooh, the memorial? Sounds interesting. Can I tag along?" ("talking"):
             pass
-        "Aw, sorry to hear that. Maybe later then.":
+        "Aw, sorry to hear that. Maybe later then." ("thonk"):
             splinters "Yeah, maybe some other time! L-Later then!"
             "They smack the ball {q}off{/q}, then open up a book with a dopey grin on their face."
             "Are those... pictures of Frankie!?"
@@ -26,7 +26,7 @@ label splinters_date_3:
             stop music fadeout 1.0
             $ scry_redo = True
             return
-        "Ew, the graveyard? Gross~":
+        "Ew, the graveyard? Gross~" ("concern"):
             splinters "Y-You know, taking care of the dead is a v-valuable and crucial service to keep a s-society up and running."
             splinters "I-It's rude to s-say it's gross."
             splinters "W-Would you say that about your own relatives?"
@@ -71,8 +71,8 @@ label splinters_date_3:
     nancy "If someone like pipsqueak has friends, then anything's possible!"
     splinters "Er…"
 
-    menu(screen = "dialog_choice"):
-        "Geez, no wonder you're so weird splinters. This is who you hang with?":
+    menu(screen="dialog_choice"):
+        "Geez, no wonder you're so weird splinters. This is who you hang with?" ("thonk"):
             "I regret my little quip instantly."
             nancy "Better weird than an idiot who insults a fray of ghosts."
             "The vibe rapidly precipitated into a coldly claustrophobic one."
@@ -97,7 +97,7 @@ label splinters_date_3:
             "Something cold whizzes by me as I shut the gates behind me."
             stop music fadeout 3.0
             return
-        "I'd love to try.":
+        "I'd love to try." ("happy"):
             pass
 
     "I hold my paws out politely."
@@ -131,10 +131,10 @@ label splinters_date_3:
     splinters "We can leverage the ectoplasmic nature of the pie as a new line of diet products."
     splinters moe "IT'LL BE A REVOLUTION IN THE FOOD INDUSTRY!"
 
-    menu(screen = "dialog_choice"):
-        "Haha, I guess it's pretty cool to have guilt-free pie.":
+    menu(screen="dialog_choice"):
+        "Haha, I guess it's pretty cool to have guilt-free pie." ("talking"):
             pass
-        "Ugh, please be quiet. I'm going to ecto-hurl.":
+        "Ugh, please be quiet. I'm going to ecto-hurl." ("thonk"):
             show splinters upset
             show yuri upset
             nancy "Haha, nice one."

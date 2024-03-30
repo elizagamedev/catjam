@@ -3,12 +3,12 @@ default clueless_about_french = False
 default gomer_angry = False
 
 label gomer_date_3:
-    pc "Hey! Are you free today?"
+    pc talking "Hey! Are you free today?"
 
     gomer "Yeah. Actually, dog, I'm really stoked you called."
     gomer "I wanna treat you to something nice for all the, you know, help."
 
-    pc "Oh? That's very kind of you."
+    pc concern "Oh? That's very kind of you."
 
     gomer "Haha. Yeah. Don't mention it."
     gomer "Seriously, don't mention it."
@@ -17,14 +17,14 @@ label gomer_date_3:
     gomer "It's French, right?"
 
     menu(screen="dialog_choice"):
-        "Yeah.":
+        "Yeah." ("talking"):
             gomer "Dope."
-        "I think it's Italian.":
+        "I think it's Italian." ("thonk"):
             $ clueless_about_french = True
             gomer "Huh. I hope not."
             gomer "Just because I'm orange, humans always think they're so funny like {q}Hey! I bet you love lasagna!{/q}"
             gomer "It's like, discrimination."
-        "Vous êtes un crétin.":
+        "Vous êtes un crétin." ("thonk"):
             $ knows_french = True
             gomer "Woah. Dog. I didn't know you were French. That's dope."
 
@@ -66,7 +66,7 @@ label gomer_date_3:
 
     "The waiter places the water pitcher on the table and leaves."
 
-    pc "Gomer... That's an eight-hundred dollar bottle."
+    pc concern "Gomer... That's an eight-hundred dollar bottle."
 
     gomer neutral "Relax. It's, uh, it's my treat."
 
@@ -109,11 +109,11 @@ label gomer_date_3:
     if knows_french:
         gomer "Can you teach me French?"
         menu(screen="dialog_choice"):
-            "Sure.":
+            "Sure." ("talking"):
                 gomer moe "Dope. Heck yeah."
-            "No.":
+            "No." ("neutral"):
                 gomer "Oh. Okay."
-            "Je préfère mourir.":
+            "Je préfère mourir." ("thonk"):
                 gomer "Haha. I don't know what you're saying, but it sounds so cool."
 
     "Waiter" "How was everything tonight?"
@@ -146,7 +146,7 @@ label gomer_date_3:
 
     "Without warning, Gomer bolts from the table."
 
-    pc "What the--"
+    pc concern "What the--"
 
     "With only a split second to make a decision, I rush after Gomer out the door."
 
@@ -162,7 +162,7 @@ label gomer_date_3:
     "Gomer flops down sideways on the asphalt and begins to groom himself."
 
     menu(screen="dialog_choice"):
-        "How could you do that!?":
+        "How could you do that!?" ("concern"):
             $ gomer_angry = True
             play sound "sound/growl.opus"
             gomer annoyed "What? Dog. I'm gonna be real with you."
@@ -189,7 +189,7 @@ label gomer_date_3:
             "Whether I regret snapping at Gomer or regret going to dinner, it's hard to say."
             stop bg fadeout 3.0
             return
-        "That was {i}so{/i} much fun.":
+        "That was {i}so{/i} much fun." ("blushing"):
             pass
 
     play sound "sound/happy.opus"

@@ -4,10 +4,10 @@ label frankie_date_1:
     frankie "Free as a bird. What're you thinking?"
 
     menu(screen="dialog_choice"):
-        "I'm looking to take my workout to the next level.":
+        "I'm looking to take my workout to the next level." ("talking"):
             pass
 
-        "Well... you have any ideas?":
+        "Well... you have any ideas?" ("thonk"):
             frankie "Yeah. I got an idea."
             frankie "My Saturday workout routine. {w=1.0}Alone."
             frankie "Frankly, I'm a busy cat. I don't got time for pussyfooting. Dig?"
@@ -66,7 +66,7 @@ label frankie_date_1:
     frankie smug "Here's the secret. The burgers here are the bees knees, jack. I come here for lunch before every single workout to get my protein fix."
 
     menu(screen="dialog_choice"):
-        "But, aren't those made for humans?":
+        "But, aren't those made for humans?" ("concern"):
             play sound "sound/hiss.opus"
             show frankie annoyed
             "Frankie glowers."
@@ -95,13 +95,13 @@ label frankie_date_1:
     frankie "Not bad for someone so green. You ought to be proud of yourself."
 
     menu(screen="dialog_choice"):
-        "Thanks to you.":
+        "Thanks to you." ("happy"):
             play sound "sound/purr.opus"
             show frankie blushing
             "Frankie purrs."
 
             frankie "Am I good or what?"
-        "If you say so...":
+        "If you say so..." ("thonk"):
             frankie annoyed "I don't flatter people, jack. Learn to take a compliment."
             show frankie upset
             "Frankie sighs."
@@ -118,7 +118,7 @@ label frankie_date_1:
     frankie "I'm talking time dilation, jack. Slap that in a potion and you got yourself a winning formula."
 
     menu(screen="dialog_choice"):
-        "That sounds dangerous...":
+        "That sounds dangerous..." ("concern"):
             $ frankie_failed = True
 
             show frankie annoyed
@@ -134,7 +134,7 @@ label frankie_date_1:
             stop bg fadeout 3.0
             scene black with irisin
             return
-        "That sounds amazing!":
+        "That sounds amazing!" ("talking"):
             pass
 
     play sound "sound/happy.opus"
