@@ -105,3 +105,15 @@ https://freesound.org/people/Debsound/sounds/395414/
 
 Itim-Regular.ttf
 https://fonts.google.com/specimen/Itim
+
+plop.opus
+https://freesound.org/people/Robinhood76/sounds/321100/
+
+bubbling.opus
+https://freesound.org/people/MattJ99/sounds/66786/
+
+mouse.opus
+https://freesound.org/people/shyguy014/sounds/463789/
+
+angry-mouse.opus
+https://freesound.org/people/shyguy014/sounds/463789/

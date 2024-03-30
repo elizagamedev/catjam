@@ -126,26 +126,7 @@ label start:
 
     "We're here for the regional finals test being held at the nearby university. There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us the ropes."
 
-    "{i}We don't know what the testing will entail...{/i}"
-
-menu intro_attitude:
-
-    "I'm excited to find out.":
-        jump excited
-
-    "I'm nervous.":
-        jump nervous
-
-label excited:
-
-    "{i}We're gonna ace it, I just know it! I can't wait to meet everyone.{/i}"
-    jump goforth
-
-label nervous:
-
-    "{i}There's so much I don't know... I wonder if I'll get along with everyone?{/i}"
-
-label goforth:
+    "TODO: insert a clear depiction of what the game's objectives are here"
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house..."
 
@@ -1727,6 +1708,8 @@ menu:
         jump j4style_trial
 
 label j4style_vibe:
+    scene black with dissolve
+    play music "music/Gagool.mp3"
 
     "I'm pretty sure my witch has this on lock, so I'm not too worried about helping her out."
 
@@ -1734,11 +1717,19 @@ label j4style_vibe:
 
     "I try my best to Just Vibe It Up, but despite my best efforts these mice have developed a nasty pattern of showing up where they're least wanted."
 
+    scene bg home_front
+    show gomer talking at center
+    with dissolve
+
     "I'm chilling with Gomer in the field in front of my house when we hear a shout from inside."
 
+    scene bg potions with dissolve
     jump j4mice
 
 label j4style_book:
+    play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
+    scene bg potions with fade
+    play music "music/Gagool.mp3"
 
     "We've practiced our potion and now it's time to test our mettle."
 
@@ -1746,7 +1737,8 @@ label j4style_book:
 
     witch "Three ounces of chicken of the woods, one stick of silvervine..."
 
-    pc "Witch? What's this potion supposed to do, anyway?"
+    # TODO: give her a name or something? calling her like "witch" feels strange
+    pc thonk "Witch? What's this potion supposed to do, anyway?"
 
     witch "I told you, it's a surprise!"
 
@@ -1754,74 +1746,93 @@ label j4style_book:
 
     "I guess I should just trust the process."
 
+    stop bg fadeout 1.0
+    scene bg home_front with longfade
+
     "I step outside to sip some catnip tea when we take a lunch break."
 
     "That's when I hear a shout from inside."
 
+    play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
+    scene bg potions with dissolve
     jump j4mice
 
 label j4style_trial:
+    play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
+    scene bg potions with fade
+    play music "music/Gagool.mp3"
 
-    witch "So I think we got the amounts right but we will probably need to finnagle it here and there."
+    witch "So I think we got the amounts right but we will probably need to finagle it here and there."
 
-    pc "What's this potion supposed to do, anyway?"
+    pc thonk "What's this potion supposed to do, anyway?"
 
     witch "Well, it's supposed to make you as light as a feather."
 
-    pc "Sooo how do we know if it works?"
+    pc thonk "Sooo how do we know if it works?"
 
     witch "..."
 
-    pc "No."
+    pc thonk "No."
 
     witch "I mean, so listen..."
 
-    pc "I'm not going to drink it!"
+    pc thonk "I'm not going to drink it!"
 
     witch "What if I say preeetty pleaaase???"
 
-    pc "..."
+    pc thonk "..."
 
     witch "Eh??"
 
-    pc "Okay. I'll do it."
+    pc thonk "Okay. I'll do it."
 
     "I lower a spoon into the bubbling cauldron mixture and raise the spoonful to my lips."
 
     "Nothing happens. Just a gurgling in my stomach."
 
-    pc "I don't feel lighter, my tummy just feels weird."
+    pc thonk "I don't feel lighter, my tummy just feels weird."
 
     witch "Back to the drawing board!"
 
+    stop bg fadeout 1.0
+    scene bg home_front with dissolve
+
     "I step outside to get a breath of fresh air. That's when I hear a shout from inside."
 
+    play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
+    scene bg potions with dissolve
     jump j4mice
 
 label j4mice:
-
     "I rush inside to see my witch trying to fend off three mice."
 
+    play sound "sound/plop.opus"
     "One of the mice jumps into the cauldron."
 
     "It swallows a good bit of the mixture and starts to float. Then it throws up into the potion."
 
     witch "NO!"
 
-    pc "NO!"
+    pc concern "NO!"
 
+    play sound "sound/mouse.opus"
     "The Floating Mouse" "Squeak?!"
 
     "Another mouse is scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
 
     witch "GET OFF ME!!!"
 
+    play sound "sound/angry-mouse.opus"
     "The Slipper Mouse" "SQUEAK!"
 
+    play sound "sound/shatter.mp3" volume 0.1
     "Glass shatters on the stone floor."
 
     "This is a disaster."
 
+    stop music fadeout 3.0
+    stop bg fadeout 3.0
+    scene black with irisin
     jump j4wke
 
 label j4wke:
@@ -1911,8 +1922,7 @@ label j4potion_frankie:
     $ ending = "frankie"
     stop bg fadeout 0.5
     scene bg room with fade
-    "I contact Frankie to ask about their potion."
-    "To my relief, they'd already spent all week perfecting it."
+    "I contact Frankie to ask about their potion. To my relief, they'd already spent all week perfecting it."
     "I'm feeling really good about our chances!"
     jump j4exam
 
