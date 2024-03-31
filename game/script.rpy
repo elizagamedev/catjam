@@ -1623,7 +1623,7 @@ label j3boardyes:
 
     "They let me hold their paw to keep me steady while I catch my balance."
 
-    "Pucci stays to watch us from under an umbrella. At one point she waves us over. She's gotten three lemonades, one for each of us."
+    "Pucci stays to watch us from under an umbrella. At one point they wave us over. They've gotten three lemonades, one for each of us."
 
     "Gomer takes back his board and does some tricks while Pucci and I watch from the umbrella table."
 
@@ -1647,7 +1647,7 @@ label j3beach_umbrella:
 
     "They take a long sip of lemonade."
 
-    pucci neutral "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to look bad if I fail."
+    pucci neutral "I've never skateboarded, but--and don't tell Gomer this--I actually really want to try. I just... don't want to get hurt if I fall."
 
     play sound "sound/skateboard-spike.opus"
 
@@ -1655,7 +1655,7 @@ label j3beach_umbrella:
 
     "They look happy."
 
-    pucci "I guess that's the problem with worrying about your image. You miss out on fun."
+    pucci "I guess that's the problem with worrying too much. You miss out on fun."
 
     pc neutral "It's not too late, I'm sure they'd teach you if you asked."
 
