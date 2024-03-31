@@ -28,14 +28,14 @@ label pucci_potion:
         jump .none
 
 label .light:
-    pucci "This light potion is more than just a light. It creates an atmosphere that is, as one might say, lit. Litty, even."
+    pucci happy "This light potion is more than just a light. It creates an atmosphere that is, as one might say, lit. Litty, even."
     "I nod along knowingly."
-    pucci "The materials that went into it included bioluminescent fungi, a glow toad, a pitcher of Grandma's Sun Tea, straight up fire, and a dollop of moonlight."
-    pucci "[pc] here had the genius idea to make it concentrated so the consumable dosage needed for the light show is quite minimal. We have some mini bottles here, would you like to try one, headmistress?"
+    pucci neutral "The materials that went into it included bioluminescent fungi, a glow toad, a pitcher of Grandma's Sun Tea, straight up fire, and a dollop of moonlight."
+    pucci smug "[pc] here had the genius idea to make it concentrated so the consumable dosage needed for the light show is quite minimal. We have some mini bottles here, would you like to try one, headmistress?"
     "Headmistress" "No thank you."
-    pucci "Excellent, I'll have some sent to your office to hand out as gifts to the faculty."
+    pucci talking "Excellent, I'll have some sent to your office to hand out as gifts to the faculty."
     "Headmistress" "I--"
-    pucci "If you would be so kind, [pc], could you please drink this potion to demonstrate that it works?"
+    pucci smug "If you would be so kind, [pc], could you please drink this potion to demonstrate that it works?"
     menu drinkchoicea:
         "{i}What should I do?{/i}"
         "Drink the potion!":
