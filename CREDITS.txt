@@ -129,8 +129,8 @@ https://freesound.org/people/StefanoPTesta/sounds/447885/
 
 # Fonts
 
-Atkinson Hyperlegible
-https://www.brailleinstitute.org/freefont
+Mali
+https://fonts.google.com/specimen/Mali
 
 Itim
 https://fonts.google.com/specimen/Itim

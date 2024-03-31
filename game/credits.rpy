@@ -100,9 +100,9 @@ screen credits():
                 color "#aaaaaa"
             null height 50
             label "Fonts"
-            text "{b}Atkinson Hyperlegible{/b} by the Braille Institute of America, Inc."
-            text "Licensed under the Atkinson Hyperlegible Font License"
-            text "https://www.brailleinstitute.org/freefont":
+            text "{b}Mali{/b} by Cadson Demak"
+            text "Licensed under the Open Font License (OFL)"
+            text "https://openfontlicense.org/":
                 color "#aaaaaa"
             null height 20
             text "{b}Itim{/b} by Cadson Demak"

@@ -57,7 +57,7 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/Atkinson-Hyperlegible-Regular-102.otf"
+define gui.text_font = "fonts/Mali-Regular.ttf"
 
 ## The font used for character names.
 define gui.name_text_font = "fonts/Itim-Regular.ttf"
@@ -66,7 +66,7 @@ define gui.name_text_font = "fonts/Itim-Regular.ttf"
 define gui.interface_text_font = "fonts/Itim-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 36
+define gui.text_size = 32
 
 ## The size of character names.
 define gui.name_text_size = 50
@@ -490,4 +490,4 @@ init python:
             ("Italic", False, True),
             ("BoldItalic", True, True)
     ]:
-        config.font_replacement_map["fonts/Atkinson-Hyperlegible-Regular-102.otf", bold, italic] = (f"fonts/Atkinson-Hyperlegible-{name}-102.otf", False, False)
+        config.font_replacement_map["fonts/Mali-Regular.ttf", bold, italic] = (f"fonts/Mali-{name}.ttf", False, False)
