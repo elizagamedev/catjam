@@ -118,14 +118,6 @@ label .transmutation:
             "Maybe next year will go better."
             jump credits
 
-label .resistance:
-    "resistance stuff"
-    jump .end
-
-label .none:
-    "none"
-    jump .end
-
 label .end:
     pucci "That concludes our presentation."
     pucci "Thank you for your time, headmistress."
