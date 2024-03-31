@@ -46,8 +46,8 @@ label splinters_date_1:
 
     show splinters neutral at center with dissolve
 
-    splinters "H-hey, sorry. Did you wait long?"
-    splinters "You're new here so I-I'll get the drinks. Do you know what you want?"
+    splinters talking "H-hey, sorry. Did you wait long?"
+    splinters neutral "You're new here so I-I'll get the drinks. Do you know what you want?"
 
     menu(screen="dialog_choice"):
         "A pretty latte with their signature hay design." ("talking"):
@@ -57,13 +57,13 @@ label splinters_date_1:
             "As Splinters makes the order, I admire the very photogenic lattes at the other tables."
             "It seemed difficult to drink without spilling; the lattes were practically overflowing..."
             $ expletive = renpy.random.choice(splinters_expletives)
-            splinters "[expletive]! W-Watch out!"
+            splinters talking "[expletive]! W-Watch out!"
             play sound "sound/crash.wav"
             stop bg fadeout 0.5
             stop music
             "Splinters goes flying. Wet cat and coffee spill onto the ground."
             "The cafe goes silent. Some patrons can't help but giggle."
-            splinters "*Sniff* S-sorry. I... I'm gonna go now."
+            splinters upset "*Sniff* S-sorry. I... I'm gonna go now."
             "Splinters runs off, a coffee-stained blushing mess."
             scene black with irisin
             return
@@ -72,17 +72,17 @@ label splinters_date_1:
             pause 1.0
             show splinters neutral with dissolve
             "Splinters brings over the two paper cups."
-            splinters "I got you the silver vine special, hope that's okay."
-            splinters "They get it from the enchanted forest near the school."
+            splinters moe "I got you the silver vine special, hope that's okay."
+            splinters neutral "They get it from the enchanted forest near the school."
 
     pc talking "Neat, there's an enchanted forest near here?"
 
-    "You take a sip."
+    "I take a sip."
 
     show bg cafe silver with dissolve
 
     "I feel a cool, sparkling sensation, and before my eyes a silver cast washes over the scene."
-    "Around happy cats is a glow and sparkles of joy and laughter."
+    "Around us happy cats is a glow and sparkles of joy and laughter."
 
     play sound "sound/happy.opus"
     splinters happy "Y-Yeah! I mean, it's kind of dangerous but we have the Dark Angora Forest."
@@ -122,7 +122,7 @@ label splinters_date_1:
     $ expletive = renpy.random.choice(splinters_expletives)
     splinters "[expletive]!"
     "The {sq}sparkle{/sq} hits them in the face."
-    "Splinter's large right eye was now watering and clamped shut."
+    "Splinter's large right eye is now watering and clamped shut."
     "They fish the {sq}sparkle{/sq} from their cup. It's a half-submerged guitar string."
 
     guitarist "Hey man, you all right?"
@@ -144,7 +144,7 @@ label splinters_date_1:
     pc thonk "Salt? For... coffee?"
 
     splinters talking "Er, n-no. I should have done this when I first got here, actually."
-    "They proceed to shake out a pile on their scratched-up paw, wincing as they did so."
+    "They proceed to shake out a pile on their scratched-up paw, wincing as they do so."
     show splinters neutral
     "Splinters then tosses the salt over the shoulder, mutters some words, then makes the rosary cross."
 
@@ -164,11 +164,11 @@ label splinters_date_1:
             "They just stare at you, quietly grabbing their cup before taking their leave."
             scene black with irisin
             return
-        "Oh, I see. Wow, you're... very serious about this bad luck stuff." ("concern"):
+        "Oh, I see. Wow, you're very serious about this bad luck stuff." ("concern"):
             splinters talking "Oh, my whole family is like this to be honest."
             splinters neutral "I know this probably seems weird and paranoid to everyone else."
 
-    pc thonk "Whatever gives you guys a peace of mind. I'm not judging."
+    pc thonk "Whatever gives you guys peace of mind. I'm not judging."
     pc happy "So... you mentioned common plants. What are the ones everyone knows about?"
 
     splinters happy "Well, there are our common exports. You should probably know about that."
@@ -231,4 +231,4 @@ label splinters_date_1:
 
     stop bg fadeout 3.0
     scene black with irisin
-    return
+return
