@@ -22,9 +22,9 @@ transform mirror:
 define flash = Fade(.25, 0.0, .75, color="#fff")
 
 transform vibrate:
-    xcenter 0.505
+    xcenter 0.502
     pause 0.02
-    xcenter 0.495
+    xcenter 0.498
     pause 0.02
     repeat
 
