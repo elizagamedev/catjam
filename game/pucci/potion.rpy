@@ -19,12 +19,12 @@ label pucci_potion:
     "Headmistress" "Very well, then. I'm glad to hear you worked as a team on this. You may begin."
     pucci happy "Here we go!"
 
-    if which_pucci_potion == "light":
-        jump .light
-    elif which_pucci_potion == "transmutation":
-        jump .transmutation
-    else:
-        return
+if which_pucci_potion == "light":
+    jump .light
+elif which_pucci_potion == "transmutation":
+    jump .transmutation
+else:
+    return
 
 label .light:
     pucci happy "This light potion is more than just a light. It creates an atmosphere that is, as one might say, lit. Litty, even."
