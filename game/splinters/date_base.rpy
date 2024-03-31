@@ -6,7 +6,7 @@ default splinters_failed = False
 default splinters_potion = False
 
 label splinters_date:
-    "I wondered what Splinters was getting themselves into. I decided to paw them up."
+    "I wonder what Splinters iss getting themself into. I decide to give them a yowl."
 
     play sound "sound/crackle.opus"
     with flash
