@@ -295,11 +295,11 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu or in_credits:
+        if main_menu:
 
             textbutton _("Start") action Start()
 
-        else:
+        elif not in_credits:
 
             textbutton _("History") action ShowMenu("history")
 
@@ -313,7 +313,7 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu and not in_credits:
+        elif not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
 

@@ -82,6 +82,7 @@ screen credits():
             text "SoundDesignForYou, CC0 1.0"
             text "SpliceSound, CC0 1.0"
             text "sportygurl37, CC BY 3.0"
+            text "StefanoPTesta, CC0 1.0"
             text "temawas, CC BY 4.0"
             text "ValentinPetiteau, CC0 1.0"
             text "yottasounds, CC 3.0"
@@ -107,6 +108,9 @@ screen credits():
             text "{b}Itim{/b} by Cadson Demak"
             text "Licensed under the Open Font License (OFL)"
             text "https://openfontlicense.org/":
+                color "#aaaaaa"
+            text "{b}VCR OSD Mono{/b} by Riciery Leal"
+            text "https://www.dafont.com/vcr-osd-mono.font":
                 color "#aaaaaa"
             null height 50
             label "Ren'Py Game Engine"

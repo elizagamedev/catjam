@@ -121,6 +121,12 @@ https://freesound.org/people/mglennsound/sounds/678671/
 cough.opus
 https://freesound.org/people/midwestdocumentary/sounds/722623/
 
+pause.opus
+https://freesound.org/people/StefanoPTesta/sounds/447885/
+
+rewind.opus
+https://freesound.org/people/StefanoPTesta/sounds/447885/
+
 # Fonts
 
 Atkinson Hyperlegible
@@ -128,3 +134,6 @@ https://www.brailleinstitute.org/freefont
 
 Itim
 https://fonts.google.com/specimen/Itim
+
+VCR OSD Mono
+https://www.dafont.com/vcr-osd-mono.font

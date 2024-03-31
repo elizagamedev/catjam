@@ -1,7 +1,6 @@
 default which_fashion = None
 
 label pucci_date_3:
-    stop music fadeout 1.0
     "Since we're meeting at seven, I have time to get something together. Even if I don't want to do the fashion show, I feel like I should still dress up. To prove a point."
 
     "I have three possible aesthetics that I've unpacked from the clothes boxes."
@@ -46,6 +45,7 @@ label herocore:
     jump runway
 
 label runway:
+    stop music fadeout 1.0
     scene bg main_street with longfade
     play music "music/Overcast.mp3"
     "I meet Pucci outside Catspaw Diner on Main Street."
@@ -106,6 +106,8 @@ label runway:
 
         pucci "Yes! Darling! You look EMPOWERED and READY for adventure! This is the whole POINT of fashion!"
         yuri "I'm so excited to see you having so much fun! Your outfit is cool :)"
+        gomer "Are you like, an elf?"
+        gomer smug "Oh, wait. I get it. Haha."
 
         hide yuri
         hide gomer
@@ -113,6 +115,8 @@ label runway:
 
     pucci neutral "You've proven yourself to be moderately fashionable."
     pucci happy "I'm proud of you for trying something new. You did good, darling. I think you're ready for anything, now."
+
+    # TODO could use some outro stuff like woah cool we did the thing had ice cream looked at the moon
 
     stop music fadeout 3.0
     scene black with irisin

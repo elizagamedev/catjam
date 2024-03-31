@@ -9,8 +9,8 @@ define frankie = Character("Frankie", image="frankie", who_color="#c43830")
 define frankie_unk = Character("???", image="frankie", who_color="#c43830")
 define pucci = Character("Pucci", image="pucci", who_color="#8e522e")
 define pucci_unk = Character("???", image="pucci", who_color="#8e522e")
-define splinters = Character("Splinters", image="splinters", who_color="#F9C254")
-define splinters_unk = Character("???", image="splinters", who_color="#F9C254")
+define splinters = Character("Splinters", image="splinters", who_color="#DED6B3")
+define splinters_unk = Character("???", image="splinters", who_color="#DED6B3")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 define yuri_unk = Character("???", image="yuri", who_color="#706ed1")
 define witch = Character("My Witch", who_color="#9900b0")
@@ -37,8 +37,8 @@ label awaken(day = None):
     scene black
     pause 1.0
     play bg "sound/morning.opus" noloop
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
     pause 1.5
     scene bg room with Dissolve(1.0)
     return
@@ -48,8 +48,8 @@ label titlecard(day = None):
         $ calendar_day = day
     scene black
     pause 1.0
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
     pause 1.5
     return
 
@@ -118,8 +118,8 @@ label start:
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") with Dissolve(1.0)
-    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") with Dissolve(0.5)
+    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
+    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
@@ -1120,10 +1120,11 @@ label j2synthesize:
     stop bg fadeout 1.0
     scene bg potions with dissolve
     play music "music/Gagool.mp3"
+    play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
 
     "The university has cauldrons prepared for students to use for synthesizing potions, like we're doing now. The cauldrons are prepared with all the tools a witch could need."
 
-    witch "Excellent. I need to head to the horticultural center to pick up a few last ingredients, you mind staying here to keep an eye on our potion?"
+    witch "Excellent. I need to head to the horticultural center to pick up a few last ingredients. You mind staying here to keep an eye on our potion?"
 
     pc neutral "Of course! I'll be right here."
 
@@ -1168,7 +1169,7 @@ label j2synthesize:
 
     "That's right. I don't skip leg day {i}or{/i} brain day. I got this."
 
-    splinters "LOOK OUT I CAN'T STOP"
+    splinters "LOOK OUT I CAN'T STOP!"
 
     "I step forward and reach my hands out, angling my body, and redirect Splinters' momentum."
     play sound "sound/collapse.opus"
@@ -1183,11 +1184,11 @@ label j2synthesize:
     pc concern "Are you okay?!"
     show splinters neutral at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
-    splinters "O-oh my claws that was very alarming, I'm not hurt though, are YOU okay???"
+    splinters "O-oh my claws that was very alarming, but I'm not hurt. Are YOU okay?"
 
     pc neutral "Yeah, I think so!"
 
-    splinters upset "Thank goodness I'm sooooo sorry, I really thought I had that but once it started tipping over it was all joe-ver from there."
+    splinters upset "Thank goodness I'm sooooo sorry. I really thought I had that, but once it started tipping over it was all joe-ver from there."
 
     "I almost ask them to help clean up, but I remember the shattered glass and think twice."
 
@@ -1197,8 +1198,9 @@ label j2synthesize:
 
     pc thonk "What is this potion, anyway?"
 
-    splinters neutral "It wasn't a potion, that was supposed to be a protein shake."
+    splinters neutral "It's not a potion. It was supposed to be a protein shake."
 
+    # TODO: did you mean frankie?
     "Seems like Splinters dodged a bullet with that one."
 
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
@@ -1214,12 +1216,11 @@ label j2synthesize:
 
     "Splinters stays a polite and safe distance away, sitting on a wooden stool next to a different cauldron."
 
-    "After a whole eon, we end up with a stable ingredient for my witch's potion idea. This is great! Now to let it sit for a week and see if it turns out how we intended."
-    # TODO: stretch this out for the whole week
+    "After a whole eon, we end up with a stable ingredient for the final potion. This is great!"
+    "All that's left is to let it sit for a week and see if it turns out how we intended."
     stop music fadeout 3.0
     scene black with irisin
     jump j2witch
-
 
 # Forage
 label j2forage:
@@ -1312,8 +1313,8 @@ label j2forage:
 
 # at home
 label j2witch:
-    scene bg room with dissolve
-    "I got to spend a lot of time with my witch this week, and I've been feeling like a really good familiar lately."
+    pause 1.0
+    "I got to spend a lot of time with my witch this week, and I've been feeling like I've been doing a great job as a familiar lately."
     "We spend the rest of the week taking it easy, sipping lemonades over board games."
     scene black with irisin
     jump j2wke
@@ -1339,7 +1340,6 @@ label j3:
     "We can stick to my witch's plan--she keeps telling me that what the potion does is a {q}surprise{/q}--or we can go with something else and see if it works better."
 
 menu j3wk:
-
     "I spend most of my time helping my witch with the potion, but on my day off I set out to..."
 
     "Shop":
@@ -1361,7 +1361,7 @@ label j3shop:
     play sound "sound/crackle.opus"
     with flash
 
-    splinters "Hey are you busy?"
+    splinters "Hey, are you busy?"
 
     pc neutral "Well, I'm on my way to do some good old fashioned retail therapy."
 
@@ -1375,9 +1375,9 @@ label j3shop:
 
     "We meet outside Schrodinger's Records."
 
-    splinters "Heyyyyy what did you need to get today?"
+    splinters "Heyyyyy. What did you need to get today?"
 
-    pc thonk "Not sure, but I'll know it when I see it. How 'bout you?"
+    pc thonk "Potion stuff. How 'bout you?"
 
     splinters "Well I was thinking I'd get some, um, hobby supplies."
 
@@ -1393,24 +1393,24 @@ label j3shop:
 
     splinters "I'm painting some figures and I wanted to get new colors."
 
-menu j3shop_minis:
-    "That's so cool!":
-        splinters "Thanks, I just got into the hobby so I don't really know what I'm doing."
+menu j3shop_minis(screen="dialog_choice"):
+    "That's so cool!" ("happy"):
+        splinters happy "Thanks! I just got into the hobby, so I don't really know what I'm doing."
         jump j3shopcont
 
-    "That's... interesting":
-        splinters "Uh, yeah."
+    "That's... interesting." ("concern"):
         jump j3shopcont
 
-    "Wow. Lame.":
-        splinters "Wehhhhh you said you wouldn't make fun of me!"
+    "Wow. Lame." ("thonk"):
+        splinters upset "Wehhhhh. You said you wouldn't make fun of me!"
         jump j3shopcont
 
 label j3shopcont:
-    splinters "I try to try new things. I think... I think it's important to do things that make you feel good."
+    splinters neutral "I try to try new things. I think... I think it's important to do things that make you feel good."
 
-    splinters "There're lots of people who make fun of me because I'm kind of a little guy."
+    splinters "There are lots of people who make fun of me because I'm kind of a little guy."
 
+    # TODO: this contradicts frankie's dates lol
     splinters "The one exception is Frankie. They mean well and are actually really defensive of me if somebody's giving me a hard time."
 
     splinters "I've been... trying to be a little more like them. They told me it matters to feel good in your own fur and to know yourself, even if other people don't get it."
@@ -1650,9 +1650,9 @@ label j3beach_umbrella:
     stop bg fadeout 3.0
 
 label j3witch:
-    play sound "sound/night.opus" fadein 2.0
+    play bg "sound/night.opus" fadein 2.0
     call titlecard(18)
-    scene bg room with Dissolve(1.0)
+    scene bg home_front with Dissolve(1.0)
 
     # TODO: no beach here
 
@@ -1688,46 +1688,59 @@ label j3wke:
 
 # --Week 4--
 label j4:
-    call awaken(21)
-    "It's about time we prepare our potion demonstration!"
+    call titlecard(26)
+    # Changed this scene to past tense to really solidify the mice disaster.
 
-    "We've been working so hard at this over the last month, and it's finally time to see the fruits of our labor."
+    play sound "sound/pause.opus"
+    show vcr pause:
+        align (0.1, 0.1)
 
-    "Everything was ready to go... and then the mice arrived."
+    play music "music/Gagool.mp3"
+    pause 1.0
+    "Everything was going so well... until the mice arrived."
+    play sound "sound/rewind.opus"
+    show vcr rewind
+    pause 1.0
+    show expression Text("October the " + october[25][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title
+    show expression Text(october[25][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle
+    pause 1.0
+    show expression Text("October the " + october[24][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title
+    show expression Text(october[24][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle
 
-    "They seemed like regular ol' mice. Just a few of them noticed here and there."
+    pause 1.8
+    show vcr play
+    pause 2.0
 
-    "But then they started showing up in numbers, wreaking havoc on the witches."
+    scene black with dissolve
 
-    "Even so, we still have to get this potion made."
+    "They seemed like regular old mice at first. Just a few of them noticed here and there."
 
-    "My approach this week is..."
+    hide vcr
 
 menu:
-    "Just vibe it up.":
+    "I had been spending my week by..."
+
+    "Just vibing it up.":
         jump j4style_vibe
 
-    "Do it by the book.":
+    "Doing it by the book.":
         jump j4style_book
 
-    "Trial and error. Drink the potion!":
+    "Trial and error.":
         jump j4style_trial
 
 label j4style_vibe:
     scene black with dissolve
-    play music "music/Gagool.mp3"
 
-    "I'm pretty sure my witch has this on lock, so I'm not too worried about helping her out."
-
-    "I am, however, worried about these mice."
-
-    "I try my best to Just Vibe It Up, but despite my best efforts these mice have developed a nasty pattern of showing up where they're least wanted."
+    "I was pretty sure my witch had things on lock, so I gave her space."
+    "I was, however, concerned about these mice."
+    "I try my best to Just Vibe It Up, but no matter how many I caught, more and more mice kept showing up where they were least wanted."
 
     scene bg home_front
     show gomer talking at center
     with dissolve
 
-    "I'm chilling with Gomer in the field in front of my house when we hear a shout from inside."
+    "I was chilling with Gomer in the field in front of my house when we heard a shout from inside."
 
     scene bg potions with dissolve
     jump j4mice
@@ -1735,11 +1748,10 @@ label j4style_vibe:
 label j4style_book:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
     scene bg potions with fade
-    play music "music/Gagool.mp3"
 
-    "We've practiced our potion and now it's time to test our mettle."
+    "We had practiced our potion and it was time to test our mettle."
 
-    "We set up the cauldron at home. I toss in ingredients as my witch measures them out and reads off the instructions."
+    "We set up the cauldron at home. I tossed in ingredients as my witch measured them out and read off the instructions."
 
     witch "Three ounces of chicken of the woods, one stick of silvervine..."
 
@@ -1748,16 +1760,11 @@ label j4style_book:
 
     witch "I told you, it's a surprise!"
 
-    "I grumble. How am I supposed to know it's going right if I don't know what it's supposed to do?"
-
-    "I guess I should just trust the process."
-
     stop bg fadeout 1.0
     scene bg home_front with longfade
 
-    "I step outside to sip some catnip tea when we take a lunch break."
-
-    "That's when I hear a shout from inside."
+    "I had stepped outside to sip some catnip tea for lunch."
+    "That's when I heard a shout from inside."
 
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
     scene bg potions with dissolve
@@ -1766,9 +1773,8 @@ label j4style_book:
 label j4style_trial:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
     scene bg potions with fade
-    play music "music/Gagool.mp3"
 
-    witch "So I think we got the amounts right but we will probably need to finagle it here and there."
+    witch "So I think we got the amounts right, but we'll probably need to finagle it here and there."
 
     pc thonk "What's this potion supposed to do, anyway?"
 
@@ -1788,13 +1794,13 @@ label j4style_trial:
 
     pc thonk "..."
 
-    witch "Eh??"
+    witch "Eh?"
 
     pc thonk "Okay. I'll do it."
 
-    "I lower a spoon into the bubbling cauldron mixture and raise the spoonful to my lips."
+    "I lowered a spoon into the bubbling cauldron mixture and raised it to my lips."
 
-    "Nothing happens. Just a gurgling in my stomach."
+    "Nothing happened. Just a gurgling in my stomach."
 
     pc thonk "I don't feel lighter, my tummy just feels weird."
 
@@ -1803,38 +1809,38 @@ label j4style_trial:
     stop bg fadeout 1.0
     scene bg home_front with dissolve
 
-    "I step outside to get a breath of fresh air. That's when I hear a shout from inside."
+    "I had stepped outside to get a breath of fresh air. That's when I heard a shout from inside."
 
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
     scene bg potions with dissolve
     jump j4mice
 
 label j4mice:
-    "I rush inside to see my witch trying to fend off three mice."
+    "I rushed inside to see my witch trying to fend off three mice."
 
     play sound "sound/plop.opus"
-    "One of the mice jumps into the cauldron."
+    "One of the mice jumped into the cauldron."
 
-    "It swallows a good bit of the mixture and starts to float. Then it throws up into the potion."
+    "It swallowed a good bit of the mixture and started to float. Then it threw up into the potion."
 
     witch "NO!"
 
     pc concern "NO!"
 
     play sound "sound/mouse.opus"
-    "The Floating Mouse" "Squeak?!"
+    "Floating Mouse" "Squeak?!"
 
-    "Another mouse is scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
+    "Another mouse was scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
 
-    witch "GET OFF ME!!!"
+    witch "{b}GET OFF ME!!!{/b}"
 
     play sound "sound/angry-mouse.opus"
-    "The Slipper Mouse" "SQUEAK!"
+    "Slipper Mouse" "SQUEAK!"
 
     play sound "sound/shatter.mp3" volume 0.1
-    "Glass shatters on the stone floor."
+    "Glass shattered on the stone floor."
 
-    "This is a disaster."
+    "It was a complete disaster."
 
     stop music fadeout 3.0
     stop bg fadeout 3.0
@@ -1843,7 +1849,7 @@ label j4mice:
 
 label j4wke:
     call awaken(26)
-    # TODO: explain how the potion is unsalvageable, etc.
+    # TODO: Back to present tense explain how the potion is unsalvageable, etc.
     "oh no shit's fucked help what do i do"
 
 menu .ending:

@@ -5,7 +5,7 @@ label pucci_date_2:
 
     "Pucci invites me to the horticultural center."
 
-    pucci "Wear something you don't mind getting dirty."
+    pucci "{q}Wear something you don't mind getting dirty.{/q}"
 
     "I get dressed in my third favorite t-shirt and hop on the bus to the university."
 
@@ -32,7 +32,7 @@ label pucci_date_2:
 
         "I hate it." ("thonk"):
             pucci annoyed "Me too, honestly. Oh posh, I was hoping you might want to pull the vegetables."
-            # TODO: kinda abrupt
+            # TODO: kinda abrupt. should this fail the quest?
             stop music fadeout 3.0
             scene black with irisin
             return
@@ -52,6 +52,7 @@ label pucci_date_2:
 
     pc concern "Right, you're outsourcing your potion."
 
+    # TODO: ??? nani
     pucci happy "Outsourcing."
 
     pc concern "You sure you can do that?"
@@ -102,6 +103,6 @@ label pucci_date_2:
 
     $ pucci_date_count += 1
 
-    stop bg fadeout 3.0
+    stop music fadeout 3.0
     scene black with irisin
     return

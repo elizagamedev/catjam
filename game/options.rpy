@@ -32,7 +32,7 @@ define config.version = "1.0"
 define gui.about = _p("""
 Created by Jeanie Choi, M Ebel, and Eliza Velasquez.
 
-Source code (Python and Ren'Py files) are licensed under the {a=https://www.gnu.org/licenses/gpl-3.0.en.html}GPL v3.0{/a}. Original art assets are copyright Jeanie Choi, M Ebel, and Eliza Velasquez.
+Source code (Python and Ren'Py files) are licensed under the {a=https://www.gnu.org/licenses/gpl-3.0.en.html}GPL v3.0{/a}. Original art assets are copyright Jeanie Choi, M Ebel, and Eliza Velasquez. All rights reserved.
 
 Click {q}Credits{/q} or view CREDITS.txt for a detailed list of third-party attribution and licensing information.
 """)

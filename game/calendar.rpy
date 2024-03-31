@@ -25,7 +25,7 @@ define october = [
     ("Wednesday", "Twenty-third"),
     ("Thursday", "Twenty-fourth"),
     ("Friday", "Twenty-fifth"),
-    ("Saturday", "Twenty-sixth"),
+    ("Exam Day", "Twenty-sixth"),
     ("Sunday", "Twenty-seventh"),
     ("Monday", "Twenty-eighth"),
     ("Tuesday", "Twenty-ninth"),

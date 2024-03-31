@@ -37,3 +37,18 @@ image bg festival night:
     matrixcolor SaturationMatrix(0.4) * TintMatrix("#6289ff")
 
 define flashback = SepiaMatrix()
+
+image vcr pause:
+    Text("PAUSE", font="fonts/VCR_OSD_MONO_1.001.ttf", size=70)
+
+image vcr rewind:
+    Text("REWIND", font="fonts/VCR_OSD_MONO_1.001.ttf", size=70)
+    pause 0.5
+    Null()
+    pause 0.5
+    repeat
+
+image vcr play:
+    Text("PLAY", font="fonts/VCR_OSD_MONO_1.001.ttf", size=70)
+    pause 2.0
+    Null()

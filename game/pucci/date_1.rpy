@@ -53,7 +53,7 @@ label pucci_date_1:
 
     pucci neutral "You know, like, hire someone else to do it?"
 
-    pc talking "Pucci, maybe that's something that works for you, but... I have to actually do it. I can't just pay for someone else to do it."
+    pc thonk "Pucci, maybe that's something that works for you, but... I have to actually do it. I can't just pay for someone else to do it."
 
     pucci smug "How about I work on outsourcing the potion work? You can keep working on yours if you feel like it, but I want to show you that you don't really {i}have{/i} to do it that way."
 
