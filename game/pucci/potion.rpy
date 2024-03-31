@@ -1,17 +1,17 @@
 label pucci_potion:
     show pucci smug at center with dissolve
-    "Pucci has stepped onto the platform, looking fresh and totally unruffled."
+    "Pucci steps onto the platform, looking fresh and totally unruffled."
     "They might have been waiting for a dramatic moment to enter the stage... or maybe it was just happenstance."
-    "Good luck? Bad luck? I don't know. Luck."
     pucci happy "Hello, headmistress! I'm here to present the potion that the three of us worked on together."
     "My witch looks at me in confusion, and I mouth back {q}Just go with it!{/q}"
     "Headmistress" "Is that so? And you contributed, [pc]?"
 
     menu contributed:
         "Yes, I did.":
-            pass
+            jump contributedyes
         "Actually... no. I didn't help make this potion.":
-            return
+            pass
+    label contributedyes:
     "Pucci steps in smoothly."
     pucci neutral "That's right, [theyre] the brains of this whole project."
     pucci talking "And also our volunteer for this demonstration."
