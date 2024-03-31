@@ -2078,7 +2078,7 @@ label festivalscene:
         return
 
 label outro_pucci:
-    "I walk over to the fluffy brown cat waiting for me expectantly."
+    "I walk over to the fluffy brown cat waiting expectantly for me."
     show pucci neutral at center with dissolve
     pc happy "Pucci! We made it!!"
     pucci moe "[pc]! We really did!"
@@ -2086,20 +2086,20 @@ label outro_pucci:
     pucci neutral "Well, I was hoping you'd be able to tell me."
     pc concern "What do you mean?"
     pucci happy "I've really enjoyed these last few weeks with you. The dates have been really nice."
-    pc blushing "O-oh!"
+    pc blushing "O-Oh!"
     "I blush."
     pucci blushing "What do you think? Should we go out for realsies? You, me... world domination... think about it!"
-    menu pucci_askedout:
-        "YES!!!":
+    menu pucci_askedout(screen="dialog_choice"):
+        "YES!!!" ("blushing"):
             pucci "FABULOUS. This is the best day EVER. You MUST come over and see that orchid dress..."
             "They take my paw in theirs and lead me off into the sunset, chatting away about all the things they want to do with me."
             "I stroll with them, contentedly listening and chiming in with my own ideas."
             "There's a lull in the night, the crisp air suggesting we stand just a little closer together for warmth."
             "The moment's right here. I have to act! I gather up my courage, and..."
             menu puccicourage:
-                "Pull them towards me for a kiss":
+                "Pull them towards me for a kiss.":
                     pc neutral "Pucci, I... hold on a moment."
-                    "They pause as I tug on their hand and turn them around to face me."
+                    "They pause as I tug on their paw and turn them around to face me."
                     pucci neutral "Oh? What's up?"
                     pc talking "I was thinking. And I... To, um, for good luck... I was just wondering--"
                     "I take a deep breath."
@@ -2109,20 +2109,20 @@ label outro_pucci:
                     scene black with irisin
                     pause 1.0
                     jump credits
-                "Give them a hug":
+                "Give them a hug.":
                     pc neutral "Hey Pucci, I just wanted to thank you."
                     pucci neutral "For what?"
                     pc talking "For pulling through for me like that. I really appreciate that you made sure I'd be covered. Can't believe I needed it!"
                     pucci happy "Of course!"
                     pc neutral "It's not an of course. I really appreciate you."
                     pucci blushing "Aw, you."
-                    "I tug their hand, pulling them in close for a warm, fluffy hug."
+                    "I tug their paw, pulling them in close for a warm, fluffy hug."
                     play sound "sound/purr.opus"
                     "We stay like that a while, Pucci purring softly into my chest."
                     scene black with irisin
                     pause 1.0
                     jump credits
-        "Oh, gosh, I don't know...":
+        "Oh, gosh, I don't know..." ("concern"):
             pucci neutral "That's okay, darling. You take your time and figure you out, and we'll just go on being friends who passed the W.F.H. exam together!"
             pc concern "Thanks, Pucci. Sorry..."
             pucci happy "No apologies! Now, let's go get some ice cream!!!"
@@ -2132,7 +2132,7 @@ label outro_pucci:
             pause 1.0
             jump credits
 
-        "No way.":
+        "No way." ("thonk"):
             pucci annoyed "Well you didn't have to say it like THAT."
             pucci happy "I'm just glad we got through this together."
             pucci happy "I'm going to go get some ice cream, feel free to come with me. Or don't! I'll see you around!"
