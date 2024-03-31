@@ -41,7 +41,7 @@ label pucci_date_1:
 
     pucci talking "So, tell me. Do you want to spend the week in Pucci's Ultimate Fashion Bootcamp?"
 
-    "They say it with a waggle of their eyebrows and it makes me laugh."
+    "They say it with a waggle of their eyebrows. It makes me laugh."
 
     pc thonk "I wish. But I should probably focus on this potion I've been working on with my witch..."
 

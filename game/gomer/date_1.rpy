@@ -148,9 +148,9 @@ label gomer_date_1:
 
             "It seems they weren't expecting that response. Perhaps I was a bit too blunt..."
 
-            pc thonk "See you... Monday?"
+            pc thonk "See you... later?"
 
-            gomer talking "Haha. Yeah. Uh, Monday."
+            gomer talking "Haha. Yeah. Uh, later."
 
             stop music fadeout 3.0
 

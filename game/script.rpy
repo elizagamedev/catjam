@@ -30,69 +30,84 @@ label after_warp:
 
 init python:
     def title_text():
-        return Text(october[calendar_day][0], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff")
+        return Text(october[calendar_day][0], size=100, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff")
     def subtitle_text():
         month = "September" if calendar_day <= 2 else "October"
-        return Text(month + " the " + october[calendar_day][1], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff")
+        return Text(month + " the " + october[calendar_day][1], size=50, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff")
 
-transform title_wipe_left:
+transform title_wipe_out_left:
+    xcenter 0.5
     parallel:
         easein 0.2 xcenter 0.45
     parallel:
         linear 0.2 alpha 0.0
 
-transform title_wipe_right:
+transform title_wipe_out_right:
+    xcenter 0.5
     parallel:
         easein 0.2 xcenter 0.55
     parallel:
         linear 0.2 alpha 0.0
 
-transform title_appear:
+transform title_wipe_in_left:
+    xcenter 0.55
     alpha 0.0
-    linear 0.1 alpha 1.0
+    parallel:
+        easein 0.2 xcenter 0.5
+    parallel:
+        linear 0.2 alpha 1.0
+
+transform title_wipe_in_right:
+    xcenter 0.45
+    alpha 0.0
+    parallel:
+        easein 0.2 xcenter 0.5
+    parallel:
+        linear 0.2 alpha 1.0
 
 label show_titlecard(day = None, transition=Dissolve(1.0), month="October"):
     show expression title_text() as title
     show expression subtitle_text() as subtitle
     with transition
     if day is None:
-        pause 0.5
+        pause 1.0
         return
+    $ title_wipe_direction = 1 if calendar_day < (day + 2) else -1
 label .nextday:
     if calendar_day == (day + 2):
-        pause 0.5
+        pause 1.0
         return
-    if calendar_day < (day + 2):
-        show expression title_text() as title at title_wipe_left
-        show expression subtitle_text() as subtitle at title_wipe_left
+    if title_wipe_direction > 0:
+        show expression title_text() as title at title_wipe_out_left
+        show expression subtitle_text() as subtitle at title_wipe_out_left
         pause 0.2
         $ calendar_day += 1
     else:
-        show expression title_text() as title at title_wipe_right
-        show expression subtitle_text() as subtitle at title_wipe_right
+        show expression title_text() as title at title_wipe_out_right
+        show expression subtitle_text() as subtitle at title_wipe_out_right
         pause 0.2
         $ calendar_day -= 1
     hide title
     hide subtitle
-    show expression title_text() as title at title_appear
-    show expression subtitle_text() as subtitle at title_appear
+    if title_wipe_direction > 0:
+        show expression title_text() as title at title_wipe_in_left
+        show expression subtitle_text() as subtitle at title_wipe_in_left
+    else:
+        show expression title_text() as title at title_wipe_in_right
+        show expression subtitle_text() as subtitle at title_wipe_in_right
     pause 0.2
     jump .nextday
 
 label awaken(day = None):
     scene black
-    pause 1.0
     play bg "sound/morning.opus" noloop
     call show_titlecard(day)
-    pause 1.5
     scene bg room with Dissolve(1.0)
     return
 
 label titlecard(day = None):
     scene black
-    pause 1.0
     call show_titlecard(day)
-    pause 1.5
     return
 
 label weekend(menuset):
@@ -169,11 +184,11 @@ label start:
 
     "This is Sablewood."
 
-    "We're here for the regional Witch For Hire exam being held at the nearby university. We need to pass this exam to become licensed as a full-fledged witch-and-familiar duo."
+    "We're here for the regional Witch For Hire exam being held at the nearby university. We need to pass to become licensed as a full-fledged witch-and-familiar duo."
 
     "There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us around."
 
-    "We don't know what the exam will entail, just that we'll have to complete an objective announced by the university's headmistress. It could be anything, so we'll have to be at our readiest."
+    "We don't know what the exam will entail; just that it will be held on the last Saturday before the Halloween festival. It could be anything, so we'll have to be at our readiest."
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house..."
 
@@ -374,13 +389,13 @@ label cafeintro:
     show splinters at right with ease
     show frankie neutral at left with dissolve
 
-    frankie_unk "Splinters, you dizzard. If you'd been doing those hundred pushups and situps every day like I said you wouldn't have dropped that drink, dig?"
+    frankie_unk "Splinters, you dizzard. If you'd been doing those hundred pushups and situps every day like I told you, you wouldn't have dropped that drink, dig?"
 
-    splinters "but Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off"
+    splinters "But Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off!"
 
     "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink."
 
-    "The tiny cat doesn't seem to even notice that the money's gone, they just wave animatedly at the big calico looming over them with crossed arms."
+    "The tiny cat doesn't seem to even notice that the money's gone. They just wave animatedly at the big calico looming over them with crossed arms."
 
     frankie annoyed "Is there anything behind those fuzzed out eyes of yours? Someone's trying to sell you a dog, jack. You're being hornswoggled."
 
@@ -390,12 +405,12 @@ label cafeintro:
 
     pc concern "Uh, right?"
 
-    frankie talking "That's right. Listen up, dork. No more pussyfooting. Drop and gimme 20!"
+    frankie talking "That's right. Listen up, dork. No more pussyfooting. Drop and gimme twenty!"
 
     show frankie neutral
-    "Splinters looks confused and hands the tall cat a $20 bill."
+    "Splinters looks confused and hands the tall cat a twenty dollar bill."
 
-    splinters "my Mewber is here to pick me up I gotta go but I'll catch you later Frankie and--"
+    splinters "My Mewber is here to pick me up I gotta go but I'll catch you later Frankie and--"
 
     "They look at me."
 
@@ -404,7 +419,7 @@ label cafeintro:
     hide splinters with dissolve
     play sound "sound/chimes.opus"
 
-    "They scurry out the door, the door's bell jingling as they go, and hop up onto a broom being flown by a taxi witch."
+    "They scurry outside, jingling the bells of the door, and hop up onto a broom piloted by a taxi witch."
 
     stop bg fadeout 1.0
     play sound "sound/chimes.opus"
@@ -502,7 +517,7 @@ menu j1records_alec(screen="dialog_choice"):
         jump j1records_outro
 
 label j1records_games:
-    "Alec" "I'm more of a books kinda guy but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit."
+    "Alec" "I'm more of a books kinda guy, but I have, like, that one with the fruits that you drop into the thing and when they touch matchy ones they like, combine and turn into a bigger fruit."
 
     "Alec" "You know the one? I'm training to play ranked competitive. But that's like my only game, I guess. Why?"
 
@@ -515,7 +530,7 @@ label j1records_games:
     jump j1records_alec
 
 label j1records_secrets:
-    "Alec" "Oh, you're here for the exam. Well the secrets here are that we don't have an actual database except this baby right here..."
+    "Alec" "Oh, you're in town for the exam. Well, the secrets here are that we don't have an actual database except this baby right here..."
 
     "He taps his forehead."
 
@@ -525,7 +540,7 @@ label j1records_secrets:
     jump j1records_alec
 
 label j1records_reading:
-    "Alec" "Oh this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffee Shop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
+    "Alec" "Oh, this old thing? Haha. It's called {q}My Forbidden Love After Parachuting Into A Foreign Country, Establishing A Coffee Shop, And Hiding From The Secret Service{/q} and honestly? It slays. At least 4 out of 5 stars. Minimum."
     jump j1records_alec
 
 label j1records_outro:
@@ -552,7 +567,7 @@ label j1university:
 
     "I see buildings for horticulture, a library, and a sports field. Students are milling about, some zipping between buildings by broom while others walk on foot with their familiars."
 
-    "{i}Wait. I don't actually knoooow what classes my witch will be attending.{/i} Whoops."
+    "Wait. I don't actually knoooow what classes my witch will be attending. Whoops."
 
     stop sound fadeout 1.0
     scene bg university_front with longfade
@@ -563,15 +578,15 @@ label j1university:
 
     show yuri neutral at center with dissolve
 
-    yuri "Oh hey you! I was just on my way in, wanna join me?"
+    yuri "Oh, hey you! I was just on my way in. Wanna join me?"
 
     scene black with dissolve
 
     "I follow them in to grab some grub, which turns out to be a rotating sushi bar. There are some counters set aside for familiars with specific dietary needs and preferences."
 
-    "Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sushi and sashimi."
+    "Yuri goes to one of these with a bird symbol hanging above it and returns with a little bowl of wriggling worms added to their tray of sashimi."
 
-    "We have a nice talk and they tell me about the history of the school before they scoot their tray back and hop up from their seat."
+    "We have a nice lunch. They tell me about the history of the school before they scoot their tray back and hop up from their seat."
 
     scene bg university_front
     show yuri talking at center
@@ -594,7 +609,7 @@ label j1vineyard:
 
     "I saw the vineyards from the train on our way into town. They stretch a good ways, rolling fields of vines and slate-tiled roofs on low buildings. It's so scenic it's magical."
 
-    "In fact, it might even be magical."
+    "Come to think of it, it might {i}actually{/i} be magical."
 
     scene bg vineyard with dissolve
 
@@ -608,7 +623,7 @@ label j1vineyard:
 
     "I stare at them, mouth agape, genuinely questioning if that was a compliment or an insult. I suspect it was both, but they didn't seem to mean it in an intentionally offensive way."
 
-    "I suspect they might just be a little rude."
+    "They might just be like that."
 
     pucci talking "Is this your first time to the Vineyards? Let's walk together!"
 
@@ -625,13 +640,13 @@ label explore_vineyard_alone:
 
     hide pucci with dissolve
 
-    "The luscious brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
+    "The well-groomed brown familiar slinks off towards the first table of wine samples ahead of the tour guide, who seems entirely used to this."
 
     scene bg vineyard with longfade
 
-    "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise it actually is magical."
+    "I spend the day hearing the history of the Vineyards from the tour guide. It's an old establishment, and to my surprise, it actually {i}is{/i} magical."
 
-    "Powerful spells are maintained by the current proprietors to keep pests and diseases from harming the crops."
+    "Powerful spells keep pests and diseases from harming the crops."
 
     "The wines made from these grapes are not magically enhanced, but the flavors are rich and oh-so-natural."
     jump explore_vineyard_outro
@@ -655,7 +670,7 @@ label explore_vineyard_wpucci:
 label explore_vineyard_outro:
     stop music fadeout 1.0
     scene black with irisin
-    "At the end of the day I'm full of information and enough wine to make me a little bit spinny. All in all, it was a successful mission."
+    "At the end of the day I'm full of information and enough wine to make me a little bit spinny. I'd call it a success."
     jump j1explorechoice
 
 # Explore - Study
@@ -875,7 +890,7 @@ label j1witch:
     call titlecard(4)
     scene black with Dissolve(1.0)
 
-    witch "Hey [pc], how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
+    witch "Hey [pc], how was your recon this week? I got the house mostly set up and--oh, there are snacks in the pantry for you whenever you get hungry."
 
     show bg home_front with dissolve
 
@@ -887,8 +902,9 @@ label j1witch:
 
     "My witch reaches down as I walk up and helps lift my satchel off of me."
 
-    witch "Oh, you. Always taking the initiative. I appreciate you so much, [pc]."
+    witch "Oh, [pc]. Always taking the initiative. I appreciate you so much."
 
+    play sound "sound/purr.opus"
     "She gives my head a few pats and I purr. It's good to be home together."
 
     witch "Let's get you some dinner. Oh, by the way, I set up your crystal ball in your room in case there's anybody you wanna scry."
@@ -911,7 +927,7 @@ label j2:
     call awaken(7)
     "My witch got the packet with the details for the exam. We're supposed to make a unique potion that we come up with ourselves."
 
-    "My witch has an idea for a potion and tells me it's a surprise."
+    "She has an idea for a potion, but tells me it's a surprise."
 
     "Before we get started brewing the potion, we're going to have to find some ingredients. I have a list of things to find, so now I just need to go do the thing."
 
@@ -1274,11 +1290,11 @@ label j2forage:
 
     witch "Stay close to me, okay? I brought us some protection wards but I don't want to risk you getting hurt."
 
-    witch "There are bristlecone boars roaming the area where we're trying to go, and we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
+    witch "There are bristlecone boars roaming the area where we're trying to go, so we need to be careful. They're named for their curved and twisted tusks, and they can be pretty territorial."
 
-    witch "This makes it an actually pretty dangerous task, but we have to get these ingredients for the exam, so go we must."
+    witch "This makes it an actually pretty dangerous task, but we need these ingredients for my potion, so..."
 
-    "We see telltale tracks but only the most obvious ones--we're not locals and don't really know what we're looking at."
+    "We see telltale tracks, but only the most obvious ones--we're not locals, and don't really know what we're looking at."
 
     "Out on the trails we run into Yuri, who also has a basket for rare flowers they're taking clippings from."
 
@@ -1326,7 +1342,7 @@ label j2forage:
     "She holds up a giant toad, its legs dangling in the air."
 
     witch "It's adorable!"
-    witch "Anyways, we should head home. It's going to get late soon."
+    witch "I think it's about time to head home. It's starting to get dark."
     witch "Yuri, thanks for joining us today!"
 
     show yuri happy at center with dissolve
@@ -1349,15 +1365,14 @@ label j2forage:
 
     "We all head home in companionable silence, listening to the birds sing their evening songs."
     "No boars were encountered and we had a great day. Success!"
-
     jump j2witch
 
 # at home
 label j2witch:
-    pause 1.0
+    call titlecard(11)
+    scene black with Dissolve(1.0)
     "I got to spend a lot of time with my witch this week, and I've been feeling like I've been doing a great job as a familiar lately."
     "We spend the rest of the week taking it easy, sipping lemonades over board games."
-    scene black with irisin
     jump j2wke
 
 
@@ -1376,12 +1391,11 @@ label j2wke:
 label j3:
     call awaken(14)
 
-    "This is our last week to get a potion ready for the exam next week, where we'll start all over and make it from scratch to prove we've learned our stuff."
-
-    "We can stick to my witch's plan--she keeps telling me that what the potion does is a {q}surprise{/q}--or we can go with something else and see if it works better."
+    "There's only two more weeks until the exam."
+    "We've still got plenty of prep work to do, but we're on schedule to brew the actual potion next week."
 
 menu j3wk:
-    "I spend most of my time helping my witch with the potion, but on my day off I set out to..."
+    "I'll be spending most of my time this week helping with the potion, but on my day off I'm setting off to..."
 
     "Shop":
         jump j3shop
@@ -1402,6 +1416,7 @@ label j3shop:
     play sound "sound/crackle.opus"
     with flash
 
+    # TODO: why is splinters specifically calling the PC before going shopping?
     splinters "Hey, are you busy?"
 
     pc neutral "Well, I'm on my way to do some good old fashioned retail therapy."
@@ -1457,13 +1472,13 @@ label j3shopcont:
 
     splinters "But I'm not really like that. Sorry I'm so chatty today I just, it's been on my mind."
 
-    splinters "...You know, now that I think about it, maybe it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside."
+    splinters blushing "...You know, now that I think about it, maybe it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside."
 
     "Splinters flushes, ears turning even pinker than normal."
 
     pc thonk "Wow, Splinters, I didn't realize you thought about that stuff."
 
-    splinters "Haha. I know, right?"
+    splinters happy "Haha. I know, right?"
 
     pc neutral "Let's go do that shopping and see if we can't find you some paint."
 
@@ -1752,13 +1767,13 @@ label j4:
 menu:
     "I was preoccupied with the job at hand. My approach to potion-making was..."
 
-    "Just vibing it up.":
+    "Just vibing it up":
         jump j4style_vibe
 
-    "Doing it by the book.":
+    "Doing it by the book":
         jump j4style_book
 
-    "Trial and error.":
+    "Trial and error":
         jump j4style_trial
 
 label j4style_vibe:

@@ -104,7 +104,7 @@ label frankie_date_1:
         "If you say so..." ("thonk"):
             frankie annoyed "I don't flatter people, jack. Learn to take a compliment."
             show frankie upset
-            "Frankie sighs."
+            "Frankie sighs deeply."
 
     frankie upset "If only there were more hours in a day. Imagine being able to fit arm and leg day in the same day--It'd just be a day."
     frankie neutral "..."
