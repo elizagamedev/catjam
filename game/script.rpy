@@ -1909,7 +1909,7 @@ label j4potion_gomer_apology:
             gomer "You're the best, dog."
             pc happy "I'll see you at the exam."
             jump j4exam
-label j4potion_pucci_rejection
+label j4potion_pucci_rejection:
     "As I was about to give up all hope, I had a flash of inspiration."
     "I give Pucci a scry."
     pucci neutral "Hey, what's up?"
