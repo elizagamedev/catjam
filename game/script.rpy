@@ -557,7 +557,7 @@ label j1university:
     stop sound fadeout 1.0
     scene bg university_front with longfade
 
-    "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but ducked back out just in time."
+    "I spend the day wandering the campus and peeking into classrooms. I almost get my whiskers singed while popping into an alchemy class, but duck back out just in time."
 
     "I bump into Yuri outside the cafeteria hall."
 
