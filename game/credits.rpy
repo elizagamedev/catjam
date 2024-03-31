@@ -83,6 +83,7 @@ screen credits():
             text "midwestdocumentary, CC0 1.0"
             text "musicvision31, CC0 1.0"
             text "NoahBangs, CC BY 4.0"
+            text "qubodup, CC BY 4.0"
             text "Robinhood76, CC BY-NC 4.0"
             text "shyguy014, CC0 1.0"
             text "SoundDesignForYou, CC0 1.0"

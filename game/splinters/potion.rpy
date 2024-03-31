@@ -1,6 +1,6 @@
 label splinters_potion:
     scene bg festival
-    with fade
+    with Dissolve(1.0)
     play music "music/One-eyed Maestro.mp3"
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
 

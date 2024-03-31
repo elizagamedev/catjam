@@ -1,7 +1,7 @@
 label gomer_potion:
     scene bg festival
     show gomer talking at center
-    with fade
+    with Dissolve(1.0)
     play music "music/One-eyed Maestro.mp3"
 
     gomer "Ladies and gentlemen. {w}And others."

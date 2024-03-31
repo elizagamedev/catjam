@@ -23,7 +23,7 @@ screen dialog_choice(items, show_pc=True):
 
 style dialog_choice_button is button:
     size gui.text_size
-    padding (46, 0, 0, 0)
+    padding (46, 6, 6, 6)
     foreground Transform("gui/button/check_foreground.webp", yalign=0.5)
     hover_foreground Transform("gui/button/check_selected_foreground.webp", yalign=0.5)
 style dialog_choice_button_text is text:

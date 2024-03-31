@@ -2033,13 +2033,16 @@ label j4potion_splinters:
 label j4exam:
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
-    # TODO: this still needs ironing out; it's implied in Gomer's that they're going alphebetical order by cat name
-    "We get to the exam site at the festival grounds. My witch and the headmistress are there."
-    "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to hearing about the potion you've prepared."
-    "My witch and I look at each other nervously."
-    "Will our backup potion get here in time?"
-    "We stall for time, until..."
+    "We arrive at the exam site at the festival grounds."
+    "The entire student body is shuffling nervously in their seats as we await for the testing to begin."
+    scene bg festival with fade
+    "At last, the headmistress, a frighteningly tall woman, takes her place at the podium."
+    "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to evaluating the efforts of each and every one of you hopefuls."
+    "I take my witch's hand in my paw. Whether I'm trying to reassure her, or looking for reassurance, I can't say."
+    "All we can do is await our turn..."
     stop bg fadeout 1.0
+    scene black with Dissolve(1.0)
+    "At last, our names are called."
     jump expression ending + "_potion"
 
 label festivalscene:

@@ -53,3 +53,7 @@ image vcr play:
     Text("PLAY", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100, color="#ffffff")
     pause 2.0
     Null()
+
+image lasers = Solid("#ffb9df")
+
+define laserflash = Fade(.25, 0.0, .75, color="#ffb9df")

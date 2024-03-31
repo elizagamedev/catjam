@@ -1,7 +1,7 @@
 label frankie_potion:
     scene bg festival
     show frankie neutral at center
-    with fade
+    with Dissolve(1.0)
     play music "music/One-eyed Maestro.mp3"
 
     frankie happy "I'll spare you the lipslap and get right into the weeds."
