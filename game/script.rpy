@@ -2081,14 +2081,14 @@ label outro_pucci:
     "I walk over to the fluffy brown cat waiting for me expectantly."
     show pucci neutral at center with dissolve
     pc happy "Pucci! We made it!!"
-    pucci "[pc]! We really did!"
+    pucci moe "[pc]! We really did!"
     pc neutral "What's next for you?"
-    pucci "Well, I was hoping you'd be able to tell me."
+    pucci neutral "Well, I was hoping you'd be able to tell me."
     pc concern "What do you mean?"
-    pucci "I've really enjoyed these last few weeks with you. The dates have been really nice."
+    pucci happy "I've really enjoyed these last few weeks with you. The dates have been really nice."
     pc blushing "O-oh!"
     "I blush."
-    pucci "What do you think? Should we go out for realsies? You, me... world domination... think about it!"
+    pucci blushing "What do you think? Should we go out for realsies? You, me... world domination... think about it!"
     menu pucci_askedout:
         "YES!!!":
             pucci "FABULOUS. This is the best day EVER. You MUST come over and see that orchid dress..."
@@ -2105,6 +2105,7 @@ label outro_pucci:
                     "I take a deep breath."
                     pc blushing "Can I... give you a kiss?"
                     pucci blushing "Oh, you. Come here."
+                    play sound "sound/purr.opus"
                     scene black with irisin
                     pause 1.0
                     jump credits
@@ -2116,14 +2117,15 @@ label outro_pucci:
                     pc neutral "It's not an of course. I really appreciate you."
                     pucci blushing "Aw, you."
                     "I tug their hand, pulling them in close for a warm, fluffy hug."
+                    play sound "sound/purr.opus"
                     "We stay like that a while, Pucci purring softly into my chest."
                     scene black with irisin
                     pause 1.0
                     jump credits
         "Oh, gosh, I don't know...":
-            pucci "That's okay, darling. You take your time and figure you out, and we'll just go on being friends who passed the W.F.H. exam together!"
-            pc "Thanks, Pucci. Sorry..."
-            pucci "No apologies! Now, let's go get some ice cream!!!"
+            pucci neutral "That's okay, darling. You take your time and figure you out, and we'll just go on being friends who passed the W.F.H. exam together!"
+            pc concern "Thanks, Pucci. Sorry..."
+            pucci happy "No apologies! Now, let's go get some ice cream!!!"
             "They give me a reassuring pat on the shoulder and zip off to find a sweet treat."
             "I take a look around and realize... I'll never forget this summer."
             scene black with irisin
