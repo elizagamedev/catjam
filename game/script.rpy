@@ -1749,12 +1749,12 @@ label j4:
 
     scene black with dissolve
 
-    "They seemed like regular old mice at first. Just a few of them noticed here and there."
-
+    "They seemed like regular old mice at first. Just a few of them noticed by folks around town, here and there."
+    "Little did I know, they were actually... bastard mice. I was unprepared. We all were."
     hide vcr
 
 menu:
-    "I had been spending my week by..."
+    "I was preoccupied with the job at hand. My approach to potion-making was..."
 
     "Just vibing it up.":
         jump j4style_vibe
@@ -1768,11 +1768,12 @@ menu:
 label j4style_vibe:
     "I was pretty sure my witch had things on lock, so I was giving her space."
     "I was, however, concerned about these mice."
-    "I try my best to Just Vibe It Up, but no matter how many I caught, more and more mice kept showing up where they were least wanted."
+    "I tried my best to Just Vibe It Up, but I kept having to catch these damn mice."
+    "No matter how many I caught, more and more mice kept showing up where they were least wanted."
 
     if gomer_failed:
         scene bg home_front with dissolve
-        "I was relaxing outside when I heard a shout from inside."
+        "I was relaxing outside, finally taking a rest, when I heard a shout from inside."
     else:
         scene bg home_front
         show gomer talking at center
@@ -1786,7 +1787,7 @@ label j4style_book:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
     scene bg potions with dissolve
 
-    "We had practiced our potion and it was time to test our mettle."
+    "We had practiced our potion at the university and it was time to test our mettle."
 
     "We set up the cauldron at home. I tossed in ingredients as my witch measured them out and read off the instructions."
 
@@ -1800,7 +1801,7 @@ label j4style_book:
     stop bg fadeout 1.0
     scene bg home_front with longfade
 
-    "I had stepped outside to sip some catnip tea for lunch."
+    "I had stepped outside to let her cook while I sipped some catnip tea."
     "That's when I heard a shout from inside."
 
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
@@ -1821,7 +1822,7 @@ label j4style_trial:
 
     witch "..."
 
-    pc thonk "No."
+    pc thonk "Wait. No."
 
     witch "I mean, so listen..."
 
@@ -1887,7 +1888,7 @@ label j4mice:
 label j4wke:
     call awaken(26)
     # TODO: Back to present tense explain how the potion is unsalvageable, etc.
-    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam TODAY."
+    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam is TODAY."
 
 menu .ending:
     "Do I have any backup options?"
