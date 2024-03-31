@@ -10,7 +10,7 @@ label pucci_potion:
         "Yes, I did.":
             pass
         "Actually... no. I didn't help make this potion.":
-
+            return
     "Pucci steps in smoothly."
     pucci neutral "That's right, [theyre!c] the brains of this whole project."
     pucci talking "And also our volunteer for this demonstration."
@@ -28,8 +28,46 @@ label pucci_potion:
         jump .none
 
 label .light:
-    "light stuff"
-    jump .end
+    pucci "This light potion is more than just a light. It creates an atmosphere that is, as one might say, lit. Litty, even."
+    "I nod along knowingly."
+    pucci "The materials that went into it included bioluminescent fungi, a glow toad, a pitcher of Grandma's Sun Tea, straight up fire, and a dollop of moonlight."
+    pucci "[pc] here had the genius idea to make it concentrated so the consumable dosage needed for the light show is quite minimal. We have some mini bottles here, would you like to try one, headmistress?"
+    "Headmistress" "No thank you."
+    pucci "Excellent, I'll have some sent to your office to hand out as gifts to the faculty."
+    "Headmistress" "I--"
+    pucci "If you would be so kind, [pc], could you please drink this potion to demonstrate that it works?"
+    menu drinkchoicea:
+        "{i}What should I do?{/i}"
+        "Drink the potion!":
+            "It goes down like fire, burning my tongue a little, and I sputter."
+            pucci "Also a splash of whisky just for kicks! Alcohol is a great..."
+            "Her voice fades. Everything fades... to brightness. It takes a moment to adjust, but I can see beams of light emitting from me everywhere that isn't blocked by my t-shirt."
+            pucci "BEHOLD, LIGHT!"
+            "Pucci turns on a boombox--when did that get there?--and it's playing Pawty In The USA."
+            "They start to turn me in circles like I'm a disco ball."
+            "On the third rotation I notice that the headmistress has put on sunglasses."
+            "My witch is squinting happily at us."
+            "Spin, spin, spin."
+            "Finally, the world stops spinning, and I stumble over my own feet and sink to the ground."
+            pc "Psst, Pucci! How long is this supposed to last?"
+            pucci "I actually don't know haha! Isn't it so cool?"
+            "The headmistress approaches us, still wearing the shades."
+            "Headmistress" "Well then. What a delightful potion! I'm impressed you managed to make something so... potent."
+            pucci "Thank you! Oh, I forgot my closing remarks. Ahem..."
+                jump .end
+        "Don't drink it, risking failing the exam":
+            pucci neutral "Uhh... I kind of need you to do this, [pc]...!!!"
+            pc "I can't do it!!!"
+            "Headmistress" "Is there a problem?"
+            pc "I'm sorry, I can't do it. I'm... I just can't."
+            "Headmistress" "Well, Pucci, why don't you drink it to demonstrate?"
+            pucci neutral "I... well... okay. Sigh."
+            "Pucci pops the cap off the potion and drinks it delicately."
+            "The light that begins to glow and then irradiate off of her is a vibrant pink."
+            "I look away just in time to see the flash from behind closed eyelids."
+            "The headmistress and my witch both shout. I open my eyes and see them covering theirs. They shake it off, thankfully."
+            "Headmistress" "Well, it... did produce light. Will that be all?"
+                jump .end
 
 label .transmutation:
     pucci "This transmutation potion completely changes the form of whoever drinks it to look like a fabulous designer cat!"
@@ -39,7 +77,7 @@ label .transmutation:
     pucci "Excellent, I'll have some sent to your office to hand out as gifts to the faculty."
     "Headmistress" "I--"
     pucci "If you would be so kind, [pc], could you please drink this potion to demonstrate that it works?"
-    menu drinkchoice:
+    menu drinkchoiceb:
         "{i}What should I do?{/i}"
         "Drink the potion!":
             "I drink it down in one big gulp."
@@ -52,7 +90,7 @@ label .transmutation:
             "Pucci beams."
             "My witch looks aghast. It must be quite a sight."
             pucci "It was all thanks to [pc]! We couldn't have done it alone, but together we made it work."
-            pass
+                jump .end
         "Don't drink it and fail the exam":
             pucci neutral "Uhh... I kind of need you to do this, [pc]...!!!"
             pc "I can't do it!!!"
@@ -79,8 +117,6 @@ label .transmutation:
             "Pucci turns on their heel and leaves."
             "Maybe next year will go better."
             jump credits
-            return
-    jump .end
 
 label .resistance:
     "resistance stuff"
@@ -93,7 +129,7 @@ label .none:
 label .end:
     pucci "That concludes our presentation."
     pucci "Thank you for your time, headmistress."
-    "Headmistress" "Pucci, [pc], that was wonderful. I hope you are both very proud of yourselves."
+    "Headmistress" "Pucci, [pc], I would consider that a passing success. I hope you are both very proud of yourselves."
     "The headmistress shakes my witch's hand and tells her that she's lucky to have such a good familiar."
     "When we leave, I pull Pucci aside privately."
     pc "Hey, why did you lie in there?"
