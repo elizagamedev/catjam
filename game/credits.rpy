@@ -49,6 +49,12 @@ screen credits():
             text "http://creativecommons.org/licenses/by/3.0/":
                 color "#aaaaaa"
             null height 50
+            label "Images"
+            text "Indieground Design"
+            text "Licensed under the Unsplash License"
+            text "https://unsplash.com/license":
+                color "#aaaaaa"
+            null height 50
             label "Sound Samples"
             text "The following artists created sound samples used or remixed in this work."
             null height 20
@@ -109,8 +115,14 @@ screen credits():
             text "Licensed under the Open Font License (OFL)"
             text "https://openfontlicense.org/":
                 color "#aaaaaa"
+            null height 20
             text "{b}VCR OSD Mono{/b} by Riciery Leal"
             text "https://www.dafont.com/vcr-osd-mono.font":
+                color "#aaaaaa"
+            null height 20
+            text "{b}Atkinson Hyperlegible{/b} by the Braille Institute of America, Inc."
+            text "Licensed under the Atkinson Hyperlegible Font License"
+            text "https://www.brailleinstitute.org/freefont":
                 color "#aaaaaa"
             null height 50
             label "Ren'Py Game Engine"

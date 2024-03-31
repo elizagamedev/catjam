@@ -1,5 +1,5 @@
 image disclaimer:
-    Text("Let's make sure not to treat pets like this!", size=80, color="#ff0", outlines=[(5, "#000", 0, 0)])
+    Text("Let's make sure not to treat pets like this!", size=80, color="#ff0", outlines=[(5, "#000", 0, 0)], font="fonts/Atkinson-Hyperlegible-Regular-102.otf")
     pause 0.5
     Null()
     pause 0.1

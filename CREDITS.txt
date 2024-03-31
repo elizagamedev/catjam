@@ -4,6 +4,10 @@ Music by Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
 
+# Images
+
+https://unsplash.com/photos/a-piece-of-white-paper-with-a-brown-border-90tYDMn-onI
+
 # Sound
 
 This game contains sound effects based on samples from the following sources.
@@ -137,3 +141,6 @@ https://fonts.google.com/specimen/Itim
 
 VCR OSD Mono
 https://www.dafont.com/vcr-osd-mono.font
+
+Atkinson Hyperlegible
+https://www.brailleinstitute.org/freefont
