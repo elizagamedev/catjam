@@ -135,7 +135,7 @@ label .end:
         "Yeah no, that makes sense":
             pucci blushing "I knew you'd understand! The girls who get it, get it. That's what the girlies say on TockTock."
             return
-    pucci happy "Well, we passed!"
+    pucci happy "The important thing is we passed!"
     "We sure did."
 
 
