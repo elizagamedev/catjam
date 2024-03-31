@@ -123,13 +123,15 @@ label start:
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
-    # TODO: mention town name here
-
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday life coming from the cozy little college town we'll call home for at least the next month."
 
-    "We're here for the regional finals test being held at the nearby university. There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us the ropes."
+    "This is Sablewood."
 
-    "TODO: insert a clear depiction of what the game's objectives are here"
+    "We're here for the regional Witch For Hire exam being held at the nearby university. We need to pass this exam to become licensed as a full-fledged witch-and-familiar duo."
+
+    "There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us around."
+
+    "We don't know what the exam will entail, just that we'll have to complete an objective announced by the university's headmistress. It could be anything, so we'll have to be at our readiest."
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house..."
 
@@ -1200,7 +1202,7 @@ label j2synthesize:
 
     splinters neutral "It's not a potion. It was supposed to be a protein shake."
 
-    # TODO: did you mean frankie?
+    # TODO: did you mean frankie? -- no, Splinters is trying to make a protein shake based on presumably frankie's suggestion but did it badly
     "Seems like Splinters dodged a bullet with that one."
 
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
@@ -1411,14 +1413,14 @@ label j3shopcont:
 
     splinters "There are lots of people who make fun of me because I'm kind of a little guy."
 
-    # TODO: this contradicts frankie's dates lol
-    splinters "The one exception is Frankie. They mean well and are actually really defensive of me if somebody's giving me a hard time."
+    # TODO: this contradicts frankie's dates lol -- fixed lol poor splinters is gaslighting themself
+    splinters "Like Frankie, for example. I know they're not really being mean, they just talk like that! Right...?"
 
-    splinters "I've been... trying to be a little more like them. They told me it matters to feel good in your own fur and to know yourself, even if other people don't get it."
+    splinters "I've been... trying to be a little more like them. Confident. Bold."
 
-    splinters "Sorry I'm so chatty today I just, it's been on my mind, and I keep thinking that just like with me other people might have more to them than it seems."
+    splinters "But I'm not really like that. Sorry I'm so chatty today I just, it's been on my mind."
 
-    splinters "...and it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside. As long as I know myself, I'm good."
+    splinters "...You know, now that I think about it, maybe it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside."
 
     "Splinters flushes, ears turning even pinker than normal."
 
@@ -1655,9 +1657,9 @@ label j3witch:
     call titlecard(18)
     scene bg home_front with Dissolve(1.0)
 
-    # TODO: no beach here
+    # TODO: no beach here -- fixed
 
-    "While I went to the beach, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
+    "While I took my day off, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
 
     "I hear her murmur from her bedroom."
 
@@ -1757,8 +1759,8 @@ label j4style_book:
 
     witch "Three ounces of chicken of the woods, one stick of silvervine..."
 
-    # TODO: give her a name or something? calling her like "witch" feels strange
-    pc thonk "Witch? What's this potion supposed to do, anyway?"
+    # TODO: give her a name or something? calling her like "witch" feels strange -- fair enough! I like the idea of leaving it unspecified so I just removed that here.
+    pc thonk "What's this potion supposed to do, anyway?"
 
     witch "I told you, it's a surprise!"
 
@@ -1860,7 +1862,7 @@ menu .ending:
     "Nope." if not pucci_potion and not frankie_potion and not splinters_potion and not (gomer_potion and not gomer_angry and not gomer_failed):
         if gomer_angry and gomer_potion and not gomer_failed:
             jump j4potion_gomer_apology
-        if pucci_date_count = 1:
+        if pucci_date_count == 1:
             jump j4potion_pucci_rejection
         jump j4potion_nope
 
@@ -1947,11 +1949,7 @@ label j4potion_pucci:
     with flash
     "I rush to scry Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
     pc thonk "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
-    if which_pucci_potion is None:
-        pucci "TODO you didnt date me but I did promise a potion so hijinks probably"
-    else:
-        # TODO: not an exam room
-        pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam room."
+    pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam site."
     jump j4exam
 
 label j4potion_frankie:
@@ -1981,10 +1979,11 @@ label j4exam:
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
     # TODO: not a university hall
-    "We get to the exam room at the university. It's full of empty desk chairs, and the only other person in the room is the headmistress."
+    "We get to the exam site at the festival grounds. My witch and the headmistress are there."
     "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to hearing about the potion you've prepared."
     "My witch and I look at each other nervously."
-    "The door slides open with a crash, the impact causing a piece of chalk to fall from the whiteboard ledge."
+    "Will our backup potion get here in time?"
+    "We stall for time, until..."
     stop bg fadeout 1.0
     jump expression ending + "_potion"
 
