@@ -868,11 +868,11 @@ label j1wke:
 # --Week 2--
 label j2:
     call awaken(7)
-    "My witch got the packet with the details for the exam. We're supposed to make a potion that changes the color of someone's fur."
+    "My witch got the packet with the details for the exam. We're supposed to make a unique potion that we come up with ourselves."
 
-    "Before we get started brewing the potion, we're going to have to find some ingredients."
+    "My witch has an idea for a potion and tells me it's a surprise."
 
-    "My witch picked a recipe for us to work on and I have a list of things to find, so now I just need to go do the thing."
+    "Before we get started brewing the potion, we're going to have to find some ingredients. I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
     "To get the ingredients, I'm going to..."
