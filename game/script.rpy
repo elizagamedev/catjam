@@ -1867,7 +1867,7 @@ label j4mice:
     play sound "sound/mouse.opus"
     "Floating Mouse" "Squeak?!"
 
-    "Another mouse was scooting glass potion bottles towards the edge of the table, while the third one has latched onto my witch's slipper."
+    "Another mouse scooted glass potion bottles towards the edge of the table, while the third one had latched onto my witch's slipper."
 
     witch "{b}GET OFF ME!!!{/b}"
 
@@ -1887,7 +1887,7 @@ label j4mice:
 label j4wke:
     call awaken(26)
     # TODO: Back to present tense explain how the potion is unsalvageable, etc.
-    "Now we're up a creek without a paddle, no potion to our names and our potions exam TODAY."
+    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam TODAY."
 
 menu .ending:
     "Do I have any backup options?"
