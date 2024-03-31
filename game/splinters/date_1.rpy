@@ -146,7 +146,7 @@ label splinters_date_1:
     splinters talking "Er, n-no. I should have done this when I first got here, actually."
     "They proceed to shake out a pile on their scratched-up paw, wincing as they did so."
     show splinters neutral
-    "Splinters then proceeded to toss the salt over the shoulder, mutter some words, then make the rosary cross."
+    "Splinters then tosses the salt over the shoulder, mutters some words, then makes the rosary cross."
 
     menu(screen="dialog_choice"):
         "Haha, you're so weird Splinters." ("talking"):
@@ -208,7 +208,7 @@ label splinters_date_1:
     stop music fadeout 3.0
     stop bg fadeout 3.0
     scene black with irisin
-    "Splinters continued telling me about the common lucky weeds as we exit the cafe together."
+    "Splinters continues telling me about the common lucky weeds as we exit the cafe together."
 
     scene bg home_front
     show splinters neutral at center
