@@ -42,7 +42,7 @@ Click {q}Credits{/q} or view CREDITS.txt for a detailed list of third-party attr
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "catjam"
+define build.name = "getting-familiar"
 
 
 ## Sounds and music ############################################################
@@ -189,7 +189,7 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
-    build.classify('game/debug.rpy', None)
+    build.classify('**/*.rpy', None)
     build.classify('game/debug.rpyc', None)
 
     ## To archive files, classify them as 'archive'.
@@ -202,7 +202,6 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-    build.documentation('*.md')
 
 
 ## A Google Play license key is required to perform in-app purchases. It can be
