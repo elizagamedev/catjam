@@ -1761,7 +1761,6 @@ label j4:
     scene black with dissolve
 
     "They seemed like regular old mice at first. Just a few of them noticed by folks around town, here and there."
-    "Little did I know, they were actually... {b}bastard mice{/b}. I was unprepared. We all were."
     hide vcr
 
 menu:
@@ -1864,12 +1863,14 @@ label j4style_trial:
     jump j4mice
 
 label j4mice:
-    "I rushed inside to see my witch trying to fend off three mice."
+    "I rushed inside to see my witch trying to fend off a horde of mice."
+    "They were pouring from the cracks in the cobblestone, the cracks in the floorboards."
+    "That's when I realized we were dealing with a veritable swarm of migrating {b}bastard mice{/b}."
 
     play sound "sound/plop.opus"
     "One of the mice jumped into the cauldron."
 
-    "It swallowed a good bit of the mixture and started to float. Then it threw up into the potion."
+    "It started to float. Then it threw up into the potion."
 
     witch "NO!"
 
@@ -1885,9 +1886,16 @@ label j4mice:
     play sound "sound/angry-mouse.opus"
     "Slipper Mouse" "SQUEAK!"
 
+    "I felt a torrent of fur rubbing against my own paws--the floor was nearly completely covered in a the hivemind of mice making their way outside like a wave."
+
     play sound "sound/shatter.mp3" volume 0.1
     "Glass shattered on the stone floor."
 
+    play sound "sound/collapse.opus"
+    "The bookshelf toppled."
+
+    play sound ["sound/plop.opus", "sound/plop.opus"]
+    play bg "sound/pouring.opus" noloop
     "It was a complete disaster."
 
     stop music fadeout 3.0
@@ -1897,7 +1905,9 @@ label j4mice:
 
 label j4wke:
     call awaken(26)
-    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam is {i}today{/i}."
+    "An ordinary encounter with bastard mice is traumatizing enough."
+    "I wish I could say the damage was limited to a few a permanent psychological scars. But our potion was completely ruined!"
+    "Now we're up a creek without a paddle, no potion to our names, and our exam is {i}today{/i}."
 
 menu .ending:
     "Do I have any backup options?"
