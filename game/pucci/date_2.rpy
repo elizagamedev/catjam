@@ -32,7 +32,8 @@ label pucci_date_2:
 
         "I hate it." ("thonk"):
             pucci annoyed "Me too, honestly. Oh posh, I was hoping you might want to pull the vegetables."
-            # TODO: kinda abrupt. should this fail the quest?
+            pucci neutral "Oh well."
+            # TODO: kinda abrupt. should this fail the quest? -- naw, you have to reeeeeally try to ruffle their feathers to fail pucci's quest -m
             stop music fadeout 3.0
             scene black with irisin
             return
@@ -52,16 +53,13 @@ label pucci_date_2:
 
     pc concern "Right, you're outsourcing your potion."
 
-    # TODO: ??? nani
-    pucci happy "Outsourcing."
-
     pc concern "You sure you can do that?"
 
     pucci talking "Of course I {i}can{/i}! It's par for the course, darling."
 
     pucci neutral "I have money, other people are good at potions, I can offload that from my plate and enjoy some peace of mind."
 
-    pucci talking "Speaking of the outsourcing, I narrowed down a few options for you: a light potion, a transmutation potion, or a potion of poison resistance. Which do you want?"
+    pucci talking "Speaking of the outsourcing, I narrowed down a few options for you: a light potion or a transmutation potion. Which do you want?"
 
     menu(screen="dialog_choice"):
         "Light potion" ("talking"):
@@ -70,9 +68,6 @@ label pucci_date_2:
         "Transmutation potion" ("talking"):
             $ which_pucci_potion = "transmutation"
             pucci talking "You won't regret it. Heehee."
-        "Potion of poison resistance" ("talking"):
-            $ which_pucci_potion = "resistance"
-            pucci talking "That's what I'm talkin' about. Let's freaking go."
 
     pucci neutral "With that sorted out, let's keep walking! I wanna get eyes on the veggies I've been keeping track of. I'm {i}not{/i} going to be pulling them up, though."
 
