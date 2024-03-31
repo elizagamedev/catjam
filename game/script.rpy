@@ -2027,12 +2027,55 @@ label outro_pucci:
     pucci "Well, I was hoping you'd be able to tell me."
     pc concern "What do you mean?"
     pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
-    # TODO put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
     pucci "What do you think? Should we go out for realsies?"
-    # TODO: more stuff go here
-    scene black with irisin
-    pause 1.0
-    jump credits
+    menu pucci_askedout:
+        "YES!!!":
+            pucci "FABULOUS. This is the best day EVER. You MUST come over and see that orchid dress..."
+            "They take my paw in theirs and lead me off into the sunset, chatting away about all the things they want to do with me."
+            "The moment's right here. I have to act! I gather up my courage, and..."
+            menu puccicourage:
+                "Pull them towards me for a kiss":
+                    pc neutral "Pucci, I... hold on a moment."
+                    "They pause as I tug on their hand and turn them around to face me."
+                    pucci neutral "Oh? What's up?"
+                    pc talking "I got you something. To, um, for good luck. And I was just wondering--"
+                    "I take a deep breath."
+                    pc blushing "Can I... give you a kiss?"
+                    pucci blushing "Oh, you. Come here."
+                    scene black with irisin
+                    pause 1.0
+                    jump credits
+                "Give them a hug":
+                    pc neutral "Hey Pucci, I just wanted to thank you."
+                    pucci neutral "For what?"
+                    pc talking "For pulling through for me like that. I really appreciate that you made sure I'd be covered. Can't believe I needed it!"
+                    pucci happy "Of course!"
+                    pc neutral "It's not an of course. I really appreciate you."
+                    pucci blushing "Aw, you."
+                    "I tug their hand, pulling them in close for a warm, fluffy hug."
+                    "We stay like that a while, Pucci purring softly into my chest."
+                    scene black with irisin
+                    pause 1.0
+                    jump credits
+        "Oh, gosh, I don't know...":
+            pucci "That's okay, darling. You take your time and figure you out, and we'll just go on being friends who passed the W.F.H. exam together!"
+            pc "Thanks, Pucci. Sorry..."
+            pucci "No apologies! Now, let's go get some ice cream!!!"
+            "They give me a reassuring pat on the shoulder and zip off to find a sweet treat."
+            "I take a look around and realize... I'll never forget this summer."
+            scene black with irisin
+            pause 1.0
+            jump credits
+
+        "No way.":
+            pucci annoyed "Well you didn't have to say it like THAT."
+            pucci happy "I'm just glad we got through this together."
+            pucci happy "I'm going to go get some ice cream, feel free to come with me. Or don't! I'll see you around!"
+            "With that, Pucci sways away in search of a sweet treat and I'm left here alone."
+            "I take a look around and realize... I'll never forget this summer."
+            scene black with irisin
+            pause 1.0
+            jump credits
 
 label outro_frankie:
     "Frankie is busy pretending like they didn't notice me approach."
