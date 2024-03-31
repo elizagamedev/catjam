@@ -18,7 +18,7 @@ label splinters_date_2:
             $ splinters_failed = True
             $ scry_redo = True
             splinters "Er... okay. How about you go by yourself?"
-            "Splinters looked bored, like he had heard this line a lot before."
+            "Splinters looked bored, like they had heard this line a lot before."
             splinters "Maybe you can pick up a new person, er I mean, personality."
             $ expletive = renpy.random.choice(splinters_expletives)
             splinters "{i}[expletive], I always mess up the comeback.{/i}"
@@ -122,11 +122,11 @@ label splinters_date_2:
 
             frankie upset "Poor kid. Always had a sensitive gut."
 
-            "You were also kind of feeling it. How did Frankie eat this stuff?"
+            "I am also kind of feeling it. How did Frankie eat this stuff?"
 
             stop music fadeout 3.0
             scene black with irisin
-            "You marveled at the buffness of Frankie's gut, both inside and out, and then you sprint off yourself for the day."
+            "I marvel at the buffness of Frankie's gut, both inside and out, and then I sprint off myself for the day."
 
             return
         "The kerfluffle cakes sound good!" ("happy"):
@@ -143,7 +143,7 @@ label splinters_date_2:
 
             splinters "I wonder what the taxonomic distance is between these rats and the marsh rats."
 
-            pc concern "What are the marsh rats?"
+            pc concern "What are marsh rats?"
 
             show splinters at right with ease
             show gomer smug at left with dissolve
@@ -260,7 +260,7 @@ label splinters_date_2:
 
             "You watch in slow motion as Splinters goes {sq}SPLAT{/sq} on the ground."
 
-            "His face is now perfectly caked."
+            "Their face is now perfectly caked."
 
             show splinters crying at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
@@ -304,7 +304,7 @@ label splinters_date_2:
     splinters "The b-baby one is weird. it means you'll find y-your lucky someone."
     splinters "The pumpkin's for harvest and the moon's for magic."
 
-    "Time flew by as you listened to Splinter's explanation of the history of kerfluffle cakes."
+    "Time flies by as I listen to Splinter's explanation of the history of kerfluffle cakes."
 
     kerfluffle_vendor "Hot Hot Hot Kerfluffle Cakes! Get them pipin' hot! What'll it be?"
 
@@ -322,14 +322,14 @@ label splinters_date_2:
     $ expletive = renpy.random.choice(splinters_expletives)
     splinters "[expletive!u]! IT'S EVERYTHING I EVER DREAMED OF AND MORE!"
 
-    "You take a tentative bite of the cake. Your teeth catch on something hard."
+    "I take a tentative bite of the cake. My teeth catch on something hard."
 
     show splinters neutral
 
     define charms = ["ruler", "crown", "baby", "pumpkin", "moon"]
     $ charm = renpy.random.choice(charms)
 
-    "Tearing off the corner, you find a charm of a [charm] inside."
+    "Tearing off the corner, I find a charm of a [charm] inside."
     if charm == "ruler":
         "It's literally just a little metal rectangle. For a moment I thought it was junk that got into the food."
         "But I quickly realize what it is, clearly because the charm just made me smarter."
@@ -355,7 +355,7 @@ label splinters_date_2:
         pc thonk "Oh look, there's a keychain attached to it."
         splinters "O-oh. Are you... going to carry it around?"
         pc thonk "..."
-        "The cherubic naked little baby continued staring, ominously. Smiling."
+        "The cherubic naked little baby continues staring, ominously. Smiling."
     elif charm == "pumpkin":
         "It's a little pumpkin. And pretty cute and well made."
         show splinters moe
@@ -363,12 +363,12 @@ label splinters_date_2:
         "Splinters coos over it."
         splinters "THE CRAFTSMANSHIP IS EXCELLENT!"
         pc talking "Oh wow, that's great to know."
-        "It really was very detailed, for being such a tiny charm."
+        "It really is very detailed, for being such a tiny charm."
         splinters "VERY NICE~"
         splinters "It's captured the botanical details of the Cucurbita Cinderellius perfectly!"
         show splinters neutral
     elif charm == "moon":
-        "It was a pretty figure of a crescent moon on a pedestal."
+        "It's a pretty figure of a crescent moon on a pedestal."
         "Suspended within the crescent's curve are three small jewels."
         splinters "Ooh wow, they enchanted this one."
         "You both marvel at the dancing jewels twinkling in the light."
@@ -377,7 +377,7 @@ label splinters_date_2:
         "I can feel some magic flowing through me. Or maybe it's the placebo effect. Who knows?"
         show splinters neutral
     else:
-        "Something was seriously wrong. The charm has imploded into a series of strange... glitchy patterns."
+        "Something is seriously wrong. The charm has imploded into a series of strange... glitchy patterns."
         "It's constantly morphing and the space around it seems to be increasingly distorted."
         splinters upset "Oh Em Gee WHAT'S HAPPENING!"
         "Splinters is now morphing as well in front of your eyes."
@@ -401,7 +401,7 @@ label splinters_date_2:
     show splinters neutral
     splinters "E-er n-nothing. I-I'm just easily ex-ex-excited."
 
-    "You then pass by a vendor selling different random goods, including crystal balls."
+    "We then pass by a vendor selling different random goods, including crystal balls."
 
     pc talking "Hey, let's stop by here."
     splinters "S-Sure."
@@ -417,23 +417,23 @@ label splinters_date_2:
 
     splinters happy "Y-Yeah, maybe."
 
-    "Splinters looked around, then pawed over to the charms section."
+    "Splinters looks around, then pads over to the charms section."
 
     splinters "O-Oh look!"
     "Splinters excitedly held up two rabbit feet charms."
     pc thonk "Rabbit feet?"
 
-    splinters "Yeah! These are from moon hare; they fall and are found near meteorite sites every now and then."
+    splinters "Yeah! These are from a moon hare; they fall and are found near meteorite sites every now and then."
     splinters "AND AT SUCH A GOOD PRICE!"
 
     "Splinters sidles over."
     splinters smug "You can tell th-they're real because of the way they glint in the dark. But I don't think they know that."
 
-    "The vendor seemed suspicious. They narrowed their eyes but didn't catch on."
+    "The vendor seems suspicious. They narrow their eyes but haven't caught on."
 
     splinters happy "H-here, I'll get one for you too. These are really, really rare."
 
-    "Splinters walked off to pay for it at the counter."
+    "Splinters walks off to pay for it at the counter."
 
     splinters "Hey, sorry for keeping you w-wai-waiting. Here's your rabbit foot!"
 
@@ -445,7 +445,7 @@ label splinters_date_2:
 
     splinters neutral "O-Oh, nothing! Th-Thanks for tagging along with me! I'll be sure to use the new c-crystal!"
 
-    "You saw Splinters off. He seemed happy and more confident with the rabbit foot hanging off of his vest."
+    "I see Splinters off. They seem happy and more confident with the rabbit foot hanging off of their vest."
 
     $ splinters_date_count += 1
 
