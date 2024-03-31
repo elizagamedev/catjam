@@ -40,16 +40,16 @@ image bg festival night:
 define flashback = SepiaMatrix()
 
 image vcr pause:
-    Text("PAUSE", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100)
+    Text("PAUSE", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100, color="#ffffff")
 
 image vcr rewind:
-    Text("REWIND", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100)
+    Text("REWIND", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100, color="#ffffff")
     pause 0.5
     Null()
     pause 0.5
     repeat
 
 image vcr play:
-    Text("PLAY", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100)
+    Text("PLAY", font="fonts/VCR_OSD_MONO_1.001.ttf", size=100, color="#ffffff")
     pause 2.0
     Null()

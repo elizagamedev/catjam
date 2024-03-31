@@ -18,10 +18,6 @@ define witch = Character("My Witch", who_color="#9900b0")
 init python:
     import patches
 
-label initialize:
-    window auto show
-    return
-
 label splashscreen:
     if not persistent.set_volumes:
         $ persistent.set_volumes = True
@@ -29,7 +25,8 @@ label splashscreen:
     return
 
 label after_warp:
-    jump initialize
+    window auto show
+    return
 
 label awaken(day = None):
     if day is not None:
@@ -37,8 +34,8 @@ label awaken(day = None):
     scene black
     pause 1.0
     play bg "sound/morning.opus" noloop
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
     pause 1.5
     scene bg room with Dissolve(1.0)
     return
@@ -48,8 +45,8 @@ label titlecard(day = None):
         $ calendar_day = day
     scene black
     pause 1.0
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
+    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
+    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
     pause 1.5
     return
 
@@ -111,17 +108,18 @@ label start:
     stop music fadeout 3.0
     with dissolve
 
-    call initialize
     call ask_name_and_pronouns
 
     scene black
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title with Dissolve(1.0)
-    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle with Dissolve(0.5)
+    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
+    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
     pause 1.5
     scene bg central_station with Dissolve(1.0)
+
+    window auto show
 
     "The wind on my whiskers feels good. Past the sound of the train leaving the station behind us, I can hear the distant clamor of everyday life coming from the cozy little college town we'll call home for at least the next month."
 
@@ -1704,11 +1702,11 @@ label j4:
     play sound "sound/rewind.opus"
     show vcr rewind
     pause 1.0
-    show expression Text("October the " + october[25][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title
-    show expression Text(october[25][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle
+    show expression Text("October the " + october[25][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title
+    show expression Text(october[25][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle
     pause 1.0
-    show expression Text("October the " + october[24][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf") as title
-    show expression Text(october[24][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf") as subtitle
+    show expression Text("October the " + october[24][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title
+    show expression Text(october[24][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle
 
     pause 1.8
     show vcr play
