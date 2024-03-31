@@ -9,7 +9,7 @@ screen dialog_choice(items, show_pc=True):
             text pc_name color '#7d8294' size gui.name_text_size font gui.name_text_font outlines gui.name_text_outlines
 
         vbox:
-            xpos gui.dialogue_xpos
+            xpos gui.dialogue_xpos - 46
             ypos gui.dialogue_ypos
             xsize gui.dialogue_width
             for i in items:
@@ -23,6 +23,9 @@ screen dialog_choice(items, show_pc=True):
 
 style dialog_choice_button is button:
     size gui.text_size
+    padding (46, 0, 0, 0)
+    foreground Transform("gui/button/check_foreground.webp", yalign=0.5)
+    hover_foreground Transform("gui/button/check_selected_foreground.webp", yalign=0.5)
 style dialog_choice_button_text is text:
     color gui.text_color
     hover_color gui.accent_color

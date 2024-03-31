@@ -846,7 +846,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground Transform("gui/button/check_[prefix_]foreground.webp", yalign=0.5)
 
 style radio_button_text:
     properties gui.text_properties("radio_button")
@@ -856,7 +856,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground Transform("gui/button/check_[prefix_]foreground.webp", yalign=0.5)
 
 style check_button_text:
     properties gui.text_properties("check_button")
