@@ -3,14 +3,14 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define gomer = Character("Gomer", image="gomer", who_color="#fcaa58")
-define gomer_unk = Character("???", image="gomer", who_color="#fcaa58")
+define gomer = Character("Gomer", image="gomer", who_color="#6f8b69")
+define gomer_unk = Character("???", image="gomer", who_color="#6f8b69")
 define frankie = Character("Frankie", image="frankie", who_color="#c43830")
 define frankie_unk = Character("???", image="frankie", who_color="#c43830")
 define pucci = Character("Pucci", image="pucci", who_color="#8e522e")
 define pucci_unk = Character("???", image="pucci", who_color="#8e522e")
-define splinters = Character("Splinters", image="splinters", who_color="#DED6B3")
-define splinters_unk = Character("???", image="splinters", who_color="#DED6B3")
+define splinters = Character("Splinters", image="splinters", who_color="#454343")
+define splinters_unk = Character("???", image="splinters", who_color="#454343")
 define yuri = Character("Yuri", image="yuri", who_color="#706ed1")
 define yuri_unk = Character("???", image="yuri", who_color="#706ed1")
 define witch = Character("My Witch", who_color="#9900b0")
@@ -1271,11 +1271,11 @@ label j2forage:
 
     show yuri upset at center with dissolve
 
-    yuri "I'm so sorry, I didn't think it'd be acting this tricksy when I suggested we come see it. Ley lines, amiright?"
+    yuri "I'm so sorry, I didn't think it'd be acting this tricksy today. Ley lines, amiright?"
 
     yuri neutral "Let's get back to your witch."
 
-    "They take my hand in theirs and we walk back to my witch together."
+    "They take my paw in their wing and we walk back to my witch together."
 
     "We take some more flower cuttings as we go, and when we catch up to my witch she's already filled a couple more containers with critters, plants, and fungi for our potion."
 
@@ -1285,7 +1285,8 @@ label j2forage:
 
     "She holds up a giant toad, its legs dangling in the air."
 
-    witch "It's adorable! Anyways, we should head home. It's going to get late soon."
+    witch "It's adorable!"
+    witch "Anyways, we should head home. It's going to get late soon."
     witch "Yuri, thanks for joining us today!"
 
     show yuri happy at center with dissolve
@@ -1299,7 +1300,7 @@ label j2forage:
 
     yuri "She always tries to make people's days brighter, so I do too."
 
-    yuri talking "I'm so proud of her, and I don't mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
+    yuri talking "I'm so proud of her. I don't even mind that it means we're busy on the weekends. Let's hang out again sometime, though, okay?"
 
     pc happy "You bet!"
 
@@ -1730,24 +1731,25 @@ menu:
         jump j4style_trial
 
 label j4style_vibe:
-    scene black with dissolve
-
-    "I was pretty sure my witch had things on lock, so I gave her space."
+    "I was pretty sure my witch had things on lock, so I was giving her space."
     "I was, however, concerned about these mice."
     "I try my best to Just Vibe It Up, but no matter how many I caught, more and more mice kept showing up where they were least wanted."
 
-    scene bg home_front
-    show gomer talking at center
-    with dissolve
-
-    "I was chilling with Gomer in the field in front of my house when we heard a shout from inside."
+    if gomer_failed:
+        scene bg home_front with dissolve
+        "I was relaxing outside when I heard a shout from inside."
+    else:
+        scene bg home_front
+        show gomer talking at center
+        with dissolve
+        "I was chilling with Gomer in the field in front of my house when we heard a shout from inside."
 
     scene bg potions with dissolve
     jump j4mice
 
 label j4style_book:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
-    scene bg potions with fade
+    scene bg potions with dissolve
 
     "We had practiced our potion and it was time to test our mettle."
 
@@ -1772,7 +1774,7 @@ label j4style_book:
 
 label j4style_trial:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
-    scene bg potions with fade
+    scene bg potions with dissolve
 
     witch "So I think we got the amounts right, but we'll probably need to finagle it here and there."
 
@@ -2007,6 +2009,7 @@ label festivalscene:
 
 label outro_pucci:
     "I walk over to the fluffy brown cat waiting for me."
+    show pucci neutral at center with dissolve
     pc happy "Pucci! We made it!!"
     pucci "[pc]! We really did!"
     pc neutral "What's next for you?"
@@ -2015,6 +2018,9 @@ label outro_pucci:
     pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
     # put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
     pucci "What do you think? Should we go out for realsies?"
+    # TODO: more stuff go here
+    scene black with irisin
+    pause 1.0
     jump credits
 
 label outro_frankie:

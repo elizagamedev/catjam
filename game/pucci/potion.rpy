@@ -54,7 +54,7 @@ label .light:
             "The headmistress approaches us, still wearing the shades."
             "Headmistress" "Well then. What a delightful potion! I'm impressed you managed to make something so... potent."
             pucci "Thank you! Oh, I forgot my closing remarks. Ahem..."
-                jump .end
+            jump .end
         "Don't drink it, risking failing the exam":
             pucci neutral "Uhh... I kind of need you to do this, [pc]...!!!"
             pc "I can't do it!!!"
@@ -67,7 +67,7 @@ label .light:
             "I look away just in time to see the flash from behind closed eyelids."
             "The headmistress and my witch both shout. I open my eyes and see them covering theirs. They shake it off, thankfully."
             "Headmistress" "Well, it... did produce light. Will that be all?"
-                jump .end
+            jump .end
 
 label .transmutation:
     pucci "This transmutation potion completely changes the form of whoever drinks it to look like a fabulous designer cat!"
@@ -90,7 +90,7 @@ label .transmutation:
             "Pucci beams."
             "My witch looks aghast. It must be quite a sight."
             pucci "It was all thanks to [pc]! We couldn't have done it alone, but together we made it work."
-                jump .end
+            jump .end
         "Don't drink it and fail the exam":
             pucci neutral "Uhh... I kind of need you to do this, [pc]...!!!"
             pc "I can't do it!!!"
@@ -132,10 +132,9 @@ label .end:
     menu pucci_philosophy:
         "That's kinda messed up.":
             pucci happy "Well, it's a philosophy that works for me. It doesn't have to work for you, darling."
-                pass
         "Yeah no, that makes sense":
             pucci blushing "I knew you'd understand! The girls who get it, get it. That's what the girlies say on TockTock."
-                return
+            return
     pucci happy "Well, we passed!"
     "We sure did."
 

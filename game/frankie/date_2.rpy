@@ -13,7 +13,8 @@ label frankie_date_2:
 
     "The crystal goes dark."
 
-    scene bg cafe with fade
+    stop music fadeout 1.0
+    scene bg cafe with longfade
     play music "music/Hep Cats.mp3"
     play bg "sound/cafe.mp3"
 

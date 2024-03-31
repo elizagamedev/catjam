@@ -116,8 +116,8 @@ define config.window = "auto"
 
 ## Transitions used to show and hide the dialogue window
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = MoveTransition(0.5, enter=Transform(yalign=0.0, ypos=1.0), leave=Transform(yalign=1.0, ypos=0.0), enter_time_warp=_warper.ease)
+define config.window_hide_transition = MoveTransition(0.5, enter=Transform(yalign=1.0, ypos=0.0), leave=Transform(yalign=0.0, ypos=1.0), leave_time_warp=_warper.ease)
 
 
 ## Preference defaults #########################################################

@@ -6,7 +6,7 @@ screen dialog_choice(items, show_pc=True):
         background None
         window:
             style "namebox"
-            text pc_name color '#7d8294' size gui.name_text_size font gui.name_text_font
+            text pc_name color '#7d8294' size gui.name_text_size font gui.name_text_font outlines gui.name_text_outlines
 
         vbox:
             xpos gui.dialogue_xpos
@@ -23,3 +23,6 @@ screen dialog_choice(items, show_pc=True):
 
 style dialog_choice_button is button:
     size gui.text_size
+style dialog_choice_button_text is text:
+    color gui.text_color
+    hover_color gui.accent_color

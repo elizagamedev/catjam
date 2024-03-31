@@ -62,10 +62,10 @@ label pucci_date_2:
     pucci talking "Speaking of the outsourcing, I narrowed down a few options for you: a light potion or a transmutation potion. Which do you want?"
 
     menu(screen="dialog_choice"):
-        "Light potion" ("talking"):
+        "The light potion." ("talking"):
             $ which_pucci_potion = "light"
             pucci moe "I'm pretty sure they can make it like a rave. Amazing choice, darling."
-        "Transmutation potion" ("talking"):
+        "The transmutation potion." ("talking"):
             $ which_pucci_potion = "transmutation"
             pucci talking "You won't regret it. Heehee."
 
