@@ -237,7 +237,7 @@ init python:
         "sq": custom_text_tag_enclose("‘", "’"),
     }
 
-    config.window_auto_hide.append("scene")
+    config.window_auto_hide.extend(["scene", "pause"])
     config.window_auto_hide.remove("menu")
 
     renpy.music.register_channel("bg", "sfx", loop=True)

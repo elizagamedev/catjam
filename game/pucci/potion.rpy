@@ -1,4 +1,5 @@
 label pucci_potion:
+    show pucci smug at center with dissolve
     "Pucci has stepped onto the platform, looking fresh and totally unruffled."
     "They might have been waiting for a dramatic moment to enter the stage... or maybe it was just happenstance."
     "Good luck? Bad luck? I don't know. Luck."
@@ -12,7 +13,7 @@ label pucci_potion:
         "Actually... no. I didn't help make this potion.":
             return
     "Pucci steps in smoothly."
-    pucci neutral "That's right, [theyre!c] the brains of this whole project."
+    pucci neutral "That's right, [theyre] the brains of this whole project."
     pucci talking "And also our volunteer for this demonstration."
     "Wait, what??? I don't remember signing up for that!"
     "Headmistress" "Very well, then. I'm glad to hear you worked as a team on this. You may begin."
@@ -22,10 +23,8 @@ label pucci_potion:
         jump .light
     elif which_pucci_potion == "transmutation":
         jump .transmutation
-    elif which_pucci_potion == "resistance":
-        jump .resistance
     else:
-        jump .none
+        return
 
 label .light:
     pucci happy "This light potion is more than just a light. It creates an atmosphere that is, as one might say, lit. Litty, even."

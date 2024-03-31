@@ -1860,8 +1860,6 @@ menu .ending:
     "Nope." if not pucci_potion and not frankie_potion and not splinters_potion and not (gomer_potion and not gomer_angry and not gomer_failed):
         if gomer_angry and gomer_potion and not gomer_failed:
             jump j4potion_gomer_apology
-        if pucci_date_count == 1:
-            jump j4potion_pucci_rejection
         jump j4potion_nope
 
 # IF DATES HAVE BEEN DATED...
@@ -1869,12 +1867,14 @@ menu .ending:
         jump j4potion_gomer
 
     "Pucci's outsourcing" if pucci_potion and not pucci_failed:
+        if which_pucci_potion is None:
+            jump j4potion_pucci_rejection
         jump j4potion_pucci
 
-    "Frankie's time-dilation potion" if frankie_potion:
+    "Frankie's time-dilation potion" if frankie_potion and not frankie_failed:
         jump j4potion_frankie
 
-    "Splinters' good luck potion" if splinters_potion:
+    "Splinters' good luck potion" if splinters_potion and not splinters_failed:
         jump j4potion_splinters
 
 label j4potion_gomer_apology:
@@ -1909,6 +1909,7 @@ label j4potion_gomer_apology:
             gomer "You're the best, dog."
             pc happy "I'll see you at the exam."
             jump j4exam
+
 label j4potion_pucci_rejection:
     "As I was about to give up all hope, I had a flash of inspiration."
     "I give Pucci a scry."
@@ -1917,7 +1918,8 @@ label j4potion_pucci_rejection:
     pc concern "Since, you know, you mentioned outsourcing..."
     pucci neutral "Oh, you didn't seem interested so I didn't pull the trigger on that."
     pc concern "Oh..."
-    "There goes my last hope of succeeding."
+    "There goes my last hope of success."
+    $ pucci_failed = True
     jump j4potion_nope
 
 label j4potion_nope:
@@ -1947,7 +1949,7 @@ label j4potion_pucci:
     with flash
     "I rush to scry Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
     pc thonk "So, actually, I kind of do need that potion if you have it. There was a huge mishap."
-    pucci "Well, great news! The potion is ready, I'll bring it with me and meet you at the exam site."
+    pucci "Well, great news! The potion is ready. I'll bring it with me and meet you at the exam site."
     jump j4exam
 
 label j4potion_frankie:
