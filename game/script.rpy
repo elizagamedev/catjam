@@ -1852,7 +1852,7 @@ label j4mice:
 label j4wke:
     call awaken(26)
     # TODO: Back to present tense explain how the potion is unsalvageable, etc.
-    "oh no shit's fucked help what do i do"
+    "Now we're up a creek without a paddle, no potion to our names and our potions exam TODAY."
 
 menu .ending:
     "Do I have any backup options?"
@@ -1860,13 +1860,15 @@ menu .ending:
     "Nope." if not pucci_potion and not frankie_potion and not splinters_potion and not (gomer_potion and not gomer_angry and not gomer_failed):
         if gomer_angry and gomer_potion and not gomer_failed:
             jump j4potion_gomer_apology
+        if pucci_date_count = 1:
+            jump j4potion_pucci_rejection
         jump j4potion_nope
 
 # IF DATES HAVE BEEN DATED...
     "Gomer's hair dye {q}potion{/q}" if gomer_potion and not gomer_angry and not gomer_failed:
         jump j4potion_gomer
 
-    "Pucci's outsourcing" if pucci_potion:
+    "Pucci's outsourcing" if pucci_potion and not pucci_failed:
         jump j4potion_pucci
 
     "Frankie's time-dilation potion" if frankie_potion:
@@ -1907,6 +1909,16 @@ label j4potion_gomer_apology:
             gomer "You're the best, dog."
             pc happy "I'll see you at the exam."
             jump j4exam
+label j4potion_pucci_rejection
+    "As I was about to give up all hope, I had a flash of inspiration."
+    "I give Pucci a scry."
+    pucci neutral "Hey, what's up?"
+    pc concern "Hey, Pucci. I was wondering if maybe you had a potion I could borrow for the exam?"
+    pc concern "Since, you know, you mentioned outsourcing..."
+    pucci neutral "Oh, you didn't seem interested so I didn't pull the trigger on that."
+    pc concern "Oh..."
+    "There goes my last hope of succeeding."
+    jump j4potion_nope
 
 label j4potion_nope:
     play music "music/Porch Blues.mp3"
@@ -2016,7 +2028,7 @@ label outro_pucci:
     pucci "Well, I was hoping you'd be able to tell me."
     pc concern "What do you mean?"
     pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
-    # put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
+    # TODO put in a conditional dialogue here: "I like that you push back, it keeps me on my toes."
     pucci "What do you think? Should we go out for realsies?"
     # TODO: more stuff go here
     scene black with irisin
