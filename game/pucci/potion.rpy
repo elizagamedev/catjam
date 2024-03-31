@@ -1,7 +1,6 @@
 label pucci_potion:
-    # TODO outdoors so no door
-    "Pucci is standing in the doorway, looking fresh and totally unruffled."
-    "They might have been waiting for a dramatic moment to enter... or maybe it was just happenstance."
+    "Pucci has stepped onto the platform, looking fresh and totally unruffled."
+    "They might have been waiting for a dramatic moment to enter the stage... or maybe it was just happenstance."
     "Good luck? Bad luck? I don't know. Luck."
     pucci happy "Hello, headmistress! I'm here to present the potion that the three of us worked on together."
     "My witch looks at me in confusion, and I mouth back {q}Just go with it!{/q}"
