@@ -149,7 +149,7 @@ label weekend(menuset):
             "I guess I'll spend the weekend by myself..."
         else:
             "Well, I can always try another cat."
-        jump .scry
+            jump .scry
     return
 
 # The game starts here.

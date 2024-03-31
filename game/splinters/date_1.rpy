@@ -30,7 +30,7 @@ label splinters_date_1:
 
     $ splinters_date_count += 1
 
-    splinters "G-great, see you tomorrow then!"
+    splinters "G-Great, see you tomorrow then!"
 
     stop music fadeout 1.0
     scene bg cafe with fade
@@ -46,7 +46,7 @@ label splinters_date_1:
 
     show splinters neutral at center with dissolve
 
-    splinters talking "H-hey, sorry. Did you wait long?"
+    splinters talking "H-Hey, sorry. Did you wait long?"
     splinters neutral "You're new here so I-I'll get the drinks. Do you know what you want?"
 
     menu(screen="dialog_choice"):
@@ -63,7 +63,7 @@ label splinters_date_1:
             stop music
             "Splinters goes flying. Wet cat and coffee spill onto the ground."
             "The cafe goes silent. Some patrons can't help but giggle."
-            splinters upset "*Sniff* S-sorry. I... I'm gonna go now."
+            splinters upset "*Sniff* S-Sorry. I... I'm gonna go now."
             "Splinters runs off, a coffee-stained blushing mess."
             scene black with irisin
             return
@@ -224,7 +224,7 @@ label splinters_date_1:
     show splinters happy
     "Splinters smiles."
 
-    splinters "Yeah! It's a good sign! Y-you're gonna do well here."
+    splinters "Yeah! It's a good sign! Y-You're gonna do well here."
     splinters "Until next time, keep away from cracks in the sidewalk and don't walk under the ladders!"
 
     $ splinters_date_count += 1
