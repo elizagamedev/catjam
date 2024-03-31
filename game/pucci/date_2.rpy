@@ -34,6 +34,7 @@ label pucci_date_2:
             pucci annoyed "Me too, honestly. Oh posh, I was hoping you might want to pull the vegetables."
             pucci neutral "Oh well."
             # TODO: kinda abrupt. should this fail the quest? -- naw, you have to reeeeeally try to ruffle their feathers to fail pucci's quest -m
+            # well in any case probably ought to have a line line "well guess I'm going home now"
             stop music fadeout 3.0
             scene black with irisin
             return

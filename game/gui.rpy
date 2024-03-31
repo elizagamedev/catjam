@@ -63,7 +63,7 @@ define gui.text_font = "fonts/Mali-Regular.ttf"
 define gui.name_text_font = "fonts/Itim-Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/Itim-Regular.ttf"
+define gui.interface_text_font = "fonts/Mali-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 32
@@ -76,6 +76,8 @@ define gui.interface_text_size = 36
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 36
+
+define gui.label_text_font = "fonts/Itim-Regular.ttf"
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24
@@ -160,7 +162,7 @@ define gui.button_borders = Borders(6, 6, 6, 6)
 define gui.button_tile = False
 
 ## The font used by the button.
-define gui.button_text_font = gui.interface_text_font
+define gui.button_text_font = "fonts/Itim-Regular.ttf"
 
 ## The size of the text used by the button.
 define gui.button_text_size = gui.interface_text_size
@@ -183,8 +185,10 @@ define gui.button_text_xalign = 0.0
 ## These customizations are used by the default interface:
 
 define gui.radio_button_borders = Borders(27, 6, 6, 6)
+define gui.radio_button_text_font = "fonts/Mali-Regular.ttf"
 
 define gui.check_button_borders = Borders(27, 6, 6, 6)
+define gui.check_button_text_font = "fonts/Mali-Regular.ttf"
 
 define gui.confirm_button_text_xalign = 0.5
 

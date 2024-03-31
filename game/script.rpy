@@ -1241,7 +1241,6 @@ label j2synthesize:
 
     splinters neutral "It's not a potion. It was supposed to be a protein shake."
 
-    # TODO: did you mean frankie? -- no, Splinters is trying to make a protein shake based on presumably frankie's suggestion but did it badly
     "Seems like Splinters dodged a bullet with that one."
 
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
@@ -1452,7 +1451,6 @@ label j3shopcont:
 
     splinters "There are lots of people who make fun of me because I'm kind of a little guy."
 
-    # TODO: this contradicts frankie's dates lol -- fixed lol poor splinters is gaslighting themself
     splinters "Like Frankie, for example. I know they're not really being mean, they just talk like that! Right...?"
 
     splinters "I've been... trying to be a little more like them. Confident. Bold."
@@ -1465,7 +1463,7 @@ label j3shopcont:
 
     pc thonk "Wow, Splinters, I didn't realize you thought about that stuff."
 
-    splinters "Haha I know right?"
+    splinters "Haha. I know, right?"
 
     pc neutral "Let's go do that shopping and see if we can't find you some paint."
 
@@ -1696,8 +1694,6 @@ label j3witch:
     call titlecard(18)
     scene bg home_front with Dissolve(1.0)
 
-    # TODO: no beach here -- fixed
-
     "While I took my day off, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
 
     "I hear her murmur from her bedroom."
@@ -1750,7 +1746,7 @@ label j4:
     scene black with dissolve
 
     "They seemed like regular old mice at first. Just a few of them noticed by folks around town, here and there."
-    "Little did I know, they were actually... bastard mice. I was unprepared. We all were."
+    "Little did I know, they were actually... {b}bastard mice{/b}. I was unprepared. We all were."
     hide vcr
 
 menu:
@@ -1793,7 +1789,6 @@ label j4style_book:
 
     witch "Three ounces of chicken of the woods, one stick of silvervine..."
 
-    # TODO: give her a name or something? calling her like "witch" feels strange -- fair enough! I like the idea of leaving it unspecified so I just removed that here.
     pc thonk "What's this potion supposed to do, anyway?"
 
     witch "I told you, it's a surprise!"
@@ -1887,8 +1882,7 @@ label j4mice:
 
 label j4wke:
     call awaken(26)
-    # TODO: Back to present tense explain how the potion is unsalvageable, etc.
-    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam is TODAY."
+    "The accident really screwed up our plans. Now we're up a creek without a paddle, no potion to our names and our exam is {i}today{/i}."
 
 menu .ending:
     "Do I have any backup options?"
@@ -2014,7 +2008,7 @@ label j4potion_splinters:
 label j4exam:
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
-    # TODO: not a university hall
+    # TODO: this still needs ironing out; it's implied in Gomer's that they're going alphebetical order by cat name
     "We get to the exam site at the festival grounds. My witch and the headmistress are there."
     "Headmistress" "Welcome to the Witch For Hire final examination. I look forward to hearing about the potion you've prepared."
     "My witch and I look at each other nervously."
