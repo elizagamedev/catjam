@@ -1257,7 +1257,7 @@ label j2synthesize:
 
     splinters neutral "It's not a potion. It was supposed to be a protein shake."
 
-    "Seems like Splinters dodged a bullet with that one."
+    "I don't think they've ever seen an actual protein shake. Seems like Splinters dodged a bullet with that one."
 
     "Splinters and I clean up the shake-splosion and I keep an eye on my cauldron, giving it a good stir once in a while."
     scene bg potions with fade
@@ -1709,7 +1709,8 @@ label j3witch:
     call titlecard(18)
     scene bg home_front with Dissolve(1.0)
 
-    "While I took my day off, my witch spent the day napping. I come home late at night, closing the front door quietly so I don't disturb her."
+
+    "While I took my day off, my witch spent the day working hard. I come home late at night, closing the front door quietly so I don't disturb her."
 
     "I hear her murmur from her bedroom."
 
@@ -1717,7 +1718,7 @@ label j3witch:
 
     pc neutral "Just got back!"
 
-    "I go to her room to check on her and find that she'd fallen asleep writing her magic thesis at her desk."
+    "I peek inside her room to check on her and find that she'd fallen asleep writing a spell thesis at her desk."
 
     "I grab a knit blanket from the bed and pull it over her shoulders."
 
@@ -2063,8 +2064,8 @@ label festivalscene:
 
     "After the ceremony, my witch and I make our way past the crowd to enjoy the rest of the festival. At the exit leading from the ceremony to the rest of the grounds, a cat catches my eye."
     "My witch gives me a knowing look and tilts her chin towards the cat."
-    witch "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But... take your time. ;)"
-    "I blush and give her a nod."
+    witch "I'll go on ahead and find us some takoyaki. Meet me at the Lucky Fountain when you're free. But no rush!"
+    "I grin and give her a nod."
 
     if ending == "pucci":
         jump outro_pucci
@@ -2077,26 +2078,30 @@ label festivalscene:
         return
 
 label outro_pucci:
-    "I walk over to the fluffy brown cat waiting for me."
+    "I walk over to the fluffy brown cat waiting for me expectantly."
     show pucci neutral at center with dissolve
     pc happy "Pucci! We made it!!"
     pucci "[pc]! We really did!"
     pc neutral "What's next for you?"
     pucci "Well, I was hoping you'd be able to tell me."
     pc concern "What do you mean?"
-    pucci "I've really enjoyed these last few weeks with you. I think we're a great match."
-    pucci "What do you think? Should we go out for realsies?"
+    pucci "I've really enjoyed these last few weeks with you. The dates have been really nice."
+    pc blushing "O-oh!"
+    "I blush."
+    pucci "What do you think? Should we go out for realsies? You, me... world domination... think about it!"
     menu pucci_askedout:
         "YES!!!":
             pucci "FABULOUS. This is the best day EVER. You MUST come over and see that orchid dress..."
             "They take my paw in theirs and lead me off into the sunset, chatting away about all the things they want to do with me."
+            "I stroll with them, contentedly listening and chiming in with my own ideas."
+            "There's a lull in the night, the crisp air suggesting we stand just a little closer together for warmth."
             "The moment's right here. I have to act! I gather up my courage, and..."
             menu puccicourage:
                 "Pull them towards me for a kiss":
                     pc neutral "Pucci, I... hold on a moment."
                     "They pause as I tug on their hand and turn them around to face me."
                     pucci neutral "Oh? What's up?"
-                    pc talking "I got you something. To, um, for good luck. And I was just wondering--"
+                    pc talking "I was thinking. And I... To, um, for good luck... I was just wondering--"
                     "I take a deep breath."
                     pc blushing "Can I... give you a kiss?"
                     pucci blushing "Oh, you. Come here."
