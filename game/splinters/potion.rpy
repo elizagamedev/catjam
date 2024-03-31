@@ -5,7 +5,7 @@ label splinters_potion:
     play bg "sound/bubbling.opus" fadein 1.0 volume 0.2
 
     "I sit by the cauldron, tapping my foot."
-    "The glob of ectoplasm Nancy had wrung out of Freddy was approaching the right temperature."
+    "The glob of ectoplasm Nancy had wrung out of Freddy is approaching the right temperature."
 
     play sound "sound/thud.opus" volume 1.5
     splinters "OOF!"
@@ -23,14 +23,14 @@ label splinters_potion:
     pc neutral "Want to do the honors?"
 
     splinters moe "S-SURE!"
-    "Splinters hopped up on the stool brought in for them, crushing the clovers and dropping them in."
+    "Splinters hops up on the stool brought in for them, crushing the clovers and dropping them in."
     "We await with bated breath."
     "There is a caustic burn, then a silvery light that flashes, leaving behind an iridescent stew."
     splinters moe "W-Wow… I c-can't believe it… I-I-I did something r-right for o-once…"
     splinters neutral "..."
     "Splinters tries a sip, and blinks."
     splinters "Hmm… I… don't feel any different."
-    "Maybe it's just my imagination, but he seems a bit calmer."
+    "Maybe it's just my imagination, but they seem a bit calmer."
     "I swear the worry lines are gone."
     pc happy "Hey, I haven't had coffee all day. Do you mind getting me some?"
     splinters "Oh, sure!"
