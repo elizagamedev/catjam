@@ -28,25 +28,70 @@ label after_warp:
     window auto show
     return
 
+init python:
+    def title_text():
+        return Text(october[calendar_day][0], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff")
+    def subtitle_text():
+        month = "September" if calendar_day <= 2 else "October"
+        return Text(month + " the " + october[calendar_day][1], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff")
+
+transform title_wipe_left:
+    parallel:
+        easein 0.2 xcenter 0.45
+    parallel:
+        linear 0.2 alpha 0.0
+
+transform title_wipe_right:
+    parallel:
+        easein 0.2 xcenter 0.55
+    parallel:
+        linear 0.2 alpha 0.0
+
+transform title_appear:
+    alpha 0.0
+    linear 0.1 alpha 1.0
+
+label show_titlecard(day = None, transition=Dissolve(1.0), month="October"):
+    show expression title_text() as title
+    show expression subtitle_text() as subtitle
+    with transition
+    if day is None:
+        pause 0.5
+        return
+label .nextday:
+    if calendar_day == (day + 2):
+        pause 0.5
+        return
+    if calendar_day < (day + 2):
+        show expression title_text() as title at title_wipe_left
+        show expression subtitle_text() as subtitle at title_wipe_left
+        pause 0.2
+        $ calendar_day += 1
+    else:
+        show expression title_text() as title at title_wipe_right
+        show expression subtitle_text() as subtitle at title_wipe_right
+        pause 0.2
+        $ calendar_day -= 1
+    hide title
+    hide subtitle
+    show expression title_text() as title at title_appear
+    show expression subtitle_text() as subtitle at title_appear
+    pause 0.2
+    jump .nextday
+
 label awaken(day = None):
-    if day is not None:
-        $ calendar_day = day
     scene black
     pause 1.0
     play bg "sound/morning.opus" noloop
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
+    call show_titlecard(day)
     pause 1.5
     scene bg room with Dissolve(1.0)
     return
 
 label titlecard(day = None):
-    if day is not None:
-        $ calendar_day = day
     scene black
     pause 1.0
-    show expression Text("October the " + october[calendar_day][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
-    show expression Text(october[calendar_day][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
+    call show_titlecard(day)
     pause 1.5
     return
 
@@ -114,8 +159,7 @@ label start:
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    show expression Text("September the Twenty-eighth", size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title with Dissolve(1.0)
-    show expression Text("Saturday", size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle with Dissolve(0.5)
+    call show_titlecard()
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
@@ -375,18 +419,15 @@ label end_intro:
     stop sound fadeout 1.0
     stop music fadeout 1.0
     scene black with dissolve
-    pause 1.0
-
-    "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
-
-    "My witch went by the university on her own to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances."
 
 # --Week 1--
 # Lay of the land
 label j1:
     call awaken(1)
 
-    "The next morning I awake and stretch off the drowsiness."
+    "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
+
+    "My witch is off at the university today to make sure we're registered for the exam. It's a big one, and she doesn't want to take any chances."
 
     "We have a week to get acquainted with the town to {q}learn its secrets{/q} or something and then we'll find out what we're gonna need to do."
 
@@ -834,7 +875,7 @@ label j1witch:
     call titlecard(4)
     scene black with Dissolve(1.0)
 
-    witch "Hey friend, how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
+    witch "Hey [pc], how was your recon this week? I got the house mostly set up, and there are snacks in the pantry for you whenever you get hungry."
 
     show bg home_front with dissolve
 
@@ -1701,14 +1742,8 @@ label j4:
     "Everything was going so well... until the mice arrived."
     play sound "sound/rewind.opus"
     show vcr rewind
-    pause 1.0
-    show expression Text("October the " + october[25][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title
-    show expression Text(october[25][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle
-    pause 1.0
-    show expression Text("October the " + october[24][1], size=100, xalign=0.5, yalign=0.5, font="fonts/Itim-Regular.ttf", color="#ffffff") as title
-    show expression Text(october[24][0], size=50, xalign=0.5, yalign=0.6, font="fonts/Itim-Regular.ttf", color="#ffffff") as subtitle
-
-    pause 1.8
+    pause 0.5
+    call show_titlecard(24)
     show vcr play
     pause 2.0
 

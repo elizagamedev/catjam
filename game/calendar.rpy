@@ -1,5 +1,7 @@
 define october = [
-    None,
+    ("Saturday", "Twenty-eighth"),
+    ("Sunday", "Twenty-ninth"),
+    ("Monday", "Thirtieth"),
     ("Tuesday", "First"),
     ("Wednesday", "Second"),
     ("Thursday", "Third"),
