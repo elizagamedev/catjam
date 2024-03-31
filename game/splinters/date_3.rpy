@@ -13,7 +13,7 @@ label splinters_date_3:
     pc thonk "..."
     pc neutral "Anyways, I wanted to know if you're free to hang out?"
 
-    splinters "Oh... darn, I promised my parents to stop by the Sablewood Memorial today."
+    splinters "Oh... darn, I promised my parents I'd stop by the Sablewood Memorial today."
 
     menu(screen="dialog_choice"):
         "Ooh, the memorial? Sounds interesting. Can I tag along?" ("talking"):
@@ -63,29 +63,29 @@ label splinters_date_3:
     betty "Please, Nancy. Don't take your complex over your dull talentless existence out on me, now."
     "One of the nicer looking ghosts turrns to me and materializes a specter of a pie out of thin air."
     pie_ghost "Hi, sweetie. Did you want a nice slice of pie?"
-    gramps_ghost "Y’all be getting senile! Yer eyes be blind? This here kitten is a normal mortal."
+    gramps_ghost "Y'all be getting senile! Yer eyes be blind? This here kitten is a normal mortal."
     gramps_ghost "They can't wear or eat our things!"
-    gramps_ghost "That's why she looking all normal and well-adjusted!"
+    gramps_ghost "That's why [they!c] be looking all normal and well-adjusted!"
     betty "Yes, as [they] [are] Splinter's friend… I sense a similar degree of great magic from [them]."
     nancy "I agree, give it a shot!"
     nancy "If someone like pipsqueak has friends, then anything's possible!"
     splinters "Er…"
 
     menu(screen="dialog_choice"):
-        "Geez, no wonder you're so weird splinters. This is who you hang with?" ("thonk"):
+        "Geez, no wonder you're so weird, Splinters. This is who you hang with?" ("thonk"):
             "I regret my little quip instantly."
             nancy "Better weird than an idiot who insults a fray of ghosts."
-            "The vibe rapidly precipitated into a coldly claustrophobic one."
+            "The vibe rapidly precipitates into a cold and claustrophobic one."
             nancy "Who do you think cursed this little idiot here?"
-            nancy "Us. Us you numskull."
+            nancy "Us. Us, you numbskull."
             "I manage to gulp down the dry knot in my throat."
             pc concern "Listen… It was a joke… Right, Splinters?"
             pc happy "...Friend?"
             splinters "Hey, if I c-can learn to live with a curse, so can you."
             splinters talking "...Wait. YOU MEAN I'VE {i}ACTUALLY{/i} BEEN CURSED THIS WHOLE TIME??"
             pc thonk "Ugh, of course you didn't know."
-            gramps_ghost "Well now yer just askin’ for it, String Bean."
-            "Man, these ghosts were mean…"
+            gramps_ghost "Well now yer just askin' for it, String Bean."
+            "Man, these ghosts are mean…"
             "And clearly dangerous."
             "I finger the lucky rabbit charm, hoping it'll help me find an opening out of here."
             pie_ghost "Everyone, calm down! Going around cursing poor kittens… Shame on you!"
@@ -93,7 +93,7 @@ label splinters_date_3:
             "They're beginning to argue again. This is my chance!"
             scene black with dissolve
             "I bolt. The gates feel so far away."
-            "Were they still arguing? I couldn't tell anymore over the thump of my heartbeat."
+            "Are they still arguing? I can't tell anymore over the thump of my heartbeat."
             "Something cold whizzes by me as I shut the gates behind me."
             stop music fadeout 3.0
             return
@@ -102,7 +102,7 @@ label splinters_date_3:
 
     "I hold my paws out politely."
     pc happy "Thanks, I've never had ghost pie before."
-    "The pie looks like a blur that wouldn't come into focus. I tentatively chomp at the air where the blur is."
+    "The pie looks like a blur that doesn't quite come into focus. I tentatively chomp at the air where the blur is."
     "My mouth is filled with the phantom memories of crisp apple pie."
     pc blushing "Oh wow, it's good!"
     pie_ghost "Oooh I'm so glad! It's a delight to have you young magic kittens around."
@@ -111,10 +111,10 @@ label splinters_date_3:
     show splinters at left with ease
     show yuri neutral at right with dissolve
 
-    "We turn around to see a decidedly non-feline newcomer to the group."
+    "We turn around to see a decidedly non-feline newcomer approaching the group."
     splinters "O-Oh, Yuri. When did you get here?"
-    yuri talking "The vibe was good around here. It's nice to reminisce with the spirits when they're feeling friendly."
-    yuri neutral "It's a lively kind of day. And I had something to share."
+    yuri talking "The vibe is good around here. It's nice to reminisce with the spirits when they're feeling friendly."
+    yuri neutral "It's a lively kind of day, and I have something to share."
     betty "Oooh a raven familiar! How rare!"
     "The mean preppy ghost grudgingly nods, giving an even rarer approval."
     nancy "Your spiritual energy. It's… good."
@@ -150,8 +150,8 @@ label splinters_date_3:
             gramps_ghost "We ain't interested in material possessions!"
             nancy "Haha, nice~"
             hide splinters with dissolve
-            "Splinters’ lower lip quivers as they run off."
-            gramps_ghost "Hah! Seeing his feathers all ruffled always riles me up!"
+            "Splinters' lower lip quivers as they run off."
+            gramps_ghost "Hah! Seeing their feathers all ruffled always riles me up!"
             gramps_ghost "Oh. No offense."
             yuri neutral "None taken. By me."
             "The group is quiet. Yuri's silent disapproval weighs on us all."
@@ -174,7 +174,7 @@ label splinters_date_3:
     yuri neutral "Have some clovers I found lying around."
     gramps_ghost "Oooh, are these… techno-whatsit?"
     betty "They are technicolor clovers. Very rare… Very lucky find."
-    gramps_ghost "Darned fancy plants and their fancy names. Ain’t no-one got no time for that."
+    gramps_ghost "Darned fancy plants and their fancy names. Ain't no-one got no time for that."
 
     gertrude "Oh, Betty! Aren't these the missing ingredient you wanted to find for Splinters?"
     "Betty pushed her glasses up with her knitting needles in thought."
@@ -183,14 +183,14 @@ label splinters_date_3:
 
     show splinters blushing
 
-    splinters "Aw shucks… You don't have to, have to call m-m-me {q}prince{/q} in front of [pc] here…"
+    splinters "Aw shucks… You don't have to, have to call m-m-me a {q}prince{/q} in front of [pc] here…"
     gertrude "Nonsense, you are our sweet little prince!"
     show splinters neutral
     nancy "Ugh. You smotherers are why little pipsqueak is such a numskull."
-    nancy "Gawd, he's like a permanent perpetual baby."
+    nancy "Gawd, they're like a permanent perpetual baby."
     gertrude "You can finally undo your wrongdoing, Freddy! What do you have to say for yourself?"
     freddy "Aw, why'd you have to drag that old thing back up?"
-    freddy "The little nugget don't even know he been cursed all this time!"
+    freddy "The little nugget don't even know they been cursed all this time!"
     splinters talking "WAIT WHAT?"
     yuri talking "This is great, Splinters. Your luck is really turning around now."
     yuri neutral "I'll see you both around then. Later!"
@@ -217,7 +217,7 @@ label splinters_date_3:
     pc happy "And then use it for the potions exam!"
     "Gertrude claps her hands in excitement"
     gertrude "Ooh, isn't this wonderful! Youth is so exuberant!"
-    betty "You'll have to indulge me with the details later. I’ve been intrigued by the recipe for a while now."
+    betty "You'll have to indulge me with the details later. I've been intrigued by the recipe for a while now."
     betty "This calls for a new vest for our little prince."
     splinters blushing "A-Aw, thanks Betty."
     freddy "Darned right, yer finally taking responsibility and manning up to your problems!"
@@ -226,14 +226,14 @@ label splinters_date_3:
     nancy "You must have leaked all the ectoplasm from your brains, Gramps."
     nancy "You're the one not manning up. You clumsy hex-throwing oaf."
     freddy "What'd you say to me?! By jove, even in death… the disrespect!"
-    betty "Nancy’s not wrong. You've done nothing but cause grief, Freddy."
+    betty "Nancy's not wrong. You've done nothing but cause grief, Freddy."
     freddy "Ugh, my knees! Curses, you old cronies, my phantom pain's acting back up…."
     gertrude "You are so selfish, Freddy. It's always about you, you, you…"
 
     scene black with irisin
     "The ghosts continue to squabble. Splinters and I take our leave quietly."
-    "I couldn't wait to try out the recipe."
-    "It looked like Splinters’ luck was turning around after all."
+    "I can't wait to try out the recipe."
+    "It looks like Splinters' luck is turning around after all."
     stop music fadeout 3.0
     $ splinters_date_count += 1
     $ splinters_potion = True
