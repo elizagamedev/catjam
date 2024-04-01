@@ -32,11 +32,6 @@ image bg cafe silver:
     "bg cafe"
     matrixcolor SaturationMatrix(0.2) * BrightnessMatrix(0.2)
 
-    # TODO: make this look less like piss
-image bg festival night:
-    "bg festival"
-    matrixcolor SaturationMatrix(0.8) * TintMatrix("#ffd16c")
-
 define flashback = SepiaMatrix()
 
 image vcr pause:
