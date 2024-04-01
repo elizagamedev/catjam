@@ -86,7 +86,7 @@ label gomer_date_3:
     gomer "You know, to spice it up a bit. Keep things interesting."
 
     pucci blushing "Fascinating. I'd love to talk more wine with you when you have the time."
-    pucci neutral "I'm usually at the vineyards from Tuesday to Thursday. Tell them I sent you and I'll give you a private tour."
+    pucci neutral "I'm usually at the Vineyards from Tuesday to Thursday. Tell them I sent you and I'll give you a private tour."
     pucci "Here's my card."
     pucci talking "{i}Au revoir!{/i}"
 
