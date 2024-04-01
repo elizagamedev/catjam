@@ -100,7 +100,7 @@ label .nextday:
 
 label awaken(day = None):
     scene black
-    play bg "sound/morning.opus" noloop
+    play bg "sound/morning.opus" fadein 1.0
     call show_titlecard(day)
     if calendar_day < 7:
         scene bg home_front with Dissolve(1.0)
@@ -151,6 +151,7 @@ label weekend(menuset):
         if len(menuset) == 4:
             "I guess I'll spend the weekend by myself..."
         else:
+            play bg "sound/morning.opus" fadein 1.0
             "Well, I can always try another cat."
             jump .scry
     return
@@ -473,7 +474,7 @@ label j1explorechoice:
     if len(j1explorechoice_menuset) >= 3:
         jump j1witch
     elif j1explorechoice_menuset:
-        call awaken(calendar_day + 1)
+        call awaken(calendar_day + 1 - 2)
     menu:
         "Where should I go today?"
         set j1explorechoice_menuset
@@ -1982,6 +1983,7 @@ label j4potion_pucci_rejection:
     jump j4potion_nope
 
 label j4potion_nope:
+    stop bg fadeout 0.5
     play music "music/Porch Blues.mp3"
     scene black with irisin
     "With no potion to present during the exam, my witch and I were left with no choice but to spend another year apprenticing."
@@ -1994,7 +1996,6 @@ label j4potion_nope:
 
 label j4potion_gomer:
     $ ending = "gomer"
-    stop bg fadeout 0.5
     play sound "sound/crackle.opus"
     with flash
     pc thonk "Hey, Gomer."
@@ -2003,7 +2004,6 @@ label j4potion_gomer:
 
 label j4potion_pucci:
     $ ending = "pucci"
-    stop bg fadeout 0.5
     play sound "sound/crackle.opus"
     with flash
     "I rush to scry Pucci. They're in a fluffy pink bathrobe with their cheek fluff pinned up in hair rollers."
@@ -2013,7 +2013,6 @@ label j4potion_pucci:
 
 label j4potion_frankie:
     $ ending = "frankie"
-    stop bg fadeout 0.5
     "I contact Frankie in a panic."
     play sound "sound/crackle.opus"
     with flash
@@ -2027,7 +2026,6 @@ label j4potion_frankie:
 
 label j4potion_splinters:
     $ ending = "splinters"
-    stop bg fadeout 0.5
     "I call up Splinters. If anyone could empathize with my bad luck, it was them."
     splinters "Oh, hey [pc]! What's up?"
     pc thonk "Listen, my luck turned on me and now I need a new potion, stat. Do you think we could partner up?"
@@ -2035,6 +2033,7 @@ label j4potion_splinters:
     jump j4exam
 
 label j4exam:
+    stop bg fadeout 0.5
     scene bg festival with fade
     play bg "sound/meadow.opus" fadein 1.0
     "We arrive at the exam site at the festival grounds."

@@ -14,17 +14,14 @@ This game contains sound effects based on samples from the following sources.
 
 train-station.opus
 https://freesound.org/people/ValentinPetiteau/sounds/656623/
-https://creativecommons.org/publicdomain/zero/1.0/
 
 garbage-can.wav
 https://freesound.org/people/cmusounddesign/sounds/85167/
-https://creativecommons.org/licenses/by/4.0/
 
 creaking.opus
 https://freesound.org/people/SoundDesignForYou/sounds/697746/
-https://creativecommons.org/publicdomain/zero/1.0/
 
-happy.opus, purr.wav
+happy.opus
 https://freesound.org/people/14FPanskaZummer_Jakub/sounds/418159/
 
 growl.opus
@@ -67,7 +64,7 @@ shatter.mp3
 https://freesound.org/people/Czarcazas/sounds/330800/
 
 morning.opus
-https://freesound.org/people/barkenov/sounds/251231/
+https://freesound.org/people/Kyster/sounds/182740/
 
 collapse.opus
 https://freesound.org/people/craigsmith/sounds/487142/
@@ -113,10 +110,7 @@ https://freesound.org/people/Robinhood76/sounds/321100/
 bubbling.opus
 https://freesound.org/people/MattJ99/sounds/66786/
 
-mouse.opus
-https://freesound.org/people/shyguy014/sounds/463789/
-
-angry-mouse.opus
+mouse.opus, angry-mouse.opus
 https://freesound.org/people/shyguy014/sounds/463789/
 
 murmur.opus
@@ -125,10 +119,7 @@ https://freesound.org/people/mglennsound/sounds/678671/
 cough.opus
 https://freesound.org/people/midwestdocumentary/sounds/722623/
 
-pause.opus
-https://freesound.org/people/StefanoPTesta/sounds/447885/
-
-rewind.opus
+pause.opus, rewind.opus
 https://freesound.org/people/StefanoPTesta/sounds/447885/
 
 pouring.opus
