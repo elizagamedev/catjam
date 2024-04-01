@@ -1201,7 +1201,7 @@ label j2synthesize:
 
     "The door slams open."
     show splinters talking at center, vibrate with easeinleft
-    splinters "IT IS YOU OH MY GOD you're exactly who I was hoping to run into today!"
+    splinters "IT IS YOU OH MY GOD you're ex-exactly who I was hoping to run into today!"
 
     "Splinters stumbles through the door, tiny arms struggling to bear the weight of the very tall glass jar filled with a concerningly brownish-orangeish viscous liquid."
 
@@ -1227,7 +1227,7 @@ label j2synthesize:
 
     "That's right. I don't skip leg day {i}or{/i} brain day. I got this."
 
-    splinters "LOOK OUT I CAN'T STOP!"
+    splinters "LOOK OUT I CAN'T ST-STOP!"
 
     "I step forward and reach my hands out, angling my body, and redirect Splinters' momentum."
     play sound "sound/collapse.opus"
@@ -1242,11 +1242,11 @@ label j2synthesize:
     pc concern "Are you okay?!"
     show splinters neutral at center with MoveTransition(0.5, enter=Transform(yoffset=0.0, yanchor=0.0), enter_time_warp=_warper.easein)
 
-    splinters "O-oh my claws that was very alarming, but I'm not hurt. Are YOU okay?"
+    splinters "O-oh my claws that was very alarming, but I'm not h-h-urt. Are YOU okay?"
 
     pc neutral "Yeah, I think so!"
 
-    splinters upset "Thank goodness I'm sooooo sorry. I really thought I had that, but once it started tipping over it was all joe-ver from there."
+    splinters upset "Thank g-goodness I'm sooooo sorry. I really thought I had that, but once it started tipping over it was all, all joe-ver from there."
 
     "I almost ask them to help clean up, but I remember the shattered glass and think twice."
 
@@ -1256,7 +1256,7 @@ label j2synthesize:
 
     pc thonk "What is this potion, anyway?"
 
-    splinters neutral "It's not a potion. It was supposed to be a protein shake."
+    splinters neutral "It's not a potion. It was supposed to be a p-protein shake."
 
     "I don't think they've ever seen an actual protein shake. Seems like Splinters dodged a bullet with that one."
 
@@ -1422,7 +1422,7 @@ label j3shop:
 
     pc neutral "Well, I'm on my way to do some good old fashioned retail therapy."
 
-    splinters "Can I come with you? I have some stuff to pick up, too, and maybe we could go together?"
+    splinters "Can I c-come with you? I have some s-s-stuff to pick up, too, and maybe we could go together?"
 
     pc happy "Yeah! Let's do it."
 
@@ -1432,11 +1432,11 @@ label j3shop:
 
     "We meet outside Schrodinger's Records."
 
-    splinters "Heyyyyy. What did you need to get today?"
+    splinters "Heyyyyy. What did you need to g-get today?"
 
     pc thonk "Potion stuff. How 'bout you?"
 
-    splinters "Well I was thinking I'd get some, um, hobby supplies."
+    splinters "Well I was thinking I'd get some, um, hobby sup, hobby supplies."
 
     pc neutral "What kind of hobby?"
 
@@ -1444,34 +1444,34 @@ label j3shop:
 
     pc thonk "...?"
 
-    splinters "Don't make fun of me..."
+    splinters "D-don't make fun of me..."
 
     pc neutral "I'm not gonna make fun of you."
 
-    splinters "I'm painting some figures and I wanted to get new colors."
+    splinters "I'm... painting some figurines and I w-wanted to get new colors."
 
 menu j3shop_minis(screen="dialog_choice"):
     "That's so cool!" ("happy"):
-        splinters happy "Thanks! I just got into the hobby, so I don't really know what I'm doing."
+        splinters happy "Thanks! I j-just got into the hobby, so I don't really know what I'm doing."
         jump j3shopcont
 
     "That's... interesting." ("concern"):
         jump j3shopcont
 
     "Wow. Lame." ("thonk"):
-        splinters upset "Wehhhhh. You said you wouldn't make fun of me!"
+        splinters upset "Wehhhhh. You said you w-w-wouldn't make fun of me!"
         jump j3shopcont
 
 label j3shopcont:
-    splinters neutral "I try to try new things. I think... I think it's important to do things that make you feel good."
+    splinters neutral "I try to try new things. I think... I think it's important to d-do things that make you feel good."
 
-    splinters "There are lots of people who make fun of me because I'm kind of a little guy."
+    splinters "There are lots of people who make fun of me because I'm k-kind of a little guy."
 
-    splinters "Like Frankie, for example. I know they're not really being mean, they just talk like that! Right...?"
+    splinters "Like Frankie, for example. I know they're not really being m-mean, they just talk like that! Right...?"
 
-    splinters "I've been... trying to be a little more like them. Confident. Bold."
+    splinters "I've been... trying to be a little, a little more like them. Confident. B-bold."
 
-    splinters "But I'm not really like that. Sorry I'm so chatty today I just, it's been on my mind."
+    splinters "But I'm not really like that. S-sorry I'm so chatty today I just, it's been on my mind."
 
     splinters blushing "...You know, now that I think about it, maybe it's okay if sometimes I'm as nerdy on the inside as people think I am on the outside."
 
@@ -1479,13 +1479,17 @@ label j3shopcont:
 
     pc thonk "Wow, Splinters, I didn't realize you thought about that stuff."
 
-    splinters happy "Haha. I know, right?"
+    splinters happy "Haha. I know, r-right?"
 
     pc neutral "Let's go do that shopping and see if we can't find you some paint."
 
     "They light up with excitement."
 
-    splinters "Let's do it!"
+    splinters "Let's!"
+
+    "We spend the day wandering, finding paints and trinkets and little gifts for our witches."
+
+    "It's a wonderful break, and the sun is already going down by the time I head home."
 
     stop music fadeout 3.0
     scene black with irisin
