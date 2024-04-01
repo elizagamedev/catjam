@@ -57,3 +57,5 @@ image vcr play:
 image lasers = Solid("#ffb9df")
 
 define laserflash = Fade(.25, 0.0, .75, color="#ffb9df")
+
+define irisin = ImageDissolve("irisin.webp", 1.0)

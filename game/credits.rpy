@@ -12,7 +12,7 @@ label credits:
     pause
     return
 
-define credits_time = 30.0
+define credits_time = 45.0
 
 transform credits_scroll:
     xcenter 0.5 yanchor 0.0 ypos 0.0

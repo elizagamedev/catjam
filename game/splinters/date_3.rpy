@@ -1,19 +1,19 @@
-define knitting_ghost = Character("Knitting Ghost", who_color="#8376F7")
-define mean_ghost = Character("Bossy Ghost", who_color="#8376F7")
-define pie_ghost = Character("Baking Ghost", who_color="#8376F7")
-define gramps_ghost = Character("Cranky Ghost", who_color="#8376F7")
+define knitting_ghost = Character("Knitting Ghost", who_color="#32b016")
+define mean_ghost = Character("Bossy Ghost", who_color="#32b016")
+define pie_ghost = Character("Baking Ghost", who_color="#32b016")
+define gramps_ghost = Character("Cranky Ghost", who_color="#32b016")
 
-define betty = Character("Betty", who_color="#8376F7")
-define nancy = Character("Nancy", who_color="#8376F7")
-define gertrude = Character("Gertrude", who_color="#8376F7")
-define freddy = Character("Freddy", who_color="#8376F7")
+define betty = Character("Betty", who_color="#32b016")
+define nancy = Character("Nancy", who_color="#32b016")
+define gertrude = Character("Gertrude", who_color="#32b016")
+define freddy = Character("Freddy", who_color="#32b016")
 
 label splinters_date_3:
     pc thonk "Oh."
     pc thonk "..."
     pc neutral "Anyways, I wanted to know if you're free to hang out?"
 
-    splinters "Oh... darn, I promised my parents I'd stop by the Sablewood Memorial today."
+    splinters "Oh... darn. I promised my parents I'd stop by the Sablewood Memorial today."
 
     menu(screen="dialog_choice"):
         "Ooh, the memorial? Sounds interesting. Can I tag along?" ("talking"):
@@ -65,7 +65,7 @@ label splinters_date_3:
     pie_ghost "Hi, sweetie. Did you want a nice slice of pie?"
     gramps_ghost "Y'all be getting senile! Yer eyes be blind? This here kitten is a normal mortal."
     gramps_ghost "They can't wear or eat our things!"
-    gramps_ghost "That's why [they!c] be looking all normal and well-adjusted!"
+    gramps_ghost "That's why [they] be looking all normal and well-adjusted!"
     betty "Yes, as [they] [are] Splinter's friend… I sense a similar degree of great magic from [them]."
     nancy "I agree, give it a shot!"
     nancy "If someone like pipsqueak has friends, then anything's possible!"
@@ -94,7 +94,7 @@ label splinters_date_3:
             scene black with dissolve
             "I bolt. The gates feel so far away."
             "Are they still arguing? I can't tell anymore over the thump of my heartbeat."
-            "Something cold whizzes by me as I shut the gates behind me."
+            "Something cold and evil barely whizzes past me as I shut the gates behind me."
             stop music fadeout 3.0
             return
         "I'd love to try." ("happy"):
@@ -163,7 +163,9 @@ label splinters_date_3:
             "The gaggle of ghosts disbands shortly after and I decide to go home."
             return
 
-    show splinters neutral
+    scene bg graveyard
+    show splinters neutral at left
+    show yuri neutral at right
     with fade
 
     pc happy "That was a very good pie. Thanks!"

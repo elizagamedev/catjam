@@ -44,7 +44,7 @@ label .light:
             "Spin, spin, spin."
             "Finally, the world stops spinning, and I stumble over my own feet and sink to the ground."
             pc "Psst, Pucci! How long is this supposed to last?"
-            pucci "I actually don't know haha! Isn't it so cool?"
+            pucci "I actually don't know, haha! Isn't it so cool?"
             "The headmistress approaches us, still wearing the shades."
             "Headmistress" "Well then. What a delightful potion! I'm impressed you managed to make something so... potent."
             pucci "Thank you! Oh, I forgot my closing remarks. Ahem..."
@@ -72,7 +72,7 @@ label .transmutation:
     pucci talking "Excellent, I'll have some sent to your office to hand out as gifts to the faculty."
     "Headmistress" "I--{p=0.5}{nw}"
     pucci smug "If you would be so kind, [pc], could you please drink this potion to demonstrate its effects?"
-    menu:
+    menu(screen="dialog_choice"):
         "Certainly!" ("happy"):
             show pucci neutral
             "I drink it down in one big gulp."
@@ -86,6 +86,7 @@ label .transmutation:
             window auto show
             "I open them to find myself spinning slowly in the air in a graceful descent, and I look down at myself."
             "I'm... fluffy?"
+            play sound "sound/applause.opus"
             "The headmistress and my witch both look at me, then look at Pucci, then look back at me, then look back at Pucci again."
             "Headmistress" "Haha! How delightful! What a clever idea, to make yourself look just like Pucci!"
             "Pucci beams."
@@ -111,6 +112,7 @@ label .transmutation:
             window auto show
             "Nothing?"
             "Nothing about Pucci has changed."
+            play sound "sound/murmur.opus"
             "Headmistress" "..."
             witch "..."
             pc "..."
@@ -137,6 +139,7 @@ label .transmutation:
 label .end:
     pucci neutral "That concludes our presentation."
     pucci talking "Thank you for your time, headmistress."
+    play sound "sound/applause.opus"
     "Headmistress" "Pucci, [pc]. Consider yourselves passed. You should both feel very proud."
     "The headmistress shakes my witch's hand and tells her that she's lucky to have such a good familiar."
     scene bg festival with fade

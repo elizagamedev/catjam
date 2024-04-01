@@ -433,7 +433,7 @@ label end_intro:
     stop bg fadeout 1.0
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    scene black with dissolve
+    scene black with irisin
 
 # --Week 1--
 # Lay of the land
@@ -740,15 +740,15 @@ label j1study_helpsplinters:
 
     "They actually say L-O-L... out loud."
 
-    splinters "yeah I'm here a lot, I like learning things and also I'm like supposed to do community service here a couple days a week."
+    splinters "Yeah I'm here a lot. I like learning things and also I'm like supposed to do community service here a couple days a week."
 
-    splinters "I'm not doing that now but you can fer suuuure find me racking books"
+    splinters "I'm not doing that now but you can fer suuuure find me racking books."
 
     "They flex their non-existent muscles."
 
-    splinters smug "and picking up ladies."
+    splinters smug "And picking up ladies."
 
-    "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored of the tiny cat."
+    "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored with the tiny cat."
 
     pc neutral "That tracks. So, that's perfect. Do you know any secrets about this place?"
 
@@ -756,19 +756,19 @@ label j1study_helpsplinters:
 
     pc thonk "Yes..."
 
-    splinters talking "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream,"
+    splinters talking "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream."
 
-    splinters "I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard"
+    splinters "I-I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard."
 
     pc neutral "Oooooo..."
 
-    splinters happy "and basically it's a secret I haven't told anyone about so there you have it!"
+    splinters happy "And basically it's a secret I haven't told anyone about. So there you have it!"
 
-    splinters neutral "Now I have a question for you"
+    splinters neutral "Now I have a question for you."
 
     pc concern "Yeah?"
 
-    splinters moe "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good"
+    splinters moe "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good."
 
     "I have no idea what a SoundMeowd is but I believe them."
 
@@ -1632,6 +1632,8 @@ menu j3beach_board(screen="dialog_choice"):
         jump j3boardno
 
 label j3boardyes:
+    hide gomer with dissolve
+
     "Gomer explains the basics to me: where to put my feet, how to move and stop, how to shift my weight."
 
     "They let me hold their paw to keep me steady while I catch my balance."
@@ -1640,14 +1642,11 @@ label j3boardyes:
 
     "Gomer takes back his board and does some tricks while Pucci and I watch from the umbrella table."
 
-    hide gomer with dissolve
-    pause 1.0
-
     jump j3beach_umbrella
 
 label j3boardno:
     gomer "No biggie. I'd rather just show off anyways, haha."
-    gomer "Not the one I biffed it on. Other tricks."
+    gomer "Not the one I biffed it on. That's not like, how it usually goes."
 
     hide gomer with dissolve
 
@@ -1670,7 +1669,7 @@ label j3beach_umbrella:
 
     pucci "I guess that's the problem with worrying too much. You miss out on fun."
 
-    pc neutral "It's not too late, I'm sure they'd teach you if you asked."
+    pc neutral "It's not too late. I'm sure they'd teach you if you asked."
 
     "Pucci watches Gomer contemplatively."
 
