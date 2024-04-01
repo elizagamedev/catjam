@@ -918,8 +918,8 @@ label j1witch:
 # talk to each character, choose 1 to hangout with
 label j1wke:
     call awaken(5)
-    # TODO: placeholder dialog
-    "It's Saturday! Something something scry someone!"
+    "I've got the weekend to myself. But maybe I should spend it with someone else?"
+    "I perform the binding cantrip on my scrying orb and get ready to test it out."
     call weekend(j1wke_menuset)
 
 # --Week 2--
@@ -1381,8 +1381,7 @@ label j2witch:
 # --weekend 2--
 label j2wke:
     call awaken(12)
-    # TODO: placeholder dialog
-    "It's Saturday! Something something scry someone!"
+    "I've got the weekend to myself. But maybe I should spend it with someone else?"
     call weekend(j2wke_menuset)
 
 
@@ -1735,8 +1734,7 @@ label j3witch:
 # --weekend 3--
 label j3wke:
     call awaken(19)
-    # TODO: placeholder dialog
-    "It's Saturday! Something something scry someone!"
+    "I've got the weekend to myself. But maybe I should spend it with someone else?"
     call weekend(j3wke_menuset)
 
 # --Week 4--
@@ -2056,10 +2054,16 @@ label festivalscene:
     "The crowds gathered to watch the parade cheer and shower us with streamers and confetti."
     "Our efforts paid off. We made it. Now there's just one final ceremony left to do, and we'll be fully fledged witches and familiars."
 
+    scene bg festival night with fade
+
     "The parade reaches its end and each witch-familiar duo lines up. We take turns being called up to the dias where the headmistress waits."
+    if pc_is_transformed:
+        "Luckily, the transmutation potion had already worn off, so I was able to participate as myself."
     "When we walk up, it's like all I can see is that moment right in front of me. Everything else becomes a blur."
     "Headmistress" "Congratulations, you two. I am proud to present you with your Witch For Hire license. You're now free to work anywhere with a WFH policy."
     "I smile up at my witch, who smiles back down at me."
+
+    scene bg festival night with fade
 
     "After the ceremony, my witch and I make our way past the crowd to enjoy the rest of the festival. At the exit leading from the ceremony to the rest of the grounds, a cat catches my eye."
     "My witch gives me a knowing look and tilts her chin towards the cat."

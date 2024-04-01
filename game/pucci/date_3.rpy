@@ -116,10 +116,9 @@ label runway:
     pucci neutral "You've proven yourself to be moderately fashionable."
     pucci happy "I'm proud of you for trying something new. You did good, darling. I think you're ready for anything, now."
 
-    # TODO could use some outro stuff like woah cool we did the thing had ice cream looked at the moon
-
     stop music fadeout 3.0
     scene black with irisin
+    "Pucci paid the judges in the form of artisnal ice cream cones, and we parted ways, shivering in the October cold."
     return
 
 label pucci_fail_early:

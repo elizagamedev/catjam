@@ -33,10 +33,10 @@ label pucci_date_2:
         "I hate it." ("thonk"):
             pucci annoyed "Me too, honestly. Oh posh, I was hoping you might want to pull the vegetables."
             pucci neutral "Oh well."
-            # TODO: kinda abrupt. should this fail the quest? -- naw, you have to reeeeeally try to ruffle their feathers to fail pucci's quest -m
-            # well in any case probably ought to have a line line "well guess I'm going home now"
             stop music fadeout 3.0
             scene black with irisin
+            "The conversation ultimately never went beyond small talk."
+            "When we parted for the evening, I couldn't help but feel a vague sense of nonfulfillment."
             return
 
 

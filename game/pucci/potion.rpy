@@ -1,3 +1,5 @@
+default pc_is_transformed = False
+
 label pucci_potion:
     scene bg festival
     with Dissolve(1.0)
@@ -92,7 +94,7 @@ label .transmutation:
             "Pucci beams."
             "My witch looks aghast. It must be quite a sight."
             pucci "It was all thanks to [pc]! We couldn't have done it alone, but together we made it work."
-            # TODO: i assume smoky has objections to this
+            $ pc_is_transformed = True
             jump .end
         "No way!" ("concern"):
             pucci neutral "Uhh... {i}I kind of need you to do this, [pc]...!{/i}"
@@ -144,20 +146,30 @@ label .end:
     "The headmistress shakes my witch's hand and tells her that she's lucky to have such a good familiar."
     scene bg festival with fade
     "When we leave, I pull Pucci aside privately."
-    pc concern "Hey, why did you lie in there?"
+    if pc_is_transformed:
+        pc "Hey, why did you lie in there?"
+    else:
+        pc concern "Hey, why did you lie in there?"
     show pucci neutral at center with dissolve
     pucci "Well, you said you needed the potion and it was an emergency. I wasn't going to let you fail just because of too much honesty."
     pucci happy "I thought about it and determined that the most efficient way for us to both pass was to lie a little, so I lied."
     pucci talking "It's just like with fashion. The method doesn't matter as long as you get what you want out of it."
 
-    menu pucci_philosophy(screen="dialog_choice"):
+    menu pucci_philosophy(screen="dialog_choice", show_pc=not pc_is_transformed):
         "That's kinda messed up." ("thonk"):
             pucci happy "Well, it's a philosophy that works for me. It doesn't have to work for you, darling."
         "Yeah no, that makes sense." ("happy"):
             pucci blushing "I knew you'd understand! The girls who get it, get it. That's what the girlies say on TockTock."
 
     pucci happy "But the important thing is we passed!"
-    "We sure did."
+    if pc_is_transformed:
+        pc "Right."
+        pc "But, uh, when is this thing going to wear off again?"
+        pucci neutral "..."
+        pucci "Later tonight... probably."
+        pc "Probably!?"
+    else:
+        "We sure did."
 
     stop music fadeout 3.0
     scene black with irisin
