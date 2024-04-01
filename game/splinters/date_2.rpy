@@ -9,7 +9,7 @@ label splinters_date_2:
 
     splinters "Oh gee, hmm. Let me think, what would be a good place to meet up?"
 
-    "I stare at his cracked, blurry visage in the ball."
+    "I stare at their cracked, blurry visage in the ball."
 
     menu(screen="dialog_choice"):
         "We could go to the marketplace? Get some new items, replacement items..." ("talking"):
@@ -35,7 +35,7 @@ label splinters_date_2:
     show splinters neutral at center with dissolve
 
     splinters "W-Wow, there sure are a lot of people here."
-    "Splinters is making themselves small, trying not to get run over. Which is in a way kind of impressive."
+    "Splinters is making themself small, trying not to get run over. Which is in a way kind of impressive."
     "They stay relatively within a 1-meter circle as the busy pedestrians push them around."
     splinters moe "...Wow. There are so many goods. And people here."
     "Their very big eyes are amazingly even bigger right now."
@@ -423,7 +423,7 @@ label splinters_date_2:
 
     splinters happy "Y-Yeah, maybe."
 
-    "Splinters looks around, then pads over to the charms section."
+    "Splinters looks around while I purchase the crystal ball, then pads over to the charms section."
 
     splinters "O-Oh look!"
     "Splinters excitedly held up two rabbit feet charms."
