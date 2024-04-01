@@ -29,6 +29,7 @@ screen name_and_pronouns():
         input style "l_default":
             xoffset 30
             value VariableInputValue("pc_name")
+            length 32
         label _("Pronouns")
         hbox:
             style_prefix "radio"

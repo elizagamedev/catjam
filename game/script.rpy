@@ -102,7 +102,10 @@ label awaken(day = None):
     scene black
     play bg "sound/morning.opus" noloop
     call show_titlecard(day)
-    scene bg room with Dissolve(1.0)
+    if calendar_day < 7:
+        scene bg home_front with Dissolve(1.0)
+    else:
+        scene bg room with Dissolve(1.0)
     return
 
 label titlecard(day = None):
@@ -188,7 +191,7 @@ label start:
 
     "There are sure to be plenty of witches with their familiars besides us, so maybe we can find somebody to show us around."
 
-    "We don't know what the exam will entail; just that it will be held on the last Saturday before the Halloween festival. It could be anything, so we'll have to be at our readiest."
+    "All we know about the exam is that it will involve brewing some kind of potion."
 
     "My witch gets my attention to let me know it's time to go. I take a deep breath, taking in the unfamiliar smells, and follow my witch forth into the unknown. We have a few stops to make on our way to the new house..."
 
@@ -219,7 +222,7 @@ label dinerintro:
     scene bg main_street
     with dissolve
 
-    "Main Street is bustling with people enjoying their last weekend of freedom before summer school begins."
+    "Main Street is bustling with people enjoying their last weekend of freedom before the exam period begins."
 
     "It's a cozy little town with diners and old record shops lining the streets."
 
@@ -391,7 +394,7 @@ label cafeintro:
 
     frankie_unk "Splinters, you dizzard. If you'd been doing those hundred pushups and situps every day like I told you, you wouldn't have dropped that drink, dig?"
 
-    splinters "But Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about, my digital purrse is popping off!"
+    splinters "But Frankie that's so many and I've been busy working on this nyan-fungible token project called B.L.E.P. which by the way I'd love to tell you about. My digital purrse is popping off!"
 
     "The irate coffee-less witch takes the money from Splinter's paw and returns to the register to order a new drink."
 
@@ -470,8 +473,7 @@ label j1explorechoice:
     if len(j1explorechoice_menuset) >= 3:
         jump j1witch
     elif j1explorechoice_menuset:
-        $ calendar_day += 1
-        call awaken
+        call awaken(calendar_day + 1)
     menu:
         "Where should I go today?"
         set j1explorechoice_menuset
@@ -925,10 +927,9 @@ label j1wke:
 # --Week 2--
 label j2:
     call awaken(7)
-    "My witch got the packet with the details for the exam. We're supposed to make a unique potion that we come up with ourselves."
-
-    "She has an idea for a potion, but tells me it's a surprise."
-
+    "My witch got the packet with the details for the exam potion."
+    "We're tasked with developing a recipe and presenting it before a panel of judges and the headmistress on the twenty-sixth, the last Saturday before Halloween."
+    "She has an idea for our potion, but tells me it's a surprise."
     "Before we get started brewing the potion, we're going to have to find some ingredients. I have a list of things to find, so now I just need to go do the thing."
 
 menu j2wk:
@@ -1275,6 +1276,7 @@ label j2synthesize:
     "After a whole eon, we end up with a stable ingredient for the final potion. This is great!"
     "All that's left is to let it sit for a week and see if it turns out how we intended."
     stop music fadeout 3.0
+    stop bg fadeout 3.0
     scene black with irisin
     jump j2witch
 
@@ -2130,7 +2132,7 @@ label outro_pucci:
             pc concern "Thanks, Pucci. Sorry..."
             pucci happy "No apologies! Now, let's go get some ice cream!!!"
             "They give me a reassuring pat on the shoulder and zip off to find a sweet treat."
-            "I take a look around and realize... I'll never forget this summer."
+            "I take a look around and realize... I'll never forget this autumn."
             scene black with irisin
             pause 1.0
             jump credits
@@ -2140,7 +2142,7 @@ label outro_pucci:
             pucci happy "I'm just glad we got through this together."
             pucci happy "I'm going to go get some ice cream, feel free to come with me. Or don't! I'll see you around!"
             "With that, Pucci sways away in search of a sweet treat and I'm left here alone."
-            "I take a look around and realize... I'll never forget this summer."
+            "I take a look around and realize... I'll never forget this autumn."
             scene black with irisin
             pause 1.0
             jump credits

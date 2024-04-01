@@ -186,9 +186,11 @@ define gui.button_text_xalign = 0.0
 
 define gui.radio_button_borders = Borders(46, 6, 6, 6)
 define gui.radio_button_text_font = "fonts/Mali-Regular.ttf"
+define gui.radio_button_text_selected_color = gui.accent_color
 
 define gui.check_button_borders = Borders(46, 6, 6, 6)
 define gui.check_button_text_font = "fonts/Mali-Regular.ttf"
+define gui.check_button_text_selected_color = gui.accent_color
 
 define gui.confirm_button_text_xalign = 0.5
 

@@ -136,7 +136,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Transform(Image("gui/textbox.png", xalign=0.5, yalign=1.0), alpha=0.95)
+    background Transform(Image("gui/textbox.webp", xalign=0.5, yalign=1.0), alpha=0.95)
 
 style namebox:
     xpos gui.name_xpos
@@ -1530,7 +1530,7 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/textbox.webp"
 
 style radio_button:
     variant "small"

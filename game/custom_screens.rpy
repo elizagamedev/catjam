@@ -9,7 +9,7 @@ screen dialog_choice(items, show_pc=True):
             text pc_name color '#7d8294' size gui.name_text_size font gui.name_text_font outlines gui.name_text_outlines
 
         vbox:
-            xpos gui.dialogue_xpos - 46
+            xpos gui.dialogue_xpos
             ypos gui.dialogue_ypos
             xsize gui.dialogue_width
             for i in items:
