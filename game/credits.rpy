@@ -32,7 +32,7 @@ screen credits():
         xalign 0.5
 
         vbox:
-            null height 400
+            null height 300
             image "title.webp":
                 xalign 0.5
             null height 680
