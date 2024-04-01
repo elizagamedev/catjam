@@ -191,6 +191,8 @@ init python:
     build.classify('**/thumbs.db', None)
     build.classify('**/*.rpy', None)
     build.classify('game/debug.rpyc', None)
+    build.classify('**/*.md', None)
+    build.classify('tools/**', None)
 
     ## To archive files, classify them as 'archive'.
 
