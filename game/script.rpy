@@ -717,7 +717,7 @@ label j1study:
 
     show splinters neutral at center with MoveTransition(1.0, enter=Transform(yoffset=1.0, ypos=0.0), enter_time_warp=_warper.easein_bounce)
 
-    "Splinters grabs a book, presumably the intended one, grasps it by the spine with his teeth, and drops down from the shelf."
+    "Splinters grabs a book, presumably the intended one, grasps it by the spine with their teeth, and drops down from the shelf."
 
     "Librarian" "HOLY FUCK YOU DID NOT JUST PUT THAT IN YOUR MOUTH AND THEN STEP ON BOOKS"
 
@@ -734,7 +734,7 @@ menu j1study_choice(screen="dialog_choice"):
 label j1study_helpsplinters:
     "The little cat notices me addressing them and gingerly climbs over the fallen books, conspicuously ignoring the aghast librarian who's clearly used to dealing with this sort of thing from them but isn't quite ready to do something like kick out the young nerd."
 
-    splinters neutral "Oh hey how's it going what did you need my help with fam?"
+    splinters neutral "Oh h-hey how's it going, what did you n-need my help with fam?"
 
     pc neutral "Firstly, do you come here often?"
 
@@ -742,35 +742,35 @@ label j1study_helpsplinters:
 
     "They actually say L-O-L... out loud."
 
-    splinters "Yeah I'm here a lot. I like learning things and also I'm like supposed to do community service here a couple days a week."
+    splinters "Yeah I'm here a lot. I like learning things and also I'm like supposed to do c-community service here a couple days a week."
 
-    splinters "I'm not doing that now but you can fer suuuure find me racking books."
+    splinters "I'm not doing that now but you can f-find me racking books. Pretty regularly."
 
     "They flex their non-existent muscles."
 
-    splinters smug "And picking up ladies."
+    splinters smug "And p-picking up ladies."
 
     "I look around. There is a fair abundance of elderly witches who {i}do{/i} seem enamored with the tiny cat."
 
     pc neutral "That tracks. So, that's perfect. Do you know any secrets about this place?"
 
-    splinters neutral "Yeah no I gotchu covered. You know how that librarian over there whisper-yells all the time?"
+    splinters neutral "Yeah no, I c-can help with that. You know how that l-librarian over there whisper-yells all the time?"
 
     pc thonk "Yes..."
 
-    splinters talking "So actually sometimes they even go into the restricted section and if you're close enough to the door you can hear them screaming like a stress-relief type of scream."
+    splinters talking "So actually sometimes they even go into the r-restricted section and if you're close enough to the door you can hear them scr-screaming, like a stress-relief type of scream."
 
-    splinters "I-I don't think they totally realize that it isn't actually soundproof in there based on the profanities I've heard."
+    splinters "I-I don't think they totally realize that it isn't actually s-soundproof in there based on the profran-profanities I've heard."
 
     pc neutral "Oooooo..."
 
-    splinters happy "And basically it's a secret I haven't told anyone about. So there you have it!"
+    splinters happy "And basically it's a s-secret I haven't told anyone about. So there y-you have it!"
 
     splinters neutral "Now I have a question for you."
 
     pc concern "Yeah?"
 
-    splinters moe "Do you—and I mean this seriously so hear me out—want toooo check out my SoundMeowd? I promise it's good."
+    splinters moe "Do you—and I mean this seriously so hear me out—want t-t-to check out my SoundMeowd? I promise it's good."
 
     "I have no idea what a SoundMeowd is but I believe them."
 
@@ -1645,7 +1645,7 @@ label j3boardyes:
 
     "Pucci stays to watch us from under an umbrella. At one point they wave us over. They've gotten three lemonades, one for each of us."
 
-    "Gomer takes back his board and does some tricks while Pucci and I watch from the umbrella table."
+    "Gomer takes back their board and does some tricks while Pucci and I watch from the umbrella table."
 
     jump j3beach_umbrella
 
