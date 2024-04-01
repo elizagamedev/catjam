@@ -129,7 +129,7 @@ label splinters_date_3:
 
     splinters happy "Y-You know, we could market this into a new venture!"
     splinters "We can leverage the ectoplasmic nature of the pie as a new line of diet products."
-    splinters moe "IT'LL BE A REVOLUTION IN THE FOOD INDUSTRY!"
+    splinters moe "IT'LL BE A REVLO-R-REVOLUTION IN THE FOOD INDUSTRY!"
 
     menu(screen="dialog_choice"):
         "Haha, I guess it's pretty cool to have guilt-free pie." ("talking"):
@@ -188,13 +188,13 @@ label splinters_date_3:
     splinters "Aw shucks… You don't have to, have to call m-m-me a {q}prince{/q} in front of [pc] here…"
     gertrude "Nonsense, you are our sweet little prince!"
     show splinters neutral
-    nancy "Ugh. You smotherers are why little pipsqueak is such a numskull."
+    nancy "Ugh. You smotherers are why the little pipsqueak is such a numbskull."
     nancy "Gawd, they're like a permanent perpetual baby."
     gertrude "You can finally undo your wrongdoing, Freddy! What do you have to say for yourself?"
     freddy "Aw, why'd you have to drag that old thing back up?"
     freddy "The little nugget don't even know they been cursed all this time!"
     splinters talking "WAIT WHAT?"
-    yuri talking "This is great, Splinters. Your luck is really turning around now."
+    yuri talking "This is great, Splinters. I'm so glad I could help! Your luck is really turning around now."
     yuri neutral "I'll see you both around then. Later!"
 
     hide yuri with dissolve
@@ -234,8 +234,8 @@ label splinters_date_3:
 
     scene black with irisin
     "The ghosts continue to squabble. Splinters and I take our leave quietly."
-    "I can't wait to try out the recipe."
-    "It looks like Splinters' luck is turning around after all."
+    "I'm so excited to try out the recipe."
+    "I can't believe they were really cursed this whole time... and that there's a fix for it! It looks like Splinters' luck is turning around after all."
     stop music fadeout 3.0
     $ splinters_date_count += 1
     $ splinters_potion = True
