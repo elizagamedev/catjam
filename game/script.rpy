@@ -2058,7 +2058,7 @@ label festivalscene:
 
     "The parade reaches its end and each witch-familiar duo lines up. We take turns being called up to the dias where the headmistress waits."
     if pc_is_transformed:
-        "Luckily, the transmutation potion had already worn off, so I was able to participate as myself."
+        "Luckily, the transmutation potion wore off over the weekend, so I was able to participate as myself."
     "When we walk up, it's like all I can see is that moment right in front of me. Everything else becomes a blur."
     "Headmistress" "Congratulations, you two. I am proud to present you with your Witch For Hire license. You're now free to work anywhere with a WFH policy."
     "I smile up at my witch, who smiles back down at me."

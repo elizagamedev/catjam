@@ -33,9 +33,8 @@ screen credits():
 
         vbox:
             null height 400
-            text "Getting Familiar":
-                size 150
-                font "fonts/Itim-Regular.ttf"
+            image "title.webp":
+                xalign 0.5
             null height 680
 
             label "Developers"
