@@ -30,7 +30,7 @@ label splinters_date:
         splinters "Eh, it happens all the time."
     elif (splinters_call_count == 1):
         pc concern "Ouch, you smushed them again. Are your paws okay?"
-        splinters "Y-yeah. Don't worry about it."
+        splinters "Y-Yeah. Don't worry about it."
     else:
         pc concern "Are your paws okay getting smushed like that all the time?"
         splinters "..."

@@ -1,5 +1,5 @@
-define carrot_vendor = Character("Carrot Cornucopia Vendor", who_color="#FFAE5E")
-define kerfluffle_vendor = Character("Kerfluffle Cake Vendor", who_color="#00F6FF")
+define carrot_vendor = Character("Carrot Cornucopia Vendor", who_color="#cb8700")
+define kerfluffle_vendor = Character("Kerfluffle Cake Vendor", who_color="#004864")
 
 label splinters_date_2:
     splinters "Anyways, how are things with you?"
@@ -27,7 +27,7 @@ label splinters_date_2:
             return
 
     splinters "Ooh, the marketplace, huh?"
-    "He wrings his hand nervously, contemplating."
+    "They wring their paws nervously, contemplating."
     splinters "You know what? That sounds fun. I-I'll see you there then."
 
     scene bg market with fade
@@ -35,10 +35,10 @@ label splinters_date_2:
     show splinters neutral at center with dissolve
 
     splinters "W-Wow, there sure are a lot of people here."
-    "Splinters is making himself small, trying not to get run over. Which is in a way kind of impressive."
-    "He stays relatively within a 1-meter circle as the busy pedestrians pushed him around."
+    "Splinters is making themselves small, trying not to get run over. Which is in a way kind of impressive."
+    "They stay relatively within a 1-meter circle as the busy pedestrians push them around."
     splinters moe "...Wow. There are so many goods. And people here."
-    "His very big eyes are amazingly even bigger right now."
+    "Their very big eyes are amazingly even bigger right now."
 
     "I look around, specifically seeking out a vendor of crystal balls."
 
@@ -70,7 +70,7 @@ label splinters_date_2:
     splinters "Let's dig in! What do you want? My treat!"
 
     menu(screen="dialog_choice"):
-        "Let's get the carrot cornucopia. I heard it's the latest health craze." ("talking"):
+        "Let's get the carrot cornucopia. It's the latest health craze." ("talking"):
             show splinters neutral
             splinters "Carrots? Like, like vegetables?"
             splinters "..."
@@ -113,7 +113,7 @@ label splinters_date_2:
             splinters "Urgh… Sorry, [pc], I-I gotta go."
 
             hide splinters
-            show splinters neutral at right
+            show splinters talking at right
             hide splinters with easeoutright
 
             "I watch Splinters sprint off."
@@ -216,8 +216,8 @@ label splinters_date_2:
 
     splinters "Oh wow… H-Hope you're okay with waiting."
 
-    menu:
-        "Ugh, this is going to be a drag.":
+    menu(screen="dialog_choice"):
+        "Ugh, this is going to be a drag." ("thonk"):
             splinters "O-Oh. Well, I can wait and get the food. You can look around."
 
             pc happy "Thank you~ Later then!"
@@ -283,7 +283,7 @@ label splinters_date_2:
             scene black with irisin
             return
 
-        "Naw, I don't mind waiting with you.":
+        "Naw, I don't mind waiting with you." ("happy"):
             show splinters blushing
             splinters "O-Oh… I don't mind waiting with you either."
 
@@ -399,11 +399,17 @@ label splinters_date_2:
     splinters "I'M JUST EXCITED I GOT TO SEE SOMEONE I LIKE WIN THE CHARM!"
     pc thonk "Er, what was that?"
     show splinters neutral
-    splinters "E-er n-nothing. I-I'm just easily ex-ex-excited."
+    splinters "E-Er n-nothing. I-I'm just easily ex-ex-excited."
 
-    "We then pass by a vendor selling different random goods, including crystal balls."
+    scene bg market
+    with fade
+
+    "We pass by a vendor selling different random goods, including crystal balls."
 
     pc talking "Hey, let's stop by here."
+
+    show splinters neutral at center with dissolve
+
     splinters "S-Sure."
 
     pc neutral "The crystal balls look really nice. This one kind of resembles you."
@@ -431,7 +437,7 @@ label splinters_date_2:
 
     "The vendor seems suspicious. They narrow their eyes but haven't caught on."
 
-    splinters happy "H-here, I'll get one for you too. These are really, really rare."
+    splinters happy "H-Here, I'll get one for you too. These are really, really rare."
 
     "Splinters walks off to pay for it at the counter."
 
@@ -439,7 +445,7 @@ label splinters_date_2:
 
     pc happy "No worries! Wow, I sure got a lot of charms today."
 
-    splinters blushing "I-it's because... It's because y-you're charming..."
+    splinters blushing "I-It's because... It's because y-you're charming..."
 
     pc thonk "Sorry, what was that?"
 
