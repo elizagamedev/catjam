@@ -101,7 +101,7 @@ label .nextday:
 label awaken(day = None):
     scene black
     play bg "sound/morning.opus" fadein 1.0
-    call show_titlecard(day)
+    call show_titlecard(day) from _call_show_titlecard
     if calendar_day < 7:
         scene bg home_front with Dissolve(1.0)
     else:
@@ -110,7 +110,7 @@ label awaken(day = None):
 
 label titlecard(day = None):
     scene black
-    call show_titlecard(day)
+    call show_titlecard(day) from _call_show_titlecard_1
     return
 
 label weekend(menuset):
@@ -123,28 +123,28 @@ label weekend(menuset):
                 jump .scry
             else:
                 stop bg fadeout 2.0
-                call gomer_date
+                call gomer_date from _call_gomer_date
         "Splinters":
             if splinters_failed:
                 "There's no response..."
                 jump .scry
             else:
                 stop bg fadeout 2.0
-                call splinters_date
+                call splinters_date from _call_splinters_date
         "Pucci":
             if pucci_failed:
                 "There's no response..."
                 jump .scry
             else:
                 stop bg fadeout 2.0
-                call pucci_date
+                call pucci_date from _call_pucci_date
         "Frankie":
             if frankie_failed:
                 "There's no response..."
                 jump .scry
             else:
                 stop bg fadeout 2.0
-                call frankie_date
+                call frankie_date from _call_frankie_date
 
     if scry_redo:
         $ scry_redo = False
@@ -172,13 +172,13 @@ label start:
     stop music fadeout 3.0
     with dissolve
 
-    call ask_name_and_pronouns
+    call ask_name_and_pronouns from _call_ask_name_and_pronouns
 
     scene black
     pause 1.0
     play sound "sound/train.opus"
     play bg "sound/train-station.opus" fadein 2.0 volume 0.5
-    call show_titlecard()
+    call show_titlecard() from _call_show_titlecard_2
     pause 1.5
     scene bg central_station with Dissolve(1.0)
 
@@ -442,7 +442,7 @@ label end_intro:
 # --Week 1--
 # Lay of the land
 label j1:
-    call awaken(1)
+    call awaken(1) from _call_awaken
 
     "The weekend goes by without remark. I stop by the diner, and it is as lively as Pucci had declared. I think it's gonna be good to get to know these people."
 
@@ -474,7 +474,7 @@ label j1explorechoice:
     if len(j1explorechoice_menuset) >= 3:
         jump j1witch
     elif j1explorechoice_menuset:
-        call awaken(calendar_day + 1 - 2)
+        call awaken(calendar_day + 1 - 2) from _call_awaken_1
     menu:
         "Where should I go today?"
         set j1explorechoice_menuset
@@ -890,7 +890,7 @@ label j1gym_outro:
 # At home
 label j1witch:
     play bg "sound/night.opus" fadein 2.0
-    call titlecard(4)
+    call titlecard(4) from _call_titlecard
     scene black with Dissolve(1.0)
 
     witch "Hey [pc], how was your recon this week? I got the house mostly set up and--oh, there are snacks in the pantry for you whenever you get hungry."
@@ -920,14 +920,14 @@ label j1witch:
 # --weekend 1--
 # talk to each character, choose 1 to hangout with
 label j1wke:
-    call awaken(5)
+    call awaken(5) from _call_awaken_2
     "I've got the weekend to myself. But maybe I should spend it with someone else?"
     "I perform the binding cantrip on my scrying orb and get ready to test it out."
-    call weekend(j1wke_menuset)
+    call weekend(j1wke_menuset) from _call_weekend
 
 # --Week 2--
 label j2:
-    call awaken(7)
+    call awaken(7) from _call_awaken_3
     "My witch got the packet with the details for the exam potion."
     "We're tasked with developing a recipe and presenting it before a panel of judges and the headmistress on the twenty-sixth, the last Saturday before Halloween."
     "She has an idea for our potion, but tells me it's a surprise."
@@ -1372,7 +1372,7 @@ label j2forage:
 
 # at home
 label j2witch:
-    call titlecard(11)
+    call titlecard(11) from _call_titlecard_1
     scene black with Dissolve(1.0)
     "I got to spend a lot of time with my witch this week, and I've been feeling like I've been doing a great job as a familiar lately."
     "We spend the rest of the week taking it easy, sipping lemonades over board games."
@@ -1383,15 +1383,15 @@ label j2witch:
 
 # --weekend 2--
 label j2wke:
-    call awaken(12)
+    call awaken(12) from _call_awaken_4
     "I've got the weekend to myself. But maybe I should spend it with someone else?"
-    call weekend(j2wke_menuset)
+    call weekend(j2wke_menuset) from _call_weekend_1
 
 
 
 # --Week 3--
 label j3:
-    call awaken(14)
+    call awaken(14) from _call_awaken_5
 
     "There's only two more weeks until the exam."
     "We've still got plenty of prep work to do, but we're on schedule to brew the actual potion next week."
@@ -1711,7 +1711,7 @@ label j3beach_umbrella:
 
 label j3witch:
     play bg "sound/night.opus" fadein 2.0
-    call titlecard(18)
+    call titlecard(18) from _call_titlecard_2
     scene bg home_front with Dissolve(1.0)
 
 
@@ -1740,13 +1740,13 @@ label j3witch:
 
 # --weekend 3--
 label j3wke:
-    call awaken(19)
+    call awaken(19) from _call_awaken_6
     "I've got the weekend to myself. But maybe I should spend it with someone else?"
-    call weekend(j3wke_menuset)
+    call weekend(j3wke_menuset) from _call_weekend_2
 
 # --Week 4--
 label j4:
-    call titlecard(26)
+    call titlecard(26) from _call_titlecard_3
     # Changed this scene to past tense to really solidify the mice disaster.
 
     play sound "sound/pause.opus"
@@ -1759,7 +1759,7 @@ label j4:
     play sound "sound/rewind.opus"
     show vcr rewind
     pause 0.5
-    call show_titlecard(24)
+    call show_titlecard(24) from _call_show_titlecard_3
     show vcr play
     pause 2.0
 
@@ -1909,7 +1909,7 @@ label j4mice:
     jump j4wke
 
 label j4wke:
-    call awaken(26)
+    call awaken(26) from _call_awaken_7
     "An ordinary encounter with bastard mice is traumatizing enough."
     "I wish I could say the damage was limited to a few a permanent psychological scars. But our potion was completely ruined!"
     "Now we're up a creek without a paddle, no potion to our names, and our exam is {i}today{/i}."
@@ -2049,7 +2049,7 @@ label j4exam:
     jump expression ending + "_potion"
 
 label festivalscene:
-    call titlecard(31)
+    call titlecard(31) from _call_titlecard_4
     scene bg festival night with Dissolve(1.0)
     play music "music/When The Wind Blows.mp3"
 

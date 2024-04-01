@@ -41,7 +41,7 @@ label splinters_date:
 
     $ splinters_call_count += 1
 
-    call expression next_splinters_date
+    call expression next_splinters_date from _call_expression
 
     return
 
