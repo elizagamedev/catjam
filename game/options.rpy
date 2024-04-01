@@ -156,7 +156,7 @@ define config.save_directory = "catjam-1708301369"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.webp"
 
 
 ## Build configuration #########################################################
@@ -193,6 +193,8 @@ init python:
     build.classify('game/debug.rpyc', None)
     build.classify('**/*.md', None)
     build.classify('tools/**', None)
+    build.classify('**/*.xcf', None)
+    build.classify('Makefile', None)
 
     ## To archive files, classify them as 'archive'.
 

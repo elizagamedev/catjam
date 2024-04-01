@@ -19,3 +19,6 @@
 *.ogg lfs
 *.flac lfs
 *.ttf lfs
+*.xcf lfs
+*.ico lfs
+*.icns lfs

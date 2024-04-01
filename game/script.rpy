@@ -2096,7 +2096,7 @@ label outro_pucci:
             "There's a lull in the night, the crisp air suggesting we stand just a little closer together for warmth."
             "The moment's right here. I have to act! I gather up my courage, and..."
             menu puccicourage:
-                "Pull them towards me for a kiss.":
+                "Pull them towards me for a kiss":
                     pc neutral "Pucci, I... hold on a moment."
                     "They pause as I tug on their paw and turn them around to face me."
                     pucci neutral "Oh? What's up?"
@@ -2108,7 +2108,7 @@ label outro_pucci:
                     scene black with irisin
                     pause 1.0
                     jump credits
-                "Give them a hug.":
+                "Give them a hug":
                     pc neutral "Hey Pucci, I just wanted to thank you."
                     pucci neutral "For what?"
                     pc talking "For pulling through for me like that. I really appreciate that you made sure I'd be covered. Can't believe I needed it!"
